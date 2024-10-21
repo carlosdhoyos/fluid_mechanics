@@ -65,3 +65,36 @@ Let $f(x) = x^3 - 3x^2 + 2x$.
    Substituting the limits and evaluating gives the final result for the definite integral.
 
 For more problems and detailed solutions, you can visit the [MIT OCW problem set](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/).
+
+
+## Problem: Partial Derivatives, Chain Rule, and Multiple Integrals
+
+### Problem Statement:
+Let $z = f(x, y)$ where $x = u^2 + 3v$ and $y = uv$.
+
+1. Find the partial derivative of $z$ with respect to $u$, denoted as $\frac{\partial z}{\partial u}$, using the chain rule.
+2. Calculate the double integral of $z(x, y)$ over a given region.
+
+<button onclick="document.getElementById('solution').style.display='block'; this.style.display='none';">Show Solution</button>
+
+<div id="solution" style="display:none;">
+  
+### Solution:
+
+1. **Applying the Chain Rule**:
+   To find $\frac{\partial z}{\partial u}$, we use the multivariable chain rule. The total derivative of $z$ with respect to $u$ is given by:
+   $$
+   \frac{\partial z}{\partial u} = \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial u} + \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial u}
+   $$
+   You would substitute the expressions for $x = u^2 + 3v$ and $y = uv$ and apply the derivatives accordingly.
+
+2. **Multiple Integrals**:
+   Once you have the function $z(x, y)$, you can compute a double integral over a region $R$:
+   $$
+   \int\int_R z(x, y) \, dx \, dy
+   $$
+   This requires setting up the appropriate limits of integration based on the region $R$.
+
+</div>
+
+For more detailed problems and solutions, you can check out [Paul's Online Math Notes](https://tutorial.math.lamar.edu/) or [MIT OCW Multivariable Calculus](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/problem-set-5/).
