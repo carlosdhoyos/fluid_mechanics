@@ -33,13 +33,13 @@
 
 ## Problem: Understanding Derivatives and Integrals
 
-Given a function \( f(x) \), find the derivative and the integral of \( f(x) \) over a given interval.
+Given a function  $f(x)$, find the derivative and the integral of $f(x)$ over a given interval.
 
 ### Problem Statement:
-Let \( f(x) = x^3 - 3x^2 + 2x \).
+Let $f(x) = x^3 - 3x^2 + 2x$.
 
-1. Find \( f'(x) \), the derivative of the function.
-2. Calculate the integral \( \int f(x) dx \) over the interval [1, 4].
+1. Find $f'(x)$, the derivative of the function.
+2. Calculate the integral $ \int f(x) dx $ over the interval [1, 4].
 
 ### Solution:
 
@@ -51,13 +51,17 @@ Let \( f(x) = x^3 - 3x^2 + 2x \).
 
 2. **Integral**:  
    The indefinite integral is:
+   
    $$
    \int (x^3 - 3x^2 + 2x) dx = \frac{x^4}{4} - x^3 + x^2 + C
    $$
+
    To evaluate the definite integral over the interval [1, 4]:
+   
    $$
    \left[\frac{x^4}{4} - x^3 + x^2 \right]_{1}^{4}
    $$
+   
    Substituting the limits and evaluating gives the final result for the definite integral.
 
 For more problems and detailed solutions, you can visit the [MIT OCW problem set](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/).

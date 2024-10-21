@@ -68,6 +68,8 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_sources/prerequisites';</script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
@@ -407,16 +409,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Prerequisites</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-prerequisites">Mathematics Prerequisites</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-prerequisites">Physics Prerequisites</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-understanding-derivatives-and-integrals">Problem: Understanding Derivatives and Integrals</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-prerequisites">Mathematics Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-prerequisites">Physics Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-understanding-derivatives-and-integrals">Problem: Understanding Derivatives and Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
 </ul>
 </li>
 </ul>
-
             </nav>
         </div>
     </div>
@@ -427,11 +427,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="prerequisites">
+  <section class="tex2jax_ignore mathjax_ignore" id="prerequisites">
 <h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h1>
-</section>
 <section id="mathematics-prerequisites">
-<h1>Mathematics Prerequisites<a class="headerlink" href="#mathematics-prerequisites" title="Link to this heading">#</a></h1>
+<h2>Mathematics Prerequisites<a class="headerlink" href="#mathematics-prerequisites" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong>Calculus I and II</strong>:</p>
 <ul class="simple">
@@ -462,7 +461,7 @@ document.write(`
 </ol>
 </section>
 <section id="physics-prerequisites">
-<h1>Physics Prerequisites<a class="headerlink" href="#physics-prerequisites" title="Link to this heading">#</a></h1>
+<h2>Physics Prerequisites<a class="headerlink" href="#physics-prerequisites" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong>General Physics I (Mechanics)</strong>:</p>
 <ul class="simple">
@@ -479,11 +478,12 @@ document.write(`
 </li>
 </ol>
 </section>
+<hr class="docutils" />
 <section id="problem-understanding-derivatives-and-integrals">
-<h1>Problem: Understanding Derivatives and Integrals<a class="headerlink" href="#problem-understanding-derivatives-and-integrals" title="Link to this heading">#</a></h1>
+<h2>Problem: Understanding Derivatives and Integrals<a class="headerlink" href="#problem-understanding-derivatives-and-integrals" title="Link to this heading">#</a></h2>
 <p>Given a function ( f(x) ), find the derivative and the integral of ( f(x) ) over a given interval.</p>
 <section id="problem-statement">
-<h2>Problem Statement:<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h2>
+<h3>Problem Statement:<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h3>
 <p>Let ( f(x) = x^3 - 3x^2 + 2x ).</p>
 <ol class="arabic simple">
 <li><p>Find ( f’(x) ), the derivative of the function.</p></li>
@@ -491,25 +491,26 @@ document.write(`
 </ol>
 </section>
 <section id="solution">
-<h2>Solution:<a class="headerlink" href="#solution" title="Link to this heading">#</a></h2>
+<h3>Solution:<a class="headerlink" href="#solution" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>Derivative</strong>:<br />
 Using basic differentiation rules:
-[
-f’(x) = 3x^2 - 6x + 2
-]</p></li>
+$<span class="math notranslate nohighlight">\(
+f'(x) = 3x^2 - 6x + 2
+\)</span>$</p></li>
 <li><p><strong>Integral</strong>:<br />
 The indefinite integral is:
-[
+$<span class="math notranslate nohighlight">\(
 \int (x^3 - 3x^2 + 2x) dx = \frac{x^4}{4} - x^3 + x^2 + C
-]
+\)</span><span class="math notranslate nohighlight">\(
 To evaluate the definite integral over the interval [1, 4]:
-[
+\)</span><span class="math notranslate nohighlight">\(
 \left[\frac{x^4}{4} - x^3 + x^2 \right]_{1}^{4}
-]
+\)</span>$
 Substituting the limits and evaluating gives the final result for the definite integral.</p></li>
 </ol>
 <p>For more problems and detailed solutions, you can visit the <a class="reference external" href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/">MIT OCW problem set</a>.</p>
+</section>
 </section>
 </section>
 
@@ -559,16 +560,14 @@ Substituting the limits and evaluating gives the final result for the definite i
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Prerequisites</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-prerequisites">Mathematics Prerequisites</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-prerequisites">Physics Prerequisites</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-understanding-derivatives-and-integrals">Problem: Understanding Derivatives and Integrals</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement:</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-prerequisites">Mathematics Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-prerequisites">Physics Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-understanding-derivatives-and-integrals">Problem: Understanding Derivatives and Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
 </ul>
 </li>
 </ul>
-
   </nav></div>
 
 </div></div>
