@@ -45,6 +45,7 @@ Let $f(x) = x^3 - 3x^2 + 2x$.
 
 1. **Derivative**:  
    Using basic differentiation rules:
+
    $$
    f'(x) = 3x^2 - 6x + 2
    $$
@@ -83,16 +84,20 @@ Let $z = f(x, y)$ where $x = u^2 + 3v$ and $y = uv$.
 
 1. **Applying the Chain Rule**:
    To find $\frac{\partial z}{\partial u}$, we use the multivariable chain rule. The total derivative of $z$ with respect to $u$ is given by:
+
    $$
    \frac{\partial z}{\partial u} = \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial u} + \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial u}
    $$
+
    You would substitute the expressions for $x = u^2 + 3v$ and $y = uv$ and apply the derivatives accordingly.
 
 2. **Multiple Integrals**:
    Once you have the function $z(x, y)$, you can compute a double integral over a region $R$:
+
    $$
    \int\int_R z(x, y) \, dx \, dy
    $$
+   
    This requires setting up the appropriate limits of integration based on the region $R$.
 
 </div>
