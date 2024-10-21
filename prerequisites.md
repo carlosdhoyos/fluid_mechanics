@@ -492,11 +492,16 @@ $$
 \frac{dy}{dx} = y^2 - x
 $$
 
+
 This is a **non-linear** differential equation and does not have a straightforward analytical solution. However, it can be solved using numerical methods, such as **Euler's method**, or qualitative techniques like **direction fields** to analyze the behavior of the solutions. 
+
+```{note}
 
 While there is no simple analytic solution to present here, numerical solutions can be computed based on initial conditions.
 
-We use the Runge-Kutta method to solve the differential equation:
+We use the **Runge-Kutta method** to solve the differential equation:
+
+```
 
 $$
 \frac{dy}{dx} = y^2 - x
