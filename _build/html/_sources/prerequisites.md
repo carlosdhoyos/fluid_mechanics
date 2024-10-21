@@ -544,10 +544,11 @@ x_values_rk_new, y_values_rk_new = runge_kutta_method(dydx, x0, y0, x_end_new, h
 plt.plot(x_values_rk_new, y_values_rk_new, label="Numerical Solution (Runge-Kutta Method)", color="orange")
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title("Solution of $dy/dx = y^2 - x$ using Runge-Kutta Method (Adjusted Domain)")
+plt.title("Solution of $dy/dx = y^2 - x$ using Runge-Kutta Method")
 plt.legend()
 plt.grid(True)
 plt.show()
 
+```
 
 ---
