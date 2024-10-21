@@ -76,9 +76,6 @@ Let $z = f(x, y)$ where $x = u^2 + 3v$ and $y = uv$.
 1. Find the partial derivative of $z$ with respect to $u$, denoted as $\frac{\partial z}{\partial u}$, using the chain rule.
 2. Calculate the double integral of $z(x, y)$ over a given region.
 
-<button onclick="document.getElementById('solution').style.display='block'; this.style.display='none';">Show Solution</button>
-
-<div id="solution" style="display:none;">
   
 ### Solution:
 
@@ -97,9 +94,8 @@ Let $z = f(x, y)$ where $x = u^2 + 3v$ and $y = uv$.
    $$
    \int\int_R z(x, y) \, dx \, dy
    $$
-   
+
    This requires setting up the appropriate limits of integration based on the region $R$.
 
-</div>
 
 For more detailed problems and solutions, you can check out [Paul's Online Math Notes](https://tutorial.math.lamar.edu/) or [MIT OCW Multivariable Calculus](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/problem-set-5/).

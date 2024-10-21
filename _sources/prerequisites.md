@@ -99,3 +99,103 @@ Let $z = f(x, y)$ where $x = u^2 + 3v$ and $y = uv$.
 
 
 For more detailed problems and solutions, you can check out [Paul's Online Math Notes](https://tutorial.math.lamar.edu/) or [MIT OCW Multivariable Calculus](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/problem-set-5/).
+
+
+## Problem: Parametric Equations and Applications
+
+### Problem Statement:
+A particle is moving along a curve defined by the following parametric equations:
+
+$$
+x(t) = 3t^2 - 2t
+$$
+
+$$
+y(t) = 2t^3 - t
+$$
+
+where $x(t)$ and $y(t)$ represent the particle's position at time $t$.
+
+1. Find the velocity and acceleration vectors of the particle at time $t$.
+2. Determine the time $t$ when the particle’s velocity is zero.
+3. Find the length of the curve traced by the particle between $t = 0$ and $t = 2$.
+
+---
+
+### Solution:
+
+#### 1. Velocity and Acceleration Vectors:
+To find the velocity and acceleration, we differentiate the parametric equations with respect to time $t$.
+
+- **Velocity** is the derivative of position with respect to time:
+
+  $$
+  v_x(t) = \frac{dx}{dt} = 6t - 2
+  $$
+
+  $$
+  v_y(t) = \frac{dy}{dt} = 6t^2 - 1
+  $$
+
+  Therefore, the velocity vector at time $t$ is:
+
+  $$
+  \mathbf{v}(t) = (6t - 2) \hat{i} + (6t^2 - 1) \hat{j}
+  $$
+
+- **Acceleration** is the derivative of velocity with respect to time:
+
+  $$
+  a_x(t) = \frac{d^2x}{dt^2} = 6
+  $$
+
+  $$
+  a_y(t) = \frac{d^2y}{dt^2} = 12t
+  $$
+
+  Therefore, the acceleration vector is:
+
+  $$
+  \mathbf{a}(t) = 6 \hat{i} + 12t \hat{j}
+  $$
+
+#### 2. Time When the Particle's Velocity is Zero:
+For the velocity to be zero, both components of the velocity vector must be zero simultaneously:
+
+  $$
+  6t - 2 = 0 \quad \text{and} \quad 6t^2 - 1 = 0
+  $$
+
+From $6t - 2 = 0$, solving for $t$ gives:
+
+  $$
+  t = \frac{1}{3}
+  $$
+
+Substituting $t = \frac{1}{3}$ into the second equation:
+
+  $$
+  6 \left(\frac{1}{3}\right)^2 - 1 = \frac{2}{3} - 1 = -\frac{1}{3} \neq 0
+  $$
+
+Thus, there is no time $t$ where the particle’s velocity is exactly zero in both the $x$ and $y$ directions.
+
+#### 3. Length of the Curve:
+The length of the curve traced by the particle from $t = 0$ to $t = 2$ is given by the formula:
+
+  $$
+  L = \int_0^2 \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} \, dt
+  $$
+
+Substitute the derivatives $v_x(t) = 6t - 2$ and $v_y(t) = 6t^2 - 1$:
+
+  $$
+  L = \int_0^2 \sqrt{(6t - 2)^2 + (6t^2 - 1)^2} \, dt
+  $$
+  
+This integral can be solved either numerically or using appropriate substitution techniques to find the length of the curve.
+
+---
+
+### Applications:
+Parametric equations are widely used to describe curves and motions in physics, engineering, and computer graphics. For instance, they are used to model the trajectory of particles, motion along a path, and even design complex curves in computer-aided design (CAD) software.
