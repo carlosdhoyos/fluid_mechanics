@@ -1,4 +1,4 @@
-## Prerequisites
+# Prerequisites
 
 ## Mathematics Prerequisites
 1. **Calculus I and II**:
@@ -29,6 +29,7 @@
    - Some exposure to wave propagation, which can help in understanding aspects of compressible flow and shock waves.
    - Familiarity with concepts like pressure fields, as similar ideas are used in both electromagnetism and fluid mechanics.
 
+---
 
 ## Problem: Understanding Derivatives and Integrals
 
@@ -44,20 +45,19 @@ Let \( f(x) = x^3 - 3x^2 + 2x \).
 
 1. **Derivative**:  
    Using basic differentiation rules:
-   \[
+   $$
    f'(x) = 3x^2 - 6x + 2
-   \]
+   $$
 
 2. **Integral**:  
    The indefinite integral is:
-   \[
+   $$
    \int (x^3 - 3x^2 + 2x) dx = \frac{x^4}{4} - x^3 + x^2 + C
-   \]
+   $$
    To evaluate the definite integral over the interval [1, 4]:
-   \[
+   $$
    \left[\frac{x^4}{4} - x^3 + x^2 \right]_{1}^{4}
-   \]
+   $$
    Substituting the limits and evaluating gives the final result for the definite integral.
 
 For more problems and detailed solutions, you can visit the [MIT OCW problem set](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/).
-
