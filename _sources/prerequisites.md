@@ -68,6 +68,9 @@ Let $f(x) = x^3 - 3x^2 + 2x$.
 For more problems and detailed solutions, you can visit the [MIT OCW problem set](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/).
 
 
+---
+
+
 ## Problem 2: Partial Derivatives, Chain Rule, and Multiple Integrals
 
 ### Problem Statement:
@@ -76,7 +79,6 @@ Let $z = f(x, y)$ where $x = u^2 + 3v$ and $y = uv$.
 1. Find the partial derivative of $z$ with respect to $u$, denoted as $\frac{\partial z}{\partial u}$, using the chain rule.
 2. Calculate the double integral of $z(x, y) = x + y$ over the region $R$, where $R$ is the square defined by $0 \leq x \leq 2$ and $0 \leq y \leq 1$.
 
----
 
 ### Solution:
 
@@ -116,7 +118,6 @@ $$
 \frac{\partial z}{\partial u} = 2u + v
 $$
 
----
 
 #### 2. **Multiple Integrals**:
 
@@ -158,16 +159,11 @@ $$
 \int_0^1 \int_0^2 (x + y) \, dx \, dy = 3
 $$
 
----
-
-### Final Answer:
-
-1. The partial derivative of $z$ with respect to $u$ is $\frac{\partial z}{\partial u} = 2u + v$.
-2. The value of the double integral is $3$.
-
-
 
 For more detailed problems and solutions, you can check out [Paul's Online Math Notes](https://tutorial.math.lamar.edu/) or [MIT OCW Multivariable Calculus](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/problem-set-5/).
+
+
+---
 
 
 ## Problem 3: Parametric Equations and Applications
@@ -189,7 +185,6 @@ where $x(t)$ and $y(t)$ represent the particle's position at time $t$.
 2. Determine the time $t$ when the particle’s velocity is zero.
 3. Find the length of the curve traced by the particle between $t = 0$ and $t = 2$.
 
----
 
 ### Solution:
 
@@ -264,10 +259,12 @@ Substitute the derivatives $v_x(t) = 6t - 2$ and $v_y(t) = 6t^2 - 1$:
 
 This integral can be solved either numerically or using appropriate substitution techniques to find the length of the curve.
 
----
 
 ### Applications:
 Parametric equations are widely used to describe curves and motions in physics, engineering, and computer graphics. For instance, they are used to model the trajectory of particles, motion along a path, and even design complex curves in computer-aided design (CAD) software.
+
+
+---
 
 
 ## Problem 4: Separable Differential Equation
@@ -401,6 +398,9 @@ y = \sqrt{2x + 2}
 $$
 
 
+---
+
+
 ## Problem 7: Linear and Non-Linear Differential Equations
 
 Consider the following two differential equations:
@@ -418,8 +418,6 @@ Consider the following two differential equations:
    $$
    \frac{dy}{dx} = y^2 - x
    $$
-
----
 
 ### Solution:
 
@@ -483,23 +481,13 @@ This is a **non-linear** differential equation and does not have a straightforwa
 
 While there is no simple analytic solution to present here, numerical solutions can be computed based on initial conditions.
 
----
-
-### Summary:
-
-- The linear differential equation is solved using an integrating factor, yielding a general solution $y = \frac{e^x}{2} + Ce^{-x}$.
-- The non-linear differential equation $\frac{dy}{dx} = y^2 - x$ presents more challenges for analytical methods and typically requires numerical approaches or qualitative analysis.
-
-
-## Solution of the Differential Equation Using Runge-Kutta Method
-
 We use the Runge-Kutta method to solve the differential equation:
 
 $$
 \frac{dy}{dx} = y^2 - x
 $$
 
-### Python Code:
+##### Python Code:
 
 ```{code-cell} python
 import numpy as np
@@ -545,3 +533,6 @@ plt.title("Solution of $dy/dx = y^2 - x$ using Runge-Kutta Method (Adjusted Doma
 plt.legend()
 plt.grid(True)
 plt.show()
+
+
+---
