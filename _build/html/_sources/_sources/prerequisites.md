@@ -192,10 +192,141 @@ Substitute the derivatives $v_x(t) = 6t - 2$ and $v_y(t) = 6t^2 - 1$:
   $$
   L = \int_0^2 \sqrt{(6t - 2)^2 + (6t^2 - 1)^2} \, dt
   $$
-  
+
 This integral can be solved either numerically or using appropriate substitution techniques to find the length of the curve.
 
 ---
 
 ### Applications:
 Parametric equations are widely used to describe curves and motions in physics, engineering, and computer graphics. For instance, they are used to model the trajectory of particles, motion along a path, and even design complex curves in computer-aided design (CAD) software.
+
+
+## Problem: Separable Differential Equation
+
+Solve the following first-order separable ODE:
+
+$$
+\frac{dy}{dx} = x^2 + x
+$$
+
+with the initial condition $y(1) = 3$.
+
+### Solution:
+
+To solve, integrate both sides with respect to $x$:
+
+$$
+y = \int (x^2 + x) \, dx = \frac{x^3}{3} + \frac{x^2}{2} + C
+$$
+
+Using the initial condition $y(1) = 3$, substitute $x = 1$ and $y = 3$:
+
+$$
+3 = \frac{1^3}{3} + \frac{1^2}{2} + C \quad \Rightarrow \quad 3 = \frac{1}{3} + \frac{1}{2} + C
+$$
+
+Solving for $C$, we get $C = \frac{15}{6}$, so the solution is:
+
+$$
+y = \frac{x^3}{3} + \frac{x^2}{2} + \frac{15}{6}
+$$
+
+---
+
+## Problem: Exponential Growth
+
+Solve the differential equation:
+
+$$
+\frac{dy}{dx} = e^x + x
+$$
+
+with the initial condition $y(0) = 10$.
+
+### Solution:
+
+To solve, integrate both sides with respect to $x$:
+
+$$
+y = \int (e^x + x) \, dx = e^x + \frac{x^2}{2} + C
+$$
+
+Using the initial condition $y(0) = 10$:
+
+$$
+10 = e^0 + \frac{0^2}{2} + C \quad \Rightarrow \quad 10 = 1 + C
+$$
+
+Thus, $C = 9$, and the solution is:
+
+$$
+y = e^x + \frac{x^2}{2} + 9
+$$
+
+---
+
+## Problem 3: Separable Differential Equation
+
+Solve the differential equation:
+
+$$
+\frac{dy}{dx} = \frac{1}{y}
+$$
+
+with the initial condition $y(1) = 2$.
+
+### Solution:
+
+This equation is separable, so we can rewrite it as:
+
+$$
+y \, dy = dx
+$$
+
+Next, integrate both sides:
+
+$$
+\int y \, dy = \int dx
+$$
+
+This gives:
+
+$$
+\frac{y^2}{2} = x + C
+$$
+
+Now, multiply by 2 to simplify:
+
+$$
+y^2 = 2x + 2C
+$$
+
+Using the initial condition $y(1) = 2$, substitute $x = 1$ and $y = 2$:
+
+$$
+2^2 = 2(1) + 2C \quad \Rightarrow \quad 4 = 2 + 2C
+$$
+
+Solving for $C$, we get:
+
+$$
+C = 1
+$$
+
+Thus, the solution is:
+
+$$
+y^2 = 2x + 2
+$$
+
+Taking the square root of both sides:
+
+$$
+y = \pm \sqrt{2x + 2}
+$$
+
+For the positive root, the solution is:
+
+$$
+y = \sqrt{2x + 2}
+$$
