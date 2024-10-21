@@ -117,6 +117,3 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 - **Munson, Bruce R., Donald F. Young, Theodore H. Okiishi, and Wade W. Huebsch.** Fundamentals of Fluid Mechanics. Wiley, 2012.
 - **Shames, Irving H.** Mechanics of Fluids. McGraw-Hill, 2003.
 - **Fox, Robert W., Alan T. McDonald, and Philip J. Pritchard.** Introduction to Fluid Mechanics. Wiley, 2011.
-
-
-```{bibliography}
