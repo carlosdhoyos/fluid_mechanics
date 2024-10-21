@@ -421,6 +421,17 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solution:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-parametric-equations-and-applications">Problem: Parametric Equations and Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Problem Statement:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-and-acceleration-vectors">1. Velocity and Acceleration Vectors:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-when-the-particle-s-velocity-is-zero">2. Time When the Particle’s Velocity is Zero:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-the-curve">3. Length of the Curve:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications:</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -555,6 +566,105 @@ Once you have the function <span class="math notranslate nohighlight">\(z(x, y)\
 <p>For more detailed problems and solutions, you can check out <a class="reference external" href="https://tutorial.math.lamar.edu/">Paul’s Online Math Notes</a> or <a class="reference external" href="https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/problem-set-5/">MIT OCW Multivariable Calculus</a>.</p>
 </section>
 </section>
+<section id="problem-parametric-equations-and-applications">
+<h2>Problem: Parametric Equations and Applications<a class="headerlink" href="#problem-parametric-equations-and-applications" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>Problem Statement:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>A particle is moving along a curve defined by the following parametric equations:</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) = 3t^2 - 2t
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+y(t) = 2t^3 - t
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(y(t)\)</span> represent the particle’s position at time <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Find the velocity and acceleration vectors of the particle at time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p>Determine the time <span class="math notranslate nohighlight">\(t\)</span> when the particle’s velocity is zero.</p></li>
+<li><p>Find the length of the curve traced by the particle between <span class="math notranslate nohighlight">\(t = 0\)</span> and <span class="math notranslate nohighlight">\(t = 2\)</span>.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id4">
+<h3>Solution:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<section id="velocity-and-acceleration-vectors">
+<h4>1. Velocity and Acceleration Vectors:<a class="headerlink" href="#velocity-and-acceleration-vectors" title="Link to this heading">#</a></h4>
+<p>To find the velocity and acceleration, we differentiate the parametric equations with respect to time <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<ul>
+<li><p><strong>Velocity</strong> is the derivative of position with respect to time:</p>
+<div class="math notranslate nohighlight">
+\[
+  v_x(t) = \frac{dx}{dt} = 6t - 2
+  \]</div>
+<div class="math notranslate nohighlight">
+\[
+  v_y(t) = \frac{dy}{dt} = 6t^2 - 1
+  \]</div>
+<p>Therefore, the velocity vector at time <span class="math notranslate nohighlight">\(t\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+  \mathbf{v}(t) = (6t - 2) \hat{i} + (6t^2 - 1) \hat{j}
+  \]</div>
+</li>
+<li><p><strong>Acceleration</strong> is the derivative of velocity with respect to time:</p>
+<div class="math notranslate nohighlight">
+\[
+  a_x(t) = \frac{d^2x}{dt^2} = 6
+  \]</div>
+<div class="math notranslate nohighlight">
+\[
+  a_y(t) = \frac{d^2y}{dt^2} = 12t
+  \]</div>
+<p>Therefore, the acceleration vector is:</p>
+<div class="math notranslate nohighlight">
+\[
+  \mathbf{a}(t) = 6 \hat{i} + 12t \hat{j}
+  \]</div>
+</li>
+</ul>
+</section>
+<section id="time-when-the-particle-s-velocity-is-zero">
+<h4>2. Time When the Particle’s Velocity is Zero:<a class="headerlink" href="#time-when-the-particle-s-velocity-is-zero" title="Link to this heading">#</a></h4>
+<p>For the velocity to be zero, both components of the velocity vector must be zero simultaneously:</p>
+<div class="math notranslate nohighlight">
+\[
+  6t - 2 = 0 \quad \text{and} \quad 6t^2 - 1 = 0
+  \]</div>
+<p>From <span class="math notranslate nohighlight">\(6t - 2 = 0\)</span>, solving for <span class="math notranslate nohighlight">\(t\)</span> gives:</p>
+<div class="math notranslate nohighlight">
+\[
+  t = \frac{1}{3}
+  \]</div>
+<p>Substituting <span class="math notranslate nohighlight">\(t = \frac{1}{3}\)</span> into the second equation:</p>
+<div class="math notranslate nohighlight">
+\[
+  6 \left(\frac{1}{3}\right)^2 - 1 = \frac{2}{3} - 1 = -\frac{1}{3} \neq 0
+  \]</div>
+<p>Thus, there is no time <span class="math notranslate nohighlight">\(t\)</span> where the particle’s velocity is exactly zero in both the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions.</p>
+</section>
+<section id="length-of-the-curve">
+<h4>3. Length of the Curve:<a class="headerlink" href="#length-of-the-curve" title="Link to this heading">#</a></h4>
+<p>The length of the curve traced by the particle from <span class="math notranslate nohighlight">\(t = 0\)</span> to <span class="math notranslate nohighlight">\(t = 2\)</span> is given by the formula:</p>
+<div class="math notranslate nohighlight">
+\[
+  L = \int_0^2 \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} \, dt
+  \]</div>
+<p>Substitute the derivatives <span class="math notranslate nohighlight">\(v_x(t) = 6t - 2\)</span> and <span class="math notranslate nohighlight">\(v_y(t) = 6t^2 - 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+  L = \int_0^2 \sqrt{(6t - 2)^2 + (6t^2 - 1)^2} \, dt
+  \]</div>
+<p>This integral can be solved either numerically or using appropriate substitution techniques to find the length of the curve.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="applications">
+<h3>Applications:<a class="headerlink" href="#applications" title="Link to this heading">#</a></h3>
+<p>Parametric equations are widely used to describe curves and motions in physics, engineering, and computer graphics. For instance, they are used to model the trajectory of particles, motion along a path, and even design complex curves in computer-aided design (CAD) software.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -613,6 +723,17 @@ Once you have the function <span class="math notranslate nohighlight">\(z(x, y)\
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-partial-derivatives-chain-rule-and-multiple-integrals">Problem: Partial Derivatives, Chain Rule, and Multiple Integrals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Problem Statement:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solution:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-parametric-equations-and-applications">Problem: Parametric Equations and Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Problem Statement:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-and-acceleration-vectors">1. Velocity and Acceleration Vectors:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-when-the-particle-s-velocity-is-zero">2. Time When the Particle’s Velocity is Zero:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-the-curve">3. Length of the Curve:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications:</a></li>
 </ul>
 </li>
 </ul>
