@@ -449,6 +449,19 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Solution:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7-linear-and-non-linear-differential-equations">Problem 7: Linear and Non-Linear Differential Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-differential-equation">1. <strong>Linear Differential Equation</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-differential-equation">2. <strong>Non-Linear Differential Equation</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-the-differential-equation-using-runge-kutta-method">Solution of the Differential Equation Using Runge-Kutta Method</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code:</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -851,6 +864,99 @@ y = \sqrt{2x + 2}
 \]</div>
 </section>
 </section>
+<section id="problem-7-linear-and-non-linear-differential-equations">
+<h2>Problem 7: Linear and Non-Linear Differential Equations<a class="headerlink" href="#problem-7-linear-and-non-linear-differential-equations" title="Link to this heading">#</a></h2>
+<p>Consider the following two differential equations:</p>
+<ol class="arabic">
+<li><p><strong>Linear Differential Equation</strong>:<br />
+Solve the linear first-order differential equation:</p>
+<div class="math notranslate nohighlight">
+\[
+   \frac{dy}{dx} + y = e^x
+   \]</div>
+</li>
+<li><p><strong>Non-Linear Differential Equation</strong>:<br />
+Solve the non-linear differential equation:</p>
+<div class="math notranslate nohighlight">
+\[
+   \frac{dy}{dx} = y^2 - x
+   \]</div>
+</li>
+</ol>
+<hr class="docutils" />
+<section id="id8">
+<h3>Solution:<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<section id="linear-differential-equation">
+<h4>1. <strong>Linear Differential Equation</strong><a class="headerlink" href="#linear-differential-equation" title="Link to this heading">#</a></h4>
+<p>The equation is of the form:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} + P(x) y = Q(x)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(P(x) = 1\)</span> and <span class="math notranslate nohighlight">\(Q(x) = e^x\)</span>.</p>
+<p><strong>Step 1</strong>: Find the integrating factor <span class="math notranslate nohighlight">\(\mu(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mu(x) = e^{\int P(x) \, dx} = e^{\int 1 \, dx} = e^x
+\]</div>
+<p><strong>Step 2</strong>: Multiply both sides of the differential equation by the integrating factor <span class="math notranslate nohighlight">\(\mu(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+e^x \frac{dy}{dx} + e^x y = e^{2x}
+\]</div>
+<p><strong>Step 3</strong>: The left-hand side is the derivative of <span class="math notranslate nohighlight">\(e^x y\)</span>, so we can rewrite the equation as:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{dx} \left( e^x y \right) = e^{2x}
+\]</div>
+<p><strong>Step 4</strong>: Integrate both sides:</p>
+<div class="math notranslate nohighlight">
+\[
+e^x y = \int e^{2x} \, dx = \frac{e^{2x}}{2} + C
+\]</div>
+<p><strong>Step 5</strong>: Solve for <span class="math notranslate nohighlight">\(y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y = \frac{e^x}{2} + Ce^{-x}
+\]</div>
+<p>Thus, the general solution is:</p>
+<div class="math notranslate nohighlight">
+\[
+y = \frac{e^x}{2} + Ce^{-x}
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="non-linear-differential-equation">
+<h4>2. <strong>Non-Linear Differential Equation</strong><a class="headerlink" href="#non-linear-differential-equation" title="Link to this heading">#</a></h4>
+<p>The given equation is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} = y^2 - x
+\]</div>
+<p>This is a <strong>non-linear</strong> differential equation and does not have a straightforward analytical solution. However, it can be solved using numerical methods, such as <strong>Euler’s method</strong>, or qualitative techniques like <strong>direction fields</strong> to analyze the behavior of the solutions.</p>
+<p>While there is no simple analytic solution to present here, numerical solutions can be computed based on initial conditions.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="summary">
+<h3>Summary:<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The linear differential equation is solved using an integrating factor, yielding a general solution <span class="math notranslate nohighlight">\(y = \frac{e^x}{2} + Ce^{-x}\)</span>.</p></li>
+<li><p>The non-linear differential equation <span class="math notranslate nohighlight">\(\frac{dy}{dx} = y^2 - x\)</span> presents more challenges for analytical methods and typically requires numerical approaches or qualitative analysis.</p></li>
+</ul>
+</section>
+</section>
+<section id="solution-of-the-differential-equation-using-runge-kutta-method">
+<h2>Solution of the Differential Equation Using Runge-Kutta Method<a class="headerlink" href="#solution-of-the-differential-equation-using-runge-kutta-method" title="Link to this heading">#</a></h2>
+<p>We use the Runge-Kutta method to solve the differential equation:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} = y^2 - x
+\]</div>
+<section id="python-code">
+<h3>Python Code:<a class="headerlink" href="#python-code" title="Link to this heading">#</a></h3>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -955,6 +1061,19 @@ y = \sqrt{2x + 2}
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6-separable-differential-equation">Problem 6: Separable Differential Equation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Solution:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7-linear-and-non-linear-differential-equations">Problem 7: Linear and Non-Linear Differential Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-differential-equation">1. <strong>Linear Differential Equation</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-differential-equation">2. <strong>Non-Linear Differential Equation</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-the-differential-equation-using-runge-kutta-method">Solution of the Differential Equation Using Runge-Kutta Method</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code:</a></li>
 </ul>
 </li>
 </ul>

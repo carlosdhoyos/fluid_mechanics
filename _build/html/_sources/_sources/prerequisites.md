@@ -31,7 +31,7 @@
 
 ---
 
-## Problem: Understanding Derivatives and Integrals
+## Problem 1: Understanding Derivatives and Integrals
 
 Given a function  $f(x)$, find the derivative and the integral of $f(x)$ over a given interval.
 
@@ -68,40 +68,109 @@ Let $f(x) = x^3 - 3x^2 + 2x$.
 For more problems and detailed solutions, you can visit the [MIT OCW problem set](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/).
 
 
-## Problem: Partial Derivatives, Chain Rule, and Multiple Integrals
+## Problem 2: Partial Derivatives, Chain Rule, and Multiple Integrals
 
 ### Problem Statement:
 Let $z = f(x, y)$ where $x = u^2 + 3v$ and $y = uv$.
 
 1. Find the partial derivative of $z$ with respect to $u$, denoted as $\frac{\partial z}{\partial u}$, using the chain rule.
-2. Calculate the double integral of $z(x, y)$ over a given region.
+2. Calculate the double integral of $z(x, y) = x + y$ over the region $R$, where $R$ is the square defined by $0 \leq x \leq 2$ and $0 \leq y \leq 1$.
 
-  
+---
+
 ### Solution:
 
-1. **Applying the Chain Rule**:
-   To find $\frac{\partial z}{\partial u}$, we use the multivariable chain rule. The total derivative of $z$ with respect to $u$ is given by:
+#### 1. **Applying the Chain Rule**:
 
-   $$
-   \frac{\partial z}{\partial u} = \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial u} + \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial u}
-   $$
+Let $f(x, y) = x + y$.
 
-   You would substitute the expressions for $x = u^2 + 3v$ and $y = uv$ and apply the derivatives accordingly.
+To find $\frac{\partial z}{\partial u}$, use the chain rule:
 
-2. **Multiple Integrals**:
-   Once you have the function $z(x, y)$, you can compute a double integral over a region $R$:
+$$
+\frac{\partial z}{\partial u} = \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial u} + \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial u}
+$$
 
-   $$
-   \int\int_R z(x, y) \, dx \, dy
-   $$
+For the function $f(x, y) = x + y$:
 
-   This requires setting up the appropriate limits of integration based on the region $R$.
+$$
+\frac{\partial f}{\partial x} = 1, \quad \frac{\partial f}{\partial y} = 1
+$$
+
+Next, calculate $\frac{\partial x}{\partial u}$ and $\frac{\partial y}{\partial u}$:
+
+Given $x = u^2 + 3v$ and $y = uv$:
+
+$$
+\frac{\partial x}{\partial u} = 2u, \quad \frac{\partial y}{\partial u} = v
+$$
+
+Now substitute these into the chain rule equation:
+
+$$
+\frac{\partial z}{\partial u} = 1 \cdot 2u + 1 \cdot v = 2u + v
+$$
+
+Thus, the partial derivative of $z$ with respect to $u$ is:
+
+$$
+\frac{\partial z}{\partial u} = 2u + v
+$$
+
+---
+
+#### 2. **Multiple Integrals**:
+
+Now, let's compute the double integral of $z(x, y) = x + y$ over the region $R$, defined by $0 \leq x \leq 2$ and $0 \leq y \leq 1$.
+
+The integral to solve is:
+
+$$
+\int_0^1 \int_0^2 (x + y) \, dx \, dy
+$$
+
+First, integrate with respect to $x$:
+
+$$
+\int_0^2 (x + y) \, dx = \int_0^2 x \, dx + \int_0^2 y \, dx = \left[ \frac{x^2}{2} \right]_0^2 + \left[ yx \right]_0^2
+$$
+
+Evaluating the integrals:
+
+$$
+\frac{2^2}{2} - 0 + y(2 - 0) = 2 + 2y
+$$
+
+Now, integrate with respect to $y$:
+
+$$
+\int_0^1 (2 + 2y) \, dy = \int_0^1 2 \, dy + \int_0^1 2y \, dy = \left[ 2y \right]_0^1 + \left[ y^2 \right]_0^1
+$$
+
+Evaluating the integrals:
+
+$$
+2(1 - 0) + (1^2 - 0^2) = 2 + 1 = 3
+$$
+
+Thus, the value of the double integral is:
+
+$$
+\int_0^1 \int_0^2 (x + y) \, dx \, dy = 3
+$$
+
+---
+
+### Final Answer:
+
+1. The partial derivative of $z$ with respect to $u$ is $\frac{\partial z}{\partial u} = 2u + v$.
+2. The value of the double integral is $3$.
+
 
 
 For more detailed problems and solutions, you can check out [Paul's Online Math Notes](https://tutorial.math.lamar.edu/) or [MIT OCW Multivariable Calculus](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/problem-set-5/).
 
 
-## Problem: Parametric Equations and Applications
+## Problem 3: Parametric Equations and Applications
 
 ### Problem Statement:
 A particle is moving along a curve defined by the following parametric equations:
@@ -201,7 +270,7 @@ This integral can be solved either numerically or using appropriate substitution
 Parametric equations are widely used to describe curves and motions in physics, engineering, and computer graphics. For instance, they are used to model the trajectory of particles, motion along a path, and even design complex curves in computer-aided design (CAD) software.
 
 
-## Problem: Separable Differential Equation
+## Problem 4: Separable Differential Equation
 
 Solve the following first-order separable ODE:
 
@@ -233,7 +302,7 @@ $$
 
 ---
 
-## Problem: Exponential Growth
+## Problem 5: Exponential Growth
 
 Solve the differential equation:
 
@@ -265,7 +334,7 @@ $$
 
 ---
 
-## Problem 3: Separable Differential Equation
+## Problem 6: Separable Differential Equation
 
 Solve the differential equation:
 

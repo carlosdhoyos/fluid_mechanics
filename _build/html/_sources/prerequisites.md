@@ -399,3 +399,149 @@ For the positive root, the solution is:
 $$
 y = \sqrt{2x + 2}
 $$
+
+
+## Problem 7: Linear and Non-Linear Differential Equations
+
+Consider the following two differential equations:
+
+1. **Linear Differential Equation**:  
+   Solve the linear first-order differential equation:
+
+   $$
+   \frac{dy}{dx} + y = e^x
+   $$
+
+2. **Non-Linear Differential Equation**:  
+   Solve the non-linear differential equation:
+
+   $$
+   \frac{dy}{dx} = y^2 - x
+   $$
+
+---
+
+### Solution:
+
+#### 1. **Linear Differential Equation**
+
+The equation is of the form:
+
+$$
+\frac{dy}{dx} + P(x) y = Q(x)
+$$
+
+where $P(x) = 1$ and $Q(x) = e^x$.
+
+**Step 1**: Find the integrating factor $\mu(x)$:
+
+$$
+\mu(x) = e^{\int P(x) \, dx} = e^{\int 1 \, dx} = e^x
+$$
+
+**Step 2**: Multiply both sides of the differential equation by the integrating factor $\mu(x)$:
+
+$$
+e^x \frac{dy}{dx} + e^x y = e^{2x}
+$$
+
+**Step 3**: The left-hand side is the derivative of $e^x y$, so we can rewrite the equation as:
+
+$$
+\frac{d}{dx} \left( e^x y \right) = e^{2x}
+$$
+
+**Step 4**: Integrate both sides:
+
+$$
+e^x y = \int e^{2x} \, dx = \frac{e^{2x}}{2} + C
+$$
+
+**Step 5**: Solve for $y$:
+
+$$
+y = \frac{e^x}{2} + Ce^{-x}
+$$
+
+Thus, the general solution is:
+
+$$
+y = \frac{e^x}{2} + Ce^{-x}
+$$
+
+---
+
+#### 2. **Non-Linear Differential Equation**
+
+The given equation is:
+
+$$
+\frac{dy}{dx} = y^2 - x
+$$
+
+This is a **non-linear** differential equation and does not have a straightforward analytical solution. However, it can be solved using numerical methods, such as **Euler's method**, or qualitative techniques like **direction fields** to analyze the behavior of the solutions. 
+
+While there is no simple analytic solution to present here, numerical solutions can be computed based on initial conditions.
+
+---
+
+### Summary:
+
+- The linear differential equation is solved using an integrating factor, yielding a general solution $y = \frac{e^x}{2} + Ce^{-x}$.
+- The non-linear differential equation $\frac{dy}{dx} = y^2 - x$ presents more challenges for analytical methods and typically requires numerical approaches or qualitative analysis.
+
+
+## Solution of the Differential Equation Using Runge-Kutta Method
+
+We use the Runge-Kutta method to solve the differential equation:
+
+$$
+\frac{dy}{dx} = y^2 - x
+$$
+
+### Python Code:
+
+```{code-cell} python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Function representing the ODE dy/dx = y^2 - x
+def dydx(x, y):
+    return y**2 - x
+
+# Fourth-order Runge-Kutta method for numerical solution of ODE
+def runge_kutta_method(dydx, x0, y0, x_end, h):
+    x_values = np.arange(x0, x_end + h, h)
+    y_values = np.zeros(len(x_values))
+    y_values[0] = y0
+    
+    for i in range(1, len(x_values)):
+        x = x_values[i-1]
+        y = y_values[i-1]
+        
+        k1 = h * dydx(x, y)
+        k2 = h * dydx(x + h/2, y + k1/2)
+        k3 = h * dydx(x + h/2, y + k2/2)
+        k4 = h * dydx(x + h, y + k3)
+        
+        y_values[i] = y + (k1 + 2*k2 + 2*k3 + k4) / 6
+    
+    return x_values, y_values
+
+# Adjust the domain to avoid large values causing overflow
+x0 = 0  # Initial x
+y0 = 1  # Initial y
+x_end_new = 1  # Limit the domain to avoid instability
+h = 0.01  # Step size
+
+# Solve the ODE using Runge-Kutta method with a smaller domain
+x_values_rk_new, y_values_rk_new = runge_kutta_method(dydx, x0, y0, x_end_new, h)
+
+# Plot the solution with the new domain
+plt.plot(x_values_rk_new, y_values_rk_new, label="Numerical Solution (Runge-Kutta Method)", color="orange")
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title("Solution of $dy/dx = y^2 - x$ using Runge-Kutta Method (Adjusted Domain)")
+plt.legend()
+plt.grid(True)
+plt.show()
