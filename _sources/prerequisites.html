@@ -423,7 +423,6 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-integrals">2. <strong>Multiple Integrals</strong>:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-answer">Final Answer:</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3-parametric-equations-and-applications">Problem 3: Parametric Equations and Applications</a><ul class="nav section-nav flex-column">
@@ -452,14 +451,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7-linear-and-non-linear-differential-equations">Problem 7: Linear and Non-Linear Differential Equations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Solution:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-differential-equation">1. <strong>Linear Differential Equation</strong></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-differential-equation">2. <strong>Non-Linear Differential Equation</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-differential-equation">2. <strong>Non-Linear Differential Equation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-the-differential-equation-using-runge-kutta-method">Solution of the Differential Equation Using Runge-Kutta Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code:</a></li>
 </ul>
 </li>
 </ul>
@@ -563,6 +560,7 @@ The indefinite integral is:</p>
 <p>For more problems and detailed solutions, you can visit the <a class="reference external" href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/">MIT OCW problem set</a>.</p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="problem-2-partial-derivatives-chain-rule-and-multiple-integrals">
 <h2>Problem 2: Partial Derivatives, Chain Rule, and Multiple Integrals<a class="headerlink" href="#problem-2-partial-derivatives-chain-rule-and-multiple-integrals" title="Link to this heading">#</a></h2>
 <section id="id1">
@@ -573,7 +571,6 @@ The indefinite integral is:</p>
 <li><p>Calculate the double integral of <span class="math notranslate nohighlight">\(z(x, y) = x + y\)</span> over the region <span class="math notranslate nohighlight">\(R\)</span>, where <span class="math notranslate nohighlight">\(R\)</span> is the square defined by <span class="math notranslate nohighlight">\(0 \leq x \leq 2\)</span> and <span class="math notranslate nohighlight">\(0 \leq y \leq 1\)</span>.</p></li>
 </ol>
 </section>
-<hr class="docutils" />
 <section id="id2">
 <h3>Solution:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <section id="applying-the-chain-rule">
@@ -606,7 +603,6 @@ The indefinite integral is:</p>
 \frac{\partial z}{\partial u} = 2u + v
 \]</div>
 </section>
-<hr class="docutils" />
 <section id="multiple-integrals">
 <h4>2. <strong>Multiple Integrals</strong>:<a class="headerlink" href="#multiple-integrals" title="Link to this heading">#</a></h4>
 <p>Now, let’s compute the double integral of <span class="math notranslate nohighlight">\(z(x, y) = x + y\)</span> over the region <span class="math notranslate nohighlight">\(R\)</span>, defined by <span class="math notranslate nohighlight">\(0 \leq x \leq 2\)</span> and <span class="math notranslate nohighlight">\(0 \leq y \leq 1\)</span>.</p>
@@ -640,18 +636,11 @@ The indefinite integral is:</p>
 \[
 \int_0^1 \int_0^2 (x + y) \, dx \, dy = 3
 \]</div>
-</section>
-</section>
-<hr class="docutils" />
-<section id="final-answer">
-<h3>Final Answer:<a class="headerlink" href="#final-answer" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>The partial derivative of <span class="math notranslate nohighlight">\(z\)</span> with respect to <span class="math notranslate nohighlight">\(u\)</span> is <span class="math notranslate nohighlight">\(\frac{\partial z}{\partial u} = 2u + v\)</span>.</p></li>
-<li><p>The value of the double integral is <span class="math notranslate nohighlight">\(3\)</span>.</p></li>
-</ol>
 <p>For more detailed problems and solutions, you can check out <a class="reference external" href="https://tutorial.math.lamar.edu/">Paul’s Online Math Notes</a> or <a class="reference external" href="https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/problem-set-5/">MIT OCW Multivariable Calculus</a>.</p>
 </section>
 </section>
+</section>
+<hr class="docutils" />
 <section id="problem-3-parametric-equations-and-applications">
 <h2>Problem 3: Parametric Equations and Applications<a class="headerlink" href="#problem-3-parametric-equations-and-applications" title="Link to this heading">#</a></h2>
 <section id="id3">
@@ -672,7 +661,6 @@ y(t) = 2t^3 - t
 <li><p>Find the length of the curve traced by the particle between <span class="math notranslate nohighlight">\(t = 0\)</span> and <span class="math notranslate nohighlight">\(t = 2\)</span>.</p></li>
 </ol>
 </section>
-<hr class="docutils" />
 <section id="id4">
 <h3>Solution:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <section id="velocity-and-acceleration-vectors">
@@ -745,12 +733,12 @@ y(t) = 2t^3 - t
 <p>This integral can be solved either numerically or using appropriate substitution techniques to find the length of the curve.</p>
 </section>
 </section>
-<hr class="docutils" />
 <section id="applications">
 <h3>Applications:<a class="headerlink" href="#applications" title="Link to this heading">#</a></h3>
 <p>Parametric equations are widely used to describe curves and motions in physics, engineering, and computer graphics. For instance, they are used to model the trajectory of particles, motion along a path, and even design complex curves in computer-aided design (CAD) software.</p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="problem-4-separable-differential-equation">
 <h2>Problem 4: Separable Differential Equation<a class="headerlink" href="#problem-4-separable-differential-equation" title="Link to this heading">#</a></h2>
 <p>Solve the following first-order separable ODE:</p>
@@ -864,6 +852,7 @@ y = \sqrt{2x + 2}
 \]</div>
 </section>
 </section>
+<hr class="docutils" />
 <section id="problem-7-linear-and-non-linear-differential-equations">
 <h2>Problem 7: Linear and Non-Linear Differential Equations<a class="headerlink" href="#problem-7-linear-and-non-linear-differential-equations" title="Link to this heading">#</a></h2>
 <p>Consider the following two differential equations:</p>
@@ -883,7 +872,6 @@ Solve the non-linear differential equation:</p>
    \]</div>
 </li>
 </ol>
-<hr class="docutils" />
 <section id="id8">
 <h3>Solution:<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
 <section id="linear-differential-equation">
@@ -935,26 +923,15 @@ y = \frac{e^x}{2} + Ce^{-x}
 \]</div>
 <p>This is a <strong>non-linear</strong> differential equation and does not have a straightforward analytical solution. However, it can be solved using numerical methods, such as <strong>Euler’s method</strong>, or qualitative techniques like <strong>direction fields</strong> to analyze the behavior of the solutions.</p>
 <p>While there is no simple analytic solution to present here, numerical solutions can be computed based on initial conditions.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="summary">
-<h3>Summary:<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>The linear differential equation is solved using an integrating factor, yielding a general solution <span class="math notranslate nohighlight">\(y = \frac{e^x}{2} + Ce^{-x}\)</span>.</p></li>
-<li><p>The non-linear differential equation <span class="math notranslate nohighlight">\(\frac{dy}{dx} = y^2 - x\)</span> presents more challenges for analytical methods and typically requires numerical approaches or qualitative analysis.</p></li>
-</ul>
-</section>
-</section>
-<section id="solution-of-the-differential-equation-using-runge-kutta-method">
-<h2>Solution of the Differential Equation Using Runge-Kutta Method<a class="headerlink" href="#solution-of-the-differential-equation-using-runge-kutta-method" title="Link to this heading">#</a></h2>
 <p>We use the Runge-Kutta method to solve the differential equation:</p>
 <div class="math notranslate nohighlight">
 \[
 \frac{dy}{dx} = y^2 - x
 \]</div>
 <section id="python-code">
-<h3>Python Code:<a class="headerlink" href="#python-code" title="Link to this heading">#</a></h3>
+<h5>Python Code:<a class="headerlink" href="#python-code" title="Link to this heading">#</a></h5>
+</section>
+</section>
 </section>
 </section>
 </section>
@@ -1019,7 +996,6 @@ y = \frac{e^x}{2} + Ce^{-x}
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-integrals">2. <strong>Multiple Integrals</strong>:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#final-answer">Final Answer:</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3-parametric-equations-and-applications">Problem 3: Parametric Equations and Applications</a><ul class="nav section-nav flex-column">
@@ -1048,14 +1024,12 @@ y = \frac{e^x}{2} + Ce^{-x}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7-linear-and-non-linear-differential-equations">Problem 7: Linear and Non-Linear Differential Equations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Solution:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-differential-equation">1. <strong>Linear Differential Equation</strong></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-differential-equation">2. <strong>Non-Linear Differential Equation</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-differential-equation">2. <strong>Non-Linear Differential Equation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary:</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-of-the-differential-equation-using-runge-kutta-method">Solution of the Differential Equation Using Runge-Kutta Method</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code:</a></li>
 </ul>
 </li>
 </ul>
