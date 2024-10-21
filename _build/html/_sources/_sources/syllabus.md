@@ -110,13 +110,10 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 - Laboratory Reports (in-lab experiments and computational): 20%
 - Midterm Exams (4): 80%
 
-## Material
+## Material:
 
 - **Cengel, Yunus A., and John M. Cimbala.** Fluid Mechanics: Fundamentals and Applications. McGraw-Hill, 2018. {cite}`cengel2018`
 - **White, Frank M.** Fluid Mechanics. McGraw-Hill, 2016. {cite}`white2016`
 - **Munson, Bruce R., Donald F. Young, Theodore H. Okiishi, and Wade W. Huebsch.** Fundamentals of Fluid Mechanics. Wiley, 2012. {cite}`munson2012`
 - **Shames, Irving H.** Mechanics of Fluids. McGraw-Hill, 2003. {cite}`shames2003`
 - **Fox, Robert W., Alan T. McDonald, and Philip J. Pritchard.** Introduction to Fluid Mechanics. Wiley, 2011. {cite}`fox2011`
-
-
-```{bibliography}
