@@ -1,10 +1,10 @@
 # Syllabus
 **Course Duration**: 16 Weeks
 
-## Course Description:
+## Course Description
 This course introduces the fundamental principles of fluid mechanics, focusing on the behavior of incompressible fluids. Topics include fluid statics, kinematics, and dynamics, with an emphasis on differential analysis, including the Navier-Stokes equations and Bernoulli's equation. Students will apply these principles to solve practical engineering problems.
 
-## Week-by-Week Outline:
+## Week-by-Week Outline
 
 ### **Weeks 1-2: Introduction to Fluid Mechanics and Properties**
 - Prerequisites: Math and physics
@@ -106,11 +106,11 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 
 ---
 
-## Assessments:
+## Assessments
 - Laboratory Reports (in-lab experiments and computational): 20%
 - Midterm Exams (4): 80%
 
-## Material:
+## Material
 
 - **Cengel, Yunus A., and John M. Cimbala.** Fluid Mechanics: Fundamentals and Applications. McGraw-Hill, 2018. {cite}`cengel2018`
 - **White, Frank M.** Fluid Mechanics. McGraw-Hill, 2016. {cite}`white2016`
