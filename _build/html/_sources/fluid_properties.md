@@ -316,34 +316,52 @@ This form is particularly useful in atmospheric science and fluid dynamics, wher
 The traditional molar form of the Ideal Gas Law is:
 
 $$
-PV = nRT
+PV = nR_uT
 $$
 
-where $n$ is the number of moles. To derive $P = \rho R T$ from this, we start with the fact that **density** is the mass per unit volume:
+where:
+- $P$ is the pressure,
+- $V$ is the volume,
+- $n$ is the number of moles,
+- $R_u$ is the **universal gas constant** ($8.314 \, \text{J/mol·K}$),
+- $T$ is the absolute temperature.
+
+To derive $P = \rho R T$, we start by expressing **density** $\rho$ as the mass per unit volume:
 
 $$
 \rho = \frac{m}{V}
 $$
 
-Also, the number of moles is related to the mass by $n = \frac{m}{M}$, where $M$ is the molar mass. Substituting this into the Ideal Gas Law $PV = nRT$:
+Also, the number of moles $n$ is related to the mass $m$ and the **molar mass** $M$ by:
 
 $$
-P = \frac{nRT}{V} = \frac{mRT}{MV}
+n = \frac{m}{M}
 $$
 
-Using $m/V = \rho$, this becomes:
+Substituting $n = \frac{m}{M}$ into the Ideal Gas Law:
+
+$$
+P = \frac{nR_uT}{V} = \frac{mR_uT}{MV}
+$$
+
+Since $\frac{m}{V} = \rho$, we now have:
 
 $$
 P = \rho \frac{R_u}{M} T
 $$
 
-Thus, we have:
+Thus, the equation becomes:
 
 $$
 P = \rho R T
 $$
 
 where $R = \frac{R_u}{M}$ is the **specific gas constant** for the particular gas being considered.
+
+### Summary
+- $R_u$ is the universal gas constant.
+- $R = \frac{R_u}{M}$ is the specific gas constant, which depends on the molar mass of the gas.
+
 
 ### Example Calculation
 
@@ -379,6 +397,41 @@ Like the molar form, this specific form of the Ideal Gas Law assumes:
 The Ideal Gas Law, in this form, is an approximation that assumes **ideal behavior**. For **real gases** under conditions of high pressure or low temperature, deviations occur, and more complex equations, such as the **Van der Waals equation**, must be used.
 
 
+```{code-cell} python
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Create a figure
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+
+# Define ranges for temperature (T) and pressure (P)
+T = np.linspace(300, 700, 50)  # Temperature from 300K to 700K
+P = np.linspace(1, 10, 50)     # Pressure from 1 to 10 atm
+T, P = np.meshgrid(T, P)
+
+# Equation for volume V, assume ideal gas law: PV = nRT
+R = 0.0821  # L·atm/mol·K (Ideal gas constant)
+n = 1       # Assume 1 mole of gas
+V = (n * R * T) / P  # Ideal gas law rearranged to V = nRT / P
+
+# Plot the surface in color
+surf = ax.plot_surface(P, T, V, cmap='plasma', edgecolor='none')
+
+# Color bar for the surface
+fig.colorbar(surf, ax=ax, shrink=0.5, aspect=5)
+
+# Label axes with units
+ax.set_xlabel('Pressure (P) [atm]', fontsize=12)
+ax.set_ylabel('Temperature (T) [K]', fontsize=12)
+ax.set_zlabel('Volume (V) [L]', fontsize=12)
+
+# Rotate the plot by 90 degrees
+ax.view_init(elev=40, azim=50)  # azim=90 rotates it by 90 degrees
+
+plt.show()
+```
 
 ## Types of Fluid Flow
 
