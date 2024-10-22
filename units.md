@@ -3,7 +3,7 @@
 | Physical Quantity      | Symbol  | SI Unit                        | CGS Unit                  | Imperial/US Unit                |
 |------------------------|---------|------------------------------- |---------------------------|---------------------------------|
 | Length                 | $L$     | meter (m)                      | centimeter (cm)            | foot (ft), inch (in)            |
-| Mass                   | $m$     | kilogram (kg)                  | gram (g)                   | pound (lb), ounce (oz)          |
+| Mass                   | $m$     | kilogram (kg)                  | gram (g)                   | slug, pound (lb), ounce (oz)    |
 | Time                   | $t$     | second (s)                     | second (s)                 | second (s), minute (min)        |
 | Speed                  | $v$     | meter per second (m/s)         | centimeter per second (cm/s) | foot per second (ft/s), miles per hour (mph) |
 | Acceleration           | $a$     | meter per second squared (m/s²) | centimeter per second squared (cm/s²) | foot per second squared (ft/s²) |
@@ -12,7 +12,7 @@
 | Work                   | $W$     | joule (J)                      | erg                        | foot-pound (ft·lb)              |
 | Power                  | $P$     | watt (W) = J/s                 | erg per second (erg/s)     | horsepower (hp)                 |
 | Pressure               | $p$     | pascal (Pa) = N/m²             | barye (Ba) = dyne/cm²      | pound per square inch (psi)     |
-| Density                | $\rho$  | kilogram per cubic meter (kg/m³) | gram per cubic centimeter (g/cm³) | pound per cubic foot (lb/ft³)   |
+| Density                | $\rho$  | kilogram per cubic meter (kg/m³) | gram per cubic centimeter (g/cm³) | slug per cubic foot (slug/ft³), pound per cubic foot (lb/ft³) |
 | Volume                 | $V$     | cubic meter (m³)               | cubic centimeter (cm³)     | cubic foot (ft³), gallon (gal)  |
 | Temperature            | $T$     | kelvin (K), Celsius (°C)        | Celsius (°C)               | Fahrenheit (°F)                 |
 | Electric Current       | $I$     | ampere (A)                     | statampere (statA)         | ampere (A)                      |
@@ -40,7 +40,6 @@
 
 ## Unit Conversion Table
 
-
 | Quantity              | SI Unit                       | Imperial/US Unit                       | CGS Unit                        |
 |-----------------------|-------------------------------|----------------------------------------|---------------------------------|
 | **Length**            | 1 meter (m)                   | 3.28084 feet (ft), 39.3701 inches (in) | 100 centimeters (cm)            |
@@ -50,6 +49,7 @@
 | **Length**            | 1 nanometer (nm)              | 3.93701e-8 inches (in)                 | 10 angstroms (Å)                |
 | **Mass**              | 1 kilogram (kg)               | 2.20462 pounds (lb)                    | 1000 grams (g)                  |
 | **Mass**              | 1 gram (g)                    | 0.035274 ounces (oz)                   | 1 gram (g)                      |
+| **Mass**              | 1 slug                        | 32.174 pounds (lb)                     | 14,593 grams (g)                |
 | **Mass**              | 1 milligram (mg)              | 0.0154324 grains (gr)                  | 0.001 grams (g)                 |
 | **Area**              | 1 square meter (m²)           | 10.7639 square feet (ft²)              | $10^4$ square centimeters (cm²) |
 | **Area**              | 1 hectare (ha)                | 2.47105 acres                          | $10^8$ square centimeters (cm²) |

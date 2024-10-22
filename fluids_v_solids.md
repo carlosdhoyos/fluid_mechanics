@@ -79,3 +79,10 @@ The continuum hypothesis allows us to use differential equations to describe flu
 The continuum hypothesis is a cornerstone of fluid mechanics, enabling the use of differential equations such as the Navier-Stokes and continuity equations. It provides a powerful framework for understanding fluid behavior in most engineering applications, simplifying the mathematical treatment of fluid flow and ensuring accurate modeling at the macroscopic scale.
 ```
 
+## What is Fluid Mechanics?
+
+Fluid mechanics is the branch of physics that studies the behavior of fluids (liquids, gases, and plasmas) and the forces acting on them. The subject is divided into two major categories:
+
+- **Fluid Statics**: The study of fluids at rest.
+- **Fluid Dynamics**: The study of fluids in motion.
+
