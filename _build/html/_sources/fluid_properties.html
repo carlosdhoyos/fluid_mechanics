@@ -392,7 +392,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptualization">Conceptualization</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-equation">Understanding the Equation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-to-the-molar-form">Relationship to the Molar Form</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Example Calculation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Calculation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-p-rho-r-t">Applications of <span class="math notranslate nohighlight">\(P = \rho R T\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-of-the-ideal-gas-law">Assumptions of the Ideal Gas Law</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
@@ -853,24 +854,37 @@ R = \frac{R_u}{M}
 <p>The traditional molar form of the Ideal Gas Law is:</p>
 <div class="math notranslate nohighlight">
 \[
-PV = nRT
+PV = nR_uT
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(n\)</span> is the number of moles. To derive <span class="math notranslate nohighlight">\(P = \rho R T\)</span> from this, we start with the fact that <strong>density</strong> is the mass per unit volume:</p>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> is the pressure,</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> is the volume,</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> is the number of moles,</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_u\)</span> is the <strong>universal gas constant</strong> (<span class="math notranslate nohighlight">\(8.314 \, \text{J/mol·K}\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is the absolute temperature.</p></li>
+</ul>
+<p>To derive <span class="math notranslate nohighlight">\(P = \rho R T\)</span>, we start by expressing <strong>density</strong> <span class="math notranslate nohighlight">\(\rho\)</span> as the mass per unit volume:</p>
 <div class="math notranslate nohighlight">
 \[
 \rho = \frac{m}{V}
 \]</div>
-<p>Also, the number of moles is related to the mass by <span class="math notranslate nohighlight">\(n = \frac{m}{M}\)</span>, where <span class="math notranslate nohighlight">\(M\)</span> is the molar mass. Substituting this into the Ideal Gas Law <span class="math notranslate nohighlight">\(PV = nRT\)</span>:</p>
+<p>Also, the number of moles <span class="math notranslate nohighlight">\(n\)</span> is related to the mass <span class="math notranslate nohighlight">\(m\)</span> and the <strong>molar mass</strong> <span class="math notranslate nohighlight">\(M\)</span> by:</p>
 <div class="math notranslate nohighlight">
 \[
-P = \frac{nRT}{V} = \frac{mRT}{MV}
+n = \frac{m}{M}
 \]</div>
-<p>Using <span class="math notranslate nohighlight">\(m/V = \rho\)</span>, this becomes:</p>
+<p>Substituting <span class="math notranslate nohighlight">\(n = \frac{m}{M}\)</span> into the Ideal Gas Law:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \frac{nR_uT}{V} = \frac{mR_uT}{MV}
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\frac{m}{V} = \rho\)</span>, we now have:</p>
 <div class="math notranslate nohighlight">
 \[
 P = \rho \frac{R_u}{M} T
 \]</div>
-<p>Thus, we have:</p>
+<p>Thus, the equation becomes:</p>
 <div class="math notranslate nohighlight">
 \[
 P = \rho R T
@@ -878,7 +892,14 @@ P = \rho R T
 <p>where <span class="math notranslate nohighlight">\(R = \frac{R_u}{M}\)</span> is the <strong>specific gas constant</strong> for the particular gas being considered.</p>
 </section>
 <section id="id1">
-<h3>Example Calculation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3>Summary<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_u\)</span> is the universal gas constant.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R = \frac{R_u}{M}\)</span> is the specific gas constant, which depends on the molar mass of the gas.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Example Calculation<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>Let’s calculate the pressure of dry air with a density of <span class="math notranslate nohighlight">\(1.2 \, \text{kg/m}^3\)</span> at a temperature of <span class="math notranslate nohighlight">\(300 \, \text{K}\)</span>, using the specific gas constant <span class="math notranslate nohighlight">\(R = 287 \, \text{J/kg·K}\)</span> for air.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1001,7 +1022,8 @@ P = 103,320 \, \text{Pa} = 103.3 \, \text{kPa}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptualization">Conceptualization</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-equation">Understanding the Equation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-to-the-molar-form">Relationship to the Molar Form</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Example Calculation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Calculation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-p-rho-r-t">Applications of <span class="math notranslate nohighlight">\(P = \rho R T\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-of-the-ideal-gas-law">Assumptions of the Ideal Gas Law</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
