@@ -76,7 +76,6 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 
 **Lab**: Application of the control volume approach to analyze jet propulsion and momentum conservation in pipe bends.
 
----
 
 ### **Weeks 13-14: Viscous Flow and Internal Flow in Pipes**
 - Laminar vs. turbulent flow: **Hagen-Poiseuille equation** for laminar flow.
@@ -85,7 +84,6 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 
 **Lab**: Measurement of head loss in pipe flow and analysis of friction losses.
 
----
 
 ### **Weeks 15-16: Dimensional Analysis, External Flow, and Turbomachinery**
 - **Dimensional Analysis**:
@@ -104,7 +102,6 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 
 **Lab**: Wind tunnel experiments measuring drag and lift on simple objects (cylinders, airfoils). Performance testing of pumps and analysis of cavitation effects.
 
----
 
 ## Assessments
 - Laboratory Reports (in-lab experiments and computational): 20%
