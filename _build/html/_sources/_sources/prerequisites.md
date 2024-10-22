@@ -555,3 +555,98 @@ plt.grid(True)
 plt.show()
 
 ```
+
+---
+
+## Problem 8: Boundary Value Problem with Initial Conditions
+
+Solve the following second-order boundary value problem (BVP):
+
+$$
+\frac{d^2 y}{dx^2} = -k^2 y
+$$
+
+with the boundary conditions:
+
+$$
+y(0) = 0 \quad \text{and} \quad y(L) = 0
+$$
+
+where $k$ is a constant and $L$ is the length of the domain.
+
+
+### Solution:
+
+#### Step 1: General Solution of the ODE
+
+The given equation is a second-order homogeneous linear differential equation with constant coefficients:
+
+$$
+\frac{d^2 y}{dx^2} = -k^2 y
+$$
+
+The characteristic equation for this differential equation is:
+
+$$
+r^2 + k^2 = 0
+$$
+
+This gives the roots:
+
+$$
+r = \pm ik
+$$
+
+So, the general solution for the differential equation is:
+
+$$
+y(x) = C_1 \sin(kx) + C_2 \cos(kx)
+$$
+
+#### Step 2: Apply the Boundary Conditions
+
+1. **First Boundary Condition: $y(0) = 0$**
+
+Substitute $x = 0$ into the general solution:
+
+$$
+y(0) = C_1 \sin(0) + C_2 \cos(0) = 0 \quad \Rightarrow \quad C_2 = 0
+$$
+
+Thus, the solution simplifies to:
+
+$$
+y(x) = C_1 \sin(kx)
+$$
+
+2. **Second Boundary Condition: $y(L) = 0$**
+
+Now, substitute $x = L$ into the simplified solution:
+
+$$
+y(L) = C_1 \sin(kL) = 0
+$$
+
+For non-trivial solutions (i.e., $C_1 \neq 0$), we require:
+
+$$
+\sin(kL) = 0
+$$
+
+This implies:
+
+$$
+kL = n\pi \quad \Rightarrow \quad k = \frac{n\pi}{L}
+$$
+
+where $n$ is an integer (i.e., $n = 1, 2, 3, \dots$).
+
+#### Step 3: Final Solution
+
+The final solution for the boundary value problem is:
+
+$$
+y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
+$$
+
+where $C_1$ is an arbitrary constant and $n$ is a positive integer.
