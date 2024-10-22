@@ -1,6 +1,6 @@
 ## Setting Up the Environment
 
-To replicate the exact Python environment I am using for this course, you can download the `environment.yml` file or view its contents below.
+To replicate the exact Python environment I am using for this course, you can replicate the `environment.yml` file or view its contents below.
 
 ### Environment File Contents
 
@@ -202,3 +202,13 @@ dependencies:
     - uc-micro-py==1.0.3
     - zipp==3.20.2
 ```
+
+
+To set up the environment, follow these steps:
+
+1. Create the `environment.yml` file from the content above.
+2. Run the following command in your terminal:
+
+   ```bash
+   conda env create -f environment.yml
+   ```

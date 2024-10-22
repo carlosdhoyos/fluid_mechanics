@@ -419,7 +419,7 @@ document.write(`
                   
   <section id="setting-up-the-environment">
 <h1>Setting Up the Environment<a class="headerlink" href="#setting-up-the-environment" title="Link to this heading">#</a></h1>
-<p>To replicate the exact Python environment I am using for this course, you can download the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file or view its contents below.</p>
+<p>To replicate the exact Python environment I am using for this course, you can replicate the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file or view its contents below.</p>
 <section id="environment-file-contents">
 <h2>Environment File Contents<a class="headerlink" href="#environment-file-contents" title="Link to this heading">#</a></h2>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jupyterbook_env</span>
@@ -620,6 +620,15 @@ document.write(`
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">zipp==3.20.2</span>
 </pre></div>
 </div>
+<p>To set up the environment, follow these steps:</p>
+<ol class="arabic">
+<li><p>Create the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file from the content above.</p></li>
+<li><p>Run the following command in your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
+</pre></div>
+</div>
+</li>
+</ol>
 </section>
 </section>
 
