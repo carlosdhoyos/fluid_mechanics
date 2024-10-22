@@ -44,3 +44,6 @@ html:
       show_navbar_depth: 2  # Controls the depth of the navbar, reducing clutter
       show_toc_level: 2  # Controls how many levels of headers are shown in the sidebar
       numbering: true  # Enable automatic numbering for chapters and sections
+
+launch_buttons:
+  thebe: true  # This enables Thebe for interactive code cells
