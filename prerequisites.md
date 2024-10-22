@@ -862,18 +862,18 @@ plt.show()
 
 ### Problem Statement
 
-1. **Line Integral**: Given the vector field \( \mathbf{F}(x, y) = (x^2, y^2) \), compute the line integral of \( \mathbf{F} \) along the curve \( C \), where \( C \) is the straight line path from point \( (0, 0) \) to point \( (1, 1) \).
+1. **Line Integral**: Given the vector field $\mathbf{F}(x, y) = (x^2, y^2)$, compute the line integral of $\mathbf{F} $ along the curve $C$, where $C$ is the straight line path from point $(0, 0)$ to point $(1, 1)$.
 
-2. **Surface Integral**: Compute the surface integral of the vector field \( \mathbf{F}(x, y, z) = (y, z, x) \) over the surface \( S \), where \( S \) is the portion of the plane \( z = 4 - x - y \) in the first octant.
+2. **Surface Integral**: Compute the surface integral of the vector field $\mathbf{F}(x, y, z) = (y, z, x)$ over the surface $S$, where $S$ is the portion of the plane $z = 4 - x - y$ in the first octant.
 
-3. **Volume Integral**: Compute the volume integral of the scalar field \( f(x, y, z) = x + y + z \) over the region \( V \), where \( V \) is the region bounded by the cylinder \( x^2 + y^2 = 1 \) and the planes \( z = 0 \) and \( z = 3 \).
+3. **Volume Integral**: Compute the volume integral of the scalar field $f(x, y, z) = x + y + z$ over the region $V$, where $V$ is the region bounded by the cylinder $x^2 + y^2 = 1$ and the planes $z = 0$ and $z = 3$.
 
 
 ### Solution
 
 #### 1. Line Integral
 
-We want to compute the line integral of the vector field \( \mathbf{F}(x, y) = (x^2, y^2) \) along the curve \( C \), a straight line from \( (0, 0) \) to \( (1, 1) \).
+We want to compute the line integral of the vector field $\mathbf{F}(x, y) = (x^2, y^2)$ along the curve $C$, a straight line from $(0, 0)$ to $(1, 1)$.
 
 The line integral is given by:
 
@@ -881,7 +881,7 @@ $$
 \int_C \mathbf{F} \cdot d\mathbf{r}
 $$
 
-Parameterizing the line as \( x(t) = t \) and \( y(t) = t \), the differential displacement vector is \( d\mathbf{r} = (1, 1) dt \).
+Parameterizing the line as $x(t) = t$ and $y(t) = t$, the differential displacement vector is $d\mathbf{r} = (1, 1) dt$.
 
 The integral becomes:
 
@@ -905,7 +905,7 @@ print(f"Line integral: {line_integral:.2f}")
 
 ```
 
-### Result: Line Integral
+##### Result: Line Integral
 
 The line integral of the vector field \( \mathbf{F}(x, y) = (x^2, y^2) \) along the curve is:
 
@@ -914,7 +914,7 @@ $$
 $$
 
 
-#### 1. Surface Integral
+#### 2. Surface Integral
 
 We are asked to compute the surface integral of the vector field \( \mathbf{F}(x, y, z) = (y, z, x) \) over the surface \( S \), which is the portion of the plane \( z = 4 - x - y \) in the first octant.
 
@@ -1001,9 +1001,85 @@ print(f"Surface integral: {surface_integral:.2f}")
 
 ##### Step 7: Final Answer
 
-After performing the numerical integration, the result of the surface integral is:
+After performing the integration, the result of the surface integral is:
 
 $$
 \iint_S \mathbf{F} \cdot \mathbf{n} \, dS = -\frac{32}{3}
 $$
 
+
+#### 3. Volume Integral
+
+We are asked to compute the volume integral of the scalar field $ f(x, y, z) = x + y + z $ over the region $ V $, which is bounded by the cylinder $ x^2 + y^2 = 1 $ and the planes $ z = 0 $ and $ z = 3 $.
+
+##### Step 1: Volume Integral Formula
+
+The volume integral of a scalar field $ f(x, y, z) $ over a volume $ V $ is given by:
+
+$$
+\iiint_V f(x, y, z) \, dV
+$$
+
+##### Step 2: Switch to Cylindrical Coordinates
+
+Since the region $ V $ is a cylinder, it's convenient to switch to cylindrical coordinates:
+
+- $ x = r \cos\theta $
+- $ y = r \sin\theta $
+- $ z = z $
+
+The volume element in cylindrical coordinates is:
+
+$$
+dV = r \, dr \, d\theta \, dz
+$$
+
+The scalar field $ f(x, y, z) = x + y + z $ becomes:
+
+$$
+f(r, \theta, z) = r \cos\theta + r \sin\theta + z
+$$
+
+##### Step 3: Set Up the Volume Integral
+
+The region $ V $ is bounded by:
+- $ r \in [0, 1] $ (the radius of the cylinder),
+- $ \theta \in [0, 2\pi] $ (the full revolution around the cylinder),
+- $ z \in [0, 3] $ (the height of the cylinder).
+
+The volume integral in cylindrical coordinates is:
+
+$$
+\iiint_V (r \cos\theta + r \sin\theta + z) \, r \, dr \, d\theta \, dz
+$$
+
+##### Step 4: Solve the Volume Integral Numerically
+
+We can use Python to compute the volume integral:
+
+```{code-cell} python
+from scipy.integrate import tplquad
+import numpy as np
+
+# Define the scalar field in cylindrical coordinates f(r, theta, z)
+def integrand_volume(z, r, theta):
+    return r * (r * np.cos(theta) + r * np.sin(theta) + z)
+
+# Limits for the volume integral
+r_min, r_max = 0, 1
+theta_min, theta_max = 0, 2 * np.pi
+z_min, z_max = 0, 3
+
+# Compute the volume integral
+volume_integral, _ = tplquad(integrand_volume, z_min, z_max, r_min, r_max, theta_min, theta_max)
+print(f"Volume integral: {volume_integral:.2f}")
+
+```
+
+##### Step 5: Final Answer
+
+After performing the numerical integration, the result of the volume integral is:
+
+$$
+\iiint_V (x + y + z) \, dV = 9\pi
+$$
