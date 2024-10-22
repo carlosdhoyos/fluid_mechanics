@@ -50,6 +50,15 @@ The **continuum hypothesis** is a crucial assumption in fluid mechanics, where f
 
 - **Fluid Element**: A differential-sized volume in the fluid, treated as a "point" where properties can be defined. The continuum hypothesis assumes that these properties vary continuously within and around the fluid element.
 
+## Application in Fluid Mechanics
+
+The continuum hypothesis allows us to use differential equations to describe fluid behavior, such as the **Navier-Stokes equations** and the **continuity equation**, which govern the flow and motion of fluids at a macroscopic level.
+
+## Importance of the Continuum Hypothesis
+
+- **Simplification**: By treating fluids as continuous, we can apply classical field theories and partial differential equations, greatly simplifying the analysis of fluid flow.
+- **Wide Applicability**: The continuum hypothesis is valid for most engineering applications involving liquids and gases under typical conditions, including aerodynamics, hydrodynamics, and heat transfer.
+
 ### Validity of the Hypothesis
 
 - The continuum hypothesis holds when the **mean free path** (the average distance a molecule travels between collisions) is much smaller than the characteristic length scale of the flow. This is quantified by the **Knudsen number** ($\text{Kn}$):
@@ -65,19 +74,8 @@ The **continuum hypothesis** is a crucial assumption in fluid mechanics, where f
   - For most practical fluid mechanics problems, $\text{Kn} \ll 1$, meaning the mean free path is much smaller than the system size, and the continuum assumption is valid.
   - In cases where $\text{Kn} \sim 1$ (e.g., rarefied gases), the continuum assumption breaks down, and molecular dynamics or **kinetic theory** becomes necessary.
 
-## Application in Fluid Mechanics
 
-The continuum hypothesis allows us to use differential equations to describe fluid behavior, such as the **Navier-Stokes equations** and the **continuity equation**, which govern the flow and motion of fluids at a macroscopic level.
-
-
-## Importance of the Continuum Hypothesis
-
-- **Simplification**: By treating fluids as continuous, we can apply classical field theories and partial differential equations, greatly simplifying the analysis of fluid flow.
-- **Wide Applicability**: The continuum hypothesis is valid for most engineering applications involving liquids and gases under typical conditions, including aerodynamics, hydrodynamics, and heat transfer.
-
-### Limitations
-
-- **Rarefied Gas Flows**: In cases where the mean free path is not negligible compared to the system size (e.g., high-altitude atmospheric flows or microfluidic systems), the continuum hypothesis may break down. In such cases, kinetic theory or molecular dynamics simulations are required.
-
-
+```{note}
 The continuum hypothesis is a cornerstone of fluid mechanics, enabling the use of differential equations such as the Navier-Stokes and continuity equations. It provides a powerful framework for understanding fluid behavior in most engineering applications, simplifying the mathematical treatment of fluid flow and ensuring accurate modeling at the macroscopic scale.
+```
+

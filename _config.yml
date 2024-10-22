@@ -40,8 +40,17 @@ html:
       use_sidenotes: true  # Other theme options
       show_download_button: true  # Allows download buttons (customizable)
 
+
+# Disable source file downloads but allow PDF download
+downloads:
+  pdf: true    # Enable PDF download
+  ipynb: false  # Disable notebook downloads
+  html: false  # Disable HTML downloads
+  rst: false  # Disable reStructuredText downloads
+  md: false   # Disable markdown downloads
+
 pdf:
-  use_pdf_download_button: true  # This enables PDF download button
+  use_pdf_download_button: true  # Enable PDF download button
 
 launch_buttons:
   thebe: false  # This enables Thebe for interactive code cells
