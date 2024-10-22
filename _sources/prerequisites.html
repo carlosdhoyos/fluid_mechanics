@@ -512,17 +512,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Problem Statement:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solution:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-theorem">1. Divergence Theorem:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-recap">Problem Recap</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-define-the-vector-field-and-grid">Step 1: Define the Vector Field and Grid</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-flux-through-each-face">Step 2: Calculate Flux through Each Face</a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-x-1">Flux through the Face at <span class="math notranslate nohighlight">\( x = 1 \)</span></a></li>
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-y-1">Flux through the Face at <span class="math notranslate nohighlight">\( y = 1 \)</span></a></li>
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-z-1">Flux through the Face at <span class="math notranslate nohighlight">\( z = 1 \)</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stokes-theorem">2. Stokes’ Theorem:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Python</a></li>
 </ul>
 </li>
 </ul>
@@ -1662,11 +1654,8 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 \iint_S \mathbf{F} \cdot d\mathbf{A} = 3
 \]</div>
 </section>
-<section id="problem-recap">
-<h4>Problem Recap<a class="headerlink" href="#problem-recap" title="Link to this heading">#</a></h4>
-<p>We want to calculate the flux of the vector field <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (x^2, y^2, z^2) \)</span> through the cube bounded by <span class="math notranslate nohighlight">\( 0 \leq x \leq 1 \)</span>, <span class="math notranslate nohighlight">\( 0 \leq y \leq 1 \)</span>, and <span class="math notranslate nohighlight">\( 0 \leq z \leq 1 \)</span>, focusing on the faces where <span class="math notranslate nohighlight">\( x = 1 \)</span>, <span class="math notranslate nohighlight">\( y = 1 \)</span>, and <span class="math notranslate nohighlight">\( z = 1 \)</span>. This calculation involves finding the flux on each of these faces by using the dot product between the vector field and the normal vectors to the surfaces.</p>
-<section id="step-1-define-the-vector-field-and-grid">
-<h5>Step 1: Define the Vector Field and Grid<a class="headerlink" href="#step-1-define-the-vector-field-and-grid" title="Link to this heading">#</a></h5>
+<section id="python">
+<h4>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h4>
 <p>We will create a grid of points in the cube and define the vector field <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (x^2, y^2, z^2) \)</span> on this grid.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1702,100 +1691,66 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 <img alt="../_images/4fffd4dc6d5e3baa3aa4aecb96bf07a24c08c48c2ae0b364b1ad46c884019ecf.png" src="../_images/4fffd4dc6d5e3baa3aa4aecb96bf07a24c08c48c2ae0b364b1ad46c884019ecf.png" />
 </div>
 </div>
+<p>Plot of the divergence field at <span class="math notranslate nohighlight">\(Z=0\)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute the divergence at each point in the cube</span>
-<span class="n">Divergence</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">X</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Y</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Z</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
 
-<span class="c1"># Create a 3D surface plot for the divergence</span>
+<span class="c1"># Create a grid of points in the cube</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># Increase the grid density for a smoother surface plot</span>
+<span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">)</span>
+
+<span class="c1"># Calculate the divergence at z = 0 plane</span>
+<span class="n">Divergence_z0</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">X</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Y</span>  <span class="c1"># Since z = 0, the divergence simplifies to 2x + 2y</span>
+
+<span class="c1"># Create a 3D surface plot for the divergence on z = 0 plane</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
 
-<span class="c1"># Plot the divergence field</span>
-<span class="n">divergence_plot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">Divergence</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">divergence_plot</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="c1"># Plot the surface</span>
+<span class="n">surface_plot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Divergence_z0</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add a color bar</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">surface_plot</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 
 <span class="c1"># Set labels</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X axis&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y axis&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Z axis&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Divergence $</span><span class="se">\\</span><span class="s1">nabla </span><span class="se">\\</span><span class="s1">cdot </span><span class="se">\\</span><span class="s1">mathbf</span><span class="si">{F}</span><span class="s1"> = 2x + 2y + 2z$ in the Cube&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Divergence&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Divergence $</span><span class="se">\\</span><span class="s1">nabla </span><span class="se">\\</span><span class="s1">cdot </span><span class="se">\\</span><span class="s1">mathbf</span><span class="si">{F}</span><span class="s1"> = 2x + 2y$ on the $z = 0$ plane&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/e6a55b5abce9c49c45f2f6276680a04624fdbcfb42858476d0777eded0e93d40.png" src="../_images/e6a55b5abce9c49c45f2f6276680a04624fdbcfb42858476d0777eded0e93d40.png" />
+<img alt="../_images/b5edefacd9b4b1ff5e7e5b7976a56fe1e7fdf44aa419f5a9e3b69575075452d2.png" src="../_images/b5edefacd9b4b1ff5e7e5b7976a56fe1e7fdf44aa419f5a9e3b69575075452d2.png" />
 </div>
 </div>
-</section>
-<section id="step-2-calculate-flux-through-each-face">
-<h5>Step 2: Calculate Flux through Each Face<a class="headerlink" href="#step-2-calculate-flux-through-each-face" title="Link to this heading">#</a></h5>
-<p>The flux through a surface is computed using:</p>
-<div class="math notranslate nohighlight">
-\[
-\text{Flux} = \iint_S \mathbf{F} \cdot \mathbf{n} \, dA
-\]</div>
-<p>where <span class="math notranslate nohighlight">\( \mathbf{n} \)</span> is the normal vector to the surface, and <span class="math notranslate nohighlight">\( \mathbf{F} \cdot \mathbf{n} \)</span> is the dot product between the vector field and the normal vector.</p>
-<section id="flux-through-the-face-at-x-1">
-<h6>Flux through the Face at <span class="math notranslate nohighlight">\( x = 1 \)</span><a class="headerlink" href="#flux-through-the-face-at-x-1" title="Link to this heading">#</a></h6>
-<p>For the face at <span class="math notranslate nohighlight">\( x = 1 \)</span>, the normal vector is <span class="math notranslate nohighlight">\( \hat{i} = (1, 0, 0) \)</span>. The flux is computed as:</p>
+<p>Volume integral for computing the divergence</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the flux through the face at x = 1</span>
-<span class="n">normal_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Normal vector to the face at x = 1</span>
-<span class="n">x_face_flux</span> <span class="o">=</span> <span class="n">F_x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>  <span class="c1"># The vector field at x = 1</span>
-<span class="n">flux_x_face</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x_face_flux</span> <span class="o">*</span> <span class="n">normal_x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Dot product with normal</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="flux-through-the-face-at-y-1">
-<h6>Flux through the Face at <span class="math notranslate nohighlight">\( y = 1 \)</span><a class="headerlink" href="#flux-through-the-face-at-y-1" title="Link to this heading">#</a></h6>
-<p>For the face at <span class="math notranslate nohighlight">\( y = 1 \)</span>, the normal vector is <span class="math notranslate nohighlight">\( \hat{j} = (0, 1, 0) \)</span>. The flux is computed as:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the flux through the face at y = 1</span>
-<span class="n">normal_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Normal vector to the face at y = 1</span>
-<span class="n">y_face_flux</span> <span class="o">=</span> <span class="n">F_y</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># The vector field at y = 1</span>
-<span class="n">flux_y_face</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y_face_flux</span> <span class="o">*</span> <span class="n">normal_y</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Dot product with normal</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="flux-through-the-face-at-z-1">
-<h6>Flux through the Face at <span class="math notranslate nohighlight">\( z = 1 \)</span><a class="headerlink" href="#flux-through-the-face-at-z-1" title="Link to this heading">#</a></h6>
-<p>For the face at <span class="math notranslate nohighlight">\( z = 1 \)</span>, the normal vector is <span class="math notranslate nohighlight">\( \hat{k} = (0, 0, 1) \)</span>. The flux is computed as:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the flux through the face at z = 1</span>
-<span class="n">normal_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Normal vector to the face at z = 1</span>
-<span class="n">z_face_flux</span> <span class="o">=</span> <span class="n">F_z</span><span class="p">[:,</span> <span class="p">:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># The vector field at z = 1</span>
-<span class="n">flux_z_face</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">z_face_flux</span> <span class="o">*</span> <span class="n">normal_z</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># Dot product with normal</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Total flux across the three faces</span>
-<span class="n">total_flux</span> <span class="o">=</span> <span class="n">flux_x_face</span> <span class="o">+</span> <span class="n">flux_y_face</span> <span class="o">+</span> <span class="n">flux_z_face</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">tplquad</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total flux through the x = 1, y = 1, and z = 1 faces: </span><span class="si">{</span><span class="n">total_flux</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="c1"># Define the divergence of the vector field</span>
+<span class="k">def</span> <span class="nf">divergence</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">z</span>
+
+<span class="c1"># Limits of the cube: x, y, z in [0, 1]</span>
+<span class="n">volume_integral</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tplquad</span><span class="p">(</span><span class="n">divergence</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Volume integral of the divergence: </span><span class="si">{</span><span class="n">volume_integral</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total flux through the x = 1, y = 1, and z = 1 faces: 43.75
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Volume integral of the divergence: 3.00
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-</section>
 </section>
 <section id="stokes-theorem">
 <h4>2. Stokes’ Theorem:<a class="headerlink" href="#stokes-theorem" title="Link to this heading">#</a></h4>
@@ -1827,6 +1782,90 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 \[
 \oint_C \mathbf{F} \cdot d\mathbf{r} = 2\pi
 \]</div>
+</section>
+<section id="id15">
+<h4>Python<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<p>Visualize the vector field</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define the grid for the disk x^2 + y^2 &lt;= 1</span>
+<span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">y_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">)</span>
+
+<span class="c1"># Mask the points that lie outside the disk (x^2 + y^2 &gt; 1)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">X</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">1</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">Y</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+
+<span class="c1"># Define the vector field F(x, y, z) = (-y, x, 0) at z = 0</span>
+<span class="n">U</span> <span class="o">=</span> <span class="o">-</span><span class="n">Y</span>  <span class="c1"># x-component of the vector field</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">X</span>   <span class="c1"># y-component of the vector field</span>
+
+<span class="c1"># Plot the vector field</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Vector Field $</span><span class="se">\\</span><span class="s2">mathbf</span><span class="si">{F}</span><span class="s2">(x, y, z) = (-y, x, 0)$ in the plane $z = 0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/868f11922f683fc9c4ebefaaaf3048edb5d226932b890b8ceece1c6a5f4bb5f4.png" src="../_images/868f11922f683fc9c4ebefaaaf3048edb5d226932b890b8ceece1c6a5f4bb5f4.png" />
+</div>
+</div>
+<p>Plot the Boundary Curve:  The boundary curve of the disk is the unit circle</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the boundary curve (circle) x^2 + y^2 = 1</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">x_circle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">y_circle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="c1"># Plot the vector field and the boundary curve</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_circle</span><span class="p">,</span> <span class="n">y_circle</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Boundary Curve&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Vector Field and Boundary Curve $x^2 + y^2 = 1$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/88ad401078b41b6d9f49647a05659ea7aaaaa72fbc3d1bd3d392ede8393f9c5a.png" src="../_images/88ad401078b41b6d9f49647a05659ea7aaaaa72fbc3d1bd3d392ede8393f9c5a.png" />
+</div>
+</div>
+<p>Calculate the Curl</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Area of the disk</span>
+<span class="n">area_of_disk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">1</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># radius = 1</span>
+<span class="n">curl_z</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># curl in the z direction</span>
+
+<span class="c1"># Surface integral of the curl</span>
+<span class="n">surface_integral</span> <span class="o">=</span> <span class="n">curl_z</span> <span class="o">*</span> <span class="n">area_of_disk</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Surface integral of the curl: </span><span class="si">{</span><span class="n">surface_integral</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Surface integral of the curl: 6.28
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -1984,17 +2023,9 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Problem Statement:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solution:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-theorem">1. Divergence Theorem:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-recap">Problem Recap</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-define-the-vector-field-and-grid">Step 1: Define the Vector Field and Grid</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-flux-through-each-face">Step 2: Calculate Flux through Each Face</a><ul class="nav section-nav flex-column">
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-x-1">Flux through the Face at <span class="math notranslate nohighlight">\( x = 1 \)</span></a></li>
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-y-1">Flux through the Face at <span class="math notranslate nohighlight">\( y = 1 \)</span></a></li>
-<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-z-1">Flux through the Face at <span class="math notranslate nohighlight">\( z = 1 \)</span></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stokes-theorem">2. Stokes’ Theorem:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Python</a></li>
 </ul>
 </li>
 </ul>

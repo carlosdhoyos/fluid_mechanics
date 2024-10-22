@@ -1146,11 +1146,7 @@ $$
 $$
 
 
-#### Problem Recap
-
-We want to calculate the flux of the vector field $ \mathbf{F}(x, y, z) = (x^2, y^2, z^2) $ through the cube bounded by $ 0 \leq x \leq 1 $, $ 0 \leq y \leq 1 $, and $ 0 \leq z \leq 1 $, focusing on the faces where $ x = 1 $, $ y = 1 $, and $ z = 1 $. This calculation involves finding the flux on each of these faces by using the dot product between the vector field and the normal vectors to the surfaces.
-
-##### Step 1: Define the Vector Field and Grid
+#### Python
 
 We will create a grid of points in the cube and define the vector field $ \mathbf{F}(x, y, z) = (x^2, y^2, z^2) $ on this grid.
 
@@ -1181,82 +1177,56 @@ ax.set_title('Vector Field $\\mathbf{F}(x, y, z) = (x^2, y^2, z^2)$ in the Cube'
 
 plt.show()
 
+
 ```
 
-```{code-cell} python
-# Compute the divergence at each point in the cube
-Divergence = 2 * X + 2 * Y + 2 * Z
+Plot of the divergence field at $Z=0$
 
-# Create a 3D surface plot for the divergence
+```{code-cell} python
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# Create a grid of points in the cube
+n = 50  # Increase the grid density for a smoother surface plot
+x_vals, y_vals = np.linspace(0, 1, n), np.linspace(0, 1, n)
+X, Y = np.meshgrid(x_vals, y_vals)
+
+# Calculate the divergence at z = 0 plane
+Divergence_z0 = 2 * X + 2 * Y  # Since z = 0, the divergence simplifies to 2x + 2y
+
+# Create a 3D surface plot for the divergence on z = 0 plane
 fig = plt.figure(figsize=(8, 6))
 ax = fig.add_subplot(111, projection='3d')
 
-# Plot the divergence field
-divergence_plot = ax.scatter(X, Y, Z, c=Divergence, cmap='viridis', marker='o')
-fig.colorbar(divergence_plot, ax=ax)
+# Plot the surface
+surface_plot = ax.plot_surface(X, Y, Divergence_z0, cmap='viridis', edgecolor='none')
+
+# Add a color bar
+fig.colorbar(surface_plot, ax=ax)
 
 # Set labels
 ax.set_xlabel('X axis')
 ax.set_ylabel('Y axis')
-ax.set_zlabel('Z axis')
-ax.set_title('Divergence $\\nabla \\cdot \\mathbf{F} = 2x + 2y + 2z$ in the Cube')
+ax.set_zlabel('Divergence')
+ax.set_title('Divergence $\\nabla \\cdot \\mathbf{F} = 2x + 2y$ on the $z = 0$ plane')
 
 plt.show()
 
 ```
 
+Volume integral for computing the divergence
 
-##### Step 2: Calculate Flux through Each Face
+```{code-cell} python
+from scipy.integrate import tplquad
 
-The flux through a surface is computed using:
+# Define the divergence of the vector field
+def divergence(x, y, z):
+    return 2 * x + 2 * y + 2 * z
 
-$$
-\text{Flux} = \iint_S \mathbf{F} \cdot \mathbf{n} \, dA
-$$
-
-where $ \mathbf{n} $ is the normal vector to the surface, and $ \mathbf{F} \cdot \mathbf{n} $ is the dot product between the vector field and the normal vector.
-
-###### Flux through the Face at $ x = 1 $
-
-For the face at $ x = 1 $, the normal vector is $ \hat{i} = (1, 0, 0) $. The flux is computed as:
-
-```{code-cell}python
-# Calculate the flux through the face at x = 1
-normal_x = np.array([1, 0, 0])  # Normal vector to the face at x = 1
-x_face_flux = F_x[-1, :, :]  # The vector field at x = 1
-flux_x_face = np.sum(x_face_flux * normal_x[0])  # Dot product with normal
-
-
-```
-
-###### Flux through the Face at $ y = 1 $
-For the face at $ y = 1 $, the normal vector is $ \hat{j} = (0, 1, 0) $. The flux is computed as:
-
-```{code-cell}python
-# Calculate the flux through the face at y = 1
-normal_y = np.array([0, 1, 0])  # Normal vector to the face at y = 1
-y_face_flux = F_y[:, -1, :]  # The vector field at y = 1
-flux_y_face = np.sum(y_face_flux * normal_y[1])  # Dot product with normal
-
-```
-
-###### Flux through the Face at $ z = 1 $
-For the face at $ z = 1 $, the normal vector is $ \hat{k} = (0, 0, 1) $. The flux is computed as:
-
-```{code-cell}python
-# Calculate the flux through the face at z = 1
-normal_z = np.array([0, 0, 1])  # Normal vector to the face at z = 1
-z_face_flux = F_z[:, :, -1]  # The vector field at z = 1
-flux_z_face = np.sum(z_face_flux * normal_z[2])  # Dot product with normal
-
-
-```
-
-```{code-cell}python
-# Total flux across the three faces
-total_flux = flux_x_face + flux_y_face + flux_z_face
-
-print(f"Total flux through the x = 1, y = 1, and z = 1 faces: {total_flux:.2f}")
+# Limits of the cube: x, y, z in [0, 1]
+volume_integral, _ = tplquad(divergence, 0, 1, lambda x: 0, lambda x: 1, lambda x, y: 0, lambda x, y: 1)
+print(f"Volume integral of the divergence: {volume_integral:.2f}")
 ```
 
 
@@ -1299,3 +1269,71 @@ $$
 $$
 
 
+#### Python
+
+Visualize the vector field
+
+
+```{code-cell} python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the grid for the disk x^2 + y^2 <= 1
+x_vals = np.linspace(-1, 1, 20)
+y_vals = np.linspace(-1, 1, 20)
+X, Y = np.meshgrid(x_vals, y_vals)
+
+# Mask the points that lie outside the disk (x^2 + y^2 > 1)
+mask = X**2 + Y**2 <= 1
+X = X[mask]
+Y = Y[mask]
+
+# Define the vector field F(x, y, z) = (-y, x, 0) at z = 0
+U = -Y  # x-component of the vector field
+V = X   # y-component of the vector field
+
+# Plot the vector field
+plt.figure(figsize=(6,6))
+plt.quiver(X, Y, U, V)
+plt.title("Vector Field $\\mathbf{F}(x, y, z) = (-y, x, 0)$ in the plane $z = 0$")
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(True)
+plt.axis('equal')
+plt.show()
+
+```
+
+Plot the Boundary Curve:  The boundary curve of the disk is the unit circle
+
+```{code-cell} python
+# Define the boundary curve (circle) x^2 + y^2 = 1
+theta = np.linspace(0, 2*np.pi, 100)
+x_circle = np.cos(theta)
+y_circle = np.sin(theta)
+
+# Plot the vector field and the boundary curve
+plt.figure(figsize=(6,6))
+plt.quiver(X, Y, U, V, color='blue', alpha=0.6)
+plt.plot(x_circle, y_circle, color='red', linewidth=2, label='Boundary Curve')
+plt.title("Vector Field and Boundary Curve $x^2 + y^2 = 1$")
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.grid(True)
+plt.axis('equal')
+plt.show()
+```
+
+Calculate the Curl
+
+
+```{code-cell} python
+# Area of the disk
+area_of_disk = np.pi * 1**2  # radius = 1
+curl_z = 2  # curl in the z direction
+
+# Surface integral of the curl
+surface_integral = curl_z * area_of_disk
+print(f"Surface integral of the curl: {surface_integral:.2f}")
+```
