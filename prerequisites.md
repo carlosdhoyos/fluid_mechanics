@@ -1411,14 +1411,10 @@ $$
 s = 9.8 \, \text{m}
 $$
 
-### Summary of Results:
+### Summary of Results
 1. The acceleration along the incline is $ 4.9 \, \text{m/s}^2 $.
 2. The speed after 2 seconds is $ 9.8 \, \text{m/s} $.
 3. The distance traveled after 2 seconds is $ 9.8 \, \text{m} $.
-
-
-
-
 
 
 $$
