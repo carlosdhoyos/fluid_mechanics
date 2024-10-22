@@ -53,4 +53,4 @@ I have a **Ph.D. in Earth and Atmospheric Sciences from Georgia Institute of Tec
 
 Fluid dynamics has been a common thread throughout my career, from analyzing **atmospheric circulations** that drive global climate patterns to modeling **river flows** that sustain ecosystems and cities. This course gives me the opportunity to share not only the fundamental concepts of fluid mechanics but also their real-world applications—whether in **renewable energy**, **environmental protection**, or **cutting-edge technologies**.
 
-Also, ...
+Also, ..
