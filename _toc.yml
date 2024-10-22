@@ -8,4 +8,6 @@ chapters:
 - file: syllabus
 - file: prerequisites
 - file: units
+- file: fluids_v_solids
+- file: fluid_properties
 - file: bibliography

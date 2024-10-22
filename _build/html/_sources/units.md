@@ -40,33 +40,59 @@
 
 ## Unit Conversion Table
 
-| Quantity           | From (SI Unit)        | To (Imperial/US Unit)      | Conversion Factor              | To (CGS Unit)      | Conversion Factor                |
-|--------------------|-----------------------|----------------------------|--------------------------------|--------------------|----------------------------------|
-| **Length**         | 1 meter (m)           | 3.28084 feet (ft)           | $1 \, \text{m} = 3.28084 \, \text{ft}$ | 100 centimeters (cm) | $1 \, \text{m} = 100 \, \text{cm}$ |
-| **Length**         | 1 kilometer (km)      | 0.621371 miles (mi)         | $1 \, \text{km} = 0.621371 \, \text{mi}$ | $10^5$ centimeters (cm) | $1 \, \text{km} = 10^5 \, \text{cm}$ |
-| **Mass**           | 1 kilogram (kg)       | 2.20462 pounds (lb)         | $1 \, \text{kg} = 2.20462 \, \text{lb}$ | 1000 grams (g)      | $1 \, \text{kg} = 1000 \, \text{g}$ |
-| **Mass**           | 1 gram (g)            | 0.035274 ounces (oz)        | $1 \, \text{g} = 0.035274 \, \text{oz}$ | 1 gram (g)          | $1 \, \text{g} = 1 \, \text{g}$ |
-| **Time**           | 1 second (s)          | 1 second (s)                | $1 \, \text{s} = 1 \, \text{s}$ | 1 second (s)        | $1 \, \text{s} = 1 \, \text{s}$ |
-| **Time**           | 1 hour (hr)           | 60 minutes (min)            | $1 \, \text{hr} = 60 \, \text{min}$ | 3600 seconds (s)    | $1 \, \text{hr} = 3600 \, \text{s}$ |
-| **Volume**         | 1 liter (L)           | 0.264172 gallons (gal)      | $1 \, \text{L} = 0.264172 \, \text{gal}$ | 1000 cubic centimeters (cm³) | $1 \, \text{L} = 1000 \, \text{cm³}$ |
-| **Volume**         | 1 cubic meter (m³)    | 35.3147 cubic feet (ft³)    | $1 \, \text{m³} = 35.3147 \, \text{ft³}$ | $10^6$ cubic centimeters (cm³) | $1 \, \text{m³} = 10^6 \, \text{cm³}$ |
-| **Force**          | 1 newton (N)          | 0.224809 pound-force (lbf)  | $1 \, \text{N} = 0.224809 \, \text{lbf}$ | $10^5$ dynes (dyn)  | $1 \, \text{N} = 10^5 \, \text{dyn}$ |
-| **Energy**         | 1 joule (J)           | 0.000947817 BTU             | $1 \, \text{J} = 0.000947817 \, \text{BTU}$ | $10^7$ ergs         | $1 \, \text{J} = 10^7 \, \text{ergs}$ |
-| **Energy**         | 1 kilojoule (kJ)      | 0.947817 BTU                | $1 \, \text{kJ} = 0.947817 \, \text{BTU}$ | $10^{10}$ ergs      | $1 \, \text{kJ} = 10^{10} \, \text{ergs}$ |
-| **Power**          | 1 watt (W)            | 0.00134102 horsepower (hp)  | $1 \, \text{W} = 0.00134102 \, \text{hp}$ | $10^7$ erg/s        | $1 \, \text{W} = 10^7 \, \text{erg/s}$ |
-| **Pressure**       | 1 pascal (Pa)         | 0.000145038 psi             | $1 \, \text{Pa} = 0.000145038 \, \text{psi}$ | 10 baryes (Ba)      | $1 \, \text{Pa} = 10 \, \text{Ba}$ |
-| **Pressure**       | 1 atmosphere (atm)    | 14.696 psi                  | $1 \, \text{atm} = 14.696 \, \text{psi}$ | $1.01325 \times 10^6$ dynes/cm² | $1 \, \text{atm} = 1.01325 \times 10^6 \, \text{dyn/cm²}$ |
-| **Temperature**    | 0 Celsius (°C)        | 32 Fahrenheit (°F)          | $T(°F) = T(°C) \times \frac{9}{5} + 32$ | Celsius (°C)         | $T(\text{K}) = T(\text{°C}) + 273.15$ |
-| **Speed**          | 1 meter/second (m/s)  | 2.23694 miles/hour (mph)    | $1 \, \text{m/s} = 2.23694 \, \text{mph}$ | 100 centimeters/second (cm/s) | $1 \, \text{m/s} = 100 \, \text{cm/s}$ |
-| **Speed**          | 1 kilometer/hour (km/h) | 0.621371 miles/hour (mph)  | $1 \, \text{km/h} = 0.621371 \, \text{mph}$ | 27.7778 cm/s         | $1 \, \text{km/h} = 27.7778 \, \text{cm/s}$ |
-| **Angular Velocity**| 1 radian/second (rad/s)| 9.5493 revolutions/min (rpm)| $1 \, \text{rad/s} = 9.5493 \, \text{rpm}$ | radian/second (rad/s)| $1 \, \text{rad/s} = 1 \, \text{rad/s}$ |
+
+| Quantity              | SI Unit                       | Imperial/US Unit                       | CGS Unit                        |
+|-----------------------|-------------------------------|----------------------------------------|---------------------------------|
+| **Length**            | 1 meter (m)                   | 3.28084 feet (ft), 39.3701 inches (in) | 100 centimeters (cm)            |
+| **Length**            | 1 kilometer (km)              | 0.621371 miles (mi)                    | $10^5$ centimeters (cm)         |
+| **Length**            | 1 millimeter (mm)             | 0.0393701 inches (in)                  | 0.1 centimeters (cm)            |
+| **Length**            | 1 micrometer (µm)             | 3.93701e-5 inches (in)                 | 0.0001 centimeters (cm)         |
+| **Length**            | 1 nanometer (nm)              | 3.93701e-8 inches (in)                 | 10 angstroms (Å)                |
+| **Mass**              | 1 kilogram (kg)               | 2.20462 pounds (lb)                    | 1000 grams (g)                  |
+| **Mass**              | 1 gram (g)                    | 0.035274 ounces (oz)                   | 1 gram (g)                      |
+| **Mass**              | 1 milligram (mg)              | 0.0154324 grains (gr)                  | 0.001 grams (g)                 |
+| **Area**              | 1 square meter (m²)           | 10.7639 square feet (ft²)              | $10^4$ square centimeters (cm²) |
+| **Area**              | 1 hectare (ha)                | 2.47105 acres                          | $10^8$ square centimeters (cm²) |
+| **Volume**            | 1 cubic meter (m³)            | 35.3147 cubic feet (ft³), 61023.7 cubic inches (in³) | $10^6$ cubic centimeters (cm³) |
+| **Volume**            | 1 liter (L)                   | 0.264172 gallons (gal), 33.814 fluid ounces (fl oz) | 1000 cubic centimeters (cm³)    |
+| **Volume**            | 1 milliliter (mL)             | 0.033814 fluid ounces (fl oz)          | 1 cubic centimeter (cm³)        |
+| **Speed**             | 1 meter/second (m/s)          | 2.23694 miles/hour (mph), 3.28084 feet/second (ft/s) | 100 centimeters/second (cm/s)   |
+| **Speed**             | 1 kilometer/hour (km/h)       | 0.621371 miles/hour (mph)              | 27.7778 centimeters/second (cm/s) |
+| **Acceleration**      | 1 meter/second² (m/s²)        | 3.28084 feet/second² (ft/s²)           | 100 centimeters/second² (cm/s²) |
+| **Force**             | 1 newton (N)                  | 0.224809 pound-force (lbf)             | $10^5$ dynes (dyn)              |
+| **Energy**            | 1 joule (J)                   | 0.000947817 BTU, 0.737562 foot-pound (ft·lb) | $10^7$ ergs                   |
+| **Energy**            | 1 kilojoule (kJ)              | 0.947817 BTU                           | $10^{10}$ ergs                  |
+| **Work**              | 1 joule (J)                   | 0.737562 foot-pound (ft·lb)            | $10^7$ ergs                     |
+| **Power**             | 1 watt (W)                    | 0.00134102 horsepower (hp)             | $10^7$ erg/second (erg/s)       |
+| **Pressure**          | 1 pascal (Pa)                 | 0.000145038 psi (pound/inch²)          | 10 baryes (Ba)                  |
+| **Pressure**          | 1 atmosphere (atm)            | 14.696 psi                             | $1.01325 \times 10^6$ dyn/cm²   |
+| **Temperature**       | 0 Celsius (°C)                | 32 Fahrenheit (°F)                     | 273.15 Kelvin (K)               |
+| **Momentum**          | 1 kilogram meter/second (kg·m/s) | 0.737562 slug·ft/s                   | $10^5$ gram centimeter/second (g·cm/s) |
+| **Torque**            | 1 newton meter (N·m)          | 0.737562 pound-foot (lbf·ft)           | $10^7$ dyne centimeter (dyn·cm) |
+| **Angular Displacement** | 1 radian (rad)             | 57.2958 degrees (°)                    | 1 radian (rad)                  |
+| **Angular Velocity**  | 1 radian/second (rad/s)       | 9.5493 revolutions per minute (rpm)    | 1 radian/second (rad/s)         |
+| **Heat**              | 1 joule (J)                   | 0.000238846 kilocalories (kcal), 0.000947817 BTU | $10^7$ ergs                    |
+| **Luminous Intensity**| 1 candela (cd)                | 0.092903 foot-candle                   | 1 stilb (sb)                    |
+| **Electric Current**  | 1 ampere (A)                  | 1 ampere (A)                           | 3.33564 × $10^{-10}$ statA      |
+| **Electric Charge**   | 1 coulomb (C)                 | 1 coulomb (C)                          | $3.33564 × 10^{-10}$ statC      |
+| **Voltage**           | 1 volt (V)                    | 1 volt (V)                             | $299.79 \times 10^6$ statvolt   |
+| **Resistance**        | 1 ohm (Ω)                     | 1 ohm (Ω)                              | $8.9876 \times 10^{11}$ statohm |
+| **Capacitance**       | 1 farad (F)                   | 1 farad (F)                            | $1.11265 \times 10^{-12}$ statfarad |
+| **Inductance**        | 1 henry (H)                   | 1 henry (H)                            | $8.9876 \times 10^{11}$ statH   |
+| **Magnetic Flux**     | 1 weber (Wb)                  | 1 maxwell (Mx)                         | 1 maxwell (Mx)                  |
+| **Magnetic Field Strength** | 1 tesla (T)             | 10,000 gauss (G)                       | 1 gauss (G)                     |
+| **Frequency**         | 1 hertz (Hz)                  | 1 cycle per second (cps)               | 1 hertz (Hz)                    |
+| **Luminous Flux**     | 1 lumen (lm)                  | 1 lumen (lm)                           | 1 lumen (lm)                    |
+| **Radiation**         | 1 becquerel (Bq)              | 2.7027 × $10^{-11}$ curies (Ci)        | 2.7027 × $10^{-11}$ curies (Ci) |
 
 ### Notes:
-- **Length**: Conversion from meters (m) to feet (ft) and centimeters (cm).
-- **Mass**: Conversion between kilograms (kg), pounds (lb), and grams (g).
-- **Volume**: Liters to gallons and cubic meters to cubic feet or cubic centimeters.
-- **Energy**: Conversion between joules (J), British thermal units (BTU), and ergs.
-- **Temperature**: Conversion between Celsius (°C) and Fahrenheit (°F) with the formula for converting between them.
-- **Speed**: Conversions between meters per second (m/s), kilometers per hour (km/h), miles per hour (mph), and centimeters per second (cm/s).
-- **Pressure**: Conversions between pascals (Pa), psi (pounds per square inch), and baryes (CGS unit).
+- **Length**: Includes conversions between **meters**, **feet**, **inches**, and **centimeters**.
+- **Mass**: Includes conversions between **kilograms**, **pounds**, **ounces**, and **grams**.
+- **Area**: Includes conversions between **square meters**, **square feet**, **hectares**, **acres**, and **square centimeters**.
+- **Volume**: Includes conversions between **liters**, **gallons**, **cubic feet**, **cubic inches**, and **cubic centimeters**.
+- **Speed**: Includes conversions between **meters per second**, **miles per hour**, **feet per second**, and **centimeters per second**.
+- **Energy**: Includes conversions between **joules**, **foot-pounds**, **BTU**, and **ergs**.
+- **Pressure**: Includes conversions between **pascals**, **psi**, **atmospheres**, and **dynes/cm²**.
+- **Electricity & Magnetism**: Includes units for **electric current**, **electric charge**, **voltage**, **resistance**, **capacitance**, **inductance**, and **magnetic field strength**.
+
 
