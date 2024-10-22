@@ -378,7 +378,7 @@ plt.plot(x_vals, y_vals, label='Parametric Curve: Particle Path', color='blue')
 t_points = np.array([0, 0.5, 1, 1.5, 2])
 v_x_vals = v_x(t_points)
 v_y_vals = v_y(t_points)
-a_x_vals = a_x(t_points)
+a_x_vals = np.full_like(t_points, a_x(0))  # a_x is constant, so create an array with the same length
 a_y_vals = a_y(t_points)
 
 # Plot velocity vectors
