@@ -508,14 +508,23 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">Problem: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-11-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">Problem 11: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Problem Statement:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solution:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-theorem">1. Divergence Theorem:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-recap">Problem Recap</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-define-the-vector-field-and-grid">Step 1: Define the Vector Field and Grid</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-flux-through-each-face">Step 2: Calculate Flux through Each Face</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-x-1">Flux through the Face at <span class="math notranslate nohighlight">\( x = 1 \)</span></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-y-1">Flux through the Face at <span class="math notranslate nohighlight">\( y = 1 \)</span></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-z-1">Flux through the Face at <span class="math notranslate nohighlight">\( z = 1 \)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stokes-theorem">2. Stokes’ Theorem:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results:</a></li>
 </ul>
 </li>
 </ul>
@@ -1596,8 +1605,8 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 </section>
 </section>
 <hr class="docutils" />
-<section id="problem-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">
-<h2>Problem: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow<a class="headerlink" href="#problem-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow" title="Link to this heading">#</a></h2>
+<section id="problem-11-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">
+<h2>Problem 11: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow<a class="headerlink" href="#problem-11-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow" title="Link to this heading">#</a></h2>
 <section id="id13">
 <h3>Problem Statement:<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
@@ -1653,6 +1662,81 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 \iint_S \mathbf{F} \cdot d\mathbf{A} = 3
 \]</div>
 </section>
+<section id="problem-recap">
+<h4>Problem Recap<a class="headerlink" href="#problem-recap" title="Link to this heading">#</a></h4>
+<p>We want to calculate the flux of the vector field <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (x^2, y^2, z^2) \)</span> through the cube bounded by <span class="math notranslate nohighlight">\( 0 \leq x \leq 1 \)</span>, <span class="math notranslate nohighlight">\( 0 \leq y \leq 1 \)</span>, and <span class="math notranslate nohighlight">\( 0 \leq z \leq 1 \)</span>, focusing on the faces where <span class="math notranslate nohighlight">\( x = 1 \)</span>, <span class="math notranslate nohighlight">\( y = 1 \)</span>, and <span class="math notranslate nohighlight">\( z = 1 \)</span>. This calculation involves finding the flux on each of these faces by using the dot product between the vector field and the normal vectors to the surfaces.</p>
+<section id="step-1-define-the-vector-field-and-grid">
+<h5>Step 1: Define the Vector Field and Grid<a class="headerlink" href="#step-1-define-the-vector-field-and-grid" title="Link to this heading">#</a></h5>
+<p>We will create a grid of points in the cube and define the vector field <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (x^2, y^2, z^2) \)</span> on this grid.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Create a grid of points in the cube</span>
+<span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">z_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">z_vals</span><span class="p">)</span>
+
+<span class="c1"># Vector field components</span>
+<span class="n">F_x</span> <span class="o">=</span> <span class="n">X</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># x component of the vector field</span>
+<span class="n">F_y</span> <span class="o">=</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># y component of the vector field</span>
+<span class="n">F_z</span> <span class="o">=</span> <span class="n">Z</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># z component of the vector field</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-calculate-flux-through-each-face">
+<h5>Step 2: Calculate Flux through Each Face<a class="headerlink" href="#step-2-calculate-flux-through-each-face" title="Link to this heading">#</a></h5>
+<p>The flux through a surface is computed using:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Flux} = \iint_S \mathbf{F} \cdot \mathbf{n} \, dA
+\]</div>
+<p>where <span class="math notranslate nohighlight">\( \mathbf{n} \)</span> is the normal vector to the surface, and <span class="math notranslate nohighlight">\( \mathbf{F} \cdot \mathbf{n} \)</span> is the dot product between the vector field and the normal vector.</p>
+<section id="flux-through-the-face-at-x-1">
+<h6>Flux through the Face at <span class="math notranslate nohighlight">\( x = 1 \)</span><a class="headerlink" href="#flux-through-the-face-at-x-1" title="Link to this heading">#</a></h6>
+<p>For the face at <span class="math notranslate nohighlight">\( x = 1 \)</span>, the normal vector is <span class="math notranslate nohighlight">\( \hat{i} = (1, 0, 0) \)</span>. The flux is computed as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the flux through the face at x = 1</span>
+<span class="n">normal_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Normal vector to the face at x = 1</span>
+<span class="n">x_face_flux</span> <span class="o">=</span> <span class="n">F_x</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>  <span class="c1"># The vector field at x = 1</span>
+<span class="n">flux_x_face</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x_face_flux</span> <span class="o">*</span> <span class="n">normal_x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Dot product with normal</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="flux-through-the-face-at-y-1">
+<h6>Flux through the Face at <span class="math notranslate nohighlight">\( y = 1 \)</span><a class="headerlink" href="#flux-through-the-face-at-y-1" title="Link to this heading">#</a></h6>
+<p>For the face at <span class="math notranslate nohighlight">\( y = 1 \)</span>, the normal vector is <span class="math notranslate nohighlight">\( \hat{j} = (0, 1, 0) \)</span>. The flux is computed as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the flux through the face at y = 1</span>
+<span class="n">normal_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Normal vector to the face at y = 1</span>
+<span class="n">y_face_flux</span> <span class="o">=</span> <span class="n">F_y</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>  <span class="c1"># The vector field at y = 1</span>
+<span class="n">flux_y_face</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y_face_flux</span> <span class="o">*</span> <span class="n">normal_y</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Dot product with normal</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="flux-through-the-face-at-z-1">
+<h6>Flux through the Face at <span class="math notranslate nohighlight">\( z = 1 \)</span><a class="headerlink" href="#flux-through-the-face-at-z-1" title="Link to this heading">#</a></h6>
+<p>For the face at <span class="math notranslate nohighlight">\( z = 1 \)</span>, the normal vector is <span class="math notranslate nohighlight">\( \hat{k} = (0, 0, 1) \)</span>. The flux is computed as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the flux through the face at z = 1</span>
+<span class="n">normal_z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Normal vector to the face at z = 1</span>
+<span class="n">z_face_flux</span> <span class="o">=</span> <span class="n">F_z</span><span class="p">[:,</span> <span class="p">:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># The vector field at z = 1</span>
+<span class="n">flux_z_face</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">z_face_flux</span> <span class="o">*</span> <span class="n">normal_z</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># Dot product with normal</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
 <section id="stokes-theorem">
 <h4>2. Stokes’ Theorem:<a class="headerlink" href="#stokes-theorem" title="Link to this heading">#</a></h4>
 <p><strong>Stokes’ Theorem</strong> relates the circulation of a vector field around a closed curve to the surface integral of the curl of the vector field over the surface bounded by the curve. Mathematically, it states:</p>
@@ -1684,23 +1768,6 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 \oint_C \mathbf{F} \cdot d\mathbf{r} = 2\pi
 \]</div>
 </section>
-</section>
-<section id="summary-of-results">
-<h3>Summary of Results:<a class="headerlink" href="#summary-of-results" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>The flux of <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (x^2, y^2, z^2) \)</span> through the surface of the cube is:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\iint_S \mathbf{F} \cdot d\mathbf{A} = 3
-\]</div>
-<ol class="arabic simple" start="2">
-<li><p>The circulation of <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (-y, x, 0) \)</span> around the boundary of the disk is:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\oint_C \mathbf{F} \cdot d\mathbf{r} = 2\pi
-\]</div>
 </section>
 </section>
 </section>
@@ -1871,14 +1938,23 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">Problem: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-11-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">Problem 11: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Problem Statement:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solution:</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-theorem">1. Divergence Theorem:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-recap">Problem Recap</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-define-the-vector-field-and-grid">Step 1: Define the Vector Field and Grid</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-flux-through-each-face">Step 2: Calculate Flux through Each Face</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-x-1">Flux through the Face at <span class="math notranslate nohighlight">\( x = 1 \)</span></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-y-1">Flux through the Face at <span class="math notranslate nohighlight">\( y = 1 \)</span></a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-through-the-face-at-z-1">Flux through the Face at <span class="math notranslate nohighlight">\( z = 1 \)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stokes-theorem">2. Stokes’ Theorem:</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results:</a></li>
 </ul>
 </li>
 </ul>

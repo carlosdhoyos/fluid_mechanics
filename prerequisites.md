@@ -1086,7 +1086,7 @@ $$
 
 ---
 
-## Problem: Application of the Divergence Theorem and Stokes' Theorem in Fluid Flow
+## Problem 11: Application of the Divergence Theorem and Stokes' Theorem in Fluid Flow
 
 ### Problem Statement:
 
@@ -1146,6 +1146,75 @@ $$
 $$
 
 
+#### Problem Recap
+
+We want to calculate the flux of the vector field $ \mathbf{F}(x, y, z) = (x^2, y^2, z^2) $ through the cube bounded by $ 0 \leq x \leq 1 $, $ 0 \leq y \leq 1 $, and $ 0 \leq z \leq 1 $, focusing on the faces where $ x = 1 $, $ y = 1 $, and $ z = 1 $. This calculation involves finding the flux on each of these faces by using the dot product between the vector field and the normal vectors to the surfaces.
+
+##### Step 1: Define the Vector Field and Grid
+
+We will create a grid of points in the cube and define the vector field $ \mathbf{F}(x, y, z) = (x^2, y^2, z^2) $ on this grid.
+
+```{code-cell} python
+import numpy as np
+
+# Create a grid of points in the cube
+x_vals, y_vals, z_vals = np.linspace(0, 1, 5), np.linspace(0, 1, 5), np.linspace(0, 1, 5)
+X, Y, Z = np.meshgrid(x_vals, y_vals, z_vals)
+
+# Vector field components
+F_x = X**2  # x component of the vector field
+F_y = Y**2  # y component of the vector field
+F_z = Z**2  # z component of the vector field
+
+```
+
+##### Step 2: Calculate Flux through Each Face
+
+The flux through a surface is computed using:
+
+$$
+\text{Flux} = \iint_S \mathbf{F} \cdot \mathbf{n} \, dA
+$$
+
+where $ \mathbf{n} $ is the normal vector to the surface, and $ \mathbf{F} \cdot \mathbf{n} $ is the dot product between the vector field and the normal vector.
+
+###### Flux through the Face at $ x = 1 $
+
+For the face at $ x = 1 $, the normal vector is $ \hat{i} = (1, 0, 0) $. The flux is computed as:
+
+```{code-cell}python
+# Calculate the flux through the face at x = 1
+normal_x = np.array([1, 0, 0])  # Normal vector to the face at x = 1
+x_face_flux = F_x[-1, :, :]  # The vector field at x = 1
+flux_x_face = np.sum(x_face_flux * normal_x[0])  # Dot product with normal
+
+
+```
+
+###### Flux through the Face at $ y = 1 $
+For the face at $ y = 1 $, the normal vector is $ \hat{j} = (0, 1, 0) $. The flux is computed as:
+
+```{code-cell}python
+# Calculate the flux through the face at y = 1
+normal_y = np.array([0, 1, 0])  # Normal vector to the face at y = 1
+y_face_flux = F_y[:, -1, :]  # The vector field at y = 1
+flux_y_face = np.sum(y_face_flux * normal_y[1])  # Dot product with normal
+
+```
+
+###### Flux through the Face at $ z = 1 $
+For the face at $ z = 1 $, the normal vector is $ \hat{k} = (0, 0, 1) $. The flux is computed as:
+
+```{code-cell}python
+# Calculate the flux through the face at z = 1
+normal_z = np.array([0, 0, 1])  # Normal vector to the face at z = 1
+z_face_flux = F_z[:, :, -1]  # The vector field at z = 1
+flux_z_face = np.sum(z_face_flux * normal_z[2])  # Dot product with normal
+
+
+```
+
+
 #### 2. Stokes' Theorem:
 
 **Stokes' Theorem** relates the circulation of a vector field around a closed curve to the surface integral of the curl of the vector field over the surface bounded by the curve. Mathematically, it states:
@@ -1184,18 +1253,4 @@ $$
 \oint_C \mathbf{F} \cdot d\mathbf{r} = 2\pi
 $$
 
-
-### Summary of Results:
-
-1. The flux of $ \mathbf{F}(x, y, z) = (x^2, y^2, z^2) $ through the surface of the cube is:
-
-$$
-\iint_S \mathbf{F} \cdot d\mathbf{A} = 3
-$$
-
-2. The circulation of $ \mathbf{F}(x, y, z) = (-y, x, 0) $ around the boundary of the disk is:
-
-$$
-\oint_C \mathbf{F} \cdot d\mathbf{r} = 2\pi
-$$
 
