@@ -6,5 +6,4 @@ root: intro
 chapters:
 - file: syllabus
 - file: prerequisites
-- file: prerequisites_nb
 - file: bibliography

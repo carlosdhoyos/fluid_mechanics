@@ -32,7 +32,8 @@ Even in everyday household technologies, fluid mechanics plays a role—whether 
 
 Jupyter Books provide a unique platform for integrating live code, dynamic visualizations, and interactive examples directly into our course materials. This allows us to break down complex concepts and equations in real-time, giving you the opportunity to not only read but also engage with the material. Imagine being able to **run a simulation** of a fluid system while learning the theory behind it, or exploring **interactive visualizations** that help you better grasp the forces at play in different fluid scenarios.
 
-The flexibility of Jupyter Books makes them an ideal medium for fluid mechanics, a subject that often requires **hands-on analysis** and **computational tools** to fully understand. As we progress through the course, I encourage you to experiment with the code and simulations provided in these materials to deepen your learning.
+The flexibility of Jupyter Books makes them an ideal medium for fluid mechanics, a subject that often requires **hands-on analysis** and **computational tools** to fully understand. As we progress through the course, I encourage you to experiment with the code and simulations provided in these materials to deepen your learning. You can learn about Jupyter Books at [jupyterbook.org](https://jupyterbook.org).
+
 
 ## Why GitHub?
 
@@ -53,9 +54,3 @@ I have a **Ph.D. in Earth and Atmospheric Sciences from Georgia Institute of Tec
 Fluid dynamics has been a common thread throughout my career, from analyzing **atmospheric circulations** that drive global climate patterns to modeling **river flows** that sustain ecosystems and cities. This course gives me the opportunity to share not only the fundamental concepts of fluid mechanics but also their real-world applications—whether in **renewable energy**, **environmental protection**, or **cutting-edge technologies**.
 
 I’m excited to take this journey with you and explore how fluid mechanics can solve both the grand challenges we face today and the everyday problems of tomorrow.
-
----
-
-Check out the content pages of the book
-
-```{tableofcontents}

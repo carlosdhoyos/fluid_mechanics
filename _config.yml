@@ -34,4 +34,10 @@ html:
     name: sphinx_book_theme
     options:
       default_mode: "light"
-
+      navbar_align: content  # Aligns the navigation bar with the content
+      launch_buttons: false  # Disables extra buttons that can crowd the UI
+      home_page_in_toc: true  # Ensures the home page is in the table of contents
+      show_navbar_depth: 2  # Controls the depth of the navbar, reducing clutter
+      show_toc_level: 1  # Controls how many levels of headers are shown in the sidebar
+      default_mode: light  # Default mode for the theme
+    logo_only: false  # Only show the logo on mobile (if it exists)
