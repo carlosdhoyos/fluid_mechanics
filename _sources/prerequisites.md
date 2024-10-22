@@ -1418,6 +1418,9 @@ $$
 
 
 
+
+
+
 $$
 \begin{tikzpicture}
 
@@ -1440,4 +1443,116 @@ $$
 
 \end{tikzpicture}
 $$
+
+--- 
+## Problem 13: Object in Uniform Circular Motion with Angular Velocity
+
+A car of mass $m = 1000 \, \text{kg}$ is moving in a circular track of radius $r = 50 \, \text{m}$ with a constant speed of $v = 20 \, \text{m/s}$. 
+
+1. What is the magnitude of the centripetal force acting on the car?
+2. What is the angular velocity of the car?
+3. If the coefficient of static friction between the tires and the track is $\mu_s = 0.6$, what is the maximum speed the car can have before it starts to skid?
+
+### Solution
+
+#### 1. Magnitude of the Centripetal Force
+
+In uniform circular motion, the centripetal force is the force that keeps an object moving in a circular path and is directed towards the center of the circle. The formula for centripetal force is:
+
+$$
+F_c = \frac{mv^2}{r}
+$$
+
+where:
+- $m = 1000 \, \text{kg}$ is the mass of the car,
+- $v = 20 \, \text{m/s}$ is the speed of the car,
+- $r = 50 \, \text{m}$ is the radius of the circular path.
+
+Substituting the known values:
+
+$$
+F_c = \frac{(1000 \, \text{kg}) \times (20 \, \text{m/s})^2}{50 \, \text{m}} = \frac{1000 \times 400}{50} = 8000 \, \text{N}
+$$
+
+Thus, the magnitude of the centripetal force is:
+
+$$
+F_c = 8000 \, \text{N}
+$$
+
+#### 2. Angular Velocity of the Car
+
+The **angular velocity** $ \omega $ of an object in circular motion is related to its linear velocity $v$ by the following relationship:
+
+$$
+\omega = \frac{v}{r}
+$$
+
+where:
+- $v = 20 \, \text{m/s}$ is the linear velocity of the car,
+- $r = 50 \, \text{m}$ is the radius of the circular path.
+
+Substituting the known values:
+
+$$
+\omega = \frac{20 \, \text{m/s}}{50 \, \text{m}} = 0.4 \, \text{rad/s}
+$$
+
+Thus, the angular velocity of the car is:
+
+$$
+\omega = 0.4 \, \text{rad/s}
+$$
+
+#### 3. Maximum Speed Before Skidding
+
+The car will start to skid when the frictional force between the tires and the track is no longer sufficient to provide the necessary centripetal force. The maximum frictional force (which acts as the centripetal force) is given by:
+
+$$
+F_f = \mu_s F_n
+$$
+
+where:
+- $\mu_s = 0.6$ is the coefficient of static friction,
+- $F_n = mg$ is the normal force, where $g = 9.8 \, \text{m/s}^2$ is the acceleration due to gravity.
+
+Substituting the known values:
+
+$$
+F_f = \mu_s mg = 0.6 \times 1000 \, \text{kg} \times 9.8 \, \text{m/s}^2 = 5880 \, \text{N}
+$$
+
+The maximum centripetal force that friction can provide is $F_f = 5880 \, \text{N}$. This force is also equal to the centripetal force required for circular motion, so we can set it equal to the formula for centripetal force and solve for the maximum speed $v_\text{max}$:
+
+$$
+F_f = \frac{m v_\text{max}^2}{r}
+$$
+
+Substitute the values for $F_f$, $m$, and $r$:
+
+$$
+5880 \, \text{N} = \frac{1000 \, \text{kg} \times v_\text{max}^2}{50 \, \text{m}}
+$$
+
+Solving for $v_\text{max}$:
+
+$$
+v_\text{max}^2 = \frac{5880 \times 50}{1000} = 294
+$$
+
+$$
+v_\text{max} = \sqrt{294} \approx 17.15 \, \text{m/s}
+$$
+
+Thus, the maximum speed the car can have before skidding is:
+
+$$
+v_\text{max} \approx 17.15 \, \text{m/s}
+$$
+
+### Summary of Results:
+1. The magnitude of the centripetal force acting on the car is $8000 \, \text{N}$.
+2. The angular velocity of the car is $0.4 \, \text{rad/s}$.
+3. The maximum speed the car can have before it starts to skid is approximately $17.15 \, \text{m/s}$.
+
 
