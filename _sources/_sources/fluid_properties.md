@@ -277,6 +277,109 @@ For example, the specific gravity of ethanol is 0.789, meaning ethanol is less d
 Note that for gases, specific gravity is often measured relative to air rather than water.
 
 
+## Ideal Gas Law
+
+The **Ideal Gas Law** can also be expressed in terms of the **specific form** as:
+
+$$
+P = \rho R T
+$$
+
+where:
+- $P$ is the **pressure** of the gas (in Pascals, Pa),
+- $\rho$ is the **density** of the gas (in $\text{kg/m}^3$),
+- $R$ is the **specific gas constant** (in J/kg·K),
+- $T$ is the **absolute temperature** of the gas (in Kelvin, K).
+
+### Conceptualization
+
+This form of the Ideal Gas Law relates the **pressure** of a gas to its **density** rather than the amount of gas in moles ($n$). The specific gas constant $R$ here is related to the universal gas constant $R_u$ by:
+
+$$
+R = \frac{R_u}{M}
+$$
+
+where:
+- $R_u = 8.314 \, \text{J/mol·K}$ is the **universal gas constant**,
+- $M$ is the **molar mass** of the gas (in kg/mol).
+
+For example, the specific gas constant $R$ for **dry air** is approximately $287 \, \text{J/kg·K}$.
+
+### Understanding the Equation
+
+- The equation $P = \rho R T$ shows that **pressure** is directly proportional to both the **density** of the gas and its **temperature**.
+- **Higher density** at a constant temperature results in **higher pressure**.
+- Similarly, increasing the **temperature** at a constant density will also increase the **pressure**.
+
+This form is particularly useful in atmospheric science and fluid dynamics, where **density** $\rho$ is often a more convenient quantity than the number of moles.
+
+### Relationship to the Molar Form
+
+The traditional molar form of the Ideal Gas Law is:
+
+$$
+PV = nRT
+$$
+
+where $n$ is the number of moles. To derive $P = \rho R T$ from this, we start with the fact that **density** is the mass per unit volume:
+
+$$
+\rho = \frac{m}{V}
+$$
+
+Also, the number of moles is related to the mass by $n = \frac{m}{M}$, where $M$ is the molar mass. Substituting this into the Ideal Gas Law $PV = nRT$:
+
+$$
+P = \frac{nRT}{V} = \frac{mRT}{MV}
+$$
+
+Using $m/V = \rho$, this becomes:
+
+$$
+P = \rho \frac{R_u}{M} T
+$$
+
+Thus, we have:
+
+$$
+P = \rho R T
+$$
+
+where $R = \frac{R_u}{M}$ is the **specific gas constant** for the particular gas being considered.
+
+### Example Calculation
+
+Let's calculate the pressure of dry air with a density of $1.2 \, \text{kg/m}^3$ at a temperature of $300 \, \text{K}$, using the specific gas constant $R = 287 \, \text{J/kg·K}$ for air.
+
+$$
+P = \rho R T = (1.2 \, \text{kg/m}^3)(287 \, \text{J/kg·K})(300 \, \text{K})
+$$
+
+$$
+P = 103,320 \, \text{Pa} = 103.3 \, \text{kPa}
+$$
+
+So, the pressure is approximately **103.3 kPa**.
+
+### Applications of $P = \rho R T$
+
+This form of the Ideal Gas Law is often used in fields like:
+- **Atmospheric science**: to describe the behavior of gases in the atmosphere.
+- **Fluid mechanics**: especially when analyzing compressible flows.
+- **Aerospace engineering**: to model air properties in high-speed flight.
+
+### Assumptions of the Ideal Gas Law
+
+Like the molar form, this specific form of the Ideal Gas Law assumes:
+1. **No intermolecular forces**: The gas molecules do not attract or repel each other.
+2. **Point particles**: Gas molecules are considered to have negligible volume.
+3. **Elastic collisions**: All collisions between gas molecules and with container walls are perfectly elastic.
+4. **Valid at low pressures and high temperatures**: The law breaks down under extreme conditions (high pressure, low temperature).
+
+### Limitations
+
+The Ideal Gas Law, in this form, is an approximation that assumes **ideal behavior**. For **real gases** under conditions of high pressure or low temperature, deviations occur, and more complex equations, such as the **Van der Waals equation**, must be used.
+
 
 
 ## Types of Fluid Flow

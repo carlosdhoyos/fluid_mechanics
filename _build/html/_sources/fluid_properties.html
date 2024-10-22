@@ -386,6 +386,16 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-specific-gravities-for-common-substances">Table of Specific Gravities for Common Substances</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal Gas Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptualization">Conceptualization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-equation">Understanding the Equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-to-the-molar-form">Relationship to the Molar Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Example Calculation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-p-rho-r-t">Applications of <span class="math notranslate nohighlight">\(P = \rho R T\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-of-the-ideal-gas-law">Assumptions of the Ideal Gas Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-fluid-flow">Types of Fluid Flow</a></li>
 </ul>
             </nav>
@@ -799,6 +809,109 @@ SG_{\text{mercury}} = \frac{13,600 \, \text{kg/m}^3}{1000 \, \text{kg/m}^3} = 13
 <p>Note that for gases, specific gravity is often measured relative to air rather than water.</p>
 </section>
 </section>
+<section id="ideal-gas-law">
+<h2>Ideal Gas Law<a class="headerlink" href="#ideal-gas-law" title="Link to this heading">#</a></h2>
+<p>The <strong>Ideal Gas Law</strong> can also be expressed in terms of the <strong>specific form</strong> as:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \rho R T
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> is the <strong>pressure</strong> of the gas (in Pascals, Pa),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> is the <strong>density</strong> of the gas (in <span class="math notranslate nohighlight">\(\text{kg/m}^3\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(R\)</span> is the <strong>specific gas constant</strong> (in J/kg·K),</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is the <strong>absolute temperature</strong> of the gas (in Kelvin, K).</p></li>
+</ul>
+<section id="conceptualization">
+<h3>Conceptualization<a class="headerlink" href="#conceptualization" title="Link to this heading">#</a></h3>
+<p>This form of the Ideal Gas Law relates the <strong>pressure</strong> of a gas to its <strong>density</strong> rather than the amount of gas in moles (<span class="math notranslate nohighlight">\(n\)</span>). The specific gas constant <span class="math notranslate nohighlight">\(R\)</span> here is related to the universal gas constant <span class="math notranslate nohighlight">\(R_u\)</span> by:</p>
+<div class="math notranslate nohighlight">
+\[
+R = \frac{R_u}{M}
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_u = 8.314 \, \text{J/mol·K}\)</span> is the <strong>universal gas constant</strong>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> is the <strong>molar mass</strong> of the gas (in kg/mol).</p></li>
+</ul>
+<p>For example, the specific gas constant <span class="math notranslate nohighlight">\(R\)</span> for <strong>dry air</strong> is approximately <span class="math notranslate nohighlight">\(287 \, \text{J/kg·K}\)</span>.</p>
+</section>
+<section id="understanding-the-equation">
+<h3>Understanding the Equation<a class="headerlink" href="#understanding-the-equation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The equation <span class="math notranslate nohighlight">\(P = \rho R T\)</span> shows that <strong>pressure</strong> is directly proportional to both the <strong>density</strong> of the gas and its <strong>temperature</strong>.</p></li>
+<li><p><strong>Higher density</strong> at a constant temperature results in <strong>higher pressure</strong>.</p></li>
+<li><p>Similarly, increasing the <strong>temperature</strong> at a constant density will also increase the <strong>pressure</strong>.</p></li>
+</ul>
+<p>This form is particularly useful in atmospheric science and fluid dynamics, where <strong>density</strong> <span class="math notranslate nohighlight">\(\rho\)</span> is often a more convenient quantity than the number of moles.</p>
+</section>
+<section id="relationship-to-the-molar-form">
+<h3>Relationship to the Molar Form<a class="headerlink" href="#relationship-to-the-molar-form" title="Link to this heading">#</a></h3>
+<p>The traditional molar form of the Ideal Gas Law is:</p>
+<div class="math notranslate nohighlight">
+\[
+PV = nRT
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is the number of moles. To derive <span class="math notranslate nohighlight">\(P = \rho R T\)</span> from this, we start with the fact that <strong>density</strong> is the mass per unit volume:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho = \frac{m}{V}
+\]</div>
+<p>Also, the number of moles is related to the mass by <span class="math notranslate nohighlight">\(n = \frac{m}{M}\)</span>, where <span class="math notranslate nohighlight">\(M\)</span> is the molar mass. Substituting this into the Ideal Gas Law <span class="math notranslate nohighlight">\(PV = nRT\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \frac{nRT}{V} = \frac{mRT}{MV}
+\]</div>
+<p>Using <span class="math notranslate nohighlight">\(m/V = \rho\)</span>, this becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \rho \frac{R_u}{M} T
+\]</div>
+<p>Thus, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \rho R T
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(R = \frac{R_u}{M}\)</span> is the <strong>specific gas constant</strong> for the particular gas being considered.</p>
+</section>
+<section id="id1">
+<h3>Example Calculation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Let’s calculate the pressure of dry air with a density of <span class="math notranslate nohighlight">\(1.2 \, \text{kg/m}^3\)</span> at a temperature of <span class="math notranslate nohighlight">\(300 \, \text{K}\)</span>, using the specific gas constant <span class="math notranslate nohighlight">\(R = 287 \, \text{J/kg·K}\)</span> for air.</p>
+<div class="math notranslate nohighlight">
+\[
+P = \rho R T = (1.2 \, \text{kg/m}^3)(287 \, \text{J/kg·K})(300 \, \text{K})
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+P = 103,320 \, \text{Pa} = 103.3 \, \text{kPa}
+\]</div>
+<p>So, the pressure is approximately <strong>103.3 kPa</strong>.</p>
+</section>
+<section id="applications-of-p-rho-r-t">
+<h3>Applications of <span class="math notranslate nohighlight">\(P = \rho R T\)</span><a class="headerlink" href="#applications-of-p-rho-r-t" title="Link to this heading">#</a></h3>
+<p>This form of the Ideal Gas Law is often used in fields like:</p>
+<ul class="simple">
+<li><p><strong>Atmospheric science</strong>: to describe the behavior of gases in the atmosphere.</p></li>
+<li><p><strong>Fluid mechanics</strong>: especially when analyzing compressible flows.</p></li>
+<li><p><strong>Aerospace engineering</strong>: to model air properties in high-speed flight.</p></li>
+</ul>
+</section>
+<section id="assumptions-of-the-ideal-gas-law">
+<h3>Assumptions of the Ideal Gas Law<a class="headerlink" href="#assumptions-of-the-ideal-gas-law" title="Link to this heading">#</a></h3>
+<p>Like the molar form, this specific form of the Ideal Gas Law assumes:</p>
+<ol class="arabic simple">
+<li><p><strong>No intermolecular forces</strong>: The gas molecules do not attract or repel each other.</p></li>
+<li><p><strong>Point particles</strong>: Gas molecules are considered to have negligible volume.</p></li>
+<li><p><strong>Elastic collisions</strong>: All collisions between gas molecules and with container walls are perfectly elastic.</p></li>
+<li><p><strong>Valid at low pressures and high temperatures</strong>: The law breaks down under extreme conditions (high pressure, low temperature).</p></li>
+</ol>
+</section>
+<section id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">#</a></h3>
+<p>The Ideal Gas Law, in this form, is an approximation that assumes <strong>ideal behavior</strong>. For <strong>real gases</strong> under conditions of high pressure or low temperature, deviations occur, and more complex equations, such as the <strong>Van der Waals equation</strong>, must be used.</p>
+</section>
+</section>
 <section id="types-of-fluid-flow">
 <h2>Types of Fluid Flow<a class="headerlink" href="#types-of-fluid-flow" title="Link to this heading">#</a></h2>
 <p>Fluids exhibit different types of flow depending on various factors like velocity, pressure, and external forces. The major types of fluid flow are:</p>
@@ -878,6 +991,16 @@ SG_{\text{mercury}} = \frac{13,600 \, \text{kg/m}^3}{1000 \, \text{kg/m}^3} = 13
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">Interpretation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-specific-gravities-for-common-substances">Table of Specific Gravities for Common Substances</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal Gas Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptualization">Conceptualization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-equation">Understanding the Equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-to-the-molar-form">Relationship to the Molar Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Example Calculation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-p-rho-r-t">Applications of <span class="math notranslate nohighlight">\(P = \rho R T\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-of-the-ideal-gas-law">Assumptions of the Ideal Gas Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-fluid-flow">Types of Fluid Flow</a></li>

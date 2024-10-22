@@ -223,8 +223,7 @@ Specific weight is often used in calculations involving:
 
 Understanding the specific weight is crucial in applications such as hydrostatics, hydraulics, and fluid dynamics.
 
-
-### What is Specific Gravity?
+## What is Specific Gravity?
 
 **Specific gravity** (denoted as $SG$) is the ratio of the density of a substance to the density of a reference substance, usually **water** for liquids and solids, or **air** for gases. Since it is a ratio of two densities, **specific gravity is a dimensionless quantity**.
 
@@ -275,7 +274,6 @@ For example, the specific gravity of ethanol is 0.789, meaning ethanol is less d
 | Air (Relative to Water) | 0.00123                              |
 
 Note that for gases, specific gravity is often measured relative to air rather than water.
-
 
 ## Ideal Gas Law
 
