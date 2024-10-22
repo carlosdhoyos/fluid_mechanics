@@ -855,3 +855,155 @@ plt.grid(True)
 plt.show()
 
 ```
+
+---
+
+## Problem 10: Line, Surface, and Volume Integrals
+
+### Problem Statement
+
+1. **Line Integral**: Given the vector field \( \mathbf{F}(x, y) = (x^2, y^2) \), compute the line integral of \( \mathbf{F} \) along the curve \( C \), where \( C \) is the straight line path from point \( (0, 0) \) to point \( (1, 1) \).
+
+2. **Surface Integral**: Compute the surface integral of the vector field \( \mathbf{F}(x, y, z) = (y, z, x) \) over the surface \( S \), where \( S \) is the portion of the plane \( z = 4 - x - y \) in the first octant.
+
+3. **Volume Integral**: Compute the volume integral of the scalar field \( f(x, y, z) = x + y + z \) over the region \( V \), where \( V \) is the region bounded by the cylinder \( x^2 + y^2 = 1 \) and the planes \( z = 0 \) and \( z = 3 \).
+
+
+### Solution
+
+#### 1. Line Integral
+
+We want to compute the line integral of the vector field \( \mathbf{F}(x, y) = (x^2, y^2) \) along the curve \( C \), a straight line from \( (0, 0) \) to \( (1, 1) \).
+
+The line integral is given by:
+
+$$
+\int_C \mathbf{F} \cdot d\mathbf{r}
+$$
+
+Parameterizing the line as \( x(t) = t \) and \( y(t) = t \), the differential displacement vector is \( d\mathbf{r} = (1, 1) dt \).
+
+The integral becomes:
+
+$$
+\int_0^1 (t^2 + t^2) dt = \int_0^1 2t^2 dt
+$$
+
+The result can be calculated as:
+
+```{code-cell} python
+import numpy as np
+from scipy.integrate import quad
+
+# Define the parameterized vector field F along the curve x(t) = t, y(t) = t
+def integrand_line(t):
+    return 2 * t**2  # (x^2 + y^2) = 2t^2
+
+# Compute the line integral from t = 0 to t = 1
+line_integral, _ = quad(integrand_line, 0, 1)
+print(f"Line integral: {line_integral:.2f}")
+
+```
+
+### Result: Line Integral
+
+The line integral of the vector field \( \mathbf{F}(x, y) = (x^2, y^2) \) along the curve is:
+
+$$
+\int_C \mathbf{F} \cdot d\mathbf{r} = \frac{2}{3}
+$$
+
+
+#### 1. Surface Integral
+
+We are asked to compute the surface integral of the vector field \( \mathbf{F}(x, y, z) = (y, z, x) \) over the surface \( S \), which is the portion of the plane \( z = 4 - x - y \) in the first octant.
+
+##### Step 1: Surface Integral Formula
+
+The surface integral of a vector field \( \mathbf{F} \) over a surface \( S \) is given by:
+
+$$
+\iint_S \mathbf{F} \cdot \mathbf{n} \, dS
+$$
+
+where \( \mathbf{n} \) is the unit normal vector to the surface, and \( dS \) is the differential surface area element.
+
+##### Step 2: Parameterization and Normal Vector
+
+The surface \( S \) is described by the plane equation \( z = 4 - x - y \). This can be parameterized as:
+
+$$
+\mathbf{r}(x, y) = (x, y, 4 - x - y)
+$$
+
+The partial derivatives of \( \mathbf{r} \) with respect to \( x \) and \( y \) give us the tangent vectors:
+
+$$
+\frac{\partial \mathbf{r}}{\partial x} = (1, 0, -1) \quad \text{and} \quad \frac{\partial \mathbf{r}}{\partial y} = (0, 1, -1)
+$$
+
+The cross product of these tangent vectors gives us the normal vector to the surface:
+
+$$
+\mathbf{n} = \frac{\partial \mathbf{r}}{\partial x} \times \frac{\partial \mathbf{r}}{\partial y} = (-1, -1, 1)
+$$
+
+##### Step 3: Dot Product of \( \mathbf{F} \) and \( \mathbf{n} \)
+
+The vector field is \( \mathbf{F}(x, y, z) = (y, z, x) \), so we need to compute the dot product:
+
+$$
+\mathbf{F} \cdot \mathbf{n} = (y, z, x) \cdot (-1, -1, 1) = -y - z + x
+$$
+
+Substitute \( z = 4 - x - y \) into the dot product:
+
+$$
+\mathbf{F} \cdot \mathbf{n} = -y - (4 - x - y) + x = 2x - 4
+$$
+
+##### Step 4: Limits of Integration
+
+The surface lies in the first octant, so the limits for \( x \) and \( y \) are:
+
+- \( x \) ranges from 0 to 4.
+- For a given \( x \), \( y \) ranges from 0 to \( 4 - x \).
+
+##### Step 5: Set Up the Surface Integral
+
+The surface integral becomes:
+
+$$
+\iint_S (2x - 4) \, dS = \int_0^4 \int_0^{4-x} (2x - 4) \, dy \, dx
+$$
+
+##### Step 6: Solve the Surface Integral Numerically
+
+We can use Python to compute the surface integral:
+
+```{code-cell} python
+from scipy.integrate import dblquad
+
+# Define the integrand for the surface integral (2x - 4)
+def integrand_surface(y, x):
+    return 2 * x - 4
+
+# Limits for the region of integration
+x_min, x_max = 0, 4
+y_min = lambda x: 0
+y_max = lambda x: 4 - x
+
+# Compute the surface integral
+surface_integral, _ = dblquad(integrand_surface, x_min, x_max, y_min, y_max)
+print(f"Surface integral: {surface_integral:.2f}")
+
+```
+
+##### Step 7: Final Answer
+
+After performing the numerical integration, the result of the surface integral is:
+
+$$
+\iint_S \mathbf{F} \cdot \mathbf{n} \, dS = -\frac{32}{3}
+$$
+
