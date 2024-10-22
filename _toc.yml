@@ -9,5 +9,6 @@ chapters:
 - file: prerequisites
 - file: units
 - file: fluids_v_solids
+- file: types_of_flows
 - file: fluid_properties
 - file: bibliography

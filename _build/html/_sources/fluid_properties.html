@@ -213,6 +213,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../prerequisites.html">Prerequisites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../units.html">Common Physical Quantities and Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../fluids_v_solids.html">Solids vs. Fluids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../types_of_flows.html">Types of Fluid Flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../fluid_properties.html">Properties of Fluids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
 </ul>
@@ -933,6 +934,48 @@ P = 103,320 \, \text{Pa} = 103.3 \, \text{kPa}
 <section id="limitations">
 <h3>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">#</a></h3>
 <p>The Ideal Gas Law, in this form, is an approximation that assumes <strong>ideal behavior</strong>. For <strong>real gases</strong> under conditions of high pressure or low temperature, deviations occur, and more complex equations, such as the <strong>Van der Waals equation</strong>, must be used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+
+<span class="c1"># Create a figure</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define ranges for temperature (T) and pressure (P)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>  <span class="c1"># Temperature from 300K to 700K</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>     <span class="c1"># Pressure from 1 to 10 atm</span>
+<span class="n">T</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
+
+<span class="c1"># Equation for volume V, assume ideal gas law: PV = nRT</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.0821</span>  <span class="c1"># L·atm/mol·K (Ideal gas constant)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>       <span class="c1"># Assume 1 mole of gas</span>
+<span class="n">V</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="n">P</span>  <span class="c1"># Ideal gas law rearranged to V = nRT / P</span>
+
+<span class="c1"># Plot the surface in color</span>
+<span class="n">surf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+
+<span class="c1"># Color bar for the surface</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">surf</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Label axes with units</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Pressure (P) [atm]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Temperature (T) [K]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Volume (V) [L]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Rotate the plot by 90 degrees</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="n">elev</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">azim</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>  <span class="c1"># azim=90 rotates it by 90 degrees</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d79e790e47c780e4ce4ee11d9c59812749300c8b7a96e6f025a09294c3e26914.png" src="../_images/d79e790e47c780e4ce4ee11d9c59812749300c8b7a96e6f025a09294c3e26914.png" />
+</div>
+</div>
 </section>
 </section>
 <section id="types-of-fluid-flow">
