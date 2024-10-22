@@ -1415,3 +1415,29 @@ $$
 1. The acceleration along the incline is $ 4.9 \, \text{m/s}^2 $.
 2. The speed after 2 seconds is $ 9.8 \, \text{m/s} $.
 3. The distance traveled after 2 seconds is $ 9.8 \, \text{m} $.
+
+
+
+$$
+\begin{tikzpicture}
+
+% Inclined plane
+\draw[thick] (0,0) -- (4,2); 
+
+% Block
+\draw[fill=blue!30] (2,1) rectangle ++(0.5,0.5);
+
+% Forces
+\draw[->, red, thick] (2.25,1.25) -- ++(0,-2) node[below] {$mg$};
+\draw[->, green, thick] (2.25,1.25) -- ++(1,0.5) node[right] {$N$};
+\draw[->, blue, thick] (2.25,1.25) -- ++(1.5,-0.75) node[right] {$mg \sin \theta$};
+
+% Angle label
+\draw (0.7,0) arc[start angle=0,end angle=26.6,radius=0.7] node[midway, right] {$\theta$};
+
+% Ground line
+\draw[dashed] (0,0) -- (4,0);
+
+\end{tikzpicture}
+$$
+
