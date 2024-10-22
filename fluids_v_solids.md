@@ -69,49 +69,6 @@ The **continuum hypothesis** is a crucial assumption in fluid mechanics, where f
 
 The continuum hypothesis allows us to use differential equations to describe fluid behavior, such as the **Navier-Stokes equations** and the **continuity equation**, which govern the flow and motion of fluids at a macroscopic level.
 
-### Navier-Stokes Equations
-
-The Navier-Stokes equations describe the motion of fluids under the influence of internal and external forces, derived from Newton’s second law:
-
-$$
-\rho \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathbf{v} \right) = -\nabla P + \mu \nabla^2 \mathbf{v} + \mathbf{f}
-$$
-
-where:
-- $\rho$ is the fluid density,
-- $\mathbf{v}$ is the velocity field,
-- $P$ is the pressure,
-- $\mu$ is the dynamic viscosity,
-- $\mathbf{f}$ represents body forces (e.g., gravity).
-
-### Continuity Equation
-
-The continuity equation expresses mass conservation in fluid flow:
-
-$$
-\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0
-$$
-
-For incompressible fluids, this simplifies to:
-
-$$
-\nabla \cdot \mathbf{v} = 0
-$$
-
-### Energy Equation
-
-The energy equation, under the continuum hypothesis, governs the conservation of energy in fluids:
-
-$$
-\frac{\partial E}{\partial t} + \nabla \cdot (E \mathbf{v}) = \nabla \cdot (\kappa \nabla T) + \mathbf{v} \cdot \nabla P + \Phi
-$$
-
-where:
-- $E$ is the total energy,
-- $\kappa$ is thermal conductivity,
-- $T$ is temperature,
-- $\Phi$ represents viscous dissipation.
-
 
 ## Importance of the Continuum Hypothesis
 

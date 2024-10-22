@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Solids vs. Fluids: Key Differences &#8212; Fluid Mechanics Class Notes</title>
+    <title>Solids vs. Fluids &#8212; Fluid Mechanics Class Notes</title>
   
   
   
@@ -353,7 +353,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Solids vs. Fluids: Key Differences</h1>
+    <h1>Solids vs. Fluids</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -363,34 +363,29 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Solids vs. Fluids: Key Differences</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-structure-and-behavior">1.1 Molecular Structure and Behavior</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-to-forces">1.2 Response to Forces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-and-motion">1.3 Flow and Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-structure-and-behavior">Molecular Structure and Behavior</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-to-forces">Response to Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-and-motion">Flow and Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuum-hypothesis-in-fluid-mechanics">Continuum Hypothesis in Fluid Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-aspects-of-the-continuum-hypothesis">Key Aspects of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-scale-vs-macroscopic-scale">Molecular Scale vs. Macroscopic Scale</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#continuum-hypothesis-in-fluid-mechanics">Continuum Hypothesis in Fluid Mechanics</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-aspects-of-the-continuum-hypothesis">2.1 Key Aspects of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-scale-vs-macroscopic-scale">Molecular Scale vs. Macroscopic Scale</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-volumes-and-fluid-elements">Control Volumes and Fluid Elements</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#validity-of-the-hypothesis">Validity of the Hypothesis</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-in-fluid-mechanics">2.2 Application in Fluid Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-in-fluid-mechanics">Application in Fluid Mechanics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navier-stokes-equations">Navier-Stokes Equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-equation">Continuity Equation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation">Energy Equation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-the-continuum-hypothesis">2.3 Importance of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-the-continuum-hypothesis">Importance of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">2.4 Conclusion</a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -401,16 +396,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="solids-vs-fluids-key-differences">
-<h1>Solids vs. Fluids: Key Differences<a class="headerlink" href="#solids-vs-fluids-key-differences" title="Link to this heading">#</a></h1>
-<p>Solids and fluids (liquids and gases) exhibit distinct mechanical behaviors, primarily due to differences in how their molecules interact and respond to forces. Understanding these differences is fundamental to distinguishing between solid mechanics and fluid mechanics.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="solids-vs-fluids">
+<h1>Solids vs. Fluids<a class="headerlink" href="#solids-vs-fluids" title="Link to this heading">#</a></h1>
+<p>Solids and fluids (liquids and gases) exhibit distinct mechanical behaviors, primarily due to differences in how their molecules interact and respond to forces.</p>
 <section id="molecular-structure-and-behavior">
-<h2>1.1 Molecular Structure and Behavior<a class="headerlink" href="#molecular-structure-and-behavior" title="Link to this heading">#</a></h2>
+<h2>Molecular Structure and Behavior<a class="headerlink" href="#molecular-structure-and-behavior" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Solids</strong>: In solids, molecules are closely packed and arranged in a regular structure. The intermolecular forces are strong, giving solids a definite shape and volume. When subjected to external forces, solids deform but resist changes in shape due to their inherent elasticity. The deformation is often small, and if the forces are removed, solids typically return to their original shape.</p>
 <ul>
 <li><p><strong>Elasticity</strong>: Solids exhibit elasticity, meaning they resist deformation and tend to return to their original form when the force is removed (Hooke’s Law).</p></li>
-<li><p><strong>Shear Stress</strong>: Solids can sustain shear stress indefinitely without flowing, as the intermolecular forces provide the necessary resistance.</p></li>
+<li><p><strong>Shear Stress</strong>: Solids can sustain shear stress without flowing, as the intermolecular forces provide the necessary resistance.</p></li>
 </ul>
 </li>
 <li><p><strong>Fluids</strong>: In fluids, molecules are loosely arranged and can move freely past each other. The intermolecular forces in fluids are much weaker compared to solids, allowing fluids to flow and take the shape of their container. Fluids are further classified into <strong>liquids</strong> and <strong>gases</strong>.</p>
@@ -423,7 +418,7 @@ document.write(`
 </ul>
 </section>
 <section id="response-to-forces">
-<h2>1.2 Response to Forces<a class="headerlink" href="#response-to-forces" title="Link to this heading">#</a></h2>
+<h2>Response to Forces<a class="headerlink" href="#response-to-forces" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Solids</strong>: A solid’s response to external forces is characterized by stress and strain. It can resist both <strong>normal forces</strong> (leading to tensile or compressive stress) and <strong>shear forces</strong> (leading to shear stress).</p>
 <ul>
@@ -438,25 +433,24 @@ document.write(`
 </ul>
 </section>
 <section id="flow-and-motion">
-<h2>1.3 Flow and Motion<a class="headerlink" href="#flow-and-motion" title="Link to this heading">#</a></h2>
+<h2>Flow and Motion<a class="headerlink" href="#flow-and-motion" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Solids</strong>: Solids undergo deformation, but once the external force is removed, they return to their original state (elastic behavior) or remain in a deformed state (plastic behavior). They do not “flow” under stress.</p></li>
 <li><p><strong>Fluids</strong>: Fluids, on the other hand, flow when subjected to shear forces. In steady flow conditions, fluids maintain a continuous, streamlined motion. The velocity distribution in fluids is a key factor that differentiates laminar from turbulent flow.</p></li>
 </ul>
 </section>
-</section>
-<hr class="docutils" />
-<section class="tex2jax_ignore mathjax_ignore" id="continuum-hypothesis-in-fluid-mechanics">
-<h1>Continuum Hypothesis in Fluid Mechanics<a class="headerlink" href="#continuum-hypothesis-in-fluid-mechanics" title="Link to this heading">#</a></h1>
+<section id="continuum-hypothesis-in-fluid-mechanics">
+<h2>Continuum Hypothesis in Fluid Mechanics<a class="headerlink" href="#continuum-hypothesis-in-fluid-mechanics" title="Link to this heading">#</a></h2>
 <p>The <strong>continuum hypothesis</strong> is a crucial assumption in fluid mechanics, where fluids are treated as continuous, homogeneous matter, disregarding their molecular structure. Despite being composed of discrete molecules, fluids are modeled using smooth, continuous functions for properties like velocity, pressure, and density.</p>
 <section id="key-aspects-of-the-continuum-hypothesis">
-<h2>2.1 Key Aspects of the Continuum Hypothesis<a class="headerlink" href="#key-aspects-of-the-continuum-hypothesis" title="Link to this heading">#</a></h2>
+<h3>Key Aspects of the Continuum Hypothesis<a class="headerlink" href="#key-aspects-of-the-continuum-hypothesis" title="Link to this heading">#</a></h3>
 <section id="molecular-scale-vs-macroscopic-scale">
-<h3>Molecular Scale vs. Macroscopic Scale<a class="headerlink" href="#molecular-scale-vs-macroscopic-scale" title="Link to this heading">#</a></h3>
+<h4>Molecular Scale vs. Macroscopic Scale<a class="headerlink" href="#molecular-scale-vs-macroscopic-scale" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>At a <strong>molecular level</strong>, fluids consist of individual molecules moving randomly. Tracking each molecule’s motion is computationally prohibitive and unnecessary for most engineering problems.</p></li>
 <li><p>The continuum hypothesis assumes that, at a <strong>macroscopic scale</strong> (i.e., scales much larger than molecular dimensions), fluid properties like density, pressure, and velocity can be defined at every point in space. These properties vary smoothly and continuously across the fluid.</p></li>
 </ul>
+</section>
 </section>
 <section id="control-volumes-and-fluid-elements">
 <h3>Control Volumes and Fluid Elements<a class="headerlink" href="#control-volumes-and-fluid-elements" title="Link to this heading">#</a></h3>
@@ -470,7 +464,9 @@ document.write(`
 <ul>
 <li><p>The continuum hypothesis holds when the <strong>mean free path</strong> (the average distance a molecule travels between collisions) is much smaller than the characteristic length scale of the flow. This is quantified by the <strong>Knudsen number</strong> (<span class="math notranslate nohighlight">\(\text{Kn}\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[ \text{Kn} = \frac{\lambda}{L} \]</div>
+\[ 
+  \text{Kn} = \frac{\lambda}{L} 
+  \]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\lambda\)</span> is the mean free path,</p></li>
@@ -482,9 +478,8 @@ document.write(`
 </ul>
 </section>
 </section>
-<hr class="docutils" />
 <section id="application-in-fluid-mechanics">
-<h2>2.2 Application in Fluid Mechanics<a class="headerlink" href="#application-in-fluid-mechanics" title="Link to this heading">#</a></h2>
+<h2>Application in Fluid Mechanics<a class="headerlink" href="#application-in-fluid-mechanics" title="Link to this heading">#</a></h2>
 <p>The continuum hypothesis allows us to use differential equations to describe fluid behavior, such as the <strong>Navier-Stokes equations</strong> and the <strong>continuity equation</strong>, which govern the flow and motion of fluids at a macroscopic level.</p>
 <section id="navier-stokes-equations">
 <h3>Navier-Stokes Equations<a class="headerlink" href="#navier-stokes-equations" title="Link to this heading">#</a></h3>
@@ -531,9 +526,8 @@ document.write(`
 </ul>
 </section>
 </section>
-<hr class="docutils" />
 <section id="importance-of-the-continuum-hypothesis">
-<h2>2.3 Importance of the Continuum Hypothesis<a class="headerlink" href="#importance-of-the-continuum-hypothesis" title="Link to this heading">#</a></h2>
+<h2>Importance of the Continuum Hypothesis<a class="headerlink" href="#importance-of-the-continuum-hypothesis" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Simplification</strong>: By treating fluids as continuous, we can apply classical field theories and partial differential equations, greatly simplifying the analysis of fluid flow.</p></li>
 <li><p><strong>Wide Applicability</strong>: The continuum hypothesis is valid for most engineering applications involving liquids and gases under typical conditions, including aerodynamics, hydrodynamics, and heat transfer.</p></li>
@@ -543,12 +537,8 @@ document.write(`
 <ul class="simple">
 <li><p><strong>Rarefied Gas Flows</strong>: In cases where the mean free path is not negligible compared to the system size (e.g., high-altitude atmospheric flows or microfluidic systems), the continuum hypothesis may break down. In such cases, kinetic theory or molecular dynamics simulations are required.</p></li>
 </ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="conclusion">
-<h2>2.4 Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
 <p>The continuum hypothesis is a cornerstone of fluid mechanics, enabling the use of differential equations such as the Navier-Stokes and continuity equations. It provides a powerful framework for understanding fluid behavior in most engineering applications, simplifying the mathematical treatment of fluid flow and ensuring accurate modeling at the macroscopic scale.</p>
+</section>
 </section>
 </section>
 
@@ -598,34 +588,29 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Solids vs. Fluids: Key Differences</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-structure-and-behavior">1.1 Molecular Structure and Behavior</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-to-forces">1.2 Response to Forces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-and-motion">1.3 Flow and Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-structure-and-behavior">Molecular Structure and Behavior</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-to-forces">Response to Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-and-motion">Flow and Motion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#continuum-hypothesis-in-fluid-mechanics">Continuum Hypothesis in Fluid Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-aspects-of-the-continuum-hypothesis">Key Aspects of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-scale-vs-macroscopic-scale">Molecular Scale vs. Macroscopic Scale</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#continuum-hypothesis-in-fluid-mechanics">Continuum Hypothesis in Fluid Mechanics</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-aspects-of-the-continuum-hypothesis">2.1 Key Aspects of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-scale-vs-macroscopic-scale">Molecular Scale vs. Macroscopic Scale</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-volumes-and-fluid-elements">Control Volumes and Fluid Elements</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#validity-of-the-hypothesis">Validity of the Hypothesis</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-in-fluid-mechanics">2.2 Application in Fluid Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-in-fluid-mechanics">Application in Fluid Mechanics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navier-stokes-equations">Navier-Stokes Equations</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-equation">Continuity Equation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation">Energy Equation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-the-continuum-hypothesis">2.3 Importance of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-the-continuum-hypothesis">Importance of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">2.4 Conclusion</a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
