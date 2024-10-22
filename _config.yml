@@ -43,3 +43,4 @@ html:
       home_page_in_toc: true  # Ensures the home page is in the table of contents
       show_navbar_depth: 2  # Controls the depth of the navbar, reducing clutter
       show_toc_level: 2  # Controls how many levels of headers are shown in the sidebar
+      numbering: true  # Enable automatic numbering for chapters and sections

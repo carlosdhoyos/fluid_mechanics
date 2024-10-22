@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Solids vs. Fluids: Key Differences &#8212; Fluid Mechanics Class Notes</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css?v=d2032c04" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=f0c89327" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/theme.css?v=a243ae73" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/bootstrap.css?v=b4a3e8ba" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?v=f4fbef65" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_sources/fluids_v_solids';</script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/searchtools.js?v=63a53a7d"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/language_data.js?v=d4673a71"></script>
+    <script src="../_static/copybutton_funcs.js?v=776a791e"></script>
+    <script src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/scripts/bootstrap.js?v=7583a70d"></script>
+    <script src="../_static/scripts/pydata-sphinx-theme.js?v=4bc35cb3"></script>
+    <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?v=4e4fcec4"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Fluid Mechanics Class Notes - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Fluid Mechanics Class Notes - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to the Fluid Mechanics Course Site
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../environment.html">Setting Up the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../units.html">Common Physical Quantities and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fluids_v_solids.html">Solids vs. Fluids: Key Differences</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../fluid_properties.html">Properties of Fluids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/carlosdhoyos/fluid_mechanics" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/carlosdhoyos/fluid_mechanics/issues/new?title=Issue%20on%20page%20%2F_sources/fluids_v_solids.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/_sources/fluids_v_solids.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Solids vs. Fluids: Key Differences</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Solids vs. Fluids: Key Differences</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-structure-and-behavior">1.1 Molecular Structure and Behavior</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-to-forces">1.2 Response to Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-and-motion">1.3 Flow and Motion</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#continuum-hypothesis-in-fluid-mechanics">Continuum Hypothesis in Fluid Mechanics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-aspects-of-the-continuum-hypothesis">2.1 Key Aspects of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-scale-vs-macroscopic-scale">Molecular Scale vs. Macroscopic Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-volumes-and-fluid-elements">Control Volumes and Fluid Elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#validity-of-the-hypothesis">Validity of the Hypothesis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-in-fluid-mechanics">2.2 Application in Fluid Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navier-stokes-equations">Navier-Stokes Equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-equation">Continuity Equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation">Energy Equation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-the-continuum-hypothesis">2.3 Importance of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">2.4 Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="solids-vs-fluids-key-differences">
+<h1>Solids vs. Fluids: Key Differences<a class="headerlink" href="#solids-vs-fluids-key-differences" title="Link to this heading">#</a></h1>
+<p>Solids and fluids (liquids and gases) exhibit distinct mechanical behaviors, primarily due to differences in how their molecules interact and respond to forces. Understanding these differences is fundamental to distinguishing between solid mechanics and fluid mechanics.</p>
+<section id="molecular-structure-and-behavior">
+<h2>1.1 Molecular Structure and Behavior<a class="headerlink" href="#molecular-structure-and-behavior" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Solids</strong>: In solids, molecules are closely packed and arranged in a regular structure. The intermolecular forces are strong, giving solids a definite shape and volume. When subjected to external forces, solids deform but resist changes in shape due to their inherent elasticity. The deformation is often small, and if the forces are removed, solids typically return to their original shape.</p>
+<ul>
+<li><p><strong>Elasticity</strong>: Solids exhibit elasticity, meaning they resist deformation and tend to return to their original form when the force is removed (Hooke’s Law).</p></li>
+<li><p><strong>Shear Stress</strong>: Solids can sustain shear stress indefinitely without flowing, as the intermolecular forces provide the necessary resistance.</p></li>
+</ul>
+</li>
+<li><p><strong>Fluids</strong>: In fluids, molecules are loosely arranged and can move freely past each other. The intermolecular forces in fluids are much weaker compared to solids, allowing fluids to flow and take the shape of their container. Fluids are further classified into <strong>liquids</strong> and <strong>gases</strong>.</p>
+<ul>
+<li><p><strong>Liquids</strong>: Liquids have a definite volume but no fixed shape. They flow under the influence of gravity or other forces, but unlike gases, they are difficult to compress.</p></li>
+<li><p><strong>Gases</strong>: Gases have no definite volume or shape. They expand to fill the entire volume of their container and are highly compressible.</p></li>
+<li><p><strong>Shear Stress</strong>: Fluids cannot resist shear stress without deforming. When subjected to even a small shear force, they flow continuously.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="response-to-forces">
+<h2>1.2 Response to Forces<a class="headerlink" href="#response-to-forces" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Solids</strong>: A solid’s response to external forces is characterized by stress and strain. It can resist both <strong>normal forces</strong> (leading to tensile or compressive stress) and <strong>shear forces</strong> (leading to shear stress).</p>
+<ul>
+<li><p><strong>Deformation</strong>: In solids, the deformation is typically elastic (reversible) or plastic (permanent) depending on the magnitude of the applied force.</p></li>
+</ul>
+</li>
+<li><p><strong>Fluids</strong>: Fluids, in contrast, cannot resist shear forces. Instead, they undergo continuous deformation (flow) when subjected to any shear stress. Fluids can resist normal forces (compressive stress), but their response is to change volume or pressure rather than shape.</p>
+<ul>
+<li><p><strong>Viscosity</strong>: Fluids resist shear stress through viscosity, a property that quantifies the internal friction between fluid layers as they move relative to each other. Unlike solids, fluids continuously deform under shear stress.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="flow-and-motion">
+<h2>1.3 Flow and Motion<a class="headerlink" href="#flow-and-motion" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Solids</strong>: Solids undergo deformation, but once the external force is removed, they return to their original state (elastic behavior) or remain in a deformed state (plastic behavior). They do not “flow” under stress.</p></li>
+<li><p><strong>Fluids</strong>: Fluids, on the other hand, flow when subjected to shear forces. In steady flow conditions, fluids maintain a continuous, streamlined motion. The velocity distribution in fluids is a key factor that differentiates laminar from turbulent flow.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="continuum-hypothesis-in-fluid-mechanics">
+<h1>Continuum Hypothesis in Fluid Mechanics<a class="headerlink" href="#continuum-hypothesis-in-fluid-mechanics" title="Link to this heading">#</a></h1>
+<p>The <strong>continuum hypothesis</strong> is a crucial assumption in fluid mechanics, where fluids are treated as continuous, homogeneous matter, disregarding their molecular structure. Despite being composed of discrete molecules, fluids are modeled using smooth, continuous functions for properties like velocity, pressure, and density.</p>
+<section id="key-aspects-of-the-continuum-hypothesis">
+<h2>2.1 Key Aspects of the Continuum Hypothesis<a class="headerlink" href="#key-aspects-of-the-continuum-hypothesis" title="Link to this heading">#</a></h2>
+<section id="molecular-scale-vs-macroscopic-scale">
+<h3>Molecular Scale vs. Macroscopic Scale<a class="headerlink" href="#molecular-scale-vs-macroscopic-scale" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>At a <strong>molecular level</strong>, fluids consist of individual molecules moving randomly. Tracking each molecule’s motion is computationally prohibitive and unnecessary for most engineering problems.</p></li>
+<li><p>The continuum hypothesis assumes that, at a <strong>macroscopic scale</strong> (i.e., scales much larger than molecular dimensions), fluid properties like density, pressure, and velocity can be defined at every point in space. These properties vary smoothly and continuously across the fluid.</p></li>
+</ul>
+</section>
+<section id="control-volumes-and-fluid-elements">
+<h3>Control Volumes and Fluid Elements<a class="headerlink" href="#control-volumes-and-fluid-elements" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Control Volume</strong>: A fixed or moving region in space where fluid properties are averaged. The continuum hypothesis ensures that within this volume, the number of molecules is large enough for meaningful averages of density, pressure, and velocity to be computed.</p></li>
+<li><p><strong>Fluid Element</strong>: A differential-sized volume in the fluid, treated as a “point” where properties can be defined. The continuum hypothesis assumes that these properties vary continuously within and around the fluid element.</p></li>
+</ul>
+</section>
+<section id="validity-of-the-hypothesis">
+<h3>Validity of the Hypothesis<a class="headerlink" href="#validity-of-the-hypothesis" title="Link to this heading">#</a></h3>
+<ul>
+<li><p>The continuum hypothesis holds when the <strong>mean free path</strong> (the average distance a molecule travels between collisions) is much smaller than the characteristic length scale of the flow. This is quantified by the <strong>Knudsen number</strong> (<span class="math notranslate nohighlight">\(\text{Kn}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ \text{Kn} = \frac{\lambda}{L} \]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> is the mean free path,</p></li>
+<li><p><span class="math notranslate nohighlight">\(L\)</span> is the characteristic length of the system (e.g., pipe diameter).</p></li>
+<li><p>For most practical fluid mechanics problems, <span class="math notranslate nohighlight">\(\text{Kn} \ll 1\)</span>, meaning the mean free path is much smaller than the system size, and the continuum assumption is valid.</p></li>
+<li><p>In cases where <span class="math notranslate nohighlight">\(\text{Kn} \sim 1\)</span> (e.g., rarefied gases), the continuum assumption breaks down, and molecular dynamics or <strong>kinetic theory</strong> becomes necessary.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="application-in-fluid-mechanics">
+<h2>2.2 Application in Fluid Mechanics<a class="headerlink" href="#application-in-fluid-mechanics" title="Link to this heading">#</a></h2>
+<p>The continuum hypothesis allows us to use differential equations to describe fluid behavior, such as the <strong>Navier-Stokes equations</strong> and the <strong>continuity equation</strong>, which govern the flow and motion of fluids at a macroscopic level.</p>
+<section id="navier-stokes-equations">
+<h3>Navier-Stokes Equations<a class="headerlink" href="#navier-stokes-equations" title="Link to this heading">#</a></h3>
+<p>The Navier-Stokes equations describe the motion of fluids under the influence of internal and external forces, derived from Newton’s second law:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho \left( \frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathbf{v} \right) = -\nabla P + \mu \nabla^2 \mathbf{v} + \mathbf{f}
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> is the fluid density,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{v}\)</span> is the velocity field,</p></li>
+<li><p><span class="math notranslate nohighlight">\(P\)</span> is the pressure,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span> is the dynamic viscosity,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{f}\)</span> represents body forces (e.g., gravity).</p></li>
+</ul>
+</section>
+<section id="continuity-equation">
+<h3>Continuity Equation<a class="headerlink" href="#continuity-equation" title="Link to this heading">#</a></h3>
+<p>The continuity equation expresses mass conservation in fluid flow:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0
+\]</div>
+<p>For incompressible fluids, this simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla \cdot \mathbf{v} = 0
+\]</div>
+</section>
+<section id="energy-equation">
+<h3>Energy Equation<a class="headerlink" href="#energy-equation" title="Link to this heading">#</a></h3>
+<p>The energy equation, under the continuum hypothesis, governs the conservation of energy in fluids:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial E}{\partial t} + \nabla \cdot (E \mathbf{v}) = \nabla \cdot (\kappa \nabla T) + \mathbf{v} \cdot \nabla P + \Phi
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(E\)</span> is the total energy,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\kappa\)</span> is thermal conductivity,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is temperature,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Phi\)</span> represents viscous dissipation.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="importance-of-the-continuum-hypothesis">
+<h2>2.3 Importance of the Continuum Hypothesis<a class="headerlink" href="#importance-of-the-continuum-hypothesis" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Simplification</strong>: By treating fluids as continuous, we can apply classical field theories and partial differential equations, greatly simplifying the analysis of fluid flow.</p></li>
+<li><p><strong>Wide Applicability</strong>: The continuum hypothesis is valid for most engineering applications involving liquids and gases under typical conditions, including aerodynamics, hydrodynamics, and heat transfer.</p></li>
+</ul>
+<section id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Rarefied Gas Flows</strong>: In cases where the mean free path is not negligible compared to the system size (e.g., high-altitude atmospheric flows or microfluidic systems), the continuum hypothesis may break down. In such cases, kinetic theory or molecular dynamics simulations are required.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="conclusion">
+<h2>2.4 Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>The continuum hypothesis is a cornerstone of fluid mechanics, enabling the use of differential equations such as the Navier-Stokes and continuity equations. It provides a powerful framework for understanding fluid behavior in most engineering applications, simplifying the mathematical treatment of fluid flow and ensuring accurate modeling at the macroscopic scale.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_sources"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Solids vs. Fluids: Key Differences</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-structure-and-behavior">1.1 Molecular Structure and Behavior</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#response-to-forces">1.2 Response to Forces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flow-and-motion">1.3 Flow and Motion</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#continuum-hypothesis-in-fluid-mechanics">Continuum Hypothesis in Fluid Mechanics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-aspects-of-the-continuum-hypothesis">2.1 Key Aspects of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-scale-vs-macroscopic-scale">Molecular Scale vs. Macroscopic Scale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#control-volumes-and-fluid-elements">Control Volumes and Fluid Elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#validity-of-the-hypothesis">Validity of the Hypothesis</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#application-in-fluid-mechanics">2.2 Application in Fluid Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navier-stokes-equations">Navier-Stokes Equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuity-equation">Continuity Equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-equation">Energy Equation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-the-continuum-hypothesis">2.3 Importance of the Continuum Hypothesis</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">2.4 Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Carlos D. Hoyos
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

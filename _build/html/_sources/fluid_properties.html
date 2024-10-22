@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Notebooks with MyST Markdown &#8212; Fluid Mechanics Class Notes</title>
+    <title>Chapter: Properties of Fluids &#8212; Fluid Mechanics Class Notes</title>
   
   
   
@@ -68,7 +68,9 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '_sources/markdown-notebooks';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_sources/fluid_properties';</script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/searchtools.js?v=63a53a7d"></script>
@@ -285,7 +287,7 @@
       
       
       
-      <li><a href="https://github.com/carlosdhoyos/fluid_mechanics/issues/new?title=Issue%20on%20page%20%2F_sources/markdown-notebooks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/carlosdhoyos/fluid_mechanics/issues/new?title=Issue%20on%20page%20%2F_sources/fluid_properties.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -315,7 +317,7 @@
       
       
       
-      <li><a href="../_sources/_sources/markdown-notebooks.md" target="_blank"
+      <li><a href="../_sources/_sources/fluid_properties.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -399,7 +401,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Notebooks with MyST Markdown</h1>
+    <h1>Chapter: Properties of Fluids</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -409,9 +411,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-fluid-mechanics">1.1 What is Fluid Mechanics?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-fluid-flow">1.2 Types of Fluid Flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-fluids">1.3 Properties of Fluids</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-continuity-equation">1.4 The Continuity Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoullis-equation">1.5 Bernoulli’s Equation</a></li>
 </ul>
             </nav>
         </div>
@@ -423,50 +427,70 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="notebooks-with-myst-markdown">
-<h1>Notebooks with MyST Markdown<a class="headerlink" href="#notebooks-with-myst-markdown" title="Link to this heading">#</a></h1>
-<p>Jupyter Book also lets you write text-based notebooks using MyST Markdown.
-See <a class="reference external" href="https://jupyterbook.org/file-types/myst-notebooks.html">the Notebooks with MyST Markdown documentation</a> for more detailed instructions.
-This page shows off a notebook written in MyST Markdown.</p>
-<section id="an-example-cell">
-<h2>An example cell<a class="headerlink" href="#an-example-cell" title="Link to this heading">#</a></h2>
-<p>With MyST Markdown, you can define code cells with a directive like so:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Jupyter Book uses <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a> to convert text-based files to notebooks, and can support <a class="reference external" href="https://jupyterbook.org/file-types/jupytext.html">many other text-based notebook files</a>.</p>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-properties-of-fluids">
+<h1>Chapter: Properties of Fluids<a class="headerlink" href="#chapter-properties-of-fluids" title="Link to this heading">#</a></h1>
+<section id="what-is-fluid-mechanics">
+<h2>1.1 What is Fluid Mechanics?<a class="headerlink" href="#what-is-fluid-mechanics" title="Link to this heading">#</a></h2>
+<p>Fluid mechanics is the branch of physics that studies the behavior of fluids (liquids, gases, and plasmas) and the forces acting on them. The subject is divided into two major categories:</p>
+<ul class="simple">
+<li><p><strong>Fluid Statics</strong>: The study of fluids at rest.</p></li>
+<li><p><strong>Fluid Dynamics</strong>: The study of fluids in motion.</p></li>
+</ul>
 </section>
-<section id="create-a-notebook-with-myst-markdown">
-<h2>Create a notebook with MyST Markdown<a class="headerlink" href="#create-a-notebook-with-myst-markdown" title="Link to this heading">#</a></h2>
-<p>MyST Markdown notebooks are defined by two things:</p>
+<section id="types-of-fluid-flow">
+<h2>1.2 Types of Fluid Flow<a class="headerlink" href="#types-of-fluid-flow" title="Link to this heading">#</a></h2>
+<p>Fluids exhibit different types of flow depending on various factors like velocity, pressure, and external forces. The major types of fluid flow are:</p>
 <ol class="arabic simple">
-<li><p>YAML metadata that is needed to understand if / how it should convert text files to notebooks (including information about the kernel needed).
-See the YAML at the top of this page for example.</p></li>
-<li><p>The presence of <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directives, which will be executed with your book.</p></li>
+<li><p><strong>Laminar Flow</strong>: Flow where fluid moves in smooth paths or layers.</p></li>
+<li><p><strong>Turbulent Flow</strong>: Flow where the fluid undergoes irregular fluctuations and mixing.</p></li>
+<li><p><strong>Steady Flow</strong>: The fluid properties at any point remain constant over time.</p></li>
+<li><p><strong>Unsteady Flow</strong>: The fluid properties change over time.</p></li>
 </ol>
-<p>That’s all that is needed to get started!</p>
 </section>
-<section id="quickly-add-yaml-metadata-for-myst-notebooks">
-<h2>Quickly add YAML metadata for MyST Notebooks<a class="headerlink" href="#quickly-add-yaml-metadata-for-myst-notebooks" title="Link to this heading">#</a></h2>
-<p>If you have a markdown file and you’d like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">markdownfile</span><span class="o">.</span><span class="n">md</span>
-</pre></div>
-</div>
+<section id="properties-of-fluids">
+<h2>1.3 Properties of Fluids<a class="headerlink" href="#properties-of-fluids" title="Link to this heading">#</a></h2>
+<p>Understanding the physical properties of fluids is essential for analyzing fluid flow. The key properties include:</p>
+<ul>
+<li><p><strong>Density</strong> (<span class="math notranslate nohighlight">\(\rho\)</span>): The mass per unit volume of a fluid, typically measured in <span class="math notranslate nohighlight">\(kg/m^3\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ \rho = \frac{m}{V} \]</div>
+</li>
+<li><p><strong>Viscosity</strong> (<span class="math notranslate nohighlight">\(\mu\)</span>): The fluid’s resistance to deformation or flow.</p>
+<div class="math notranslate nohighlight">
+\[ \tau = \mu \frac{du}{dy} \]</div>
+</li>
+<li><p><strong>Surface Tension</strong> (<span class="math notranslate nohighlight">\(\sigma\)</span>): The cohesive force at the surface of a fluid.</p>
+<div class="math notranslate nohighlight">
+\[ F = \sigma L \]</div>
+</li>
+</ul>
+</section>
+<section id="the-continuity-equation">
+<h2>1.4 The Continuity Equation<a class="headerlink" href="#the-continuity-equation" title="Link to this heading">#</a></h2>
+<p>The continuity equation expresses the conservation of mass in a fluid flow. For a steady flow of an incompressible fluid, the equation is:</p>
+<div class="math notranslate nohighlight">
+\[ \nabla \cdot \mathbf{v} = 0 \]</div>
+<p>or in integral form for a control volume:</p>
+<div class="math notranslate nohighlight">
+\[ \int_{CS} \rho \mathbf{v} \cdot dA = 0 \]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{v}\)</span> is the fluid velocity,</p></li>
+<li><p><span class="math notranslate nohighlight">\(dA\)</span> is the differential area element on the control surface.</p></li>
+</ul>
+</section>
+<section id="bernoullis-equation">
+<h2>1.5 Bernoulli’s Equation<a class="headerlink" href="#bernoullis-equation" title="Link to this heading">#</a></h2>
+<p>Bernoulli’s principle relates the pressure, velocity, and elevation in a flowing fluid. For an incompressible and inviscid flow, it is expressed as:</p>
+<div class="math notranslate nohighlight">
+\[ P + \frac{1}{2} \rho v^2 + \rho g h = \text{constant} \]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> is the fluid pressure,</p></li>
+<li><p><span class="math notranslate nohighlight">\(v\)</span> is the velocity of the fluid,</p></li>
+<li><p><span class="math notranslate nohighlight">\(h\)</span> is the height above a reference level,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> is the density of the fluid.</p></li>
+</ul>
 </section>
 </section>
 
@@ -516,9 +540,11 @@ See the YAML at the top of this page for example.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-fluid-mechanics">1.1 What is Fluid Mechanics?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-fluid-flow">1.2 Types of Fluid Flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-fluids">1.3 Properties of Fluids</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-continuity-equation">1.4 The Continuity Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bernoullis-equation">1.5 Bernoulli’s Equation</a></li>
 </ul>
   </nav></div>
 
