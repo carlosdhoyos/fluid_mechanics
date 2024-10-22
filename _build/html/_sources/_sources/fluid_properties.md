@@ -1,6 +1,6 @@
-# Chapter: Properties of Fluids
+# Properties of Fluids
 
-## 1.1 What is Fluid Mechanics?
+## 1. What is Fluid Mechanics?
 
 Fluid mechanics is the branch of physics that studies the behavior of fluids (liquids, gases, and plasmas) and the forces acting on them. The subject is divided into two major categories:
 
