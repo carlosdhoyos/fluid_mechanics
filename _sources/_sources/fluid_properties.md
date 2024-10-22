@@ -4,7 +4,7 @@ Understanding the physical properties of fluids is essential for analyzing fluid
 
 - **Density** ($\rho$):
 - **Specific Weight** ($\gamma$)
-- 
+- **Specific Gravity** ($SG$)
 - **Viscosity** ($\mu$): The fluid's resistance to deformation or flow.
   
   $$ \tau = \mu \frac{du}{dy} $$
@@ -222,6 +222,59 @@ Specific weight is often used in calculations involving:
 - Specific weight changes with variations in density and is influenced by temperature, pressure, and fluid composition.
 
 Understanding the specific weight is crucial in applications such as hydrostatics, hydraulics, and fluid dynamics.
+
+
+### What is Specific Gravity?
+
+**Specific gravity** (denoted as $SG$) is the ratio of the density of a substance to the density of a reference substance, usually **water** for liquids and solids, or **air** for gases. Since it is a ratio of two densities, **specific gravity is a dimensionless quantity**.
+
+For liquids and solids, the reference substance is water at $4^\circ C$, which has a density of approximately $1000 \, \text{kg/m}^3$ in the SI system or $62.4 \, \text{lb/ft}^3$ in the English system.
+
+### Formula
+
+$$
+SG = \frac{\rho_{\text{fluid}}}{\rho_{\text{water}}}
+$$
+
+where:
+- $\rho_{\text{fluid}}$ is the density of the fluid (or material) whose specific gravity is being calculated,
+- $\rho_{\text{water}}$ is the density of water at $4^\circ C$.
+
+Since the densities are in the same units, the specific gravity itself has no units.
+
+### Example Calculation
+
+If the density of mercury is $13,600 \, \text{kg/m}^3$, the specific gravity of mercury relative to water would be:
+
+$$
+SG_{\text{mercury}} = \frac{13,600 \, \text{kg/m}^3}{1000 \, \text{kg/m}^3} = 13.6
+$$
+
+### Interpretation
+
+- A **specific gravity** greater than 1 means the substance is **denser than water**.
+- A **specific gravity** less than 1 means the substance is **less dense than water**.
+
+For example, the specific gravity of ethanol is 0.789, meaning ethanol is less dense than water.
+
+### Applications
+
+- **Buoyancy**: Specific gravity helps in determining whether an object will float or sink in a fluid.
+- **Concentration**: It is used to estimate concentrations in solutions, especially in industries like brewing and chemical processing.
+- **Hydrometry**: Devices like hydrometers use specific gravity to measure the density of liquids.
+
+### Table of Specific Gravities for Common Substances
+
+| Substance               | Specific Gravity (Relative to Water) |
+|-------------------------|--------------------------------------|
+| Water                   | 1.00                                 |
+| Mercury                 | 13.6                                 |
+| Ethanol                 | 0.789                                |
+| Seawater                | 1.025                                |
+| Glycerin                | 1.26                                 |
+| Air (Relative to Water) | 0.00123                              |
+
+Note that for gases, specific gravity is often measured relative to air rather than water.
 
 
 
