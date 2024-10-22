@@ -14,6 +14,10 @@ execute:
 latex:
   latex_documents:
     targetname: book.tex
+  packages:
+    - amsmath
+    - amssymb
+    - tikz
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:

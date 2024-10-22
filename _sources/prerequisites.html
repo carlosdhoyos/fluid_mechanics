@@ -482,10 +482,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10-line-surface-and-volume-integrals">Problem 10: Line, Surface, and Volume Integrals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Problem Statement</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Solution</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#result-line-integral">Result: Line Integral</a></li>
-</ul>
-</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-integral">2. Surface Integral</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-surface-integral-formula">Step 1: Surface Integral Formula</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-parameterization-and-normal-vector">Step 2: Parameterization and Normal Vector</a></li>
@@ -510,13 +507,25 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-11-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">Problem 11: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Problem Statement:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solution:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-theorem">1. Divergence Theorem:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stokes-theorem">2. Stokes’ Theorem:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-theorem">1. Divergence Theorem:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stokes-theorem">2. Stokes’ Theorem</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Python</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-12-motion-on-an-inclined-plane">Problem 12: Motion on an Inclined Plane</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-along-the-incline">1. Acceleration Along the Incline</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#speed-after-2-seconds">2. Speed After 2 Seconds</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-traveled-after-2-seconds">3. Distance Traveled After 2 Seconds</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results:</a></li>
 </ul>
 </li>
 </ul>
@@ -1405,14 +1414,11 @@ y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
 </div>
 </div>
 </div>
-<section id="result-line-integral">
-<h5>Result: Line Integral<a class="headerlink" href="#result-line-integral" title="Link to this heading">#</a></h5>
 <p>The line integral of the vector field ( \mathbf{F}(x, y) = (x^2, y^2) ) along the curve is:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_C \mathbf{F} \cdot d\mathbf{r} = \frac{2}{3}
 \]</div>
-</section>
 </section>
 <section id="surface-integral">
 <h4>2. Surface Integral<a class="headerlink" href="#surface-integral" title="Link to this heading">#</a></h4>
@@ -1607,7 +1613,7 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 </ol>
 </section>
 <section id="id14">
-<h3>Solution:<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<h3>Solution<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
 <section id="divergence-theorem">
 <h4>1. Divergence Theorem:<a class="headerlink" href="#divergence-theorem" title="Link to this heading">#</a></h4>
 <p>The <strong>Divergence Theorem</strong> relates the flux of a vector field through a closed surface to the volume integral of the divergence of the vector field over the region enclosed by the surface. Mathematically, it states:</p>
@@ -1653,9 +1659,8 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 \[
 \iint_S \mathbf{F} \cdot d\mathbf{A} = 3
 \]</div>
-</section>
 <section id="python">
-<h4>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h4>
+<h5>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h5>
 <p>We will create a grid of points in the cube and define the vector field <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (x^2, y^2, z^2) \)</span> on this grid.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1752,8 +1757,9 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 </div>
 </div>
 </section>
+</section>
 <section id="stokes-theorem">
-<h4>2. Stokes’ Theorem:<a class="headerlink" href="#stokes-theorem" title="Link to this heading">#</a></h4>
+<h4>2. Stokes’ Theorem<a class="headerlink" href="#stokes-theorem" title="Link to this heading">#</a></h4>
 <p><strong>Stokes’ Theorem</strong> relates the circulation of a vector field around a closed curve to the surface integral of the curl of the vector field over the surface bounded by the curve. Mathematically, it states:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1867,6 +1873,85 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 </div>
 </div>
 </section>
+</section>
+</section>
+<section id="problem-12-motion-on-an-inclined-plane">
+<h2>Problem 12: Motion on an Inclined Plane<a class="headerlink" href="#problem-12-motion-on-an-inclined-plane" title="Link to this heading">#</a></h2>
+<p>A block of mass <span class="math notranslate nohighlight">\( m = 5 \, \text{kg} \)</span> is placed on a frictionless inclined plane, which makes an angle of <span class="math notranslate nohighlight">\( \theta = 30^\circ \)</span> with the horizontal. The block is released from rest at the top of the incline.</p>
+<ol class="arabic simple">
+<li><p>What is the acceleration of the block along the incline?</p></li>
+<li><p>How fast is the block moving after 2 seconds?</p></li>
+<li><p>How far down the incline has the block moved after 2 seconds?</p></li>
+</ol>
+<section id="id16">
+<h3>Solution<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<section id="acceleration-along-the-incline">
+<h4>1. Acceleration Along the Incline<a class="headerlink" href="#acceleration-along-the-incline" title="Link to this heading">#</a></h4>
+<p>Using Newton’s second law of motion, the net force acting on the block along the incline is the component of the gravitational force that acts parallel to the incline. Since the plane is frictionless, the only force along the incline is due to gravity:</p>
+<div class="math notranslate nohighlight">
+\[
+F_{\parallel} = mg \sin \theta
+\]</div>
+<p>According to Newton’s second law, <span class="math notranslate nohighlight">\( F = ma \)</span>, so the acceleration along the incline is:</p>
+<div class="math notranslate nohighlight">
+\[
+a = \frac{F_{\parallel}}{m} = \frac{mg \sin \theta}{m} = g \sin \theta
+\]</div>
+<p>Substituting the values:</p>
+<div class="math notranslate nohighlight">
+\[
+a = (9.8 \, \text{m/s}^2) \sin 30^\circ = (9.8 \, \text{m/s}^2) \times 0.5 = 4.9 \, \text{m/s}^2
+\]</div>
+<p>Thus, the acceleration of the block along the incline is:</p>
+<div class="math notranslate nohighlight">
+\[
+a = 4.9 \, \text{m/s}^2
+\]</div>
+</section>
+<section id="speed-after-2-seconds">
+<h4>2. Speed After 2 Seconds<a class="headerlink" href="#speed-after-2-seconds" title="Link to this heading">#</a></h4>
+<p>The block is released from rest, so its initial velocity is <span class="math notranslate nohighlight">\( v_0 = 0 \, \text{m/s} \)</span>. Using the equation of motion:</p>
+<div class="math notranslate nohighlight">
+\[
+v = v_0 + at
+\]</div>
+<p>Substitute the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+v = 0 + (4.9 \, \text{m/s}^2) \times 2 \, \text{s} = 9.8 \, \text{m/s}
+\]</div>
+<p>Thus, after 2 seconds, the speed of the block is:</p>
+<div class="math notranslate nohighlight">
+\[
+v = 9.8 \, \text{m/s}
+\]</div>
+</section>
+<section id="distance-traveled-after-2-seconds">
+<h4>3. Distance Traveled After 2 Seconds<a class="headerlink" href="#distance-traveled-after-2-seconds" title="Link to this heading">#</a></h4>
+<p>We can use the equation of motion:</p>
+<div class="math notranslate nohighlight">
+\[
+s = v_0 t + \frac{1}{2} a t^2
+\]</div>
+<p>Substitute the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+s = 0 \times 2 + \frac{1}{2} (4.9 \, \text{m/s}^2) (2 \, \text{s})^2 = \frac{1}{2} (4.9 \, \text{m/s}^2) \times 4 = 9.8 \, \text{m}
+\]</div>
+<p>Thus, the block travels a distance of:</p>
+<div class="math notranslate nohighlight">
+\[
+s = 9.8 \, \text{m}
+\]</div>
+</section>
+</section>
+<section id="summary-of-results">
+<h3>Summary of Results:<a class="headerlink" href="#summary-of-results" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>The acceleration along the incline is <span class="math notranslate nohighlight">\( 4.9 \, \text{m/s}^2 \)</span>.</p></li>
+<li><p>The speed after 2 seconds is <span class="math notranslate nohighlight">\( 9.8 \, \text{m/s} \)</span>.</p></li>
+<li><p>The distance traveled after 2 seconds is <span class="math notranslate nohighlight">\( 9.8 \, \text{m} \)</span>.</p></li>
+</ol>
 </section>
 </section>
 </section>
@@ -1993,10 +2078,7 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10-line-surface-and-volume-integrals">Problem 10: Line, Surface, and Volume Integrals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Problem Statement</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Solution</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#result-line-integral">Result: Line Integral</a></li>
-</ul>
-</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-integral">2. Surface Integral</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-surface-integral-formula">Step 1: Surface Integral Formula</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-parameterization-and-normal-vector">Step 2: Parameterization and Normal Vector</a></li>
@@ -2021,13 +2103,25 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-11-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">Problem 11: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Problem Statement:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solution:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-theorem">1. Divergence Theorem:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stokes-theorem">2. Stokes’ Theorem:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-theorem">1. Divergence Theorem:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stokes-theorem">2. Stokes’ Theorem</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Python</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-12-motion-on-an-inclined-plane">Problem 12: Motion on an Inclined Plane</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-along-the-incline">1. Acceleration Along the Incline</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#speed-after-2-seconds">2. Speed After 2 Seconds</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-traveled-after-2-seconds">3. Distance Traveled After 2 Seconds</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results:</a></li>
 </ul>
 </li>
 </ul>

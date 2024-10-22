@@ -905,8 +905,6 @@ print(f"Line integral: {line_integral:.2f}")
 
 ```
 
-##### Result: Line Integral
-
 The line integral of the vector field \( \mathbf{F}(x, y) = (x^2, y^2) \) along the curve is:
 
 $$
@@ -1095,7 +1093,7 @@ $$
 2. **Stokes' Theorem**: Given the vector field $ \mathbf{F}(x, y, z) = (-y, x, 0) $, use **Stokes' Theorem** to compute the circulation of $ \mathbf{F} $ around the boundary of the surface defined by the disk $ x^2 + y^2 \leq 1 $ in the plane $ z = 0 $.
 
 
-### Solution:
+### Solution
 
 #### 1. Divergence Theorem:
 
@@ -1146,7 +1144,7 @@ $$
 $$
 
 
-#### Python
+##### Python
 
 We will create a grid of points in the cube and define the vector field $ \mathbf{F}(x, y, z) = (x^2, y^2, z^2) $ on this grid.
 
@@ -1230,7 +1228,7 @@ print(f"Volume integral of the divergence: {volume_integral:.2f}")
 ```
 
 
-#### 2. Stokes' Theorem:
+#### 2. Stokes' Theorem
 
 **Stokes' Theorem** relates the circulation of a vector field around a closed curve to the surface integral of the curl of the vector field over the surface bounded by the curve. Mathematically, it states:
 
@@ -1327,7 +1325,6 @@ plt.show()
 
 Calculate the Curl
 
-
 ```{code-cell} python
 # Area of the disk
 area_of_disk = np.pi * 1**2  # radius = 1
@@ -1337,3 +1334,84 @@ curl_z = 2  # curl in the z direction
 surface_integral = curl_z * area_of_disk
 print(f"Surface integral of the curl: {surface_integral:.2f}")
 ```
+
+## Problem 12: Motion on an Inclined Plane
+
+A block of mass $ m = 5 \, \text{kg} $ is placed on a frictionless inclined plane, which makes an angle of $ \theta = 30^\circ $ with the horizontal. The block is released from rest at the top of the incline. 
+
+1. What is the acceleration of the block along the incline?
+2. How fast is the block moving after 2 seconds?
+3. How far down the incline has the block moved after 2 seconds?
+
+### Solution
+
+#### 1. Acceleration Along the Incline
+
+Using Newton’s second law of motion, the net force acting on the block along the incline is the component of the gravitational force that acts parallel to the incline. Since the plane is frictionless, the only force along the incline is due to gravity:
+
+$$
+F_{\parallel} = mg \sin \theta
+$$
+
+According to Newton’s second law, $ F = ma $, so the acceleration along the incline is:
+
+$$
+a = \frac{F_{\parallel}}{m} = \frac{mg \sin \theta}{m} = g \sin \theta
+$$
+
+Substituting the values:
+
+$$
+a = (9.8 \, \text{m/s}^2) \sin 30^\circ = (9.8 \, \text{m/s}^2) \times 0.5 = 4.9 \, \text{m/s}^2
+$$
+
+Thus, the acceleration of the block along the incline is:
+
+$$
+a = 4.9 \, \text{m/s}^2
+$$
+
+#### 2. Speed After 2 Seconds
+
+The block is released from rest, so its initial velocity is $ v_0 = 0 \, \text{m/s} $. Using the equation of motion:
+
+$$
+v = v_0 + at
+$$
+
+Substitute the known values:
+
+$$
+v = 0 + (4.9 \, \text{m/s}^2) \times 2 \, \text{s} = 9.8 \, \text{m/s}
+$$
+
+Thus, after 2 seconds, the speed of the block is:
+
+$$
+v = 9.8 \, \text{m/s}
+$$
+
+#### 3. Distance Traveled After 2 Seconds
+
+We can use the equation of motion:
+
+$$
+s = v_0 t + \frac{1}{2} a t^2
+$$
+
+Substitute the known values:
+
+$$
+s = 0 \times 2 + \frac{1}{2} (4.9 \, \text{m/s}^2) (2 \, \text{s})^2 = \frac{1}{2} (4.9 \, \text{m/s}^2) \times 4 = 9.8 \, \text{m}
+$$
+
+Thus, the block travels a distance of:
+
+$$
+s = 9.8 \, \text{m}
+$$
+
+### Summary of Results:
+1. The acceleration along the incline is $ 4.9 \, \text{m/s}^2 $.
+2. The speed after 2 seconds is $ 9.8 \, \text{m/s} $.
+3. The distance traveled after 2 seconds is $ 9.8 \, \text{m} $.
