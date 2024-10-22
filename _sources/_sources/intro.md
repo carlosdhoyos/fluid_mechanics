@@ -49,6 +49,6 @@ By engaging with the material in English, you’ll be better prepared to attend 
 
 ## A Bit About Me
 
-I have a **Ph.D. in Earth and Atmospheric Sciences from Georgia Institute of Technology**, along with a **Master of Science in Oceanic and Atmospheric Sciences**, a **Master in Water Resources**, and a **Civil Engineering degree**. My work has taken me through diverse fields—studying the behavior of **atmospheric currents**, understanding **water resources**, and applying **data science** to solve problems related to agriculture, energy, risk management, and climate.
+I have a **Ph.D. in Earth and Atmospheric Sciences from Georgia Institute of Technology**, along with a **Masters in Oceanic and Atmospheric Sciences**, a **Masters in Water Resources**, and a **Civil Engineering degree**. My work has taken me through diverse fields—studying the behavior of **atmospheric currents**, understanding **water resources**, and applying **data science** to solve problems related to agriculture, energy, risk management, and climate.
 
 Fluid dynamics has been a common thread throughout my career, from analyzing **atmospheric circulations** that drive global climate patterns to modeling **river flows** that sustain ecosystems and cities. This course gives me the opportunity to share not only the fundamental concepts of fluid mechanics but also their real-world applications—whether in **renewable energy**, **environmental protection**, or **cutting-edge technologies**.

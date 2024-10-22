@@ -456,6 +456,15 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-8-boundary-value-problem-with-initial-conditions">Problem 8: Boundary Value Problem with Initial Conditions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-general-solution-of-the-ode">Step 1: General Solution of the ODE</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-apply-the-boundary-conditions">Step 2: Apply the Boundary Conditions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-final-solution">Step 3: Final Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -986,6 +995,91 @@ y = \frac{e^x}{2} + Ce^{-x}
 </section>
 </section>
 </section>
+<hr class="docutils" />
+<section id="problem-8-boundary-value-problem-with-initial-conditions">
+<h2>Problem 8: Boundary Value Problem with Initial Conditions<a class="headerlink" href="#problem-8-boundary-value-problem-with-initial-conditions" title="Link to this heading">#</a></h2>
+<p>Solve the following second-order boundary value problem (BVP):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d^2 y}{dx^2} = -k^2 y
+\]</div>
+<p>with the boundary conditions:</p>
+<div class="math notranslate nohighlight">
+\[
+y(0) = 0 \quad \text{and} \quad y(L) = 0
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is a constant and <span class="math notranslate nohighlight">\(L\)</span> is the length of the domain.</p>
+<section id="id9">
+<h3>Solution:<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<section id="step-1-general-solution-of-the-ode">
+<h4>Step 1: General Solution of the ODE<a class="headerlink" href="#step-1-general-solution-of-the-ode" title="Link to this heading">#</a></h4>
+<p>The given equation is a second-order homogeneous linear differential equation with constant coefficients:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d^2 y}{dx^2} = -k^2 y
+\]</div>
+<p>The characteristic equation for this differential equation is:</p>
+<div class="math notranslate nohighlight">
+\[
+r^2 + k^2 = 0
+\]</div>
+<p>This gives the roots:</p>
+<div class="math notranslate nohighlight">
+\[
+r = \pm ik
+\]</div>
+<p>So, the general solution for the differential equation is:</p>
+<div class="math notranslate nohighlight">
+\[
+y(x) = C_1 \sin(kx) + C_2 \cos(kx)
+\]</div>
+</section>
+<section id="step-2-apply-the-boundary-conditions">
+<h4>Step 2: Apply the Boundary Conditions<a class="headerlink" href="#step-2-apply-the-boundary-conditions" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>First Boundary Condition: <span class="math notranslate nohighlight">\(y(0) = 0\)</span></strong></p></li>
+</ol>
+<p>Substitute <span class="math notranslate nohighlight">\(x = 0\)</span> into the general solution:</p>
+<div class="math notranslate nohighlight">
+\[
+y(0) = C_1 \sin(0) + C_2 \cos(0) = 0 \quad \Rightarrow \quad C_2 = 0
+\]</div>
+<p>Thus, the solution simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+y(x) = C_1 \sin(kx)
+\]</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Second Boundary Condition: <span class="math notranslate nohighlight">\(y(L) = 0\)</span></strong></p></li>
+</ol>
+<p>Now, substitute <span class="math notranslate nohighlight">\(x = L\)</span> into the simplified solution:</p>
+<div class="math notranslate nohighlight">
+\[
+y(L) = C_1 \sin(kL) = 0
+\]</div>
+<p>For non-trivial solutions (i.e., <span class="math notranslate nohighlight">\(C_1 \neq 0\)</span>), we require:</p>
+<div class="math notranslate nohighlight">
+\[
+\sin(kL) = 0
+\]</div>
+<p>This implies:</p>
+<div class="math notranslate nohighlight">
+\[
+kL = n\pi \quad \Rightarrow \quad k = \frac{n\pi}{L}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is an integer (i.e., <span class="math notranslate nohighlight">\(n = 1, 2, 3, \dots\)</span>).</p>
+</section>
+<section id="step-3-final-solution">
+<h4>Step 3: Final Solution<a class="headerlink" href="#step-3-final-solution" title="Link to this heading">#</a></h4>
+<p>The final solution for the boundary value problem is:</p>
+<div class="math notranslate nohighlight">
+\[
+y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_1\)</span> is an arbitrary constant and <span class="math notranslate nohighlight">\(n\)</span> is a positive integer.</p>
+</section>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1098,6 +1192,15 @@ y = \frac{e^x}{2} + Ce^{-x}
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code:</a></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-8-boundary-value-problem-with-initial-conditions">Problem 8: Boundary Value Problem with Initial Conditions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-general-solution-of-the-ode">Step 1: General Solution of the ODE</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-apply-the-boundary-conditions">Step 2: Apply the Boundary Conditions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-final-solution">Step 3: Final Solution</a></li>
 </ul>
 </li>
 </ul>
