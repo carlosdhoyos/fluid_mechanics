@@ -32,18 +32,16 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  use_issues_button: true  # Adds a button to link to the GitHub issues page
-  use_repository_button: true  # Adds a button to link to the repository
   theme:
     name: sphinx_book_theme
     options:
       default_mode: "light"  # Ensures the light theme is the default
-      navbar_align: content  # Aligns the navigation bar with the content
       launch_buttons: false  # Disables extra buttons that can crowd the UI
       home_page_in_toc: true  # Ensures the home page is in the table of contents
-      show_navbar_depth: 2  # Controls the depth of the navbar, reducing clutter
-      show_toc_level: 2  # Controls how many levels of headers are shown in the sidebar
-      numbering: true  # Enable automatic numbering for chapters and sections
+      use_sidenotes: true  # Other theme options
+  # Highlighting options
+  pygments_style: "default"
+  use_syntax_highlighting: true  # Ensure this is not set multiple times
 
 launch_buttons:
   thebe: false  # This enables Thebe for interactive code cells
