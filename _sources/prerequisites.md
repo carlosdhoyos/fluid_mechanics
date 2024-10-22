@@ -1078,8 +1078,124 @@ print(f"Volume integral: {volume_integral:.2f}")
 
 ##### Step 5: Final Answer
 
-After performing the numerical integration, the result of the volume integral is:
+After performing the integration, the result of the volume integral is:
 
 $$
 \iiint_V (x + y + z) \, dV = 9\pi
 $$
+
+---
+
+## Problem: Application of the Divergence Theorem and Stokes' Theorem in Fluid Flow
+
+### Problem Statement:
+
+1. **Divergence Theorem**: Given the vector field $ \mathbf{F}(x, y, z) = (x^2, y^2, z^2) $, use the **Divergence Theorem** to compute the flux of $ \mathbf{F} $ through the surface of the cube bounded by the planes $ x = 0 $, $ x = 1 $, $ y = 0 $, $ y = 1 $, $ z = 0 $, and $ z = 1 $.
+
+2. **Stokes' Theorem**: Given the vector field $ \mathbf{F}(x, y, z) = (-y, x, 0) $, use **Stokes' Theorem** to compute the circulation of $ \mathbf{F} $ around the boundary of the surface defined by the disk $ x^2 + y^2 \leq 1 $ in the plane $ z = 0 $.
+
+
+### Solution:
+
+#### 1. Divergence Theorem:
+
+The **Divergence Theorem** relates the flux of a vector field through a closed surface to the volume integral of the divergence of the vector field over the region enclosed by the surface. Mathematically, it states:
+
+$$
+\iint_S \mathbf{F} \cdot d\mathbf{A} = \iiint_V (\nabla \cdot \mathbf{F}) \, dV
+$$
+
+where $ \mathbf{F} $ is the vector field, $ d\mathbf{A} $ is the surface area element, and $ \nabla \cdot \mathbf{F} $ is the divergence of $ \mathbf{F} $.
+
+**Step 1**: Compute the divergence of the vector field $ \mathbf{F}(x, y, z) = (x^2, y^2, z^2) $:
+
+$$
+\nabla \cdot \mathbf{F} = \frac{\partial}{\partial x}(x^2) + \frac{\partial}{\partial y}(y^2) + \frac{\partial}{\partial z}(z^2) = 2x + 2y + 2z
+$$
+
+**Step 2**: Set up the volume integral over the cube $ 0 \leq x \leq 1 $, $ 0 \leq y \leq 1 $, and $ 0 \leq z \leq 1 $:
+
+$$
+\iiint_V (2x + 2y + 2z) \, dV = \int_0^1 \int_0^1 \int_0^1 (2x + 2y + 2z) \, dx \, dy \, dz
+$$
+
+**Step 3**: Compute the integral:
+
+1. Integrating with respect to $ x $:
+
+$$
+\int_0^1 (2x + 2y + 2z) \, dx = \left[ x^2 + 2yx + 2zx \right]_0^1 = 1 + 2y + 2z
+$$
+
+2. Integrating with respect to $ y $:
+
+$$
+\int_0^1 (1 + 2y + 2z) \, dy = \left[ y + y^2 + 2zy \right]_0^1 = 1 + 1 + 2z = 2 + 2z
+$$
+
+3. Finally, integrate with respect to $ z $:
+
+$$
+\int_0^1 (2 + 2z) \, dz = \left[ 2z + z^2 \right]_0^1 = 2 + 1 = 3
+$$
+
+Thus, the flux of $ \mathbf{F} $ through the surface of the cube is:
+
+$$
+\iint_S \mathbf{F} \cdot d\mathbf{A} = 3
+$$
+
+
+#### 2. Stokes' Theorem:
+
+**Stokes' Theorem** relates the circulation of a vector field around a closed curve to the surface integral of the curl of the vector field over the surface bounded by the curve. Mathematically, it states:
+
+$$
+\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{A}
+$$
+
+where $ C $ is the boundary curve, and $ S $ is the surface bounded by $ C $.
+
+**Step 1**: Compute the curl of the vector field $ \mathbf{F}(x, y, z) = (-y, x, 0) $:
+
+$$
+\nabla \times \mathbf{F} = \left( \frac{\partial}{\partial y}(0) - \frac{\partial}{\partial z}(x), \frac{\partial}{\partial z}(-y) - \frac{\partial}{\partial x}(0), \frac{\partial}{\partial x}(x) - \frac{\partial}{\partial y}(-y) \right) = (0, 0, 2)
+$$
+
+The curl of $ \mathbf{F} $ is $ (0, 0, 2) $.
+
+**Step 2**: The surface is the disk $ x^2 + y^2 \leq 1 $ in the plane $ z = 0 $. The area element for a flat disk is $ dA = dx \, dy $.
+
+Thus, the surface integral becomes:
+
+$$
+\iint_S (0, 0, 2) \cdot (0, 0, 1) \, dA = 2 \iint_S dA
+$$
+
+**Step 3**: The area of the disk is:
+
+$$
+\iint_S dA = \pi (1^2) = \pi
+$$
+
+Therefore, the circulation of $ \mathbf{F} $ around the boundary of the disk is:
+
+$$
+\oint_C \mathbf{F} \cdot d\mathbf{r} = 2\pi
+$$
+
+
+### Summary of Results:
+
+1. The flux of $ \mathbf{F}(x, y, z) = (x^2, y^2, z^2) $ through the surface of the cube is:
+
+$$
+\iint_S \mathbf{F} \cdot d\mathbf{A} = 3
+$$
+
+2. The circulation of $ \mathbf{F}(x, y, z) = (-y, x, 0) $ around the boundary of the disk is:
+
+$$
+\oint_C \mathbf{F} \cdot d\mathbf{r} = 2\pi
+$$
+

@@ -482,11 +482,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10-line-surface-and-volume-integrals">Problem 10: Line, Surface, and Volume Integrals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Problem Statement</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Solution</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#result-line-integral">Result: Line Integral</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result-line-integral">Result: Line Integral</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-integral">1. Surface Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-integral">2. Surface Integral</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-surface-integral-formula">Step 1: Surface Integral Formula</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-parameterization-and-normal-vector">Step 2: Parameterization and Normal Vector</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-dot-product-of-mathbf-f-and-mathbf-n">Step 3: Dot Product of ( \mathbf{F} ) and ( \mathbf{n} )</a></li>
@@ -494,6 +494,14 @@ document.write(`
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-set-up-the-surface-integral">Step 5: Set Up the Surface Integral</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-solve-the-surface-integral-numerically">Step 6: Solve the Surface Integral Numerically</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-final-answer">Step 7: Final Answer</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-integral">3. Volume Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-volume-integral-formula">Step 1: Volume Integral Formula</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-switch-to-cylindrical-coordinates">Step 2: Switch to Cylindrical Coordinates</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-set-up-the-volume-integral">Step 3: Set Up the Volume Integral</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-solve-the-volume-integral-numerically">Step 4: Solve the Volume Integral Numerically</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-final-answer">Step 5: Final Answer</a></li>
 </ul>
 </li>
 </ul>
@@ -1343,22 +1351,22 @@ y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
 <section id="id11">
 <h3>Problem Statement<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p><strong>Line Integral</strong>: Given the vector field ( \mathbf{F}(x, y) = (x^2, y^2) ), compute the line integral of ( \mathbf{F} ) along the curve ( C ), where ( C ) is the straight line path from point ( (0, 0) ) to point ( (1, 1) ).</p></li>
-<li><p><strong>Surface Integral</strong>: Compute the surface integral of the vector field ( \mathbf{F}(x, y, z) = (y, z, x) ) over the surface ( S ), where ( S ) is the portion of the plane ( z = 4 - x - y ) in the first octant.</p></li>
-<li><p><strong>Volume Integral</strong>: Compute the volume integral of the scalar field ( f(x, y, z) = x + y + z ) over the region ( V ), where ( V ) is the region bounded by the cylinder ( x^2 + y^2 = 1 ) and the planes ( z = 0 ) and ( z = 3 ).</p></li>
+<li><p><strong>Line Integral</strong>: Given the vector field <span class="math notranslate nohighlight">\(\mathbf{F}(x, y) = (x^2, y^2)\)</span>, compute the line integral of <span class="math notranslate nohighlight">\(\mathbf{F} \)</span> along the curve <span class="math notranslate nohighlight">\(C\)</span>, where <span class="math notranslate nohighlight">\(C\)</span> is the straight line path from point <span class="math notranslate nohighlight">\((0, 0)\)</span> to point <span class="math notranslate nohighlight">\((1, 1)\)</span>.</p></li>
+<li><p><strong>Surface Integral</strong>: Compute the surface integral of the vector field <span class="math notranslate nohighlight">\(\mathbf{F}(x, y, z) = (y, z, x)\)</span> over the surface <span class="math notranslate nohighlight">\(S\)</span>, where <span class="math notranslate nohighlight">\(S\)</span> is the portion of the plane <span class="math notranslate nohighlight">\(z = 4 - x - y\)</span> in the first octant.</p></li>
+<li><p><strong>Volume Integral</strong>: Compute the volume integral of the scalar field <span class="math notranslate nohighlight">\(f(x, y, z) = x + y + z\)</span> over the region <span class="math notranslate nohighlight">\(V\)</span>, where <span class="math notranslate nohighlight">\(V\)</span> is the region bounded by the cylinder <span class="math notranslate nohighlight">\(x^2 + y^2 = 1\)</span> and the planes <span class="math notranslate nohighlight">\(z = 0\)</span> and <span class="math notranslate nohighlight">\(z = 3\)</span>.</p></li>
 </ol>
 </section>
 <section id="id12">
 <h3>Solution<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <section id="line-integral">
 <h4>1. Line Integral<a class="headerlink" href="#line-integral" title="Link to this heading">#</a></h4>
-<p>We want to compute the line integral of the vector field ( \mathbf{F}(x, y) = (x^2, y^2) ) along the curve ( C ), a straight line from ( (0, 0) ) to ( (1, 1) ).</p>
+<p>We want to compute the line integral of the vector field <span class="math notranslate nohighlight">\(\mathbf{F}(x, y) = (x^2, y^2)\)</span> along the curve <span class="math notranslate nohighlight">\(C\)</span>, a straight line from <span class="math notranslate nohighlight">\((0, 0)\)</span> to <span class="math notranslate nohighlight">\((1, 1)\)</span>.</p>
 <p>The line integral is given by:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_C \mathbf{F} \cdot d\mathbf{r}
 \]</div>
-<p>Parameterizing the line as ( x(t) = t ) and ( y(t) = t ), the differential displacement vector is ( d\mathbf{r} = (1, 1) dt ).</p>
+<p>Parameterizing the line as <span class="math notranslate nohighlight">\(x(t) = t\)</span> and <span class="math notranslate nohighlight">\(y(t) = t\)</span>, the differential displacement vector is <span class="math notranslate nohighlight">\(d\mathbf{r} = (1, 1) dt\)</span>.</p>
 <p>The integral becomes:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1386,17 +1394,17 @@ y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
 </div>
 </div>
 </div>
-</section>
-</section>
 <section id="result-line-integral">
-<h3>Result: Line Integral<a class="headerlink" href="#result-line-integral" title="Link to this heading">#</a></h3>
+<h5>Result: Line Integral<a class="headerlink" href="#result-line-integral" title="Link to this heading">#</a></h5>
 <p>The line integral of the vector field ( \mathbf{F}(x, y) = (x^2, y^2) ) along the curve is:</p>
 <div class="math notranslate nohighlight">
 \[
 \int_C \mathbf{F} \cdot d\mathbf{r} = \frac{2}{3}
 \]</div>
+</section>
+</section>
 <section id="surface-integral">
-<h4>1. Surface Integral<a class="headerlink" href="#surface-integral" title="Link to this heading">#</a></h4>
+<h4>2. Surface Integral<a class="headerlink" href="#surface-integral" title="Link to this heading">#</a></h4>
 <p>We are asked to compute the surface integral of the vector field ( \mathbf{F}(x, y, z) = (y, z, x) ) over the surface ( S ), which is the portion of the plane ( z = 4 - x - y ) in the first octant.</p>
 <section id="step-1-surface-integral-formula">
 <h5>Step 1: Surface Integral Formula<a class="headerlink" href="#step-1-surface-integral-formula" title="Link to this heading">#</a></h5>
@@ -1485,10 +1493,93 @@ y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
 </section>
 <section id="step-7-final-answer">
 <h5>Step 7: Final Answer<a class="headerlink" href="#step-7-final-answer" title="Link to this heading">#</a></h5>
-<p>After performing the numerical integration, the result of the surface integral is:</p>
+<p>After performing the integration, the result of the surface integral is:</p>
 <div class="math notranslate nohighlight">
 \[
 \iint_S \mathbf{F} \cdot \mathbf{n} \, dS = -\frac{32}{3}
+\]</div>
+</section>
+</section>
+<section id="volume-integral">
+<h4>3. Volume Integral<a class="headerlink" href="#volume-integral" title="Link to this heading">#</a></h4>
+<p>We are asked to compute the volume integral of the scalar field <span class="math notranslate nohighlight">\( f(x, y, z) = x + y + z \)</span> over the region <span class="math notranslate nohighlight">\( V \)</span>, which is bounded by the cylinder <span class="math notranslate nohighlight">\( x^2 + y^2 = 1 \)</span> and the planes <span class="math notranslate nohighlight">\( z = 0 \)</span> and <span class="math notranslate nohighlight">\( z = 3 \)</span>.</p>
+<section id="step-1-volume-integral-formula">
+<h5>Step 1: Volume Integral Formula<a class="headerlink" href="#step-1-volume-integral-formula" title="Link to this heading">#</a></h5>
+<p>The volume integral of a scalar field <span class="math notranslate nohighlight">\( f(x, y, z) \)</span> over a volume <span class="math notranslate nohighlight">\( V \)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\iiint_V f(x, y, z) \, dV
+\]</div>
+</section>
+<section id="step-2-switch-to-cylindrical-coordinates">
+<h5>Step 2: Switch to Cylindrical Coordinates<a class="headerlink" href="#step-2-switch-to-cylindrical-coordinates" title="Link to this heading">#</a></h5>
+<p>Since the region <span class="math notranslate nohighlight">\( V \)</span> is a cylinder, it’s convenient to switch to cylindrical coordinates:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( x = r \cos\theta \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( y = r \sin\theta \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( z = z \)</span></p></li>
+</ul>
+<p>The volume element in cylindrical coordinates is:</p>
+<div class="math notranslate nohighlight">
+\[
+dV = r \, dr \, d\theta \, dz
+\]</div>
+<p>The scalar field <span class="math notranslate nohighlight">\( f(x, y, z) = x + y + z \)</span> becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+f(r, \theta, z) = r \cos\theta + r \sin\theta + z
+\]</div>
+</section>
+<section id="step-3-set-up-the-volume-integral">
+<h5>Step 3: Set Up the Volume Integral<a class="headerlink" href="#step-3-set-up-the-volume-integral" title="Link to this heading">#</a></h5>
+<p>The region <span class="math notranslate nohighlight">\( V \)</span> is bounded by:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( r \in [0, 1] \)</span> (the radius of the cylinder),</p></li>
+<li><p><span class="math notranslate nohighlight">\( \theta \in [0, 2\pi] \)</span> (the full revolution around the cylinder),</p></li>
+<li><p><span class="math notranslate nohighlight">\( z \in [0, 3] \)</span> (the height of the cylinder).</p></li>
+</ul>
+<p>The volume integral in cylindrical coordinates is:</p>
+<div class="math notranslate nohighlight">
+\[
+\iiint_V (r \cos\theta + r \sin\theta + z) \, r \, dr \, d\theta \, dz
+\]</div>
+</section>
+<section id="step-4-solve-the-volume-integral-numerically">
+<h5>Step 4: Solve the Volume Integral Numerically<a class="headerlink" href="#step-4-solve-the-volume-integral-numerically" title="Link to this heading">#</a></h5>
+<p>We can use Python to compute the volume integral:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">tplquad</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Define the scalar field in cylindrical coordinates f(r, theta, z)</span>
+<span class="k">def</span> <span class="nf">integrand_volume</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">r</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
+
+<span class="c1"># Limits for the volume integral</span>
+<span class="n">r_min</span><span class="p">,</span> <span class="n">r_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="n">theta_min</span><span class="p">,</span> <span class="n">theta_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="c1"># Compute the volume integral</span>
+<span class="n">volume_integral</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tplquad</span><span class="p">(</span><span class="n">integrand_volume</span><span class="p">,</span> <span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">,</span> <span class="n">r_min</span><span class="p">,</span> <span class="n">r_max</span><span class="p">,</span> <span class="n">theta_min</span><span class="p">,</span> <span class="n">theta_max</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Volume integral: </span><span class="si">{</span><span class="n">volume_integral</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Volume integral: 34.07
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-final-answer">
+<h5>Step 5: Final Answer<a class="headerlink" href="#step-5-final-answer" title="Link to this heading">#</a></h5>
+<p>After performing the numerical integration, the result of the volume integral is:</p>
+<div class="math notranslate nohighlight">
+\[
+\iiint_V (x + y + z) \, dV = 9\pi
 \]</div>
 </section>
 </section>
@@ -1618,11 +1709,11 @@ y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10-line-surface-and-volume-integrals">Problem 10: Line, Surface, and Volume Integrals</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Problem Statement</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Solution</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#result-line-integral">Result: Line Integral</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#result-line-integral">Result: Line Integral</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-integral">1. Surface Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-integral">2. Surface Integral</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-surface-integral-formula">Step 1: Surface Integral Formula</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-parameterization-and-normal-vector">Step 2: Parameterization and Normal Vector</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-dot-product-of-mathbf-f-and-mathbf-n">Step 3: Dot Product of ( \mathbf{F} ) and ( \mathbf{n} )</a></li>
@@ -1630,6 +1721,14 @@ y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-set-up-the-surface-integral">Step 5: Set Up the Surface Integral</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-solve-the-surface-integral-numerically">Step 6: Solve the Surface Integral Numerically</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-final-answer">Step 7: Final Answer</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-integral">3. Volume Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-volume-integral-formula">Step 1: Volume Integral Formula</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-switch-to-cylindrical-coordinates">Step 2: Switch to Cylindrical Coordinates</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-set-up-the-volume-integral">Step 3: Set Up the Volume Integral</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-solve-the-volume-integral-numerically">Step 4: Solve the Volume Integral Numerically</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-final-answer">Step 5: Final Answer</a></li>
 </ul>
 </li>
 </ul>
