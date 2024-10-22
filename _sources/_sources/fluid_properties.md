@@ -1,18 +1,9 @@
 # Properties of Fluids
 
-## What is Fluid Mechanics?
-
-Fluid mechanics is the branch of physics that studies the behavior of fluids (liquids, gases, and plasmas) and the forces acting on them. The subject is divided into two major categories:
-
-- **Fluid Statics**: The study of fluids at rest.
-- **Fluid Dynamics**: The study of fluids in motion.
-
-## Properties of Fluids
-
 Understanding the physical properties of fluids is essential for analyzing fluid flow. The key properties include:
 
-- **Density** ($\rho$): The mass per unit volume of a fluid.
-- 
+- **Density** ($\rho$):
+- **Specific Weight** ($\gamma$)
 - 
 - **Viscosity** ($\mu$): The fluid's resistance to deformation or flow.
   
@@ -74,10 +65,6 @@ The following table lists the typical densities of common fluids in both **SI un
 Consider an object submerged in water. If the object's density is less than that of water ($\rho_{\text{object}} < \rho_{\text{water}}$), it will float. For example, a wooden block with a density of $600 \, kg/m^3$ will float in water because its density is significantly lower than water's density of $1000 \, kg/m^3$.
 
 On the other hand, if an object is denser than water (e.g., iron with $\rho \approx 7,870 \, kg/m^3$), it will sink because its density is much greater than the surrounding fluid.
-
-### Conclusion
-
-Density is a fundamental property in fluid mechanics that directly affects fluid behavior under various conditions. From determining whether objects float or sink to influencing pressure in fluid columns, understanding and calculating density is essential for solving fluid mechanics problems.
 
 
 ```{note}
@@ -163,6 +150,78 @@ In this case, the mass density of air is about $0.00238 \, \text{slug/ft}^3$, wh
 
 ```
 
+## What is Specific Weight?
+
+**Specific weight** (also known as **weight density**) is the weight of a fluid per unit volume. It is a measure of how much weight is associated with a given volume of the substance. Specific weight is denoted by the symbol $\gamma$ and is related to the density of the fluid.
+
+Mathematically, specific weight is expressed as:
+
+$$
+\gamma = \rho g
+$$
+
+Where:
+- $\gamma$ is the specific weight (in units of $N/m^3$ or $lbf/ft^3$),
+- $\rho$ is the density of the fluid (in units of $kg/m^3$ or $slug/ft^3$),
+- $g$ is the gravitational acceleration (standard value $9.81 \, m/s^2$ or $32.174 \, ft/s^2$).
+
+### Units of Specific Weight
+
+- **SI Units**: In the SI system, specific weight is measured in **newtons per cubic meter** ($N/m^3$), which represents the weight (force) in newtons of a fluid in one cubic meter of volume.
+  
+  $$ \gamma \ (\text{SI units}) = \rho \times 9.81 \, m/s^2 $$
+
+- **Imperial/US Units**: In the Imperial system, specific weight is commonly measured in **pounds-force per cubic foot** ($lbf/ft^3$).
+
+  $$ \gamma \ (\text{Imperial units}) = \rho \times 32.174 \, ft/s^2 $$
+
+### Relationship Between Density and Specific Weight
+
+The specific weight is directly proportional to the density of the fluid. For a fluid with constant density, the specific weight is simply the density multiplied by the acceleration due to gravity. If a fluid’s density changes with temperature or pressure, its specific weight will also change.
+
+### Example: Specific Weight of Water
+
+- **In SI Units**:
+  The density of water at $4^\circ C$ is approximately $1000 \, kg/m^3$. Using the acceleration due to gravity $g = 9.81 \, m/s^2$, the specific weight of water is:
+
+  $$
+  \gamma_{\text{water}} = 1000 \, \text{kg/m}^3 \times 9.81 \, \text{m/s}^2 = 9810 \, \text{N/m}^3
+  $$
+
+- **In the BG System**:
+  The density of water in the BG system is approximately **$1.94 \, \text{slug/ft}^3$**. Using $g = 32.174 \, \text{ft/s}^2$, the specific weight of water is:
+
+  $$
+  \gamma_{\text{water}} = 1.94 \, \text{slug/ft}^3 \times 32.174 \, \text{ft/s}^2 = 62.4 \, \text{lbf/ft}^3
+  $$
+
+In the BG system, the specific weight of water remains **62.4 lbf/ft³**, as it accounts for both the density in slugs and the gravitational acceleration.
+
+### Practical Applications of Specific Weight
+
+Specific weight is often used in calculations involving:
+- **Buoyancy**: The weight of the displaced fluid determines the buoyant force on an object.
+- **Hydrostatics**: The pressure exerted by a fluid at rest depends on the specific weight, as seen in the hydrostatic pressure formula $P = \gamma h$, where $h$ is the height of the fluid column.
+- **Hydraulic Systems**: Engineers use specific weight to design systems where fluid flow and pressures are key factors, such as in dams or water distribution systems.
+
+### Table of Specific Weights for Common Fluids
+
+| Fluid         | Density ($\rho$)   | Specific Weight ($\gamma$) in SI | Specific Weight ($\gamma$) in BG Units |
+|---------------|-------------------:|---------------------------------:|-----------------------------------------:|
+| Air (STP)     | 1.225 kg/m³        | 12.01 N/m³                       | 0.00238 slug/ft³                         |
+| Water (4°C)   | 1000 kg/m³         | 9810 N/m³                        | 1.94 slug/ft³                            |
+| Seawater      | 1025 kg/m³         | 10,055 N/m³                      | 1.99 slug/ft³                            |
+| Mercury       | 13,600 kg/m³       | 133,416 N/m³                     | 26.48 slug/ft³                           |
+| Ethanol       | 789 kg/m³          | 7744.1 N/m³                      | 1.53 slug/ft³                            |
+| Glycerin      | 1260 kg/m³         | 12,355 N/m³                      | 2.44 slug/ft³                            |
+
+### Summary
+
+- **Specific weight** is the weight per unit volume of a substance and is given by the product of density and gravitational acceleration.
+- It is widely used in fluid mechanics to calculate pressures, buoyancy forces, and other parameters related to the weight of fluids.
+- Specific weight changes with variations in density and is influenced by temperature, pressure, and fluid composition.
+
+Understanding the specific weight is crucial in applications such as hydrostatics, hydraulics, and fluid dynamics.
 
 
 

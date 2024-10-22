@@ -207,13 +207,13 @@ Specific weight is often used in calculations involving:
 ### Table of Specific Weights for Common Fluids
 
 | Fluid         | Density ($\rho$)   | Specific Weight ($\gamma$) in SI | Specific Weight ($\gamma$) in BG Units |
-|---------------|-------------------:|---------------------------------:|-----------------------------------------:|
-| Air (STP)     | 1.225 kg/m³        | 12.01 N/m³                       | 0.00238 slug/ft³                         |
-| Water (4°C)   | 1000 kg/m³         | 9810 N/m³                        | 1.94 slug/ft³                            |
-| Seawater      | 1025 kg/m³         | 10,055 N/m³                      | 1.99 slug/ft³                            |
-| Mercury       | 13,600 kg/m³       | 133,416 N/m³                     | 26.48 slug/ft³                           |
-| Ethanol       | 789 kg/m³          | 7744.1 N/m³                      | 1.53 slug/ft³                            |
-| Glycerin      | 1260 kg/m³         | 12,355 N/m³                      | 2.44 slug/ft³                            |
+|---------------|-------------------:|---------------------------------:|---------------------------------------:|
+| Air (STP)     | 1.225 kg/m³        | 12.01 N/m³                       | 0.0765 lbf/ft³                         |
+| Water (4°C)   | 1000 kg/m³         | 9810 N/m³                        | 62.4 lbf/ft³                           |
+| Seawater      | 1025 kg/m³         | 10,055 N/m³                      | 64.0 lbf/ft³                           |
+| Mercury       | 13,600 kg/m³       | 133,416 N/m³                     | 847 lbf/ft³                            |
+| Ethanol       | 789 kg/m³          | 7744.1 N/m³                      | 49.3 lbf/ft³                           |
+| Glycerin      | 1260 kg/m³         | 12,355 N/m³                      | 78.6 lbf/ft³                           |
 
 ### Summary
 
