@@ -12,6 +12,7 @@ kernelspec:
   name: python3
 ---
 
+
 # Properties of Fluids
 
 Understanding the physical properties of fluids is essential for analyzing fluid flow. The key properties include:
@@ -22,7 +23,6 @@ Understanding the physical properties of fluids is essential for analyzing fluid
 - **Viscosity** ($\mu$)
 - **Surface Tension** ($\sigma$)
 - 
-
 
 ## What is Density?
 
@@ -445,18 +445,7 @@ plt.show()
 
 ### Introduction to Viscosity
 
-Viscosity is a measure of a fluid's resistance to deformation under shear or tensile stress. In simple terms, it quantifies how "thick" or "sticky" a fluid is. High-viscosity fluids like honey resist flow more than low-viscosity fluids like water. Viscosity plays a critical role in fluid mechanics, affecting flow behavior in various applications ranging from lubrication to aerodynamics.
-
-The viscosity $\mu$ is defined for Newtonian fluids (those for which the stress is proportional to the rate of strain) as the constant of proportionality between the shear stress $\tau$ and the velocity gradient $\frac{du}{dy}$ in a simple shear flow:
-
-$$
-\tau = \mu \frac{du}{dy}
-$$
-
-Here:
-- $\tau$ is the shear stress (force per unit area) acting parallel to the fluid layer,
-- $\frac{du}{dy}$ is the velocity gradient (rate of strain) perpendicular to the fluid motion,
-- $\mu$ is the dynamic viscosity (units: $\text{Pa} \cdot \text{s}$ or $\text{N} \cdot \text{s}/\text{m}^2$).
+Viscosity is a measure of a fluid's resistance to deformation under shear stress. In simple terms, it quantifies how "thick" or "sticky" a fluid is. High-viscosity fluids like honey resist flow more than low-viscosity fluids like water. Viscosity plays a critical role in fluid mechanics, affecting flow behavior in various applications ranging from lubrication to aerodynamics.
 
 Viscosity arises from the internal friction between layers of fluid in motion. When fluid moves, the layers adjacent to solid boundaries experience resistance due to intermolecular forces, and this interaction causes the "stickiness" that characterizes viscous effects.
 
@@ -464,13 +453,38 @@ In fluids, viscosity depends on:
 - **Temperature**: Higher temperatures generally decrease the viscosity of liquids and increase the viscosity of gases.
 - **Pressure**: For most liquids, the viscosity slightly increases with pressure, while for gases, this effect is more complex.
 
-## Mathematical Derivation of Viscosity
+The **no-slip condition** is a fundamental boundary condition in fluid mechanics, particularly relevant in the context of viscosity. It states that at a solid boundary, a fluid will have zero velocity relative to the boundary. In other words, the fluid particles at the interface between the fluid and the solid surface "stick" to the surface, meaning that the velocity of the fluid at the boundary is equal to the velocity of the surface itself.
+
+### Role of the No-Slip Condition in Viscous Flows
+
+Viscosity, as described earlier, is a measure of a fluid’s internal resistance to deformation or shear. When fluid flows over a surface, such as a pipe wall or a flat plate, the no-slip condition creates a velocity gradient from zero at the boundary (due to the fluid adhering to the surface) to the maximum velocity in the flow field away from the surface. This velocity gradient generates **shear stress** in the fluid, with the magnitude of this stress being directly proportional to the viscosity of the fluid.
+
+For a highly viscous fluid, such as honey, the velocity gradient near the surface is more gradual, meaning the fluid's motion near the boundary is significantly slowed down by viscous forces. In contrast, for low-viscosity fluids like water, the fluid velocity increases more sharply away from the surface, as the internal friction is lower.
+
+### Physical Mechanism Behind the No-Slip Condition
+
+The no-slip condition arises due to intermolecular forces between the fluid molecules and the solid boundary. Near the surface, fluid molecules are attracted to the solid and do not slip past it. The layer of fluid molecules closest to the surface is essentially stationary relative to the solid. The fluid layers adjacent to this stationary layer experience shear due to the velocity difference between layers, and this is where viscosity acts to resist the relative motion between the layers.
+
+In summary:
+- **Viscosity**: Determines how much the fluid resists the development of this velocity gradient.
+- **No-slip condition**: Ensures that the velocity of the fluid at the boundary equals the velocity of the solid surface, enforcing a zero-velocity condition at solid-fluid interfaces.
+
+### Importance in Applications
+
+The no-slip condition is critical in various engineering applications where fluid interaction with solid surfaces is important:
+- **Lubrication**: In systems where moving parts are lubricated, the no-slip condition ensures a velocity gradient develops in the lubricant, creating shear stress that supports the load.
+- **Aerodynamics**: In aerodynamics, the no-slip condition causes the formation of boundary layers on surfaces like airplane wings, which significantly affect drag and lift.
+- **Heat transfer**: In heat exchangers, the no-slip condition at the solid walls enhances heat transfer by enforcing fluid velocity gradients, which increase convective heat transfer.
+
+Thus, the no-slip condition is inseparably linked with viscosity, as it governs the behavior of fluids at solid boundaries, directly influencing the velocity distribution and the shear forces in the fluid.
+
 
 ### Shear Flow in Fluids
 
 Consider a Newtonian fluid between two parallel plates, where:
 - The bottom plate is stationary.
 - The top plate moves at a constant velocity $U$.
+- The fluid between the plates is assumed to be incompressible and Newtonian.
 - The distance between the plates is $h$.
 
 The velocity distribution between the plates is linear, given by:
@@ -481,17 +495,21 @@ $$
 
 where $u(y)$ is the fluid velocity at a distance $y$ from the stationary plate.
 
-The shear stress $\tau$ on the fluid is proportional to the velocity gradient $\frac{du}{dy}$:
+
+The viscosity $\mu$ is defined for Newtonian fluids (those for which the stress is proportional to the rate of strain) as the constant of proportionality between the shear stress $\tau$ and the velocity gradient $\frac{du}{dy}$ in a simple shear flow:
 
 $$
 \tau = \mu \frac{du}{dy}
 $$
+
+For Newtonian fluids, $\mu$ remains constant, meaning the fluid's resistance to shear flow is directly proportional to the velocity gradient. Non-Newtonian fluids, by contrast, exhibit a non-linear relationship between shear stress and velocity gradient, where viscosity may vary with the rate of strain.
 
 For this system:
 
 $$
 \frac{du}{dy} = \frac{U}{h}
 $$
+
 
 Thus, the shear stress is:
 
@@ -501,21 +519,14 @@ $$
 
 This shows that the shear stress $\tau$ is directly proportional to the viscosity $\mu$ and the velocity gradient $\frac{U}{h}$.
 
-### 3.2. Newton’s Law of Viscosity
-
-In general, Newton’s law of viscosity is expressed as:
-
-$$
-\tau = \mu \frac{du}{dy}
-$$
-
-For Newtonian fluids, $\mu$ remains constant, meaning the fluid's resistance to shear flow is directly proportional to the velocity gradient. Non-Newtonian fluids, by contrast, exhibit a non-linear relationship between shear stress and velocity gradient, where viscosity may vary with the rate of strain.
-
-## 4. Units of Viscosity
-
-Dynamic viscosity $\mu$ has the following units:
+```{note}
+Remember:
+- $\tau$ is the shear stress (force per unit area) acting parallel to the fluid layer,
+- $\frac{du}{dy}$ is the velocity gradient (rate of strain) perpendicular to the fluid motion,
+- $\mu$ is the dynamic viscosity (units: $\text{Pa} \cdot \text{s}$ or $\text{N} \cdot \text{s}/\text{m}^2$).
 - In SI: $\text{Pa} \cdot \text{s}$ or $\text{N} \cdot \text{s}/\text{m}^2$.
 - In the CGS system: **Poise** (P), where $1 \, \text{P} = 0.1 \, \text{Pa} \cdot \text{s}$.
+```
 
 Another common term is **kinematic viscosity** $\nu$, defined as the ratio of dynamic viscosity to fluid density $\rho$:
 
@@ -525,73 +536,32 @@ $$
 
 The units of kinematic viscosity are $\text{m}^2/\text{s}$ (SI) and **Stokes (St)** in the CGS system.
 
-## 5. Microscopic Origin of Viscosity
+### Microscopic Origin of Viscosity
 
 From a molecular perspective, viscosity is related to the momentum transfer between fluid molecules. In gases, molecules move randomly, and as they collide, they transfer momentum, creating a shear stress. In liquids, the intermolecular forces dominate, and these forces resist the relative motion of adjacent layers, contributing to the fluid’s viscosity.
 
-## 6. Experimental Measurement of Viscosity
+### Experimental Measurement of Viscosity
 
 Viscosity can be measured using several devices, such as:
 - **Capillary Viscometers**: Based on measuring the flow rate of the fluid through a thin tube.
 - **Rotational Viscometers**: Measure the torque required to rotate a disk or cylinder in the fluid.
 - **Falling Sphere Viscometers**: Measure the terminal velocity of a sphere falling through the fluid, applying Stokes' law.
 
-## 7. Importance of Viscosity in Fluid Mechanics
+### Importance of Viscosity in Fluid Mechanics
 
-Viscosity affects many fluid mechanics phenomena:
+Viscosity is a fundamental property that governs how fluids resist motion under applied forces. It is particularly important in understanding fluid flow in systems ranging from simple pipe flows to complex aerodynamic applications. Newton’s law of viscosity provides the foundation for analyzing fluid behavior in shear flows, allowing us to predict stresses, velocities, and flow rates in Newtonian fluids. Derived from Newton’s law of viscosity, this property governs many fluid behaviors in both laminar and turbulent regimes.
+
+In real-world engineering applications, accurate knowledge of viscosity is essential for designing fluid systems, analyzing heat transfer, and ensuring the efficient operation of machinery.
+
 - **Laminar vs. Turbulent Flow**: High viscosity favors laminar flow, while low viscosity fluids are more prone to turbulence.
 - **Boundary Layers**: Viscosity plays a critical role in the formation and thickness of boundary layers.
 - **Energy Dissipation**: Viscous effects lead to energy dissipation in fluids, important in pipe flow, pumps, and engines.
 
-## 8. Example Problem: Flow Between Parallel Plates
-
-Given:
-- Fluid with viscosity $\mu = 0.01 \, \text{Pa} \cdot \text{s}$,
-- Velocity of the top plate $U = 1 \, \text{m/s}$,
-- Distance between plates $h = 0.005 \, \text{m}$.
-
-The shear stress $\tau$ is calculated as:
-
-$$
-\tau = \mu \frac{U}{h} = 0.01 \cdot \frac{1}{0.005} = 2 \, \text{Pa}
-$$
-
-Thus, the shear stress between the plates is 2 Pa.
-
-## 9. Conclusion
-
-Viscosity is a fundamental property of fluids that describes their internal resistance to flow. The understanding of viscosity is critical in applications ranging from designing lubrication systems to analyzing aerodynamic flows. Derived from Newton’s law of viscosity, this property governs many fluid behaviors in both laminar and turbulent regimes.
-
-
-# Derivation of Viscosity
-
-## 1. Introduction to Viscosity
-
-Viscosity is a fundamental fluid property that quantifies the internal resistance of a fluid to shear or deformation. It measures how "thick" or "sticky" a fluid is, and it plays a crucial role in determining the flow behavior of fluids under applied forces.
-
-### 1.1 Newton’s Law of Viscosity
-
-For **Newtonian fluids**, the relationship between the applied shear stress $\tau$ and the resulting rate of strain (velocity gradient) $\frac{du}{dy}$ is linear. This relationship is expressed by **Newton's law of viscosity**:
-
-$$
-\tau = \mu \frac{du}{dy}
-$$
-
-Where:
-- $\tau$ is the shear stress (force per unit area, N/m² or Pa),
-- $\frac{du}{dy}$ is the velocity gradient perpendicular to the flow direction (s⁻¹),
-- $\mu$ is the dynamic viscosity of the fluid (Pa⋅s or N⋅s/m²).
-
-This equation indicates that the shear stress in a Newtonian fluid is directly proportional to the velocity gradient, with the constant of proportionality being the dynamic viscosity $\mu$. Fluids such as water, air, and oil behave as Newtonian fluids under typical conditions.
 
 ## 2. Shear Flow Between Parallel Plates
 
 To derive a practical expression for viscosity, consider the case of **simple shear flow** between two parallel plates. This scenario is often used as a basic model to study viscosity.
 
-- The bottom plate is stationary.
-- The top plate moves at a constant velocity $U$.
-- The fluid between the plates is assumed to be incompressible and Newtonian.
-- The distance between the plates is $h$.
 
 ### 2.1 Velocity Distribution
 
@@ -649,607 +619,4 @@ The units of kinematic viscosity are:
 - CGS: **Stokes (St)**, where $1 \, \text{St} = 10^{-4} \, \text{m}^2/\text{s}$.
 
 Kinematic viscosity is particularly useful when studying fluid flow in systems where the density plays a significant role, such as in buoyancy-driven flows.
-
-## 4. Experimental Measurement of Viscosity
-
-Viscosity can be measured using various experimental methods, including:
-- **Capillary Viscometers**: Measure the time for a fluid to flow through a thin capillary tube under the influence of gravity.
-- **Rotational Viscometers**: Measure the torque required to rotate a disk or cylinder in a fluid at a known speed.
-- **Falling Sphere Viscometers**: Determine the viscosity by measuring the terminal velocity of a sphere falling through the fluid and applying **Stokes' law**.
-
-## 5. Example Problem: Flow Between Parallel Plates
-
-Given:
-- Dynamic viscosity $\mu = 0.01 \, \text{Pa·s}$,
-- Velocity of the top plate $U = 1 \, \text{m/s}$,
-- Distance between plates $h = 0.005 \, \text{m}$.
-
-The shear stress $\tau$ is calculated as:
-
-$$
-\tau = \mu \frac{U}{h} = 0.01 \cdot \frac{1}{0.005} = 2 \, \text{Pa}
-$$
-
-Thus, the shear stress between the plates is 2 Pa.
-
-## 6. Conclusion
-
-Viscosity is a fundamental property that governs how fluids resist motion under applied forces. It is particularly important in understanding fluid flow in systems ranging from simple pipe flows to complex aerodynamic applications. Newton’s law of viscosity provides the foundation for analyzing fluid behavior in shear flows, allowing us to predict stresses, velocities, and flow rates in Newtonian fluids.
-
-In real-world engineering applications, accurate knowledge of viscosity is essential for designing fluid systems, analyzing heat transfer, and ensuring the efficient operation of machinery.
-
-# Derivation of Viscosity
-
-## 1. Introduction to Viscosity
-
-Viscosity is a fundamental fluid property that quantifies the internal resistance of a fluid to shear or deformation. It measures how "thick" or "sticky" a fluid is, and it plays a crucial role in determining the flow behavior of fluids under applied forces.
-
-### 1.1 Newton’s Law of Viscosity
-
-For **Newtonian fluids**, the relationship between the applied shear stress $\tau$ and the resulting rate of strain (velocity gradient) $\frac{du}{dy}$ is linear. This relationship is expressed by **Newton's law of viscosity**:
-
-$$
-\tau = \mu \frac{du}{dy}
-$$
-
-Where:
-- $\tau$ is the shear stress (force per unit area, N/m² or Pa),
-- $\frac{du}{dy}$ is the velocity gradient perpendicular to the flow direction (s⁻¹),
-- $\mu$ is the dynamic viscosity of the fluid (Pa⋅s or N⋅s/m²).
-
-This equation indicates that the shear stress in a Newtonian fluid is directly proportional to the velocity gradient, with the constant of proportionality being the dynamic viscosity $\mu$. Fluids such as water, air, and oil behave as Newtonian fluids under typical conditions.
-
-## 2. Shear Flow Between Parallel Plates
-
-To derive a practical expression for viscosity, consider the case of **simple shear flow** between two parallel plates. This scenario is often used as a basic model to study viscosity.
-
-- The bottom plate is stationary.
-- The top plate moves at a constant velocity $U$.
-- The fluid between the plates is assumed to be incompressible and Newtonian.
-- The distance between the plates is $h$.
-
-### 2.1 Velocity Distribution
-
-In this situation, the velocity of the fluid varies linearly from zero at the stationary bottom plate to $U$ at the moving top plate. The velocity profile is given by:
-
-$$
-u(y) = \frac{U}{h} y
-$$
-
-Where:
-- $u(y)$ is the fluid velocity at a distance $y$ from the stationary plate,
-- $h$ is the distance between the plates,
-- $U$ is the velocity of the moving plate.
-
-### 2.2 Velocity Gradient
-
-The velocity gradient $\frac{du}{dy}$ is the rate of change of velocity with respect to the distance $y$ from the stationary plate. For this linear profile, the velocity gradient is constant and given by:
-
-$$
-\frac{du}{dy} = \frac{U}{h}
-$$
-
-### 2.3 Shear Stress
-
-Substituting this velocity gradient into Newton's law of viscosity, we get the expression for the shear stress $\tau$ acting on the fluid:
-
-$$
-\tau = \mu \frac{U}{h}
-$$
-
-Thus, the shear stress is proportional to the viscosity $\mu$, the velocity of the moving plate $U$, and inversely proportional to the distance between the plates $h$. This equation provides a practical way to calculate the shear stress in a Newtonian fluid when the velocity and geometry are known.
-
-## 3. Viscosity as a Fluid Property
-
-### 3.1 Dynamic Viscosity
-
-The **dynamic viscosity** $\mu$ is a measure of a fluid’s resistance to shear flow. For Newtonian fluids, it remains constant under varying shear rates and is a function of temperature and pressure. 
-
-The units of dynamic viscosity are:
-- **SI units**: Pa·s (N·s/m²),
-- **CGS units**: Poise (P), where $1 \, \text{P} = 0.1 \, \text{Pa·s}$.
-
-For example, water at 20°C has a viscosity of approximately $1.002 \, \text{mPa·s}$ (or $1.002 \, \text{cP}$).
-
-### 3.2 Kinematic Viscosity
-
-The **kinematic viscosity** $\nu$ is the ratio of the dynamic viscosity $\mu$ to the fluid density $\rho$:
-
-$$
-\nu = \frac{\mu}{\rho}
-$$
-
-The units of kinematic viscosity are:
-- SI: $\text{m}^2/\text{s}$,
-- CGS: **Stokes (St)**, where $1 \, \text{St} = 10^{-4} \, \text{m}^2/\text{s}$.
-
-Kinematic viscosity is particularly useful when studying fluid flow in systems where the density plays a significant role, such as in buoyancy-driven flows.
-
-## 4. Experimental Measurement of Viscosity
-
-Viscosity can be measured using various experimental methods, including:
-- **Capillary Viscometers**: Measure the time for a fluid to flow through a thin capillary tube under the influence of gravity.
-- **Rotational Viscometers**: Measure the torque required to rotate a disk or cylinder in a fluid at a known speed.
-- **Falling Sphere Viscometers**: Determine the viscosity by measuring the terminal velocity of a sphere falling through the fluid and applying **Stokes' law**.
-
-## 5. Example Problem: Flow Between Parallel Plates
-
-Given:
-- Dynamic viscosity $\mu = 0.01 \, \text{Pa·s}$,
-- Velocity of the top plate $U = 1 \, \text{m/s}$,
-- Distance between plates $h = 0.005 \, \text{m}$.
-
-The shear stress $\tau$ is calculated as:
-
-$$
-\tau = \mu \frac{U}{h} = 0.01 \cdot \frac{1}{0.005} = 2 \, \text{Pa}
-$$
-
-Thus, the shear stress between the plates is 2 Pa.
-
-## 6. Conclusion
-
-Viscosity is a fundamental property that governs how fluids resist motion under applied forces. It is particularly important in understanding fluid flow in systems ranging from simple pipe flows to complex aerodynamic applications. Newton’s law of viscosity provides the foundation for analyzing fluid behavior in shear flows, allowing us to predict stresses, velocities, and flow rates in Newtonian fluids.
-
-In real-world engineering applications, accurate knowledge of viscosity is essential for designing fluid systems, analyzing heat transfer, and ensuring the efficient operation of machinery.
-# Derivation of Viscosity
-
-## 1. Introduction to Viscosity
-
-Viscosity is a fundamental fluid property that quantifies the internal resistance of a fluid to shear or deformation. It measures how "thick" or "sticky" a fluid is, and it plays a crucial role in determining the flow behavior of fluids under applied forces.
-
-### 1.1 Newton’s Law of Viscosity
-
-For **Newtonian fluids**, the relationship between the applied shear stress $\tau$ and the resulting rate of strain (velocity gradient) $\frac{du}{dy}$ is linear. This relationship is expressed by **Newton's law of viscosity**:
-
-$$
-\tau = \mu \frac{du}{dy}
-$$
-
-Where:
-- $\tau$ is the shear stress (force per unit area, N/m² or Pa),
-- $\frac{du}{dy}$ is the velocity gradient perpendicular to the flow direction (s⁻¹),
-- $\mu$ is the dynamic viscosity of the fluid (Pa⋅s or N⋅s/m²).
-
-This equation indicates that the shear stress in a Newtonian fluid is directly proportional to the velocity gradient, with the constant of proportionality being the dynamic viscosity $\mu$. Fluids such as water, air, and oil behave as Newtonian fluids under typical conditions.
-
-## 2. Shear Flow Between Parallel Plates
-
-To derive a practical expression for viscosity, consider the case of **simple shear flow** between two parallel plates. This scenario is often used as a basic model to study viscosity.
-
-- The bottom plate is stationary.
-- The top plate moves at a constant velocity $U$.
-- The fluid between the plates is assumed to be incompressible and Newtonian.
-- The distance between the plates is $h$.
-
-### 2.1 Velocity Distribution
-
-In this situation, the velocity of the fluid varies linearly from zero at the stationary bottom plate to $U$ at the moving top plate. The velocity profile is given by:
-
-$$
-u(y) = \frac{U}{h} y
-$$
-
-Where:
-- $u(y)$ is the fluid velocity at a distance $y$ from the stationary plate,
-- $h$ is the distance between the plates,
-- $U$ is the velocity of the moving plate.
-
-### 2.2 Velocity Gradient
-
-The velocity gradient $\frac{du}{dy}$ is the rate of change of velocity with respect to the distance $y$ from the stationary plate. For this linear profile, the velocity gradient is constant and given by:
-
-$$
-\frac{du}{dy} = \frac{U}{h}
-$$
-
-### 2.3 Shear Stress
-
-Substituting this velocity gradient into Newton's law of viscosity, we get the expression for the shear stress $\tau$ acting on the fluid:
-
-$$
-\tau = \mu \frac{U}{h}
-$$
-
-Thus, the shear stress is proportional to the viscosity $\mu$, the velocity of the moving plate $U$, and inversely proportional to the distance between the plates $h$. This equation provides a practical way to calculate the shear stress in a Newtonian fluid when the velocity and geometry are known.
-
-## 3. Viscosity as a Fluid Property
-
-### 3.1 Dynamic Viscosity
-
-The **dynamic viscosity** $\mu$ is a measure of a fluid’s resistance to shear flow. For Newtonian fluids, it remains constant under varying shear rates and is a function of temperature and pressure. 
-
-The units of dynamic viscosity are:
-- **SI units**: Pa·s (N·s/m²),
-- **CGS units**: Poise (P), where $1 \, \text{P} = 0.1 \, \text{Pa·s}$.
-
-For example, water at 20°C has a viscosity of approximately $1.002 \, \text{mPa·s}$ (or $1.002 \, \text{cP}$).
-
-### 3.2 Kinematic Viscosity
-
-The **kinematic viscosity** $\nu$ is the ratio of the dynamic viscosity $\mu$ to the fluid density $\rho$:
-
-$$
-\nu = \frac{\mu}{\rho}
-$$
-
-The units of kinematic viscosity are:
-- SI: $\text{m}^2/\text{s}$,
-- CGS: **Stokes (St)**, where $1 \, \text{St} = 10^{-4} \, \text{m}^2/\text{s}$.
-
-Kinematic viscosity is particularly useful when studying fluid flow in systems where the density plays a significant role, such as in buoyancy-driven flows.
-
-## 4. Experimental Measurement of Viscosity
-
-Viscosity can be measured using various experimental methods, including:
-- **Capillary Viscometers**: Measure the time for a fluid to flow through a thin capillary tube under the influence of gravity.
-- **Rotational Viscometers**: Measure the torque required to rotate a disk or cylinder in a fluid at a known speed.
-- **Falling Sphere Viscometers**: Determine the viscosity by measuring the terminal velocity of a sphere falling through the fluid and applying **Stokes' law**.
-
-## 5. Example Problem: Flow Between Parallel Plates
-
-Given:
-- Dynamic viscosity $\mu = 0.01 \, \text{Pa·s}$,
-- Velocity of the top plate $U = 1 \, \text{m/s}$,
-- Distance between plates $h = 0.005 \, \text{m}$.
-
-The shear stress $\tau$ is calculated as:
-
-$$
-\tau = \mu \frac{U}{h} = 0.01 \cdot \frac{1}{0.005} = 2 \, \text{Pa}
-$$
-
-Thus, the shear stress between the plates is 2 Pa.
-
-## 6. Conclusion
-
-Viscosity is a fundamental property that governs how fluids resist motion under applied forces. It is particularly important in understanding fluid flow in systems ranging from simple pipe flows to complex aerodynamic applications. Newton’s law of viscosity provides the foundation for analyzing fluid behavior in shear flows, allowing us to predict stresses, velocities, and flow rates in Newtonian fluids.
-
-In real-world engineering applications, accurate knowledge of viscosity is essential for designing fluid systems, analyzing heat transfer, and ensuring the efficient operation of machinery.
-
-# Derivation of Viscosity
-
-## 1. Introduction to Viscosity
-
-Viscosity is a fundamental fluid property that quantifies the internal resistance of a fluid to shear or deformation. It measures how "thick" or "sticky" a fluid is, and it plays a crucial role in determining the flow behavior of fluids under applied forces.
-
-### 1.1 Newton’s Law of Viscosity
-
-For **Newtonian fluids**, the relationship between the applied shear stress $\tau$ and the resulting rate of strain (velocity gradient) $\frac{du}{dy}$ is linear. This relationship is expressed by **Newton's law of viscosity**:
-
-$$
-\tau = \mu \frac{du}{dy}
-$$
-
-Where:
-- $\tau$ is the shear stress (force per unit area, N/m² or Pa),
-- $\frac{du}{dy}$ is the velocity gradient perpendicular to the flow direction (s⁻¹),
-- $\mu$ is the dynamic viscosity of the fluid (Pa⋅s or N⋅s/m²).
-
-This equation indicates that the shear stress in a Newtonian fluid is directly proportional to the velocity gradient, with the constant of proportionality being the dynamic viscosity $\mu$. Fluids such as water, air, and oil behave as Newtonian fluids under typical conditions.
-
-## 2. Shear Flow Between Parallel Plates
-
-To derive a practical expression for viscosity, consider the case of **simple shear flow** between two parallel plates. This scenario is often used as a basic model to study viscosity.
-
-- The bottom plate is stationary.
-- The top plate moves at a constant velocity $U$.
-- The fluid between the plates is assumed to be incompressible and Newtonian.
-- The distance between the plates is $h$.
-
-### 2.1 Velocity Distribution
-
-In this situation, the velocity of the fluid varies linearly from zero at the stationary bottom plate to $U$ at the moving top plate. The velocity profile is given by:
-
-$$
-u(y) = \frac{U}{h} y
-$$
-
-Where:
-- $u(y)$ is the fluid velocity at a distance $y$ from the stationary plate,
-- $h$ is the distance between the plates,
-- $U$ is the velocity of the moving plate.
-
-### 2.2 Velocity Gradient
-
-The velocity gradient $\frac{du}{dy}$ is the rate of change of velocity with respect to the distance $y$ from the stationary plate. For this linear profile, the velocity gradient is constant and given by:
-
-$$
-\frac{du}{dy} = \frac{U}{h}
-$$
-
-### 2.3 Shear Stress
-
-Substituting this velocity gradient into Newton's law of viscosity, we get the expression for the shear stress $\tau$ acting on the fluid:
-
-$$
-\tau = \mu \frac{U}{h}
-$$
-
-Thus, the shear stress is proportional to the viscosity $\mu$, the velocity of the moving plate $U$, and inversely proportional to the distance between the plates $h$. This equation provides a practical way to calculate the shear stress in a Newtonian fluid when the velocity and geometry are known.
-
-## 3. Viscosity as a Fluid Property
-
-### 3.1 Dynamic Viscosity
-
-The **dynamic viscosity** $\mu$ is a measure of a fluid’s resistance to shear flow. For Newtonian fluids, it remains constant under varying shear rates and is a function of temperature and pressure. 
-
-The units of dynamic viscosity are:
-- **SI units**: Pa·s (N·s/m²),
-- **CGS units**: Poise (P), where $1 \, \text{P} = 0.1 \, \text{Pa·s}$.
-
-For example, water at 20°C has a viscosity of approximately $1.002 \, \text{mPa·s}$ (or $1.002 \, \text{cP}$).
-
-### 3.2 Kinematic Viscosity
-
-The **kinematic viscosity** $\nu$ is the ratio of the dynamic viscosity $\mu$ to the fluid density $\rho$:
-
-$$
-\nu = \frac{\mu}{\rho}
-$$
-
-The units of kinematic viscosity are:
-- SI: $\text{m}^2/\text{s}$,
-- CGS: **Stokes (St)**, where $1 \, \text{St} = 10^{-4} \, \text{m}^2/\text{s}$.
-
-Kinematic viscosity is particularly useful when studying fluid flow in systems where the density plays a significant role, such as in buoyancy-driven flows.
-
-## 4. Experimental Measurement of Viscosity
-
-Viscosity can be measured using various experimental methods, including:
-- **Capillary Viscometers**: Measure the time for a fluid to flow through a thin capillary tube under the influence of gravity.
-- **Rotational Viscometers**: Measure the torque required to rotate a disk or cylinder in a fluid at a known speed.
-- **Falling Sphere Viscometers**: Determine the viscosity by measuring the terminal velocity of a sphere falling through the fluid and applying **Stokes' law**.
-
-## 5. Example Problem: Flow Between Parallel Plates
-
-Given:
-- Dynamic viscosity $\mu = 0.01 \, \text{Pa·s}$,
-- Velocity of the top plate $U = 1 \, \text{m/s}$,
-- Distance between plates $h = 0.005 \, \text{m}$.
-
-The shear stress $\tau$ is calculated as:
-
-$$
-\tau = \mu \frac{U}{h} = 0.01 \cdot \frac{1}{0.005} = 2 \, \text{Pa}
-$$
-
-Thus, the shear stress between the plates is 2 Pa.
-
-## 6. Conclusion
-
-Viscosity is a fundamental property that governs how fluids resist motion under applied forces. It is particularly important in understanding fluid flow in systems ranging from simple pipe flows to complex aerodynamic applications. Newton’s law of viscosity provides the foundation for analyzing fluid behavior in shear flows, allowing us to predict stresses, velocities, and flow rates in Newtonian fluids.
-
-In real-world engineering applications, accurate knowledge of viscosity is essential for designing fluid systems, analyzing heat transfer, and ensuring the efficient operation of machinery.
-
-# Derivation of Viscosity
-
-## 1. Introduction to Viscosity
-
-Viscosity is a fundamental fluid property that quantifies the internal resistance of a fluid to shear or deformation. It measures how "thick" or "sticky" a fluid is, and it plays a crucial role in determining the flow behavior of fluids under applied forces.
-
-### 1.1 Newton’s Law of Viscosity
-
-For **Newtonian fluids**, the relationship between the applied shear stress $\tau$ and the resulting rate of strain (velocity gradient) $\frac{du}{dy}$ is linear. This relationship is expressed by **Newton's law of viscosity**:
-
-$$
-\tau = \mu \frac{du}{dy}
-$$
-
-Where:
-- $\tau$ is the shear stress (force per unit area, N/m² or Pa),
-- $\frac{du}{dy}$ is the velocity gradient perpendicular to the flow direction (s⁻¹),
-- $\mu$ is the dynamic viscosity of the fluid (Pa⋅s or N⋅s/m²).
-
-This equation indicates that the shear stress in a Newtonian fluid is directly proportional to the velocity gradient, with the constant of proportionality being the dynamic viscosity $\mu$. Fluids such as water, air, and oil behave as Newtonian fluids under typical conditions.
-
-## 2. Shear Flow Between Parallel Plates
-
-To derive a practical expression for viscosity, consider the case of **simple shear flow** between two parallel plates. This scenario is often used as a basic model to study viscosity.
-
-- The bottom plate is stationary.
-- The top plate moves at a constant velocity $U$.
-- The fluid between the plates is assumed to be incompressible and Newtonian.
-- The distance between the plates is $h$.
-
-### 2.1 Velocity Distribution
-
-In this situation, the velocity of the fluid varies linearly from zero at the stationary bottom plate to $U$ at the moving top plate. The velocity profile is given by:
-
-$$
-u(y) = \frac{U}{h} y
-$$
-
-Where:
-- $u(y)$ is the fluid velocity at a distance $y$ from the stationary plate,
-- $h$ is the distance between the plates,
-- $U$ is the velocity of the moving plate.
-
-### 2.2 Velocity Gradient
-
-The velocity gradient $\frac{du}{dy}$ is the rate of change of velocity with respect to the distance $y$ from the stationary plate. For this linear profile, the velocity gradient is constant and given by:
-
-$$
-\frac{du}{dy} = \frac{U}{h}
-$$
-
-### 2.3 Shear Stress
-
-Substituting this velocity gradient into Newton's law of viscosity, we get the expression for the shear stress $\tau$ acting on the fluid:
-
-$$
-\tau = \mu \frac{U}{h}
-$$
-
-Thus, the shear stress is proportional to the viscosity $\mu$, the velocity of the moving plate $U$, and inversely proportional to the distance between the plates $h$. This equation provides a practical way to calculate the shear stress in a Newtonian fluid when the velocity and geometry are known.
-
-## 3. Viscosity as a Fluid Property
-
-### 3.1 Dynamic Viscosity
-
-The **dynamic viscosity** $\mu$ is a measure of a fluid’s resistance to shear flow. For Newtonian fluids, it remains constant under varying shear rates and is a function of temperature and pressure. 
-
-The units of dynamic viscosity are:
-- **SI units**: Pa·s (N·s/m²),
-- **CGS units**: Poise (P), where $1 \, \text{P} = 0.1 \, \text{Pa·s}$.
-
-For example, water at 20°C has a viscosity of approximately $1.002 \, \text{mPa·s}$ (or $1.002 \, \text{cP}$).
-
-### 3.2 Kinematic Viscosity
-
-The **kinematic viscosity** $\nu$ is the ratio of the dynamic viscosity $\mu$ to the fluid density $\rho$:
-
-$$
-\nu = \frac{\mu}{\rho}
-$$
-
-The units of kinematic viscosity are:
-- SI: $\text{m}^2/\text{s}$,
-- CGS: **Stokes (St)**, where $1 \, \text{St} = 10^{-4} \, \text{m}^2/\text{s}$.
-
-Kinematic viscosity is particularly useful when studying fluid flow in systems where the density plays a significant role, such as in buoyancy-driven flows.
-
-## 4. Experimental Measurement of Viscosity
-
-Viscosity can be measured using various experimental methods, including:
-- **Capillary Viscometers**: Measure the time for a fluid to flow through a thin capillary tube under the influence of gravity.
-- **Rotational Viscometers**: Measure the torque required to rotate a disk or cylinder in a fluid at a known speed.
-- **Falling Sphere Viscometers**: Determine the viscosity by measuring the terminal velocity of a sphere falling through the fluid and applying **Stokes' law**.
-
-## 5. Example Problem: Flow Between Parallel Plates
-
-Given:
-- Dynamic viscosity $\mu = 0.01 \, \text{Pa·s}$,
-- Velocity of the top plate $U = 1 \, \text{m/s}$,
-- Distance between plates $h = 0.005 \, \text{m}$.
-
-The shear stress $\tau$ is calculated as:
-
-$$
-\tau = \mu \frac{U}{h} = 0.01 \cdot \frac{1}{0.005} = 2 \, \text{Pa}
-$$
-
-Thus, the shear stress between the plates is 2 Pa.
-
-## 6. Conclusion
-
-Viscosity is a fundamental property that governs how fluids resist motion under applied forces. It is particularly important in understanding fluid flow in systems ranging from simple pipe flows to complex aerodynamic applications. Newton’s law of viscosity provides the foundation for analyzing fluid behavior in shear flows, allowing us to predict stresses, velocities, and flow rates in Newtonian fluids.
-
-In real-world engineering applications, accurate knowledge of viscosity is essential for designing fluid systems, analyzing heat transfer, and ensuring the efficient operation of machinery.
-
-# Derivation of Viscosity
-
-## 1. Introduction to Viscosity
-
-Viscosity is a fundamental fluid property that quantifies the internal resistance of a fluid to shear or deformation. It measures how "thick" or "sticky" a fluid is, and it plays a crucial role in determining the flow behavior of fluids under applied forces.
-
-### 1.1 Newton’s Law of Viscosity
-
-For **Newtonian fluids**, the relationship between the applied shear stress $\tau$ and the resulting rate of strain (velocity gradient) $\frac{du}{dy}$ is linear. This relationship is expressed by **Newton's law of viscosity**:
-
-$$
-\tau = \mu \frac{du}{dy}
-$$
-
-Where:
-- $\tau$ is the shear stress (force per unit area, N/m² or Pa),
-- $\frac{du}{dy}$ is the velocity gradient perpendicular to the flow direction (s⁻¹),
-- $\mu$ is the dynamic viscosity of the fluid (Pa⋅s or N⋅s/m²).
-
-This equation indicates that the shear stress in a Newtonian fluid is directly proportional to the velocity gradient, with the constant of proportionality being the dynamic viscosity $\mu$. Fluids such as water, air, and oil behave as Newtonian fluids under typical conditions.
-
-## 2. Shear Flow Between Parallel Plates
-
-To derive a practical expression for viscosity, consider the case of **simple shear flow** between two parallel plates. This scenario is often used as a basic model to study viscosity.
-
-- The bottom plate is stationary.
-- The top plate moves at a constant velocity $U$.
-- The fluid between the plates is assumed to be incompressible and Newtonian.
-- The distance between the plates is $h$.
-
-### 2.1 Velocity Distribution
-
-In this situation, the velocity of the fluid varies linearly from zero at the stationary bottom plate to $U$ at the moving top plate. The velocity profile is given by:
-
-$$
-u(y) = \frac{U}{h} y
-$$
-
-Where:
-- $u(y)$ is the fluid velocity at a distance $y$ from the stationary plate,
-- $h$ is the distance between the plates,
-- $U$ is the velocity of the moving plate.
-
-### 2.2 Velocity Gradient
-
-The velocity gradient $\frac{du}{dy}$ is the rate of change of velocity with respect to the distance $y$ from the stationary plate. For this linear profile, the velocity gradient is constant and given by:
-
-$$
-\frac{du}{dy} = \frac{U}{h}
-$$
-
-### 2.3 Shear Stress
-
-Substituting this velocity gradient into Newton's law of viscosity, we get the expression for the shear stress $\tau$ acting on the fluid:
-
-$$
-\tau = \mu \frac{U}{h}
-$$
-
-Thus, the shear stress is proportional to the viscosity $\mu$, the velocity of the moving plate $U$, and inversely proportional to the distance between the plates $h$. This equation provides a practical way to calculate the shear stress in a Newtonian fluid when the velocity and geometry are known.
-
-## 3. Viscosity as a Fluid Property
-
-### 3.1 Dynamic Viscosity
-
-The **dynamic viscosity** $\mu$ is a measure of a fluid’s resistance to shear flow. For Newtonian fluids, it remains constant under varying shear rates and is a function of temperature and pressure. 
-
-The units of dynamic viscosity are:
-- **SI units**: Pa·s (N·s/m²),
-- **CGS units**: Poise (P), where $1 \, \text{P} = 0.1 \, \text{Pa·s}$.
-
-For example, water at 20°C has a viscosity of approximately $1.002 \, \text{mPa·s}$ (or $1.002 \, \text{cP}$).
-
-### 3.2 Kinematic Viscosity
-
-The **kinematic viscosity** $\nu$ is the ratio of the dynamic viscosity $\mu$ to the fluid density $\rho$:
-
-$$
-\nu = \frac{\mu}{\rho}
-$$
-
-The units of kinematic viscosity are:
-- SI: $\text{m}^2/\text{s}$,
-- CGS: **Stokes (St)**, where $1 \, \text{St} = 10^{-4} \, \text{m}^2/\text{s}$.
-
-Kinematic viscosity is particularly useful when studying fluid flow in systems where the density plays a significant role, such as in buoyancy-driven flows.
-
-## 4. Experimental Measurement of Viscosity
-
-Viscosity can be measured using various experimental methods, including:
-- **Capillary Viscometers**: Measure the time for a fluid to flow through a thin capillary tube under the influence of gravity.
-- **Rotational Viscometers**: Measure the torque required to rotate a disk or cylinder in a fluid at a known speed.
-- **Falling Sphere Viscometers**: Determine the viscosity by measuring the terminal velocity of a sphere falling through the fluid and applying **Stokes' law**.
-
-## 5. Example Problem: Flow Between Parallel Plates
-
-Given:
-- Dynamic viscosity $\mu = 0.01 \, \text{Pa·s}$,
-- Velocity of the top plate $U = 1 \, \text{m/s}$,
-- Distance between plates $h = 0.005 \, \text{m}$.
-
-The shear stress $\tau$ is calculated as:
-
-$$
-\tau = \mu \frac{U}{h} = 0.01 \cdot \frac{1}{0.005} = 2 \, \text{Pa}
-$$
-
-Thus, the shear stress between the plates is 2 Pa.
-
-## 6. Conclusion
-
-Viscosity is a fundamental property that governs how fluids resist motion under applied forces. It is particularly important in understanding fluid flow in systems ranging from simple pipe flows to complex aerodynamic applications. Newton’s law of viscosity provides the foundation for analyzing fluid behavior in shear flows, allowing us to predict stresses, velocities, and flow rates in Newtonian fluids.
-
-In real-world engineering applications, accurate knowledge of viscosity is essential for designing fluid systems, analyzing heat transfer, and ensuring the efficient operation of machinery.
-
 

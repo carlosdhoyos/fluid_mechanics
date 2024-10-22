@@ -364,6 +364,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Properties of Fluids</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-density">What is Density?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-density-in-fluid-mechanics">Importance of Density in Fluid Mechanics</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-density">Examples of Density</a></li>
@@ -382,7 +383,6 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-specific-gravity">What is Specific Gravity?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formula">Formula</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculation">Example Calculation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">Interpretation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
@@ -400,8 +400,43 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-fluid-flow">Types of Fluid Flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-description-and-derivation">Viscosity: Description and Derivation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-viscosity">Introduction to Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-flow-in-fluids">Shear Flow in Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newtons-law-of-viscosity">3.2. Newton’s Law of Viscosity</a></li>
 </ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-viscosity">4. Units of Viscosity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopic-origin-of-viscosity">5. Microscopic Origin of Viscosity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-measurement-of-viscosity">6. Experimental Measurement of Viscosity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-viscosity-in-fluid-mechanics">7. Importance of Viscosity in Fluid Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-flow-between-parallel-plates">8. Example Problem: Flow Between Parallel Plates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">9. Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-viscosity">Derivation of Viscosity</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1. Introduction to Viscosity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.1 Newton’s Law of Viscosity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-flow-between-parallel-plates">2. Shear Flow Between Parallel Plates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-distribution">2.1 Velocity Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-gradient">2.2 Velocity Gradient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-stress">2.3 Shear Stress</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-as-a-fluid-property">3. Viscosity as a Fluid Property</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-viscosity">3.1 Dynamic Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematic-viscosity">3.2 Kinematic Viscosity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">4. Experimental Measurement of Viscosity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5. Example Problem: Flow Between Parallel Plates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">6. Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -415,18 +450,13 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="properties-of-fluids">
 <h1>Properties of Fluids<a class="headerlink" href="#properties-of-fluids" title="Link to this heading">#</a></h1>
 <p>Understanding the physical properties of fluids is essential for analyzing fluid flow. The key properties include:</p>
-<ul>
-<li><p><strong>Density</strong> (<span class="math notranslate nohighlight">\(\rho\)</span>):</p></li>
+<ul class="simple">
+<li><p><strong>Density</strong> (<span class="math notranslate nohighlight">\(\rho\)</span>)</p></li>
 <li><p><strong>Specific Weight</strong> (<span class="math notranslate nohighlight">\(\gamma\)</span>)</p></li>
 <li><p><strong>Specific Gravity</strong> (<span class="math notranslate nohighlight">\(SG\)</span>)</p></li>
-<li><p><strong>Viscosity</strong> (<span class="math notranslate nohighlight">\(\mu\)</span>): The fluid’s resistance to deformation or flow.</p>
-<div class="math notranslate nohighlight">
-\[ \tau = \mu \frac{du}{dy} \]</div>
-</li>
-<li><p><strong>Surface Tension</strong> (<span class="math notranslate nohighlight">\(\sigma\)</span>): The cohesive force at the surface of a fluid.</p>
-<div class="math notranslate nohighlight">
-\[ F = \sigma L \]</div>
-</li>
+<li><p><strong>Viscosity</strong> (<span class="math notranslate nohighlight">\(\mu\)</span>)</p></li>
+<li><p><strong>Surface Tension</strong> (<span class="math notranslate nohighlight">\(\sigma\)</span>)</p></li>
+<li></li>
 </ul>
 <section id="what-is-density">
 <h2>What is Density?<a class="headerlink" href="#what-is-density" title="Link to this heading">#</a></h2>
@@ -680,7 +710,7 @@ The density of water in the BG system is approximately <strong><span class="math
 <p>Specific weight is often used in calculations involving:</p>
 <ul class="simple">
 <li><p><strong>Buoyancy</strong>: The weight of the displaced fluid determines the buoyant force on an object.</p></li>
-<li><p><strong>Hydrostatics</strong>: The pressure exerted by a fluid at rest depends on the specific weight, as seen in the hydrostatic pressure formula <span class="math notranslate nohighlight">\(P = \gamma h\)</span>, where <span class="math notranslate nohighlight">\(h\)</span> is the height of the fluid column.</p></li>
+<li><p><strong>Hydrostatics</strong>: The pressure exerted by a fluid at rest depends on the specific weight, as seen in the hydrostatic pressure formulation <span class="math notranslate nohighlight">\(P = \gamma h\)</span>, where <span class="math notranslate nohighlight">\(h\)</span> is the height of the fluid column.</p></li>
 <li><p><strong>Hydraulic Systems</strong>: Engineers use specific weight to design systems where fluid flow and pressures are key factors, such as in dams or water distribution systems.</p></li>
 </ul>
 </section>
@@ -743,8 +773,6 @@ The density of water in the BG system is approximately <strong><span class="math
 <h2>What is Specific Gravity?<a class="headerlink" href="#what-is-specific-gravity" title="Link to this heading">#</a></h2>
 <p><strong>Specific gravity</strong> (denoted as <span class="math notranslate nohighlight">\(SG\)</span>) is the ratio of the density of a substance to the density of a reference substance, usually <strong>water</strong> for liquids and solids, or <strong>air</strong> for gases. Since it is a ratio of two densities, <strong>specific gravity is a dimensionless quantity</strong>.</p>
 <p>For liquids and solids, the reference substance is water at <span class="math notranslate nohighlight">\(4^\circ C\)</span>, which has a density of approximately <span class="math notranslate nohighlight">\(1000 \, \text{kg/m}^3\)</span> in the SI system or <span class="math notranslate nohighlight">\(62.4 \, \text{lb/ft}^3\)</span> in the English system.</p>
-<section id="formula">
-<h3>Formula<a class="headerlink" href="#formula" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[
 SG = \frac{\rho_{\text{fluid}}}{\rho_{\text{water}}}
@@ -755,7 +783,6 @@ SG = \frac{\rho_{\text{fluid}}}{\rho_{\text{water}}}
 <li><p><span class="math notranslate nohighlight">\(\rho_{\text{water}}\)</span> is the density of water at <span class="math notranslate nohighlight">\(4^\circ C\)</span>.</p></li>
 </ul>
 <p>Since the densities are in the same units, the specific gravity itself has no units.</p>
-</section>
 <section id="example-calculation">
 <h3>Example Calculation<a class="headerlink" href="#example-calculation" title="Link to this heading">#</a></h3>
 <p>If the density of mercury is <span class="math notranslate nohighlight">\(13,600 \, \text{kg/m}^3\)</span>, the specific gravity of mercury relative to water would be:</p>
@@ -978,15 +1005,243 @@ P = 103,320 \, \text{Pa} = 103.3 \, \text{kPa}
 </div>
 </section>
 </section>
-<section id="types-of-fluid-flow">
-<h2>Types of Fluid Flow<a class="headerlink" href="#types-of-fluid-flow" title="Link to this heading">#</a></h2>
-<p>Fluids exhibit different types of flow depending on various factors like velocity, pressure, and external forces. The major types of fluid flow are:</p>
-<ol class="arabic simple">
-<li><p><strong>Laminar Flow</strong>: Flow where fluid moves in smooth paths or layers.</p></li>
-<li><p><strong>Turbulent Flow</strong>: Flow where the fluid undergoes irregular fluctuations and mixing.</p></li>
-<li><p><strong>Steady Flow</strong>: The fluid properties at any point remain constant over time.</p></li>
-<li><p><strong>Unsteady Flow</strong>: The fluid properties change over time.</p></li>
-</ol>
+<section id="viscosity-description-and-derivation">
+<h2>Viscosity: Description and Derivation<a class="headerlink" href="#viscosity-description-and-derivation" title="Link to this heading">#</a></h2>
+<section id="introduction-to-viscosity">
+<h3>Introduction to Viscosity<a class="headerlink" href="#introduction-to-viscosity" title="Link to this heading">#</a></h3>
+<p>Viscosity is a measure of a fluid’s resistance to deformation under shear or tensile stress. In simple terms, it quantifies how “thick” or “sticky” a fluid is. High-viscosity fluids like honey resist flow more than low-viscosity fluids like water. Viscosity plays a critical role in fluid mechanics, affecting flow behavior in various applications ranging from lubrication to aerodynamics.</p>
+<p>Viscosity arises from the internal friction between layers of fluid in motion. When fluid moves, the layers adjacent to solid boundaries experience resistance due to intermolecular forces, and this interaction causes the “stickiness” that characterizes viscous effects.</p>
+<p>In fluids, viscosity depends on:</p>
+<ul class="simple">
+<li><p><strong>Temperature</strong>: Higher temperatures generally decrease the viscosity of liquids and increase the viscosity of gases.</p></li>
+<li><p><strong>Pressure</strong>: For most liquids, the viscosity slightly increases with pressure, while for gases, this effect is more complex.</p></li>
+</ul>
+</section>
+<section id="shear-flow-in-fluids">
+<h3>Shear Flow in Fluids<a class="headerlink" href="#shear-flow-in-fluids" title="Link to this heading">#</a></h3>
+<p>Consider a Newtonian fluid between two parallel plates, where:</p>
+<ul class="simple">
+<li><p>The bottom plate is stationary.</p></li>
+<li><p>The top plate moves at a constant velocity <span class="math notranslate nohighlight">\(U\)</span>.</p></li>
+<li><p>The distance between the plates is <span class="math notranslate nohighlight">\(h\)</span>.</p></li>
+</ul>
+<p>The velocity distribution between the plates is linear, given by:</p>
+<div class="math notranslate nohighlight">
+\[
+u(y) = \frac{U}{h} y
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(u(y)\)</span> is the fluid velocity at a distance <span class="math notranslate nohighlight">\(y\)</span> from the stationary plate.</p>
+<p>The shear stress <span class="math notranslate nohighlight">\(\tau\)</span> on the fluid is proportional to the velocity gradient <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{du}{dy}
+\]</div>
+<p>For this system:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{du}{dy} = \frac{U}{h}
+\]</div>
+<p>Thus, the shear stress is:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{U}{h}
+\]</div>
+<p>This shows that the shear stress <span class="math notranslate nohighlight">\(\tau\)</span> is directly proportional to the viscosity <span class="math notranslate nohighlight">\(\mu\)</span> and the velocity gradient <span class="math notranslate nohighlight">\(\frac{U}{h}\)</span>.</p>
+<p>In other words, the viscosity <span class="math notranslate nohighlight">\(\mu\)</span> is defined for Newtonian fluids (those for which the stress is proportional to the rate of strain) as the constant of proportionality between the shear stress <span class="math notranslate nohighlight">\(\tau\)</span> and the velocity gradient <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> in a simple shear flow:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{du}{dy}
+\]</div>
+<p>Here:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\tau\)</span> is the shear stress (force per unit area) acting parallel to the fluid layer,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> is the velocity gradient (rate of strain) perpendicular to the fluid motion,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span> is the dynamic viscosity (units: <span class="math notranslate nohighlight">\(\text{Pa} \cdot \text{s}\)</span> or <span class="math notranslate nohighlight">\(\text{N} \cdot \text{s}/\text{m}^2\)</span>).</p></li>
+</ul>
+</section>
+<section id="newtons-law-of-viscosity">
+<h3>3.2. Newton’s Law of Viscosity<a class="headerlink" href="#newtons-law-of-viscosity" title="Link to this heading">#</a></h3>
+<p>In general, Newton’s law of viscosity is expressed as:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{du}{dy}
+\]</div>
+<p>For Newtonian fluids, <span class="math notranslate nohighlight">\(\mu\)</span> remains constant, meaning the fluid’s resistance to shear flow is directly proportional to the velocity gradient. Non-Newtonian fluids, by contrast, exhibit a non-linear relationship between shear stress and velocity gradient, where viscosity may vary with the rate of strain.</p>
+</section>
+</section>
+<section id="units-of-viscosity">
+<h2>4. Units of Viscosity<a class="headerlink" href="#units-of-viscosity" title="Link to this heading">#</a></h2>
+<p>Dynamic viscosity <span class="math notranslate nohighlight">\(\mu\)</span> has the following units:</p>
+<ul class="simple">
+<li><p>In SI: <span class="math notranslate nohighlight">\(\text{Pa} \cdot \text{s}\)</span> or <span class="math notranslate nohighlight">\(\text{N} \cdot \text{s}/\text{m}^2\)</span>.</p></li>
+<li><p>In the CGS system: <strong>Poise</strong> (P), where <span class="math notranslate nohighlight">\(1 \, \text{P} = 0.1 \, \text{Pa} \cdot \text{s}\)</span>.</p></li>
+</ul>
+<p>Another common term is <strong>kinematic viscosity</strong> <span class="math notranslate nohighlight">\(\nu\)</span>, defined as the ratio of dynamic viscosity to fluid density <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\nu = \frac{\mu}{\rho}
+\]</div>
+<p>The units of kinematic viscosity are <span class="math notranslate nohighlight">\(\text{m}^2/\text{s}\)</span> (SI) and <strong>Stokes (St)</strong> in the CGS system.</p>
+</section>
+<section id="microscopic-origin-of-viscosity">
+<h2>5. Microscopic Origin of Viscosity<a class="headerlink" href="#microscopic-origin-of-viscosity" title="Link to this heading">#</a></h2>
+<p>From a molecular perspective, viscosity is related to the momentum transfer between fluid molecules. In gases, molecules move randomly, and as they collide, they transfer momentum, creating a shear stress. In liquids, the intermolecular forces dominate, and these forces resist the relative motion of adjacent layers, contributing to the fluid’s viscosity.</p>
+</section>
+<section id="experimental-measurement-of-viscosity">
+<h2>6. Experimental Measurement of Viscosity<a class="headerlink" href="#experimental-measurement-of-viscosity" title="Link to this heading">#</a></h2>
+<p>Viscosity can be measured using several devices, such as:</p>
+<ul class="simple">
+<li><p><strong>Capillary Viscometers</strong>: Based on measuring the flow rate of the fluid through a thin tube.</p></li>
+<li><p><strong>Rotational Viscometers</strong>: Measure the torque required to rotate a disk or cylinder in the fluid.</p></li>
+<li><p><strong>Falling Sphere Viscometers</strong>: Measure the terminal velocity of a sphere falling through the fluid, applying Stokes’ law.</p></li>
+</ul>
+</section>
+<section id="importance-of-viscosity-in-fluid-mechanics">
+<h2>7. Importance of Viscosity in Fluid Mechanics<a class="headerlink" href="#importance-of-viscosity-in-fluid-mechanics" title="Link to this heading">#</a></h2>
+<p>Viscosity affects many fluid mechanics phenomena:</p>
+<ul class="simple">
+<li><p><strong>Laminar vs. Turbulent Flow</strong>: High viscosity favors laminar flow, while low viscosity fluids are more prone to turbulence.</p></li>
+<li><p><strong>Boundary Layers</strong>: Viscosity plays a critical role in the formation and thickness of boundary layers.</p></li>
+<li><p><strong>Energy Dissipation</strong>: Viscous effects lead to energy dissipation in fluids, important in pipe flow, pumps, and engines.</p></li>
+</ul>
+</section>
+<section id="example-problem-flow-between-parallel-plates">
+<h2>8. Example Problem: Flow Between Parallel Plates<a class="headerlink" href="#example-problem-flow-between-parallel-plates" title="Link to this heading">#</a></h2>
+<p>Given:</p>
+<ul class="simple">
+<li><p>Fluid with viscosity <span class="math notranslate nohighlight">\(\mu = 0.01 \, \text{Pa} \cdot \text{s}\)</span>,</p></li>
+<li><p>Velocity of the top plate <span class="math notranslate nohighlight">\(U = 1 \, \text{m/s}\)</span>,</p></li>
+<li><p>Distance between plates <span class="math notranslate nohighlight">\(h = 0.005 \, \text{m}\)</span>.</p></li>
+</ul>
+<p>The shear stress <span class="math notranslate nohighlight">\(\tau\)</span> is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{U}{h} = 0.01 \cdot \frac{1}{0.005} = 2 \, \text{Pa}
+\]</div>
+<p>Thus, the shear stress between the plates is 2 Pa.</p>
+</section>
+<section id="conclusion">
+<h2>9. Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Viscosity is a fundamental property of fluids that describes their internal resistance to flow. The understanding of viscosity is critical in applications ranging from designing lubrication systems to analyzing aerodynamic flows. Derived from Newton’s law of viscosity, this property governs many fluid behaviors in both laminar and turbulent regimes.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="derivation-of-viscosity">
+<h1>Derivation of Viscosity<a class="headerlink" href="#derivation-of-viscosity" title="Link to this heading">#</a></h1>
+<section id="id3">
+<h2>1. Introduction to Viscosity<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Viscosity is a fundamental fluid property that quantifies the internal resistance of a fluid to shear or deformation. It measures how “thick” or “sticky” a fluid is, and it plays a crucial role in determining the flow behavior of fluids under applied forces.</p>
+<section id="id4">
+<h3>1.1 Newton’s Law of Viscosity<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>For <strong>Newtonian fluids</strong>, the relationship between the applied shear stress <span class="math notranslate nohighlight">\(\tau\)</span> and the resulting rate of strain (velocity gradient) <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> is linear. This relationship is expressed by <strong>Newton’s law of viscosity</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{du}{dy}
+\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\tau\)</span> is the shear stress (force per unit area, N/m² or Pa),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> is the velocity gradient perpendicular to the flow direction (s⁻¹),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span> is the dynamic viscosity of the fluid (Pa⋅s or N⋅s/m²).</p></li>
+</ul>
+<p>This equation indicates that the shear stress in a Newtonian fluid is directly proportional to the velocity gradient, with the constant of proportionality being the dynamic viscosity <span class="math notranslate nohighlight">\(\mu\)</span>. Fluids such as water, air, and oil behave as Newtonian fluids under typical conditions.</p>
+</section>
+</section>
+<section id="shear-flow-between-parallel-plates">
+<h2>2. Shear Flow Between Parallel Plates<a class="headerlink" href="#shear-flow-between-parallel-plates" title="Link to this heading">#</a></h2>
+<p>To derive a practical expression for viscosity, consider the case of <strong>simple shear flow</strong> between two parallel plates. This scenario is often used as a basic model to study viscosity.</p>
+<ul class="simple">
+<li><p>The bottom plate is stationary.</p></li>
+<li><p>The top plate moves at a constant velocity <span class="math notranslate nohighlight">\(U\)</span>.</p></li>
+<li><p>The fluid between the plates is assumed to be incompressible and Newtonian.</p></li>
+<li><p>The distance between the plates is <span class="math notranslate nohighlight">\(h\)</span>.</p></li>
+</ul>
+<section id="velocity-distribution">
+<h3>2.1 Velocity Distribution<a class="headerlink" href="#velocity-distribution" title="Link to this heading">#</a></h3>
+<p>In this situation, the velocity of the fluid varies linearly from zero at the stationary bottom plate to <span class="math notranslate nohighlight">\(U\)</span> at the moving top plate. The velocity profile is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+u(y) = \frac{U}{h} y
+\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(u(y)\)</span> is the fluid velocity at a distance <span class="math notranslate nohighlight">\(y\)</span> from the stationary plate,</p></li>
+<li><p><span class="math notranslate nohighlight">\(h\)</span> is the distance between the plates,</p></li>
+<li><p><span class="math notranslate nohighlight">\(U\)</span> is the velocity of the moving plate.</p></li>
+</ul>
+</section>
+<section id="velocity-gradient">
+<h3>2.2 Velocity Gradient<a class="headerlink" href="#velocity-gradient" title="Link to this heading">#</a></h3>
+<p>The velocity gradient <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> is the rate of change of velocity with respect to the distance <span class="math notranslate nohighlight">\(y\)</span> from the stationary plate. For this linear profile, the velocity gradient is constant and given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{du}{dy} = \frac{U}{h}
+\]</div>
+</section>
+<section id="shear-stress">
+<h3>2.3 Shear Stress<a class="headerlink" href="#shear-stress" title="Link to this heading">#</a></h3>
+<p>Substituting this velocity gradient into Newton’s law of viscosity, we get the expression for the shear stress <span class="math notranslate nohighlight">\(\tau\)</span> acting on the fluid:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{U}{h}
+\]</div>
+<p>Thus, the shear stress is proportional to the viscosity <span class="math notranslate nohighlight">\(\mu\)</span>, the velocity of the moving plate <span class="math notranslate nohighlight">\(U\)</span>, and inversely proportional to the distance between the plates <span class="math notranslate nohighlight">\(h\)</span>. This equation provides a practical way to calculate the shear stress in a Newtonian fluid when the velocity and geometry are known.</p>
+</section>
+</section>
+<section id="viscosity-as-a-fluid-property">
+<h2>3. Viscosity as a Fluid Property<a class="headerlink" href="#viscosity-as-a-fluid-property" title="Link to this heading">#</a></h2>
+<section id="dynamic-viscosity">
+<h3>3.1 Dynamic Viscosity<a class="headerlink" href="#dynamic-viscosity" title="Link to this heading">#</a></h3>
+<p>The <strong>dynamic viscosity</strong> <span class="math notranslate nohighlight">\(\mu\)</span> is a measure of a fluid’s resistance to shear flow. For Newtonian fluids, it remains constant under varying shear rates and is a function of temperature and pressure.</p>
+<p>The units of dynamic viscosity are:</p>
+<ul class="simple">
+<li><p><strong>SI units</strong>: Pa·s (N·s/m²),</p></li>
+<li><p><strong>CGS units</strong>: Poise (P), where <span class="math notranslate nohighlight">\(1 \, \text{P} = 0.1 \, \text{Pa·s}\)</span>.</p></li>
+</ul>
+<p>For example, water at 20°C has a viscosity of approximately <span class="math notranslate nohighlight">\(1.002 \, \text{mPa·s}\)</span> (or <span class="math notranslate nohighlight">\(1.002 \, \text{cP}\)</span>).</p>
+</section>
+<section id="kinematic-viscosity">
+<h3>3.2 Kinematic Viscosity<a class="headerlink" href="#kinematic-viscosity" title="Link to this heading">#</a></h3>
+<p>The <strong>kinematic viscosity</strong> <span class="math notranslate nohighlight">\(\nu\)</span> is the ratio of the dynamic viscosity <span class="math notranslate nohighlight">\(\mu\)</span> to the fluid density <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\nu = \frac{\mu}{\rho}
+\]</div>
+<p>The units of kinematic viscosity are:</p>
+<ul class="simple">
+<li><p>SI: <span class="math notranslate nohighlight">\(\text{m}^2/\text{s}\)</span>,</p></li>
+<li><p>CGS: <strong>Stokes (St)</strong>, where <span class="math notranslate nohighlight">\(1 \, \text{St} = 10^{-4} \, \text{m}^2/\text{s}\)</span>.</p></li>
+</ul>
+<p>Kinematic viscosity is particularly useful when studying fluid flow in systems where the density plays a significant role, such as in buoyancy-driven flows.</p>
+</section>
+</section>
+<section id="id5">
+<h2>4. Experimental Measurement of Viscosity<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Viscosity can be measured using various experimental methods, including:</p>
+<ul class="simple">
+<li><p><strong>Capillary Viscometers</strong>: Measure the time for a fluid to flow through a thin capillary tube under the influence of gravity.</p></li>
+<li><p><strong>Rotational Viscometers</strong>: Measure the torque required to rotate a disk or cylinder in a fluid at a known speed.</p></li>
+<li><p><strong>Falling Sphere Viscometers</strong>: Determine the viscosity by measuring the terminal velocity of a sphere falling through the fluid and applying <strong>Stokes’ law</strong>.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h2>5. Example Problem: Flow Between Parallel Plates<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Given:</p>
+<ul class="simple">
+<li><p>Dynamic viscosity <span class="math notranslate nohighlight">\(\mu = 0.01 \, \text{Pa·s}\)</span>,</p></li>
+<li><p>Velocity of the top plate <span class="math notranslate nohighlight">\(U = 1 \, \text{m/s}\)</span>,</p></li>
+<li><p>Distance between plates <span class="math notranslate nohighlight">\(h = 0.005 \, \text{m}\)</span>.</p></li>
+</ul>
+<p>The shear stress <span class="math notranslate nohighlight">\(\tau\)</span> is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{U}{h} = 0.01 \cdot \frac{1}{0.005} = 2 \, \text{Pa}
+\]</div>
+<p>Thus, the shear stress between the plates is 2 Pa.</p>
+</section>
+<section id="id7">
+<h2>6. Conclusion<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Viscosity is a fundamental property that governs how fluids resist motion under applied forces. It is particularly important in understanding fluid flow in systems ranging from simple pipe flows to complex aerodynamic applications. Newton’s law of viscosity provides the foundation for analyzing fluid behavior in shear flows, allowing us to predict stresses, velocities, and flow rates in Newtonian fluids.</p>
+<p>In real-world engineering applications, accurate knowledge of viscosity is essential for designing fluid systems, analyzing heat transfer, and ensuring the efficient operation of machinery.</p>
 </section>
 </section>
 
@@ -1036,6 +1291,7 @@ P = 103,320 \, \text{Pa} = 103.3 \, \text{kPa}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Properties of Fluids</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-density">What is Density?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-density-in-fluid-mechanics">Importance of Density in Fluid Mechanics</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-density">Examples of Density</a></li>
@@ -1054,7 +1310,6 @@ P = 103,320 \, \text{Pa} = 103.3 \, \text{kPa}
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-specific-gravity">What is Specific Gravity?</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formula">Formula</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculation">Example Calculation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">Interpretation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
@@ -1072,8 +1327,43 @@ P = 103,320 \, \text{Pa} = 103.3 \, \text{kPa}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-fluid-flow">Types of Fluid Flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-description-and-derivation">Viscosity: Description and Derivation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-viscosity">Introduction to Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-flow-in-fluids">Shear Flow in Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newtons-law-of-viscosity">3.2. Newton’s Law of Viscosity</a></li>
 </ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-viscosity">4. Units of Viscosity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopic-origin-of-viscosity">5. Microscopic Origin of Viscosity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-measurement-of-viscosity">6. Experimental Measurement of Viscosity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-viscosity-in-fluid-mechanics">7. Importance of Viscosity in Fluid Mechanics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-problem-flow-between-parallel-plates">8. Example Problem: Flow Between Parallel Plates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">9. Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-viscosity">Derivation of Viscosity</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1. Introduction to Viscosity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.1 Newton’s Law of Viscosity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-flow-between-parallel-plates">2. Shear Flow Between Parallel Plates</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-distribution">2.1 Velocity Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-gradient">2.2 Velocity Gradient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-stress">2.3 Shear Stress</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-as-a-fluid-property">3. Viscosity as a Fluid Property</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-viscosity">3.1 Dynamic Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematic-viscosity">3.2 Kinematic Viscosity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">4. Experimental Measurement of Viscosity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5. Example Problem: Flow Between Parallel Plates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">6. Conclusion</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
