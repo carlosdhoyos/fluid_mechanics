@@ -50,22 +50,22 @@ kernelspec:
 
 Given a function $f(x)$, find the derivative and the integral of $f(x)$ over a given interval.
 
-### Problem Statement:
+### Problem Statement
 Let $f(x) = x^3 - 3x^2 + 2x$.
 
 1. Find $f'(x)$, the derivative of the function.
 2. Calculate the integral $\int f(x) dx$ over the interval [1, 4].
 
-### Solution:
+### Solution
 
-#### 1. **Derivative**:  
+#### 1. **Derivative**
 Using basic differentiation rules:
 
 $$
 f'(x) = 3x^2 - 6x + 2
 $$
 
-#### 2. **Integral**:  
+#### 2. **Integral**
 The indefinite integral is:
 
 $$
@@ -97,7 +97,7 @@ $$
 $$
 
 
-### Python Visualization and Area Calculation:
+### Python Visualization and Area Calculation
 
 Here is the Python code to visualize the function and calculate the area under the curve:
 
@@ -141,7 +141,7 @@ print(f"The area under the curve from x=1 to x=4 is {area:.2f}.")
 
 ## Problem 2: Partial Derivatives, Chain Rule, and Multiple Integrals
 
-### Problem Statement:
+### Problem Statement
 Let $z = f(x, y)$ where $x = u^2 + 3v$ and $y = uv$.
 
 1. Find the partial derivative of $z$ with respect to $u$, denoted as $\frac{\partial z}{\partial u}$, using the chain rule.
@@ -228,15 +228,12 @@ $$
 $$
 
 
-For more detailed problems and solutions, you can check out [Paul's Online Math Notes](https://tutorial.math.lamar.edu/) or [MIT OCW Multivariable Calculus](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/pages/2.-partial-derivatives/part-b-chain-rule-gradient-and-directional-derivatives/problem-set-5/).
-
-
 ---
 
 
 ## Problem 3: Parametric Equations and Applications
 
-### Problem Statement:
+### Problem Statement
 A particle is moving along a curve defined by the following parametric equations:
 
 $$
@@ -254,9 +251,9 @@ where $x(t)$ and $y(t)$ represent the particle's position at time $t$.
 3. Find the length of the curve traced by the particle between $t = 0$ and $t = 2$.
 
 
-### Solution:
+### Solution
 
-#### 1. Velocity and Acceleration Vectors:
+#### 1. Velocity and Acceleration Vectors
 To find the velocity and acceleration, we differentiate the parametric equations with respect to time $t$.
 
 - **Velocity** is the derivative of position with respect to time:
@@ -291,7 +288,7 @@ To find the velocity and acceleration, we differentiate the parametric equations
   \mathbf{a}(t) = 6 \hat{i} + 12t \hat{j}
   $$
 
-#### 2. Time When the Particle's Velocity is Zero:
+#### 2. Time When the Particle's Velocity is Zero
 For the velocity to be zero, both components of the velocity vector must be zero simultaneously:
 
   $$
@@ -312,7 +309,7 @@ Substituting $t = \frac{1}{3}$ into the second equation:
 
 Thus, there is no time $t$ where the particle’s velocity is exactly zero in both the $x$ and $y$ directions.
 
-#### 3. Length of the Curve:
+#### 3. Length of the Curve
 The length of the curve traced by the particle from $t = 0$ to $t = 2$ is given by the formula:
 
   $$
@@ -328,9 +325,81 @@ Substitute the derivatives $v_x(t) = 6t - 2$ and $v_y(t) = 6t^2 - 1$:
 This integral can be solved either numerically or using appropriate substitution techniques to find the length of the curve.
 
 
-### Applications:
+### Applications
 Parametric equations are widely used to describe curves and motions in physics, engineering, and computer graphics. For instance, they are used to model the trajectory of particles, motion along a path, and even design complex curves in computer-aided design (CAD) software.
 
+
+
+
+### Python Visualization and Curve Length Calculation:
+
+Here’s the Python code to plot the parametric curve, velocity and acceleration vectors, and calculate the length of the curve numerically:
+
+```{code-cell} python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import quad
+
+# Define the parametric equations for x(t) and y(t)
+def x(t):
+    return 3 * t**2 - 2 * t
+
+def y(t):
+    return 2 * t**3 - t
+
+# Define the velocity components
+def v_x(t):
+    return 6 * t - 2
+
+def v_y(t):
+    return 6 * t**2 - 1
+
+# Define the acceleration components
+def a_x(t):
+    return 6
+
+def a_y(t):
+    return 12 * t
+
+# Define the integrand for the length of the curve
+def integrand(t):
+    return np.sqrt(v_x(t)**2 + v_y(t)**2)
+
+# Time range for plotting
+t_vals = np.linspace(0, 2, 100)
+x_vals = x(t_vals)
+y_vals = y(t_vals)
+
+# Plot the parametric curve
+plt.figure(figsize=(8, 6))
+plt.plot(x_vals, y_vals, label='Parametric Curve: Particle Path', color='blue')
+
+# Calculate and plot velocity and acceleration vectors at specific points
+t_points = np.array([0, 0.5, 1, 1.5, 2])
+v_x_vals = v_x(t_points)
+v_y_vals = v_y(t_points)
+a_x_vals = a_x(t_points)
+a_y_vals = a_y(t_points)
+
+# Plot velocity vectors
+plt.quiver(x(t_points), y(t_points), v_x_vals, v_y_vals, color='green', angles='xy', scale_units='xy', scale=1, label="Velocity Vectors")
+
+# Plot acceleration vectors
+plt.quiver(x(t_points), y(t_points), a_x_vals, a_y_vals, color='red', angles='xy', scale_units='xy', scale=1, label="Acceleration Vectors")
+
+# Labels and Title
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Particle Motion: Parametric Curve with Velocity and Acceleration Vectors')
+plt.grid(True)
+plt.legend()
+plt.show()
+
+# Calculate the length of the curve numerically using integration
+curve_length, _ = quad(integrand, 0, 2)
+print(f"The length of the curve traced by the particle between t = 0 and t = 2 is approximately {curve_length:.2f}.")
+
+```
 
 ---
 
