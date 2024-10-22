@@ -538,6 +538,34 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Summary of Results:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-14-elastic-collision-and-energy-conservation">Problem 14: Elastic Collision and Energy Conservation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#final-velocities-of-the-balls-after-the-collision">1. Final Velocities of the Balls After the Collision</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-kinetic-energy">Conservation of Kinetic Energy:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-system-of-equations">Solving the System of Equations:</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verifying-conservation-of-momentum-and-energy">2. Verifying Conservation of Momentum and Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-conservation">Momentum Conservation:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-conservation">Energy Conservation:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Summary of Results:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-15-object-falling-from-a-height-energy-conservation">Problem 15: Object Falling from a Height (Energy Conservation)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#speed-of-the-rock-just-before-impact">1. Speed of the Rock Just Before Impact</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-energy-conservation">2. Verify Energy Conservation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-to-hit-the-ground">3. Time to Hit the Ground</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Summary of Results:</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -2085,6 +2113,284 @@ v_\text{max} \approx 17.15 \, \text{m/s}
 </ol>
 </section>
 </section>
+<hr class="docutils" />
+<section id="problem-14-elastic-collision-and-energy-conservation">
+<h2>Problem 14: Elastic Collision and Energy Conservation<a class="headerlink" href="#problem-14-elastic-collision-and-energy-conservation" title="Link to this heading">#</a></h2>
+<p>A ball of mass <span class="math notranslate nohighlight">\(m_1 = 2 \, \text{kg}\)</span> is moving with a velocity of <span class="math notranslate nohighlight">\(v_1 = 5 \, \text{m/s}\)</span> towards another stationary ball of mass <span class="math notranslate nohighlight">\(m_2 = 3 \, \text{kg}\)</span>. The collision between the two balls is perfectly elastic.</p>
+<ol class="arabic simple">
+<li><p>What are the velocities of the two balls after the collision?</p></li>
+<li><p>Verify that both momentum and kinetic energy are conserved in the system.</p></li>
+</ol>
+<section id="id19">
+<h3>Solution<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<section id="final-velocities-of-the-balls-after-the-collision">
+<h4>1. Final Velocities of the Balls After the Collision<a class="headerlink" href="#final-velocities-of-the-balls-after-the-collision" title="Link to this heading">#</a></h4>
+<p>In a perfectly elastic collision, both <strong>momentum</strong> and <strong>kinetic energy</strong> are conserved.</p>
+<section id="conservation-of-momentum">
+<h5>Conservation of Momentum:<a class="headerlink" href="#conservation-of-momentum" title="Link to this heading">#</a></h5>
+<p>The total momentum before the collision must equal the total momentum after the collision. The equation for conservation of momentum is:</p>
+<div class="math notranslate nohighlight">
+\[
+m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2'
+\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_1' \)</span> is the velocity of ball 1 after the collision,</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_2' \)</span> is the velocity of ball 2 after the collision,</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_2 = 0\)</span> since ball 2 is initially at rest.</p></li>
+</ul>
+<p>Thus, the momentum conservation equation simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+m_1 v_1 = m_1 v_1' + m_2 v_2'
+\]</div>
+<p>Substitute the known values for <span class="math notranslate nohighlight">\(m_1\)</span>, <span class="math notranslate nohighlight">\(v_1\)</span>, and <span class="math notranslate nohighlight">\(m_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+2 \, \text{kg} \times 5 \, \text{m/s} = 2 \, \text{kg} \times v_1' + 3 \, \text{kg} \times v_2'
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+10 \, \text{kg} \cdot \text{m/s} = 2 v_1' + 3 v_2'
+\]</div>
+</section>
+<section id="conservation-of-kinetic-energy">
+<h5>Conservation of Kinetic Energy:<a class="headerlink" href="#conservation-of-kinetic-energy" title="Link to this heading">#</a></h5>
+<p>The total kinetic energy before the collision must equal the total kinetic energy after the collision. The equation for conservation of kinetic energy is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2 = \frac{1}{2} m_1 v_1'^2 + \frac{1}{2} m_2 v_2'^2
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(v_2 = 0\)</span>, this simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} m_1 v_1^2 = \frac{1}{2} m_1 v_1'^2 + \frac{1}{2} m_2 v_2'^2
+\]</div>
+<p>Substitute the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} \times 2 \, \text{kg} \times (5 \, \text{m/s})^2 = \frac{1}{2} \times 2 \, \text{kg} \times v_1'^2 + \frac{1}{2} \times 3 \, \text{kg} \times v_2'^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+25 \, \text{J} = v_1'^2 + 1.5 v_2'^2
+\]</div>
+<p>Now, we have two equations:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\( 10 = 2 v_1' + 3 v_2' \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( 25 = v_1'^2 + 1.5 v_2'^2 \)</span></p></li>
+</ol>
+<p>We can solve this system of equations to find <span class="math notranslate nohighlight">\(v_1'\)</span> and <span class="math notranslate nohighlight">\(v_2'\)</span>.</p>
+</section>
+<section id="solving-the-system-of-equations">
+<h5>Solving the System of Equations:<a class="headerlink" href="#solving-the-system-of-equations" title="Link to this heading">#</a></h5>
+<p>From the momentum equation:</p>
+<div class="math notranslate nohighlight">
+\[
+v_1' = 5 - 1.5 v_2'
+\]</div>
+<p>Substitute this into the energy equation:</p>
+<div class="math notranslate nohighlight">
+\[
+25 = (5 - 1.5 v_2')^2 + 1.5 v_2'^2
+\]</div>
+<p>Expand and simplify:</p>
+<div class="math notranslate nohighlight">
+\[
+25 = (25 - 15 v_2' + 2.25 v_2'^2) + 1.5 v_2'^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+25 = 25 - 15 v_2' + 3.75 v_2'^2
+\]</div>
+<p>Simplifying further:</p>
+<div class="math notranslate nohighlight">
+\[
+0 = -15 v_2' + 3.75 v_2'^2
+\]</div>
+<p>Factor out <span class="math notranslate nohighlight">\(v_2'\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v_2' (3.75 v_2' - 15) = 0
+\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(v_2' = 0\)</span> or <span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(v_2' = 0\)</span>, the collision would not have been elastic, so <span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span>.</p>
+<p>Now, substitute <span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span> into the momentum equation:</p>
+<div class="math notranslate nohighlight">
+\[
+v_1' = 5 - 1.5 \times 4 = 5 - 6 = -1 \, \text{m/s}
+\]</div>
+<p>Thus, the velocities after the collision are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_1' = -1 \, \text{m/s}\)</span> (ball 1 reverses direction),</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span> (ball 2 moves forward).</p></li>
+</ul>
+</section>
+</section>
+<section id="verifying-conservation-of-momentum-and-energy">
+<h4>2. Verifying Conservation of Momentum and Energy<a class="headerlink" href="#verifying-conservation-of-momentum-and-energy" title="Link to this heading">#</a></h4>
+<section id="momentum-conservation">
+<h5>Momentum Conservation:<a class="headerlink" href="#momentum-conservation" title="Link to this heading">#</a></h5>
+<p>Before the collision:</p>
+<div class="math notranslate nohighlight">
+\[
+p_\text{initial} = m_1 v_1 + m_2 v_2 = 2 \times 5 + 3 \times 0 = 10 \, \text{kg} \cdot \text{m/s}
+\]</div>
+<p>After the collision:</p>
+<div class="math notranslate nohighlight">
+\[
+p_\text{final} = m_1 v_1' + m_2 v_2' = 2 \times (-1) + 3 \times 4 = -2 + 12 = 10 \, \text{kg} \cdot \text{m/s}
+\]</div>
+<p>Momentum is conserved, as <span class="math notranslate nohighlight">\(p_\text{initial} = p_\text{final}\)</span>.</p>
+</section>
+<section id="energy-conservation">
+<h5>Energy Conservation:<a class="headerlink" href="#energy-conservation" title="Link to this heading">#</a></h5>
+<p>Before the collision:</p>
+<div class="math notranslate nohighlight">
+\[
+KE_\text{initial} = \frac{1}{2} m_1 v_1^2 = \frac{1}{2} \times 2 \times (5)^2 = 25 \, \text{J}
+\]</div>
+<p>After the collision:</p>
+<div class="math notranslate nohighlight">
+\[
+KE_\text{final} = \frac{1}{2} m_1 v_1'^2 + \frac{1}{2} m_2 v_2'^2 = \frac{1}{2} \times 2 \times (-1)^2 + \frac{1}{2} \times 3 \times (4)^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+KE_\text{final} = 1 + 24 = 25 \, \text{J}
+\]</div>
+<p>Energy is conserved, as <span class="math notranslate nohighlight">\(KE_\text{initial} = KE_\text{final}\)</span>.</p>
+</section>
+</section>
+</section>
+<section id="id20">
+<h3>Summary of Results:<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>After the collision, ball 1 has a velocity of <span class="math notranslate nohighlight">\(v_1' = -1 \, \text{m/s}\)</span> and ball 2 has a velocity of <span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span>.</p></li>
+<li><p>Both momentum and kinetic energy are conserved in this elastic collision.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-15-object-falling-from-a-height-energy-conservation">
+<h2>Problem 15: Object Falling from a Height (Energy Conservation)<a class="headerlink" href="#problem-15-object-falling-from-a-height-energy-conservation" title="Link to this heading">#</a></h2>
+<p>A rock of mass <span class="math notranslate nohighlight">\(m = 2 \, \text{kg}\)</span> is dropped from a height of <span class="math notranslate nohighlight">\(h = 10 \, \text{m}\)</span> above the ground. Assume no air resistance.</p>
+<ol class="arabic simple">
+<li><p>What is the speed of the rock just before it hits the ground?</p></li>
+<li><p>Verify that the potential energy at the start equals the kinetic energy just before impact.</p></li>
+<li><p>How long does it take for the rock to hit the ground?</p></li>
+</ol>
+<section id="id21">
+<h3>Solution<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<p>This problem involves the <strong>conversion of gravitational potential energy into kinetic energy</strong> as the rock falls. We will also verify that energy is conserved in the system.</p>
+<section id="speed-of-the-rock-just-before-impact">
+<h4>1. Speed of the Rock Just Before Impact<a class="headerlink" href="#speed-of-the-rock-just-before-impact" title="Link to this heading">#</a></h4>
+<p>To find the speed of the rock just before it hits the ground, we use the <strong>conservation of mechanical energy</strong>. Initially, the rock has gravitational potential energy, and as it falls, this energy is converted into kinetic energy.</p>
+<p>The total mechanical energy of the rock at the top (just before it is dropped) is:</p>
+<div class="math notranslate nohighlight">
+\[
+E_\text{total} = PE_\text{initial} = mgh
+\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m = 2 \, \text{kg}\)</span> is the mass of the rock,</p></li>
+<li><p><span class="math notranslate nohighlight">\(g = 9.8 \, \text{m/s}^2\)</span> is the acceleration due to gravity,</p></li>
+<li><p><span class="math notranslate nohighlight">\(h = 10 \, \text{m}\)</span> is the height from which the rock is dropped.</p></li>
+</ul>
+<p>Substituting the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+PE_\text{initial} = 2 \, \text{kg} \times 9.8 \, \text{m/s}^2 \times 10 \, \text{m} = 196 \, \text{J}
+\]</div>
+<p>At the moment just before the rock hits the ground, all the potential energy has been converted into kinetic energy. The total mechanical energy of the rock just before impact is:</p>
+<div class="math notranslate nohighlight">
+\[
+E_\text{total} = KE_\text{final} = \frac{1}{2} m v^2
+\]</div>
+<p>Since energy is conserved, <span class="math notranslate nohighlight">\(PE_\text{initial} = KE_\text{final}\)</span>. So:</p>
+<div class="math notranslate nohighlight">
+\[
+mgh = \frac{1}{2} m v^2
+\]</div>
+<p>Cancel the mass <span class="math notranslate nohighlight">\(m\)</span> on both sides of the equation:</p>
+<div class="math notranslate nohighlight">
+\[
+gh = \frac{1}{2} v^2
+\]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(v\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v^2 = 2gh
+\]</div>
+<p>Substitute the values of <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v^2 = 2 \times 9.8 \, \text{m/s}^2 \times 10 \, \text{m} = 196 \, \text{m}^2/\text{s}^2
+\]</div>
+<p>Taking the square root:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{196} = 14 \, \text{m/s}
+\]</div>
+<p>Thus, the speed of the rock just before it hits the ground is:</p>
+<div class="math notranslate nohighlight">
+\[
+v = 14 \, \text{m/s}
+\]</div>
+</section>
+<section id="verify-energy-conservation">
+<h4>2. Verify Energy Conservation<a class="headerlink" href="#verify-energy-conservation" title="Link to this heading">#</a></h4>
+<p>Initially, the rock has only <strong>potential energy</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+PE_\text{initial} = mgh = 196 \, \text{J}
+\]</div>
+<p>Just before the rock hits the ground, all this potential energy is converted into <strong>kinetic energy</strong>. The final kinetic energy is:</p>
+<div class="math notranslate nohighlight">
+\[
+KE_\text{final} = \frac{1}{2} m v^2 = \frac{1}{2} \times 2 \, \text{kg} \times (14 \, \text{m/s})^2 = \frac{1}{2} \times 2 \times 196 = 196 \, \text{J}
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(PE_\text{initial} = KE_\text{final}\)</span>, energy is conserved in the system.</p>
+</section>
+<section id="time-to-hit-the-ground">
+<h4>3. Time to Hit the Ground<a class="headerlink" href="#time-to-hit-the-ground" title="Link to this heading">#</a></h4>
+<p>To find how long it takes for the rock to hit the ground, we use the equation for vertical motion under constant acceleration:</p>
+<div class="math notranslate nohighlight">
+\[
+h = \frac{1}{2} g t^2
+\]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+t^2 = \frac{2h}{g}
+\]</div>
+<p>Substitute the values for <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(g\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+t^2 = \frac{2 \times 10 \, \text{m}}{9.8 \, \text{m/s}^2} \approx 2.04 \, \text{s}^2
+\]</div>
+<p>Taking the square root:</p>
+<div class="math notranslate nohighlight">
+\[
+t = \sqrt{2.04} \approx 1.43 \, \text{s}
+\]</div>
+<p>Thus, it takes approximately:</p>
+<div class="math notranslate nohighlight">
+\[
+t \approx 1.43 \, \text{s}
+\]</div>
+<p>for the rock to hit the ground.</p>
+</section>
+</section>
+<section id="id22">
+<h3>Summary of Results:<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>The speed of the rock just before it hits the ground is <span class="math notranslate nohighlight">\(14 \, \text{m/s}\)</span>.</p></li>
+<li><p>The potential energy at the start equals the kinetic energy just before impact, confirming that energy is conserved.</p></li>
+<li><p>It takes approximately <span class="math notranslate nohighlight">\(1.43 \, \text{seconds}\)</span> for the rock to hit the ground.</p></li>
+</ol>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -2281,6 +2587,34 @@ v_\text{max} \approx 17.15 \, \text{m/s}
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Summary of Results:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-14-elastic-collision-and-energy-conservation">Problem 14: Elastic Collision and Energy Conservation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#final-velocities-of-the-balls-after-the-collision">1. Final Velocities of the Balls After the Collision</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-kinetic-energy">Conservation of Kinetic Energy:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-system-of-equations">Solving the System of Equations:</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verifying-conservation-of-momentum-and-energy">2. Verifying Conservation of Momentum and Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-conservation">Momentum Conservation:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-conservation">Energy Conservation:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Summary of Results:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-15-object-falling-from-a-height-energy-conservation">Problem 15: Object Falling from a Height (Energy Conservation)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#speed-of-the-rock-just-before-impact">1. Speed of the Rock Just Before Impact</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-energy-conservation">2. Verify Energy Conservation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-to-hit-the-ground">3. Time to Hit the Ground</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Summary of Results:</a></li>
 </ul>
 </li>
 </ul>

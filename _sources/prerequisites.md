@@ -1555,4 +1555,300 @@ $$
 2. The angular velocity of the car is $0.4 \, \text{rad/s}$.
 3. The maximum speed the car can have before it starts to skid is approximately $17.15 \, \text{m/s}$.
 
+---
+
+## Problem 14: Elastic Collision and Energy Conservation
+
+A ball of mass $m_1 = 2 \, \text{kg}$ is moving with a velocity of $v_1 = 5 \, \text{m/s}$ towards another stationary ball of mass $m_2 = 3 \, \text{kg}$. The collision between the two balls is perfectly elastic. 
+
+1. What are the velocities of the two balls after the collision?
+2. Verify that both momentum and kinetic energy are conserved in the system.
+
+### Solution
+
+#### 1. Final Velocities of the Balls After the Collision
+
+In a perfectly elastic collision, both **momentum** and **kinetic energy** are conserved.
+
+##### Conservation of Momentum:
+The total momentum before the collision must equal the total momentum after the collision. The equation for conservation of momentum is:
+
+$$
+m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2'
+$$
+
+Where:
+- $v_1' $ is the velocity of ball 1 after the collision,
+- $v_2' $ is the velocity of ball 2 after the collision,
+- $v_2 = 0$ since ball 2 is initially at rest.
+
+Thus, the momentum conservation equation simplifies to:
+
+$$
+m_1 v_1 = m_1 v_1' + m_2 v_2'
+$$
+
+Substitute the known values for $m_1$, $v_1$, and $m_2$:
+
+$$
+2 \, \text{kg} \times 5 \, \text{m/s} = 2 \, \text{kg} \times v_1' + 3 \, \text{kg} \times v_2'
+$$
+
+$$
+10 \, \text{kg} \cdot \text{m/s} = 2 v_1' + 3 v_2'
+$$
+
+##### Conservation of Kinetic Energy:
+The total kinetic energy before the collision must equal the total kinetic energy after the collision. The equation for conservation of kinetic energy is:
+
+$$
+\frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2 = \frac{1}{2} m_1 v_1'^2 + \frac{1}{2} m_2 v_2'^2
+$$
+
+Since $v_2 = 0$, this simplifies to:
+
+$$
+\frac{1}{2} m_1 v_1^2 = \frac{1}{2} m_1 v_1'^2 + \frac{1}{2} m_2 v_2'^2
+$$
+
+Substitute the known values:
+
+$$
+\frac{1}{2} \times 2 \, \text{kg} \times (5 \, \text{m/s})^2 = \frac{1}{2} \times 2 \, \text{kg} \times v_1'^2 + \frac{1}{2} \times 3 \, \text{kg} \times v_2'^2
+$$
+
+$$
+25 \, \text{J} = v_1'^2 + 1.5 v_2'^2
+$$
+
+Now, we have two equations:
+
+1. $ 10 = 2 v_1' + 3 v_2' $
+2. $ 25 = v_1'^2 + 1.5 v_2'^2 $
+
+We can solve this system of equations to find $v_1'$ and $v_2'$.
+
+##### Solving the System of Equations:
+
+From the momentum equation:
+
+$$
+v_1' = 5 - 1.5 v_2'
+$$
+
+Substitute this into the energy equation:
+
+$$
+25 = (5 - 1.5 v_2')^2 + 1.5 v_2'^2
+$$
+
+Expand and simplify:
+
+$$
+25 = (25 - 15 v_2' + 2.25 v_2'^2) + 1.5 v_2'^2
+$$
+
+$$
+25 = 25 - 15 v_2' + 3.75 v_2'^2
+$$
+
+Simplifying further:
+
+$$
+0 = -15 v_2' + 3.75 v_2'^2
+$$
+
+Factor out $v_2'$:
+
+$$
+v_2' (3.75 v_2' - 15) = 0
+$$
+
+Thus, $v_2' = 0$ or $v_2' = 4 \, \text{m/s}$.
+
+If $v_2' = 0$, the collision would not have been elastic, so $v_2' = 4 \, \text{m/s}$.
+
+Now, substitute $v_2' = 4 \, \text{m/s}$ into the momentum equation:
+
+$$
+v_1' = 5 - 1.5 \times 4 = 5 - 6 = -1 \, \text{m/s}
+$$
+
+Thus, the velocities after the collision are:
+- $v_1' = -1 \, \text{m/s}$ (ball 1 reverses direction),
+- $v_2' = 4 \, \text{m/s}$ (ball 2 moves forward).
+
+#### 2. Verifying Conservation of Momentum and Energy
+
+##### Momentum Conservation:
+
+Before the collision:
+
+$$
+p_\text{initial} = m_1 v_1 + m_2 v_2 = 2 \times 5 + 3 \times 0 = 10 \, \text{kg} \cdot \text{m/s}
+$$
+
+After the collision:
+
+$$
+p_\text{final} = m_1 v_1' + m_2 v_2' = 2 \times (-1) + 3 \times 4 = -2 + 12 = 10 \, \text{kg} \cdot \text{m/s}
+$$
+
+Momentum is conserved, as $p_\text{initial} = p_\text{final}$.
+
+##### Energy Conservation:
+
+Before the collision:
+
+$$
+KE_\text{initial} = \frac{1}{2} m_1 v_1^2 = \frac{1}{2} \times 2 \times (5)^2 = 25 \, \text{J}
+$$
+
+After the collision:
+
+$$
+KE_\text{final} = \frac{1}{2} m_1 v_1'^2 + \frac{1}{2} m_2 v_2'^2 = \frac{1}{2} \times 2 \times (-1)^2 + \frac{1}{2} \times 3 \times (4)^2
+$$
+
+$$
+KE_\text{final} = 1 + 24 = 25 \, \text{J}
+$$
+
+Energy is conserved, as $KE_\text{initial} = KE_\text{final}$.
+
+### Summary of Results:
+1. After the collision, ball 1 has a velocity of $v_1' = -1 \, \text{m/s}$ and ball 2 has a velocity of $v_2' = 4 \, \text{m/s}$.
+2. Both momentum and kinetic energy are conserved in this elastic collision.
+
+---
+
+## Problem 15: Object Falling from a Height (Energy Conservation)
+
+A rock of mass $m = 2 \, \text{kg}$ is dropped from a height of $h = 10 \, \text{m}$ above the ground. Assume no air resistance.
+
+1. What is the speed of the rock just before it hits the ground?
+2. Verify that the potential energy at the start equals the kinetic energy just before impact.
+3. How long does it take for the rock to hit the ground?
+
+### Solution
+
+This problem involves the **conversion of gravitational potential energy into kinetic energy** as the rock falls. We will also verify that energy is conserved in the system.
+
+#### 1. Speed of the Rock Just Before Impact
+
+To find the speed of the rock just before it hits the ground, we use the **conservation of mechanical energy**. Initially, the rock has gravitational potential energy, and as it falls, this energy is converted into kinetic energy.
+
+The total mechanical energy of the rock at the top (just before it is dropped) is:
+
+$$
+E_\text{total} = PE_\text{initial} = mgh
+$$
+
+Where:
+- $m = 2 \, \text{kg}$ is the mass of the rock,
+- $g = 9.8 \, \text{m/s}^2$ is the acceleration due to gravity,
+- $h = 10 \, \text{m}$ is the height from which the rock is dropped.
+
+Substituting the known values:
+
+$$
+PE_\text{initial} = 2 \, \text{kg} \times 9.8 \, \text{m/s}^2 \times 10 \, \text{m} = 196 \, \text{J}
+$$
+
+At the moment just before the rock hits the ground, all the potential energy has been converted into kinetic energy. The total mechanical energy of the rock just before impact is:
+
+$$
+E_\text{total} = KE_\text{final} = \frac{1}{2} m v^2
+$$
+
+Since energy is conserved, $PE_\text{initial} = KE_\text{final}$. So:
+
+$$
+mgh = \frac{1}{2} m v^2
+$$
+
+Cancel the mass $m$ on both sides of the equation:
+
+$$
+gh = \frac{1}{2} v^2
+$$
+
+Solving for $v$:
+
+$$
+v^2 = 2gh
+$$
+
+Substitute the values of $g$ and $h$:
+
+$$
+v^2 = 2 \times 9.8 \, \text{m/s}^2 \times 10 \, \text{m} = 196 \, \text{m}^2/\text{s}^2
+$$
+
+Taking the square root:
+
+$$
+v = \sqrt{196} = 14 \, \text{m/s}
+$$
+
+Thus, the speed of the rock just before it hits the ground is:
+
+$$
+v = 14 \, \text{m/s}
+$$
+
+#### 2. Verify Energy Conservation
+
+Initially, the rock has only **potential energy**:
+
+$$
+PE_\text{initial} = mgh = 196 \, \text{J}
+$$
+
+Just before the rock hits the ground, all this potential energy is converted into **kinetic energy**. The final kinetic energy is:
+
+$$
+KE_\text{final} = \frac{1}{2} m v^2 = \frac{1}{2} \times 2 \, \text{kg} \times (14 \, \text{m/s})^2 = \frac{1}{2} \times 2 \times 196 = 196 \, \text{J}
+$$
+
+Since $PE_\text{initial} = KE_\text{final}$, energy is conserved in the system.
+
+#### 3. Time to Hit the Ground
+
+To find how long it takes for the rock to hit the ground, we use the equation for vertical motion under constant acceleration:
+
+$$
+h = \frac{1}{2} g t^2
+$$
+
+Solving for $t$:
+
+$$
+t^2 = \frac{2h}{g}
+$$
+
+Substitute the values for $h$ and $g$:
+
+$$
+t^2 = \frac{2 \times 10 \, \text{m}}{9.8 \, \text{m/s}^2} \approx 2.04 \, \text{s}^2
+$$
+
+Taking the square root:
+
+$$
+t = \sqrt{2.04} \approx 1.43 \, \text{s}
+$$
+
+Thus, it takes approximately:
+
+$$
+t \approx 1.43 \, \text{s}
+$$
+
+for the rock to hit the ground.
+
+### Summary of Results:
+1. The speed of the rock just before it hits the ground is $14 \, \text{m/s}$.
+2. The potential energy at the start equals the kinetic energy just before impact, confirming that energy is conserved.
+3. It takes approximately $1.43 \, \text{seconds}$ for the rock to hit the ground.
 
