@@ -526,7 +526,7 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-traveled-after-2-seconds">3. Distance Traveled After 2 Seconds</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-13-object-in-uniform-circular-motion-with-angular-velocity">Problem 13: Object in Uniform Circular Motion with Angular Velocity</a><ul class="nav section-nav flex-column">
@@ -536,11 +536,11 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-speed-before-skidding">3. Maximum Speed Before Skidding</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Summary of Results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-14-elastic-collision-and-energy-conservation">Problem 14: Elastic Collision and Energy Conservation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#final-velocities-of-the-balls-after-the-collision">1. Final Velocities of the Balls After the Collision</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-kinetic-energy">Conservation of Kinetic Energy</a></li>
@@ -554,17 +554,17 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Summary of Results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Summary of Results</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-15-object-falling-from-a-height-energy-conservation">Problem 15: Object Falling from a Height (Energy Conservation)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#speed-of-the-rock-just-before-impact">1. Speed of the Rock Just Before Impact</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-energy-conservation">2. Verify Energy Conservation</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-to-hit-the-ground">3. Time to Hit the Ground</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Summary of Results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Summary of Results</a></li>
 </ul>
 </li>
 </ul>
@@ -1984,24 +1984,13 @@ s = 9.8 \, \text{m}
 \]</div>
 </section>
 </section>
-<section id="summary-of-results">
-<h3>Summary of Results<a class="headerlink" href="#summary-of-results" title="Link to this heading">#</a></h3>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>The acceleration along the incline is <span class="math notranslate nohighlight">\( 4.9 \, \text{m/s}^2 \)</span>.</p></li>
 <li><p>The speed after 2 seconds is <span class="math notranslate nohighlight">\( 9.8 \, \text{m/s} \)</span>.</p></li>
 <li><p>The distance traveled after 2 seconds is <span class="math notranslate nohighlight">\( 9.8 \, \text{m} \)</span>.</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-\begin{tikzpicture}\\% Inclined plane
-\draw[thick] (0,0) -- (4,2); \\% Block
-\draw[fill=blue!30] (2,1) rectangle ++(0.5,0.5);\\% Forces
-\draw[-&gt;, red, thick] (2.25,1.25) -- ++(0,-2) node[below] {$mg$};
-\draw[-&gt;, green, thick] (2.25,1.25) -- ++(1,0.5) node[right] {$N$};
-\draw[-&gt;, blue, thick] (2.25,1.25) -- ++(1.5,-0.75) node[right] {$mg \sin \theta$};\\% Angle label
-\draw (0.7,0) arc[start angle=0,end angle=26.6,radius=0.7] node[midway, right] {$\theta$};\\% Ground line
-\draw[dashed] (0,0) -- (4,0);\\\end{tikzpicture}
-\end{aligned}\end{align} \]</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -2105,8 +2094,8 @@ v_\text{max} \approx 17.15 \, \text{m/s}
 \]</div>
 </section>
 </section>
-<section id="id18">
-<h3>Summary of Results<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<section id="summary-of-results">
+<h3>Summary of Results<a class="headerlink" href="#summary-of-results" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>The magnitude of the centripetal force acting on the car is <span class="math notranslate nohighlight">\(8000 \, \text{N}\)</span>.</p></li>
 <li><p>The angular velocity of the car is <span class="math notranslate nohighlight">\(0.4 \, \text{rad/s}\)</span>.</p></li>
@@ -2122,8 +2111,8 @@ v_\text{max} \approx 17.15 \, \text{m/s}
 <li><p>What are the velocities of the two balls after the collision?</p></li>
 <li><p>Verify that both momentum and kinetic energy are conserved in the system.</p></li>
 </ol>
-<section id="id19">
-<h3>Solution<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<section id="id18">
+<h3>Solution<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
 <section id="final-velocities-of-the-balls-after-the-collision">
 <h4>1. Final Velocities of the Balls After the Collision<a class="headerlink" href="#final-velocities-of-the-balls-after-the-collision" title="Link to this heading">#</a></h4>
 <p>In a perfectly elastic collision, both <strong>momentum</strong> and <strong>kinetic energy</strong> are conserved.</p>
@@ -2264,8 +2253,8 @@ KE_\text{final} = 1 + 24 = 25 \, \text{J}
 </section>
 </section>
 </section>
-<section id="id20">
-<h3>Summary of Results<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<section id="id19">
+<h3>Summary of Results<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>After the collision, ball 1 has a velocity of <span class="math notranslate nohighlight">\(v_1' = -1 \, \text{m/s}\)</span> and ball 2 has a velocity of <span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span>.</p></li>
 <li><p>Both momentum and kinetic energy are conserved in this elastic collision.</p></li>
@@ -2281,8 +2270,8 @@ KE_\text{final} = 1 + 24 = 25 \, \text{J}
 <li><p>Verify that the potential energy at the start equals the kinetic energy just before impact.</p></li>
 <li><p>How long does it take for the rock to hit the ground?</p></li>
 </ol>
-<section id="id21">
-<h3>Solution<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<section id="id20">
+<h3>Solution<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
 <p>This problem involves the <strong>conversion of gravitational potential energy into kinetic energy</strong> as the rock falls. We will also verify that energy is conserved in the system.</p>
 <section id="speed-of-the-rock-just-before-impact">
 <h4>1. Speed of the Rock Just Before Impact<a class="headerlink" href="#speed-of-the-rock-just-before-impact" title="Link to this heading">#</a></h4>
@@ -2383,8 +2372,8 @@ t \approx 1.43 \, \text{s}
 <p>for the rock to hit the ground.</p>
 </section>
 </section>
-<section id="id22">
-<h3>Summary of Results<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<section id="id21">
+<h3>Summary of Results<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>The speed of the rock just before it hits the ground is <span class="math notranslate nohighlight">\(14 \, \text{m/s}\)</span>.</p></li>
 <li><p>The potential energy at the start equals the kinetic energy just before impact, confirming that energy is conserved.</p></li>
@@ -2577,7 +2566,7 @@ t \approx 1.43 \, \text{s}
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-traveled-after-2-seconds">3. Distance Traveled After 2 Seconds</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-13-object-in-uniform-circular-motion-with-angular-velocity">Problem 13: Object in Uniform Circular Motion with Angular Velocity</a><ul class="nav section-nav flex-column">
@@ -2587,11 +2576,11 @@ t \approx 1.43 \, \text{s}
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-speed-before-skidding">3. Maximum Speed Before Skidding</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Summary of Results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-14-elastic-collision-and-energy-conservation">Problem 14: Elastic Collision and Energy Conservation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#final-velocities-of-the-balls-after-the-collision">1. Final Velocities of the Balls After the Collision</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-kinetic-energy">Conservation of Kinetic Energy</a></li>
@@ -2605,17 +2594,17 @@ t \approx 1.43 \, \text{s}
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Summary of Results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Summary of Results</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-15-object-falling-from-a-height-energy-conservation">Problem 15: Object Falling from a Height (Energy Conservation)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#speed-of-the-rock-just-before-impact">1. Speed of the Rock Just Before Impact</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-energy-conservation">2. Verify Energy Conservation</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-to-hit-the-ground">3. Time to Hit the Ground</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Summary of Results</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Summary of Results</a></li>
 </ul>
 </li>
 </ul>
