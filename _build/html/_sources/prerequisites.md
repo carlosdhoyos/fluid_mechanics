@@ -48,40 +48,93 @@ kernelspec:
 
 ## Problem 1: Understanding Derivatives and Integrals
 
-Given a function  $f(x)$, find the derivative and the integral of $f(x)$ over a given interval.
+Given a function $f(x)$, find the derivative and the integral of $f(x)$ over a given interval.
 
 ### Problem Statement:
 Let $f(x) = x^3 - 3x^2 + 2x$.
 
 1. Find $f'(x)$, the derivative of the function.
-2. Calculate the integral $ \int f(x) dx $ over the interval [1, 4].
+2. Calculate the integral $\int f(x) dx$ over the interval [1, 4].
 
 ### Solution:
 
-1. **Derivative**:  
-   Using basic differentiation rules:
+#### 1. **Derivative**:  
+Using basic differentiation rules:
 
-   $$
-   f'(x) = 3x^2 - 6x + 2
-   $$
+$$
+f'(x) = 3x^2 - 6x + 2
+$$
 
-2. **Integral**:  
-   The indefinite integral is:
-   
-   $$
-   \int (x^3 - 3x^2 + 2x) dx = \frac{x^4}{4} - x^3 + x^2 + C
-   $$
+#### 2. **Integral**:  
+The indefinite integral is:
 
-   To evaluate the definite integral over the interval [1, 4]:
-   
-   $$
-   \left[\frac{x^4}{4} - x^3 + x^2 \right]_{1}^{4}
-   $$
-   
-   Substituting the limits and evaluating gives the final result for the definite integral.
+$$
+\int (x^3 - 3x^2 + 2x) dx = \frac{x^4}{4} - x^3 + x^2 + C
+$$
 
-For more problems and detailed solutions, you can visit the [MIT OCW problem set](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/).
+To evaluate the definite integral over the interval [1, 4]:
 
+$$
+\left[\frac{x^4}{4} - x^3 + x^2 \right]_{1}^{4}
+$$
+
+Substituting the limits:
+
+$$
+\left[\frac{4^4}{4} - 4^3 + 4^2\right] - \left[\frac{1^4}{4} - 1^3 + 1^2\right]
+$$
+
+Evaluating both terms:
+
+$$
+\left[\frac{256}{4} - 64 + 16\right] - \left[\frac{1}{4} - 1 + 1\right] = (64 - 64 + 16) - \left(\frac{1}{4}\right) = 16 - \frac{1}{4}
+$$
+
+Thus, the definite integral evaluates to:
+
+$$
+15.75
+$$
+
+
+### Python Visualization and Area Calculation:
+
+Here is the Python code to visualize the function and calculate the area under the curve:
+
+```{code-cell} python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import quad
+
+# Define the function f(x) = x^3 - 3x^2 + 2x
+def f(x):
+    return x**3 - 3*x**2 + 2*x
+
+# Generate x values for plotting
+x_vals = np.linspace(0, 5, 100)
+y_vals = f(x_vals)
+
+# Plot the function
+plt.figure(figsize=(8, 6))
+plt.plot(x_vals, y_vals, label=r'$f(x) = x^3 - 3x^2 + 2x$', color="blue")
+plt.fill_between(x_vals, y_vals, where=[(1 <= x <= 4) for x in x_vals], color='lightblue', alpha=0.5)
+
+# Labels and Title
+plt.axhline(0, color='black',linewidth=0.5)
+plt.axvline(0, color='black',linewidth=0.5)
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.title('Function $f(x) = x^3 - 3x^2 + 2x$ and the Area Under the Curve [1, 4]')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Calculate the integral over the interval [1, 4]
+area, _ = quad(f, 1, 4)
+
+print(f"The area under the curve from x=1 to x=4 is {area:.2f}.")
+
+```
 
 ---
 

@@ -650,3 +650,86 @@ y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
 $$
 
 where $C_1$ is an arbitrary constant and $n$ is a positive integer.
+
+---
+
+## Problem 9: Vector Field and Gradient
+
+Given the scalar function:
+
+$$
+\phi(x, y, z) = x^2 y + yz^2
+$$
+
+1. Find the **gradient** of the scalar field $\phi(x, y, z)$.
+2. Plot the vector field representing the gradient in the $xy$-plane for $z = 0$.
+
+
+### Solution:
+
+#### 1. **Gradient of the Scalar Field**
+
+The gradient of a scalar field $\phi(x, y, z)$ is given by:
+
+$$
+\nabla \phi = \left( \frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y}, \frac{\partial \phi}{\partial z} \right)
+$$
+
+For $\phi(x, y, z) = x^2 y + yz^2$, the partial derivatives are:
+
+$$
+\frac{\partial \phi}{\partial x} = 2xy
+$$
+
+$$
+\frac{\partial \phi}{\partial y} = x^2 + z^2
+$$
+
+$$
+\frac{\partial \phi}{\partial z} = 2yz
+$$
+
+Thus, the gradient vector field is:
+
+$$
+\nabla \phi = (2xy, x^2 + z^2, 2yz)
+$$
+
+#### 2. **Plotting the Gradient Field in the $xy$-Plane**
+
+Since we're plotting in the $xy$-plane for $z = 0$, the gradient simplifies to:
+
+$$
+\nabla \phi(x, y, 0) = (2xy, x^2, 0)
+$$
+
+Here is the Python code to plot the vector field in the $xy$-plane:
+
+```{code-cell} python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the scalar field gradient in the xy-plane (z=0)
+def grad_phi(x, y):
+    grad_x = 2 * x * y
+    grad_y = x**2
+    return grad_x, grad_y
+
+# Create a grid of points
+x_vals = np.linspace(-2, 2, 20)
+y_vals = np.linspace(-2, 2, 20)
+X, Y = np.meshgrid(x_vals, y_vals)
+
+# Compute the gradient at each point
+U, V = grad_phi(X, Y)
+
+# Plot the vector field
+plt.figure(figsize=(6, 6))
+plt.quiver(X, Y, U, V)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Gradient of $\phi(x, y, z) = x^2 y + yz^2$ in the xy-plane (z=0)')
+plt.grid(True)
+plt.show()
+
+```
