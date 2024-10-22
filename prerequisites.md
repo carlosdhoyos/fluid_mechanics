@@ -1847,4 +1847,3 @@ for the rock to hit the ground.
 1. The speed of the rock just before it hits the ground is $14 \, \text{m/s}$.
 2. The potential energy at the start equals the kinetic energy just before impact, confirming that energy is conserved.
 3. It takes approximately $1.43 \, \text{seconds}$ for the rock to hit the ground.
-
