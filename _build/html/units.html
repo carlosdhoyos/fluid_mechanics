@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to the Fluid Mechanics Course Site &#8212; Fluid Mechanics Class Notes</title>
+    <title>Common Physical Quantities and Units &#8212; Fluid Mechanics Class Notes</title>
   
   
   
@@ -70,7 +70,7 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'units';</script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/searchtools.js?v=63a53a7d"></script>
@@ -88,7 +88,8 @@
     <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?v=4e4fcec4"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Setting Up the Environment" href="environment.html" />
+    <link rel="next" title="Bibliography" href="bibliography.html" />
+    <link rel="prev" title="Prerequisites" href="prerequisites.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -151,8 +152,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -171,7 +170,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -202,17 +201,17 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to the Fluid Mechanics Course Site
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="units.html">Common Physical Quantities and Units</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Common Physical Quantities and Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -285,7 +284,7 @@
       
       
       
-      <li><a href="https://github.com/carlosdhoyos/fluid_mechanics/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/carlosdhoyos/fluid_mechanics/issues/new?title=Issue%20on%20page%20%2Funits.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -315,7 +314,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/units.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -399,7 +398,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to the Fluid Mechanics Course Site</h1>
+    <h1>Common Physical Quantities and Units</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -409,13 +408,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of-fluid-mechanics">The Importance of Fluid Mechanics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-mechanics-and-climate-science">Fluid Mechanics and Climate Science</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-scale-applications-from-biomedical-engineering-to-household-technologies">Small-Scale Applications: From Biomedical Engineering to Household Technologies</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-jupyter-books">Why Jupyter Books?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-github">Why GitHub?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-the-notes-in-english">Why the Notes in English?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bit-about-me">A Bit About Me</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes:</a></li>
 </ul>
             </nav>
         </div>
@@ -427,50 +420,131 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-fluid-mechanics-course-site">
-<h1>Welcome to the Fluid Mechanics Course Site<a class="headerlink" href="#welcome-to-the-fluid-mechanics-course-site" title="Link to this heading">#</a></h1>
-<p>My name is <strong>Carlos D. Hoyos</strong>, and I am one of the professors at the <strong>Universidad Nacional de Colombia, Facultad de Minas, Sede Medellín</strong>, guiding you through the principles and applications of fluid mechanics. As part of this journey, I am committed to building a set of online course materials to complement our in-class lectures. This content is made accessible through Jupyter Books hosted on GitHub, providing you with dynamic, interactive, and up-to-date resources for your studies.</p>
-<section id="the-importance-of-fluid-mechanics">
-<h2>The Importance of Fluid Mechanics<a class="headerlink" href="#the-importance-of-fluid-mechanics" title="Link to this heading">#</a></h2>
-<p>Fluid mechanics is not just a core subject within engineering; it’s the backbone of many fields that influence our daily lives. Whether you’re dealing with the flow of air over an aircraft wing, the circulation of blood in the human body, or the dynamics of ocean currents driving global climate patterns, fluid mechanics is involved. The discipline provides the tools to understand how fluids (liquids and gases) behave, whether they are at rest or in motion, and how these behaviors interact with the forces and energy around them.</p>
-<p>From an engineering perspective, fluid mechanics plays a crucial role in <strong>energy systems</strong>, where it helps us design more efficient turbines, optimize hydraulic systems, and improve aerodynamics in transportation. <strong>Environmental applications</strong> are just as critical. For instance, fluid mechanics is at the heart of <strong>water resource management</strong>—whether we are designing irrigation systems, controlling floodwaters, or managing the quality of water bodies like rivers and lakes.</p>
-<p>One of the most exciting areas where fluid mechanics comes into play is in <strong>climate science</strong>. As an engineer with a background in both climate and fluid dynamics, I can attest that understanding how fluids move in the atmosphere and oceans is fundamental to making accurate climate predictions. Large-scale systems like <strong>jet streams, ocean currents, and monsoons</strong> are governed by the principles of fluid mechanics. These systems, in turn, influence everything from <strong>local weather patterns</strong> to <strong>long-term climate trends</strong> that affect agriculture, ecosystems, and even energy generation.</p>
-<p>At the other end of the spectrum, fluid mechanics also helps solve <strong>small-scale, everyday problems</strong>. Think about how fluids are used in <strong>biomedical engineering</strong>—from the way drugs are delivered through microfluidic devices to how engineers design heart pumps and blood flow models. Even at this smaller scale, the principles we study in this course apply and enable breakthroughs in technology and medicine.</p>
-<p>Understanding fluid mechanics empowers us to address these diverse challenges, giving engineers a universal toolkit to approach problems ranging from global to local scales.</p>
-</section>
-<section id="fluid-mechanics-and-climate-science">
-<h2>Fluid Mechanics and Climate Science<a class="headerlink" href="#fluid-mechanics-and-climate-science" title="Link to this heading">#</a></h2>
-<p>While we often associate fluid mechanics with mechanical and civil engineering, its relevance to <strong>climate science</strong> cannot be overstated. Fluid behavior in the atmosphere and oceans dictates weather patterns, the distribution of heat and moisture across the planet, and even how pollutants disperse. As the climate changes, fluid mechanics becomes crucial in modeling these evolving dynamics and predicting their impacts on both natural and human systems.</p>
-<p>For example, <strong>wind energy</strong>, one of the most promising renewable energy sources, relies heavily on our understanding of fluid flow. Engineers design wind turbines and wind farms by modeling how air moves across landscapes. Similarly, in <strong>solar energy</strong>, fluid dynamics helps in improving the cooling systems of solar panels and optimizing the flow of air around large solar fields.</p>
-<p>Moreover, <strong>climate resilience</strong>—a topic that is increasingly critical as we face more extreme weather events—benefits directly from fluid mechanics. Flood control systems, stormwater management, and predicting the behavior of hurricanes or typhoons all require a deep understanding of how fluids move and interact with their surroundings.</p>
-</section>
-<section id="small-scale-applications-from-biomedical-engineering-to-household-technologies">
-<h2>Small-Scale Applications: From Biomedical Engineering to Household Technologies<a class="headerlink" href="#small-scale-applications-from-biomedical-engineering-to-household-technologies" title="Link to this heading">#</a></h2>
-<p>While climate science deals with global fluid systems, the principles of fluid mechanics also apply at much smaller scales. <strong>Biomedical engineering</strong> is a field that deeply integrates fluid dynamics to design medical devices, simulate blood flow, and develop life-saving technologies. Engineers use fluid mechanics to understand how the heart pumps blood, how artificial valves can mimic natural flow, and even how we might deliver drugs through targeted microfluidic channels.</p>
-<p>Even in everyday household technologies, fluid mechanics plays a role—whether it’s the way your <strong>showerhead</strong> disperses water efficiently or how a <strong>vacuum cleaner</strong> is designed to create suction through fluid flow. These seemingly simple systems are based on complex principles that we will explore in this course.</p>
-</section>
-<section id="why-jupyter-books">
-<h2>Why Jupyter Books?<a class="headerlink" href="#why-jupyter-books" title="Link to this heading">#</a></h2>
-<p>Jupyter Books provide a unique platform for integrating live code, dynamic visualizations, and interactive examples directly into our course materials. This allows us to break down complex concepts and equations in real-time, giving you the opportunity to not only read but also engage with the material. Imagine being able to <strong>run a simulation</strong> of a fluid system while learning the theory behind it, or exploring <strong>interactive visualizations</strong> that help you better grasp the forces at play in different fluid scenarios.</p>
-<p>The flexibility of Jupyter Books makes them an ideal medium for fluid mechanics, a subject that often requires <strong>hands-on analysis</strong> and <strong>computational tools</strong> to fully understand. As we progress through the course, I encourage you to experiment with the code and simulations provided in these materials to deepen your learning. You can learn about Jupyter Books at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
-</section>
-<section id="why-github">
-<h2>Why GitHub?<a class="headerlink" href="#why-github" title="Link to this heading">#</a></h2>
-<p>By hosting these materials on GitHub, I’m inviting you into a <strong>collaborative learning environment</strong>. Version control on GitHub ensures that the materials are always up to date, and it offers an opportunity for you to <strong>suggest improvements</strong>, raise issues, and even contribute to new content. This platform promotes transparency, community-driven learning, and continuous improvement—values that are essential in both academia and engineering practice.</p>
-<p>If you don’t already have a GitHub account, I recommend creating one, as it will be useful not only for this course but also for future projects and collaborations in your career.</p>
-</section>
-<section id="why-the-notes-in-english">
-<h2>Why the Notes in English?<a class="headerlink" href="#why-the-notes-in-english" title="Link to this heading">#</a></h2>
-<p>Although this course is taught in Spanish, the course notes are provided in English to help you get comfortable with the <strong>technical terminology</strong> that dominates international literature, research, and professional work in fluid mechanics. Many of the key resources—such as academic papers, research articles, and advanced textbooks—are published in English, and mastering this language will help you stay connected with the <strong>global scientific community</strong>.</p>
-<p>By engaging with the material in English, you’ll be better prepared to attend <strong>international conferences</strong>, contribute to <strong>global research efforts</strong>, and work with colleagues from around the world. It’s an investment that will expand your opportunities both academically and professionally.</p>
-</section>
-<section id="a-bit-about-me">
-<h2>A Bit About Me<a class="headerlink" href="#a-bit-about-me" title="Link to this heading">#</a></h2>
-<p>I have a <strong>Ph.D. in Earth and Atmospheric Sciences from Georgia Institute of Technology</strong>, along with a <strong>Masters in Oceanic and Atmospheric Sciences</strong>, a <strong>Masters in Water Resources</strong>, and a <strong>Civil Engineering degree</strong>. My work has taken me through diverse fields—studying the behavior of <strong>atmospheric currents</strong>, understanding <strong>water resources</strong>, and applying <strong>data science</strong> to solve problems related to agriculture, energy, risk management, and climate.</p>
-<p>Fluid dynamics has been a common thread throughout my career, from analyzing <strong>atmospheric circulations</strong> that drive global climate patterns to modeling <strong>river flows</strong> that sustain ecosystems and cities. This course gives me the opportunity to share not only the fundamental concepts of fluid mechanics but also their real-world applications—whether in <strong>renewable energy</strong>, <strong>environmental protection</strong>, or <strong>cutting-edge technologies</strong>.</p>
-</section>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="common-physical-quantities-and-units">
+<h1>Common Physical Quantities and Units<a class="headerlink" href="#common-physical-quantities-and-units" title="Link to this heading">#</a></h1>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Physical Quantity</p></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>SI Unit</p></th>
+<th class="head"><p>CGS Unit</p></th>
+<th class="head"><p>Imperial/US Unit</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Length</p></td>
+<td><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
+<td><p>meter (m)</p></td>
+<td><p>centimeter (cm)</p></td>
+<td><p>foot (ft), inch (in)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mass</p></td>
+<td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+<td><p>kilogram (kg)</p></td>
+<td><p>gram (g)</p></td>
+<td><p>pound (lb), ounce (oz)</p></td>
+</tr>
+<tr class="row-even"><td><p>Time</p></td>
+<td><p><span class="math notranslate nohighlight">\(t\)</span></p></td>
+<td><p>second (s)</p></td>
+<td><p>second (s)</p></td>
+<td><p>second (s), minute (min)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Speed</p></td>
+<td><p><span class="math notranslate nohighlight">\(v\)</span></p></td>
+<td><p>meter per second (m/s)</p></td>
+<td><p>centimeter per second (cm/s)</p></td>
+<td><p>foot per second (ft/s), miles per hour (mph)</p></td>
+</tr>
+<tr class="row-even"><td><p>Acceleration</p></td>
+<td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p>meter per second squared (m/s²)</p></td>
+<td><p>centimeter per second squared (cm/s²)</p></td>
+<td><p>foot per second squared (ft/s²)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Force</p></td>
+<td><p><span class="math notranslate nohighlight">\(F\)</span></p></td>
+<td><p>newton (N) = kg·m/s²</p></td>
+<td><p>dyne = g·cm/s²</p></td>
+<td><p>pound-force (lbf)</p></td>
+</tr>
+<tr class="row-even"><td><p>Energy</p></td>
+<td><p><span class="math notranslate nohighlight">\(E\)</span></p></td>
+<td><p>joule (J) = N·m</p></td>
+<td><p>erg = dyne·cm</p></td>
+<td><p>British thermal unit (BTU), foot-pound (ft·lb)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Power</p></td>
+<td><p><span class="math notranslate nohighlight">\(P\)</span></p></td>
+<td><p>watt (W) = J/s</p></td>
+<td><p>erg per second (erg/s)</p></td>
+<td><p>horsepower (hp)</p></td>
+</tr>
+<tr class="row-even"><td><p>Pressure</p></td>
+<td><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td><p>pascal (Pa) = N/m²</p></td>
+<td><p>barye (Ba) = dyne/cm²</p></td>
+<td><p>pound per square inch (psi)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Density</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p>kilogram per cubic meter (kg/m³)</p></td>
+<td><p>gram per cubic centimeter (g/cm³)</p></td>
+<td><p>pound per cubic foot (lb/ft³)</p></td>
+</tr>
+<tr class="row-even"><td><p>Volume</p></td>
+<td><p><span class="math notranslate nohighlight">\(V\)</span></p></td>
+<td><p>cubic meter (m³)</p></td>
+<td><p>cubic centimeter (cm³)</p></td>
+<td><p>cubic foot (ft³), gallon (gal)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Temperature</p></td>
+<td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>kelvin (K), Celsius (°C)</p></td>
+<td><p>Celsius (°C)</p></td>
+<td><p>Fahrenheit (°F)</p></td>
+</tr>
+<tr class="row-even"><td><p>Electric Current</p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p>ampere (A)</p></td>
+<td><p>statampere (statA)</p></td>
+<td><p>ampere (A)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Charge</p></td>
+<td><p><span class="math notranslate nohighlight">\(q\)</span></p></td>
+<td><p>coulomb (C)</p></td>
+<td><p>statcoulomb (statC)</p></td>
+<td><p>coulomb (C)</p></td>
+</tr>
+<tr class="row-even"><td><p>Voltage</p></td>
+<td><p><span class="math notranslate nohighlight">\(V\)</span></p></td>
+<td><p>volt (V)</p></td>
+<td><p>statvolt (statV)</p></td>
+<td><p>volt (V)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Resistance</p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>ohm (Ω)</p></td>
+<td><p>statohm (statΩ)</p></td>
+<td><p>ohm (Ω)</p></td>
+</tr>
+<tr class="row-even"><td><p>Frequency</p></td>
+<td><p><span class="math notranslate nohighlight">\(f\)</span></p></td>
+<td><p>hertz (Hz) = 1/s</p></td>
+<td><p>cycles per second (cps)</p></td>
+<td><p>hertz (Hz)</p></td>
+</tr>
+</tbody>
+</table>
 </div>
+<section id="notes">
+<h2>Notes:<a class="headerlink" href="#notes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>SI (International System of Units)</strong> is the most widely used unit system.</p></li>
+<li><p><strong>CGS (Centimeter-Gram-Second)</strong> is often used in theoretical physics.</p></li>
+<li><p><strong>Imperial/US Customary</strong> units are commonly used in the United States for everyday measurements.</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -503,12 +577,21 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="prerequisites.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Prerequisites</p>
+      </div>
+    </a>
     <a class="right-next"
-       href="environment.html"
+       href="bibliography.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Setting Up the Environment</p>
+        <p class="prev-next-title">Bibliography</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -528,13 +611,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of-fluid-mechanics">The Importance of Fluid Mechanics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-mechanics-and-climate-science">Fluid Mechanics and Climate Science</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-scale-applications-from-biomedical-engineering-to-household-technologies">Small-Scale Applications: From Biomedical Engineering to Household Technologies</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-jupyter-books">Why Jupyter Books?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-github">Why GitHub?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-the-notes-in-english">Why the Notes in English?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bit-about-me">A Bit About Me</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes:</a></li>
 </ul>
   </nav></div>
 

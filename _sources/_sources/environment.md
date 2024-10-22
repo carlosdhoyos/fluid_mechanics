@@ -203,7 +203,7 @@ dependencies:
     - zipp==3.20.2
 ```
 
-
+### Environment set up
 To set up the environment, follow these steps:
 
 1. Create the `environment.yml` file from the content above.
