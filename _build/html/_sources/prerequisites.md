@@ -16,7 +16,7 @@ kernelspec:
 # Prerequisites
 
 ## Mathematics Prerequisites
-1. **Calculus I and II**:
+1. **Calculus**:
    - Understanding of derivatives and integrals, especially related to functions of one or more variables.
    - Concepts of partial derivatives, chain rule, and multiple integrals.
    - Parametric equations and their applications.
@@ -35,12 +35,12 @@ kernelspec:
    - Some familiarity with matrices and solving systems of equations, particularly in computational aspects like numerical simulations or matrix-based methods for solving differential equations.
 
 ## Physics Prerequisites
-1. **General Physics I (Mechanics)**:
+1. **General Physics (Mechanics)**:
    - Mastery of Newton's laws of motion and their application to different systems.
    - Knowledge of energy conservation (kinetic and potential energy) and momentum conservation, as these concepts directly translate to Bernoulli's equation and fluid statics.
    - Basics of forces, including gravitational forces and frictional forces.
 
-2. **General Physics II (Electricity and Magnetism, optional)**:
+2. **General Physics (Electricity and Magnetism, optional)**:
    - Some exposure to wave propagation, which can help in understanding aspects of compressible flow and shock waves.
    - Familiarity with concepts like pressure fields, as similar ideas are used in both electromagnetism and fluid mechanics.
 
@@ -1550,7 +1550,7 @@ $$
 v_\text{max} \approx 17.15 \, \text{m/s}
 $$
 
-### Summary of Results:
+### Summary of Results
 1. The magnitude of the centripetal force acting on the car is $8000 \, \text{N}$.
 2. The angular velocity of the car is $0.4 \, \text{rad/s}$.
 3. The maximum speed the car can have before it starts to skid is approximately $17.15 \, \text{m/s}$.
@@ -1570,7 +1570,7 @@ A ball of mass $m_1 = 2 \, \text{kg}$ is moving with a velocity of $v_1 = 5 \, \
 
 In a perfectly elastic collision, both **momentum** and **kinetic energy** are conserved.
 
-##### Conservation of Momentum:
+##### Conservation of Momentum
 The total momentum before the collision must equal the total momentum after the collision. The equation for conservation of momentum is:
 
 $$
@@ -1598,7 +1598,7 @@ $$
 10 \, \text{kg} \cdot \text{m/s} = 2 v_1' + 3 v_2'
 $$
 
-##### Conservation of Kinetic Energy:
+##### Conservation of Kinetic Energy
 The total kinetic energy before the collision must equal the total kinetic energy after the collision. The equation for conservation of kinetic energy is:
 
 $$
@@ -1628,7 +1628,7 @@ Now, we have two equations:
 
 We can solve this system of equations to find $v_1'$ and $v_2'$.
 
-##### Solving the System of Equations:
+##### Solving the System of Equations
 
 From the momentum equation:
 
@@ -1680,7 +1680,7 @@ Thus, the velocities after the collision are:
 
 #### 2. Verifying Conservation of Momentum and Energy
 
-##### Momentum Conservation:
+##### Momentum Conservation
 
 Before the collision:
 
@@ -1696,7 +1696,7 @@ $$
 
 Momentum is conserved, as $p_\text{initial} = p_\text{final}$.
 
-##### Energy Conservation:
+##### Energy Conservation
 
 Before the collision:
 
@@ -1716,7 +1716,7 @@ $$
 
 Energy is conserved, as $KE_\text{initial} = KE_\text{final}$.
 
-### Summary of Results:
+### Summary of Results
 1. After the collision, ball 1 has a velocity of $v_1' = -1 \, \text{m/s}$ and ball 2 has a velocity of $v_2' = 4 \, \text{m/s}$.
 2. Both momentum and kinetic energy are conserved in this elastic collision.
 
@@ -1847,7 +1847,7 @@ $$
 
 for the rock to hit the ground.
 
-### Summary of Results:
+### Summary of Results
 1. The speed of the rock just before it hits the ground is $14 \, \text{m/s}$.
 2. The potential energy at the start equals the kinetic energy just before impact, confirming that energy is conserved.
 3. It takes approximately $1.43 \, \text{seconds}$ for the rock to hit the ground.
