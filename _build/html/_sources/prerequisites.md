@@ -1411,14 +1411,10 @@ $$
 s = 9.8 \, \text{m}
 $$
 
-### Summary of Results:
+### Summary of Results
 1. The acceleration along the incline is $ 4.9 \, \text{m/s}^2 $.
 2. The speed after 2 seconds is $ 9.8 \, \text{m/s} $.
 3. The distance traveled after 2 seconds is $ 9.8 \, \text{m} $.
-
-
-
-
 
 
 $$
@@ -1851,4 +1847,3 @@ for the rock to hit the ground.
 1. The speed of the rock just before it hits the ground is $14 \, \text{m/s}$.
 2. The potential energy at the start equals the kinetic energy just before impact, confirming that energy is conserved.
 3. It takes approximately $1.43 \, \text{seconds}$ for the rock to hit the ground.
-
