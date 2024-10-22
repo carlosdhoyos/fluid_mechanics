@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/Users/carlosdavid/opt/anaconda3/envs/jupyterbook_env/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/carlosdavid/opt/anaconda3/envs/jupyterbook_env/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlosdavid/opt/anaconda3/envs/jupyterbook_env/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/carlosdavid/opt/anaconda3/envs/jupyterbook_env/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/carlosdavid/opt/anaconda3/envs/jupyterbook_env/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/Users/carlosdavid/opt/anaconda3/envs/jupyterbook_env/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/carlosdavid/opt/anaconda3/envs/jupyterbook_env/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Calculate the flux through each face of the cube
+# Face at x = 1
+normal_x = np.array([1, 0, 0])
+flux_x_face = np.dot(np.array([1, Y, Z]).T, normal_x)
+
+# Face at y = 1
+normal_y = np.array([0, 1, 0])
+flux_y_face = np.dot(np.array([X, 1, Z]).T, normal_y)
+
+# Face at z = 1
+normal_z = np.array([0, 0, 1])
+flux_z_face = np.dot(np.array([X, Y, 1]).T, normal_z)
+
+# Total flux
+total_flux = np.sum(flux_x_face) + np.sum(flux_y_face) + np.sum(flux_z_face)
+print(f"Total surface flux: {total_flux}")
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+Cell [0;32mIn[5], line 4[0m
+[1;32m      1[0m [38;5;66;03m# Calculate the flux through each face of the cube[39;00m
+[1;32m      2[0m [38;5;66;03m# Face at x = 1[39;00m
+[1;32m      3[0m normal_x [38;5;241m=[39m np[38;5;241m.[39marray([[38;5;241m1[39m, [38;5;241m0[39m, [38;5;241m0[39m])
+[0;32m----> 4[0m flux_x_face [38;5;241m=[39m np[38;5;241m.[39mdot(np[38;5;241m.[39marray([[38;5;241m1[39m, Y, Z])[38;5;241m.[39mT, normal_x)
+[1;32m      6[0m [38;5;66;03m# Face at y = 1[39;00m
+[1;32m      7[0m normal_y [38;5;241m=[39m np[38;5;241m.[39marray([[38;5;241m0[39m, [38;5;241m1[39m, [38;5;241m0[39m])
+
+[0;31mValueError[0m: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (3,) + inhomogeneous part.
+

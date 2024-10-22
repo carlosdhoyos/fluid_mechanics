@@ -1161,12 +1161,50 @@ import numpy as np
 x_vals, y_vals, z_vals = np.linspace(0, 1, 5), np.linspace(0, 1, 5), np.linspace(0, 1, 5)
 X, Y, Z = np.meshgrid(x_vals, y_vals, z_vals)
 
+
+# Define the vector field F(x, y, z) = (x^2, y^2, z^2)
 # Vector field components
 F_x = X**2  # x component of the vector field
 F_y = Y**2  # y component of the vector field
 F_z = Z**2  # z component of the vector field
 
+# Plot the vector field using quiver
+fig = plt.figure(figsize=(8, 8))
+ax = fig.add_subplot(111, projection='3d')
+ax.quiver(X, Y, Z, F_x, F_y, F_z, length=0.1)
+
+# Set labels
+ax.set_xlabel('X axis')
+ax.set_ylabel('Y axis')
+ax.set_zlabel('Z axis')
+ax.set_title('Vector Field $\\mathbf{F}(x, y, z) = (x^2, y^2, z^2)$ in the Cube')
+
+plt.show()
+
 ```
+
+```{code-cell} python
+# Compute the divergence at each point in the cube
+Divergence = 2 * X + 2 * Y + 2 * Z
+
+# Create a 3D surface plot for the divergence
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection='3d')
+
+# Plot the divergence field
+divergence_plot = ax.scatter(X, Y, Z, c=Divergence, cmap='viridis', marker='o')
+fig.colorbar(divergence_plot, ax=ax)
+
+# Set labels
+ax.set_xlabel('X axis')
+ax.set_ylabel('Y axis')
+ax.set_zlabel('Z axis')
+ax.set_title('Divergence $\\nabla \\cdot \\mathbf{F} = 2x + 2y + 2z$ in the Cube')
+
+plt.show()
+
+```
+
 
 ##### Step 2: Calculate Flux through Each Face
 
@@ -1212,6 +1250,13 @@ z_face_flux = F_z[:, :, -1]  # The vector field at z = 1
 flux_z_face = np.sum(z_face_flux * normal_z[2])  # Dot product with normal
 
 
+```
+
+```{code-cell}python
+# Total flux across the three faces
+total_flux = flux_x_face + flux_y_face + flux_z_face
+
+print(f"Total flux through the x = 1, y = 1, and z = 1 faces: {total_flux:.2f}")
 ```
 
 
