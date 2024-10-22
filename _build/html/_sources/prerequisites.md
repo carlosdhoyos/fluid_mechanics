@@ -623,11 +623,12 @@ While there is no simple analytic solution to present here, numerical solutions 
 
 We use the **Runge-Kutta method** to solve the differential equation:
 
-```
-
 $$
 \frac{dy}{dx} = y^2 - x
 $$
+
+```
+
 
 ##### Python Code:
 
