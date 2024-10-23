@@ -410,17 +410,6 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-viscosity-in-fluid-mechanics">Importance of Viscosity in Fluid Mechanics</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-flow-between-parallel-plates">2. Shear Flow Between Parallel Plates</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-distribution">2.1 Velocity Distribution</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-gradient">2.2 Velocity Gradient</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-stress">2.3 Shear Stress</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-as-a-fluid-property">3. Viscosity as a Fluid Property</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-viscosity">3.1 Dynamic Viscosity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematic-viscosity">3.2 Kinematic Viscosity</a></li>
-</ul>
-</li>
 </ul>
             </nav>
         </div>
@@ -1101,68 +1090,6 @@ u(y) = \frac{U}{h} y
 </ul>
 </section>
 </section>
-<section id="shear-flow-between-parallel-plates">
-<h2>2. Shear Flow Between Parallel Plates<a class="headerlink" href="#shear-flow-between-parallel-plates" title="Link to this heading">#</a></h2>
-<p>To derive a practical expression for viscosity, consider the case of <strong>simple shear flow</strong> between two parallel plates. This scenario is often used as a basic model to study viscosity.</p>
-<section id="velocity-distribution">
-<h3>2.1 Velocity Distribution<a class="headerlink" href="#velocity-distribution" title="Link to this heading">#</a></h3>
-<p>In this situation, the velocity of the fluid varies linearly from zero at the stationary bottom plate to <span class="math notranslate nohighlight">\(U\)</span> at the moving top plate. The velocity profile is given by:</p>
-<div class="math notranslate nohighlight">
-\[
-u(y) = \frac{U}{h} y
-\]</div>
-<p>Where:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(u(y)\)</span> is the fluid velocity at a distance <span class="math notranslate nohighlight">\(y\)</span> from the stationary plate,</p></li>
-<li><p><span class="math notranslate nohighlight">\(h\)</span> is the distance between the plates,</p></li>
-<li><p><span class="math notranslate nohighlight">\(U\)</span> is the velocity of the moving plate.</p></li>
-</ul>
-</section>
-<section id="velocity-gradient">
-<h3>2.2 Velocity Gradient<a class="headerlink" href="#velocity-gradient" title="Link to this heading">#</a></h3>
-<p>The velocity gradient <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> is the rate of change of velocity with respect to the distance <span class="math notranslate nohighlight">\(y\)</span> from the stationary plate. For this linear profile, the velocity gradient is constant and given by:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{du}{dy} = \frac{U}{h}
-\]</div>
-</section>
-<section id="shear-stress">
-<h3>2.3 Shear Stress<a class="headerlink" href="#shear-stress" title="Link to this heading">#</a></h3>
-<p>Substituting this velocity gradient into Newton’s law of viscosity, we get the expression for the shear stress <span class="math notranslate nohighlight">\(\tau\)</span> acting on the fluid:</p>
-<div class="math notranslate nohighlight">
-\[
-\tau = \mu \frac{U}{h}
-\]</div>
-<p>Thus, the shear stress is proportional to the viscosity <span class="math notranslate nohighlight">\(\mu\)</span>, the velocity of the moving plate <span class="math notranslate nohighlight">\(U\)</span>, and inversely proportional to the distance between the plates <span class="math notranslate nohighlight">\(h\)</span>. This equation provides a practical way to calculate the shear stress in a Newtonian fluid when the velocity and geometry are known.</p>
-</section>
-</section>
-<section id="viscosity-as-a-fluid-property">
-<h2>3. Viscosity as a Fluid Property<a class="headerlink" href="#viscosity-as-a-fluid-property" title="Link to this heading">#</a></h2>
-<section id="dynamic-viscosity">
-<h3>3.1 Dynamic Viscosity<a class="headerlink" href="#dynamic-viscosity" title="Link to this heading">#</a></h3>
-<p>The <strong>dynamic viscosity</strong> <span class="math notranslate nohighlight">\(\mu\)</span> is a measure of a fluid’s resistance to shear flow. For Newtonian fluids, it remains constant under varying shear rates and is a function of temperature and pressure.</p>
-<p>The units of dynamic viscosity are:</p>
-<ul class="simple">
-<li><p><strong>SI units</strong>: Pa·s (N·s/m²),</p></li>
-<li><p><strong>CGS units</strong>: Poise (P), where <span class="math notranslate nohighlight">\(1 \, \text{P} = 0.1 \, \text{Pa·s}\)</span>.</p></li>
-</ul>
-<p>For example, water at 20°C has a viscosity of approximately <span class="math notranslate nohighlight">\(1.002 \, \text{mPa·s}\)</span> (or <span class="math notranslate nohighlight">\(1.002 \, \text{cP}\)</span>).</p>
-</section>
-<section id="kinematic-viscosity">
-<h3>3.2 Kinematic Viscosity<a class="headerlink" href="#kinematic-viscosity" title="Link to this heading">#</a></h3>
-<p>The <strong>kinematic viscosity</strong> <span class="math notranslate nohighlight">\(\nu\)</span> is the ratio of the dynamic viscosity <span class="math notranslate nohighlight">\(\mu\)</span> to the fluid density <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\nu = \frac{\mu}{\rho}
-\]</div>
-<p>The units of kinematic viscosity are:</p>
-<ul class="simple">
-<li><p>SI: <span class="math notranslate nohighlight">\(\text{m}^2/\text{s}\)</span>,</p></li>
-<li><p>CGS: <strong>Stokes (St)</strong>, where <span class="math notranslate nohighlight">\(1 \, \text{St} = 10^{-4} \, \text{m}^2/\text{s}\)</span>.</p></li>
-</ul>
-<p>Kinematic viscosity is particularly useful when studying fluid flow in systems where the density plays a significant role, such as in buoyancy-driven flows.</p>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1255,17 +1182,6 @@ u(y) = \frac{U}{h} y
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopic-origin-of-viscosity">Microscopic Origin of Viscosity</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-measurement-of-viscosity">Experimental Measurement of Viscosity</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-viscosity-in-fluid-mechanics">Importance of Viscosity in Fluid Mechanics</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-flow-between-parallel-plates">2. Shear Flow Between Parallel Plates</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-distribution">2.1 Velocity Distribution</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-gradient">2.2 Velocity Gradient</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-stress">2.3 Shear Stress</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-as-a-fluid-property">3. Viscosity as a Fluid Property</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-viscosity">3.1 Dynamic Viscosity</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kinematic-viscosity">3.2 Kinematic Viscosity</a></li>
 </ul>
 </li>
 </ul>
