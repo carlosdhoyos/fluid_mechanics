@@ -558,11 +558,6 @@ In real-world engineering applications, accurate knowledge of viscosity is essen
 - **Energy Dissipation**: Viscous effects lead to energy dissipation in fluids, important in pipe flow, pumps, and engines.
 
 
-## 2. Shear Flow Between Parallel Plates
-
-To derive a practical expression for viscosity, consider the case of **simple shear flow** between two parallel plates. This scenario is often used as a basic model to study viscosity.
-
-
 ### 2.1 Velocity Distribution
 
 In this situation, the velocity of the fluid varies linearly from zero at the stationary bottom plate to $U$ at the moving top plate. The velocity profile is given by:
@@ -593,30 +588,3 @@ $$
 $$
 
 Thus, the shear stress is proportional to the viscosity $\mu$, the velocity of the moving plate $U$, and inversely proportional to the distance between the plates $h$. This equation provides a practical way to calculate the shear stress in a Newtonian fluid when the velocity and geometry are known.
-
-## 3. Viscosity as a Fluid Property
-
-### 3.1 Dynamic Viscosity
-
-The **dynamic viscosity** $\mu$ is a measure of a fluid’s resistance to shear flow. For Newtonian fluids, it remains constant under varying shear rates and is a function of temperature and pressure. 
-
-The units of dynamic viscosity are:
-- **SI units**: Pa·s (N·s/m²),
-- **CGS units**: Poise (P), where $1 \, \text{P} = 0.1 \, \text{Pa·s}$.
-
-For example, water at 20°C has a viscosity of approximately $1.002 \, \text{mPa·s}$ (or $1.002 \, \text{cP}$).
-
-### 3.2 Kinematic Viscosity
-
-The **kinematic viscosity** $\nu$ is the ratio of the dynamic viscosity $\mu$ to the fluid density $\rho$:
-
-$$
-\nu = \frac{\mu}{\rho}
-$$
-
-The units of kinematic viscosity are:
-- SI: $\text{m}^2/\text{s}$,
-- CGS: **Stokes (St)**, where $1 \, \text{St} = 10^{-4} \, \text{m}^2/\text{s}$.
-
-Kinematic viscosity is particularly useful when studying fluid flow in systems where the density plays a significant role, such as in buoyancy-driven flows.
-
