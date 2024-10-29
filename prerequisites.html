@@ -1,0 +1,2627 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Prerequisites &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'prerequisites';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Syllabus" href="syllabus.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to the Fluid Mechanics Course Site
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Prerequisites</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fprerequisites.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/prerequisites.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Prerequisites</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-prerequisites">Mathematics Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-prerequisites">Physics Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1-understanding-derivatives-and-integrals">Problem 1: Understanding Derivatives and Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative">1. <strong>Derivative</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integral">2. <strong>Integral</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-visualization-and-area-calculation">Python Visualization and Area Calculation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2-partial-derivatives-chain-rule-and-multiple-integrals">Problem 2: Partial Derivatives, Chain Rule, and Multiple Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-the-chain-rule">1. <strong>Applying the Chain Rule</strong>:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-integrals">2. <strong>Multiple Integrals</strong>:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3-parametric-equations-and-applications">Problem 3: Parametric Equations and Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-and-acceleration-vectors">1. Velocity and Acceleration Vectors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-when-the-particle-s-velocity-is-zero">2. Time When the Particle’s Velocity is Zero</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-the-curve">3. Length of the Curve</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-visualization-and-curve-length-calculation">Python Visualization and Curve Length Calculation:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-4-separable-differential-equation">Problem 4: Separable Differential Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Solution:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-5-exponential-growth">Problem 5: Exponential Growth</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Solution:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6-separable-differential-equation">Problem 6: Separable Differential Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Solution:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7-linear-and-non-linear-differential-equations">Problem 7: Linear and Non-Linear Differential Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-differential-equation">1. <strong>Linear Differential Equation</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-differential-equation">2. <strong>Non-Linear Differential Equation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-8-boundary-value-problem-with-initial-conditions">Problem 8: Boundary Value Problem with Initial Conditions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-general-solution-of-the-ode">Step 1: General Solution of the ODE</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-apply-the-boundary-conditions">Step 2: Apply the Boundary Conditions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-final-solution">Step 3: Final Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-9-vector-field-and-gradient">Problem 9: Vector Field and Gradient</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-of-the-scalar-field">1. <strong>Gradient of the Scalar Field</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-gradient-field-in-the-xy-plane">2. <strong>Plotting the Gradient Field in the <span class="math notranslate nohighlight">\(xy\)</span>-Plane</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10-line-surface-and-volume-integrals">Problem 10: Line, Surface, and Volume Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-integral">2. Surface Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-surface-integral-formula">Step 1: Surface Integral Formula</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-parameterization-and-normal-vector">Step 2: Parameterization and Normal Vector</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-dot-product-of-mathbf-f-and-mathbf-n">Step 3: Dot Product of ( \mathbf{F} ) and ( \mathbf{n} )</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-limits-of-integration">Step 4: Limits of Integration</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-set-up-the-surface-integral">Step 5: Set Up the Surface Integral</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-solve-the-surface-integral-numerically">Step 6: Solve the Surface Integral Numerically</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-final-answer">Step 7: Final Answer</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-integral">3. Volume Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-volume-integral-formula">Step 1: Volume Integral Formula</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-switch-to-cylindrical-coordinates">Step 2: Switch to Cylindrical Coordinates</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-set-up-the-volume-integral">Step 3: Set Up the Volume Integral</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-solve-the-volume-integral-numerically">Step 4: Solve the Volume Integral Numerically</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-final-answer">Step 5: Final Answer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-11-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">Problem 11: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Problem Statement:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-theorem">1. Divergence Theorem:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stokes-theorem">2. Stokes’ Theorem</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-12-motion-on-an-inclined-plane">Problem 12: Motion on an Inclined Plane</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-along-the-incline">1. Acceleration Along the Incline</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#speed-after-2-seconds">2. Speed After 2 Seconds</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-traveled-after-2-seconds">3. Distance Traveled After 2 Seconds</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-13-object-in-uniform-circular-motion-with-angular-velocity">Problem 13: Object in Uniform Circular Motion with Angular Velocity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#magnitude-of-the-centripetal-force">1. Magnitude of the Centripetal Force</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-velocity-of-the-car">2. Angular Velocity of the Car</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-speed-before-skidding">3. Maximum Speed Before Skidding</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-14-elastic-collision-and-energy-conservation">Problem 14: Elastic Collision and Energy Conservation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#final-velocities-of-the-balls-after-the-collision">1. Final Velocities of the Balls After the Collision</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-kinetic-energy">Conservation of Kinetic Energy</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-system-of-equations">Solving the System of Equations</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verifying-conservation-of-momentum-and-energy">2. Verifying Conservation of Momentum and Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-conservation">Momentum Conservation</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-conservation">Energy Conservation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Summary of Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-15-object-falling-from-a-height-energy-conservation">Problem 15: Object Falling from a Height (Energy Conservation)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#speed-of-the-rock-just-before-impact">1. Speed of the Rock Just Before Impact</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-energy-conservation">2. Verify Energy Conservation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-to-hit-the-ground">3. Time to Hit the Ground</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Summary of Results</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="prerequisites">
+<h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h1>
+<section id="mathematics-prerequisites">
+<h2>Mathematics Prerequisites<a class="headerlink" href="#mathematics-prerequisites" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Calculus</strong>:</p>
+<ul class="simple">
+<li><p>Understanding of derivatives and integrals, especially related to functions of one or more variables.</p></li>
+<li><p>Concepts of partial derivatives, chain rule, and multiple integrals.</p></li>
+<li><p>Parametric equations and their applications.</p></li>
+</ul>
+</li>
+<li><p><strong>Differential Equations</strong>:</p>
+<ul class="simple">
+<li><p>Ability to solve ordinary differential equations (ODEs), which are essential for understanding fluid dynamics, particularly in deriving the Navier-Stokes equations and other conservation laws.</p></li>
+<li><p>Familiarity with linear and non-linear differential equations.</p></li>
+<li><p>Exposure to boundary value problems and initial conditions.</p></li>
+</ul>
+</li>
+<li><p><strong>Vector Calculus</strong>:</p>
+<ul class="simple">
+<li><p>Mastery of vector fields, gradient, divergence, and curl operations.</p></li>
+<li><p>Line integrals, surface integrals, and volume integrals.</p></li>
+<li><p>Understanding the physical meaning of the divergence theorem and Stokes’ theorem, which are crucial in fluid flow analysis using control volumes and differential analysis.</p></li>
+</ul>
+</li>
+<li><p><strong>Linear Algebra (optional)</strong>:</p>
+<ul class="simple">
+<li><p>Some familiarity with matrices and solving systems of equations, particularly in computational aspects like numerical simulations or matrix-based methods for solving differential equations.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="physics-prerequisites">
+<h2>Physics Prerequisites<a class="headerlink" href="#physics-prerequisites" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>General Physics (Mechanics)</strong>:</p>
+<ul class="simple">
+<li><p>Mastery of Newton’s laws of motion and their application to different systems.</p></li>
+<li><p>Knowledge of energy conservation (kinetic and potential energy) and momentum conservation, as these concepts directly translate to Bernoulli’s equation and fluid statics.</p></li>
+<li><p>Basics of forces, including gravitational forces and frictional forces.</p></li>
+</ul>
+</li>
+<li><p><strong>General Physics (Electricity and Magnetism, optional)</strong>:</p>
+<ul class="simple">
+<li><p>Some exposure to wave propagation, which can help in understanding aspects of compressible flow and shock waves.</p></li>
+<li><p>Familiarity with concepts like pressure fields, as similar ideas are used in both electromagnetism and fluid mechanics.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="problem-1-understanding-derivatives-and-integrals">
+<h2>Problem 1: Understanding Derivatives and Integrals<a class="headerlink" href="#problem-1-understanding-derivatives-and-integrals" title="Link to this heading">#</a></h2>
+<p>Given a function <span class="math notranslate nohighlight">\(f(x)\)</span>, find the derivative and the integral of <span class="math notranslate nohighlight">\(f(x)\)</span> over a given interval.</p>
+<section id="problem-statement">
+<h3>Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f(x) = x^3 - 3x^2 + 2x\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Find <span class="math notranslate nohighlight">\(f'(x)\)</span>, the derivative of the function.</p></li>
+<li><p>Calculate the integral <span class="math notranslate nohighlight">\(\int f(x) dx\)</span> over the interval [1, 4].</p></li>
+</ol>
+</section>
+<section id="solution">
+<h3>Solution<a class="headerlink" href="#solution" title="Link to this heading">#</a></h3>
+<section id="derivative">
+<h4>1. <strong>Derivative</strong><a class="headerlink" href="#derivative" title="Link to this heading">#</a></h4>
+<p>Using basic differentiation rules:</p>
+<div class="math notranslate nohighlight">
+\[
+f'(x) = 3x^2 - 6x + 2
+\]</div>
+</section>
+<section id="integral">
+<h4>2. <strong>Integral</strong><a class="headerlink" href="#integral" title="Link to this heading">#</a></h4>
+<p>The indefinite integral is:</p>
+<div class="math notranslate nohighlight">
+\[
+\int (x^3 - 3x^2 + 2x) dx = \frac{x^4}{4} - x^3 + x^2 + C
+\]</div>
+<p>To evaluate the definite integral over the interval [1, 4]:</p>
+<div class="math notranslate nohighlight">
+\[
+\left[\frac{x^4}{4} - x^3 + x^2 \right]_{1}^{4}
+\]</div>
+<p>Substituting the limits:</p>
+<div class="math notranslate nohighlight">
+\[
+\left[\frac{4^4}{4} - 4^3 + 4^2\right] - \left[\frac{1^4}{4} - 1^3 + 1^2\right]
+\]</div>
+<p>Evaluating both terms:</p>
+<div class="math notranslate nohighlight">
+\[
+\left[\frac{256}{4} - 64 + 16\right] - \left[\frac{1}{4} - 1 + 1\right] = (64 - 64 + 16) - \left(\frac{1}{4}\right) = 16 - \frac{1}{4}
+\]</div>
+<p>Thus, the definite integral evaluates to:</p>
+<div class="math notranslate nohighlight">
+\[
+15.75
+\]</div>
+</section>
+</section>
+<section id="python-visualization-and-area-calculation">
+<h3>Python Visualization and Area Calculation<a class="headerlink" href="#python-visualization-and-area-calculation" title="Link to this heading">#</a></h3>
+<p>Here is the Python code to visualize the function and calculate the area under the curve:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+
+<span class="c1"># Define the function f(x) = x^3 - 3x^2 + 2x</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span>
+
+<span class="c1"># Generate x values for plotting</span>
+<span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y_vals</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x_vals</span><span class="p">)</span>
+
+<span class="c1"># Plot the function</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$f(x) = x^3 - 3x^2 + 2x$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_vals</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Labels and Title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Function $f(x) = x^3 - 3x^2 + 2x$ and the Area Under the Curve [1, 4]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Calculate the integral over the interval [1, 4]</span>
+<span class="n">area</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The area under the curve from x=1 to x=4 is </span><span class="si">{</span><span class="n">area</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d01ac6626333f287f9a83db74bd9509f926563aa0832f9d54a717b8698685099.png" src="_images/d01ac6626333f287f9a83db74bd9509f926563aa0832f9d54a717b8698685099.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The area under the curve from x=1 to x=4 is 15.75.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-2-partial-derivatives-chain-rule-and-multiple-integrals">
+<h2>Problem 2: Partial Derivatives, Chain Rule, and Multiple Integrals<a class="headerlink" href="#problem-2-partial-derivatives-chain-rule-and-multiple-integrals" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Problem Statement<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(z = f(x, y)\)</span> where <span class="math notranslate nohighlight">\(x = u^2 + 3v\)</span> and <span class="math notranslate nohighlight">\(y = uv\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Find the partial derivative of <span class="math notranslate nohighlight">\(z\)</span> with respect to <span class="math notranslate nohighlight">\(u\)</span>, denoted as <span class="math notranslate nohighlight">\(\frac{\partial z}{\partial u}\)</span>, using the chain rule.</p></li>
+<li><p>Calculate the double integral of <span class="math notranslate nohighlight">\(z(x, y) = x + y\)</span> over the region <span class="math notranslate nohighlight">\(R\)</span>, where <span class="math notranslate nohighlight">\(R\)</span> is the square defined by <span class="math notranslate nohighlight">\(0 \leq x \leq 2\)</span> and <span class="math notranslate nohighlight">\(0 \leq y \leq 1\)</span>.</p></li>
+</ol>
+</section>
+<section id="id2">
+<h3>Solution:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<section id="applying-the-chain-rule">
+<h4>1. <strong>Applying the Chain Rule</strong>:<a class="headerlink" href="#applying-the-chain-rule" title="Link to this heading">#</a></h4>
+<p>Let <span class="math notranslate nohighlight">\(f(x, y) = x + y\)</span>.</p>
+<p>To find <span class="math notranslate nohighlight">\(\frac{\partial z}{\partial u}\)</span>, use the chain rule:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial z}{\partial u} = \frac{\partial f}{\partial x} \cdot \frac{\partial x}{\partial u} + \frac{\partial f}{\partial y} \cdot \frac{\partial y}{\partial u}
+\]</div>
+<p>For the function <span class="math notranslate nohighlight">\(f(x, y) = x + y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial f}{\partial x} = 1, \quad \frac{\partial f}{\partial y} = 1
+\]</div>
+<p>Next, calculate <span class="math notranslate nohighlight">\(\frac{\partial x}{\partial u}\)</span> and <span class="math notranslate nohighlight">\(\frac{\partial y}{\partial u}\)</span>:</p>
+<p>Given <span class="math notranslate nohighlight">\(x = u^2 + 3v\)</span> and <span class="math notranslate nohighlight">\(y = uv\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial x}{\partial u} = 2u, \quad \frac{\partial y}{\partial u} = v
+\]</div>
+<p>Now substitute these into the chain rule equation:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial z}{\partial u} = 1 \cdot 2u + 1 \cdot v = 2u + v
+\]</div>
+<p>Thus, the partial derivative of <span class="math notranslate nohighlight">\(z\)</span> with respect to <span class="math notranslate nohighlight">\(u\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial z}{\partial u} = 2u + v
+\]</div>
+</section>
+<section id="multiple-integrals">
+<h4>2. <strong>Multiple Integrals</strong>:<a class="headerlink" href="#multiple-integrals" title="Link to this heading">#</a></h4>
+<p>Now, let’s compute the double integral of <span class="math notranslate nohighlight">\(z(x, y) = x + y\)</span> over the region <span class="math notranslate nohighlight">\(R\)</span>, defined by <span class="math notranslate nohighlight">\(0 \leq x \leq 2\)</span> and <span class="math notranslate nohighlight">\(0 \leq y \leq 1\)</span>.</p>
+<p>The integral to solve is:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_0^1 \int_0^2 (x + y) \, dx \, dy
+\]</div>
+<p>First, integrate with respect to <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_0^2 (x + y) \, dx = \int_0^2 x \, dx + \int_0^2 y \, dx = \left[ \frac{x^2}{2} \right]_0^2 + \left[ yx \right]_0^2
+\]</div>
+<p>Evaluating the integrals:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{2^2}{2} - 0 + y(2 - 0) = 2 + 2y
+\]</div>
+<p>Now, integrate with respect to <span class="math notranslate nohighlight">\(y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_0^1 (2 + 2y) \, dy = \int_0^1 2 \, dy + \int_0^1 2y \, dy = \left[ 2y \right]_0^1 + \left[ y^2 \right]_0^1
+\]</div>
+<p>Evaluating the integrals:</p>
+<div class="math notranslate nohighlight">
+\[
+2(1 - 0) + (1^2 - 0^2) = 2 + 1 = 3
+\]</div>
+<p>Thus, the value of the double integral is:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_0^1 \int_0^2 (x + y) \, dx \, dy = 3
+\]</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-3-parametric-equations-and-applications">
+<h2>Problem 3: Parametric Equations and Applications<a class="headerlink" href="#problem-3-parametric-equations-and-applications" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>Problem Statement<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>A particle is moving along a curve defined by the following parametric equations:</p>
+<div class="math notranslate nohighlight">
+\[
+x(t) = 3t^2 - 2t
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+y(t) = 2t^3 - t
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(x(t)\)</span> and <span class="math notranslate nohighlight">\(y(t)\)</span> represent the particle’s position at time <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Find the velocity and acceleration vectors of the particle at time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p>Determine the time <span class="math notranslate nohighlight">\(t\)</span> when the particle’s velocity is zero.</p></li>
+<li><p>Find the length of the curve traced by the particle between <span class="math notranslate nohighlight">\(t = 0\)</span> and <span class="math notranslate nohighlight">\(t = 2\)</span>.</p></li>
+</ol>
+</section>
+<section id="id4">
+<h3>Solution<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<section id="velocity-and-acceleration-vectors">
+<h4>1. Velocity and Acceleration Vectors<a class="headerlink" href="#velocity-and-acceleration-vectors" title="Link to this heading">#</a></h4>
+<p>To find the velocity and acceleration, we differentiate the parametric equations with respect to time <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<ul>
+<li><p><strong>Velocity</strong> is the derivative of position with respect to time:</p>
+<div class="math notranslate nohighlight">
+\[
+  v_x(t) = \frac{dx}{dt} = 6t - 2
+  \]</div>
+<div class="math notranslate nohighlight">
+\[
+  v_y(t) = \frac{dy}{dt} = 6t^2 - 1
+  \]</div>
+<p>Therefore, the velocity vector at time <span class="math notranslate nohighlight">\(t\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+  \mathbf{v}(t) = (6t - 2) \hat{i} + (6t^2 - 1) \hat{j}
+  \]</div>
+</li>
+<li><p><strong>Acceleration</strong> is the derivative of velocity with respect to time:</p>
+<div class="math notranslate nohighlight">
+\[
+  a_x(t) = \frac{d^2x}{dt^2} = 6
+  \]</div>
+<div class="math notranslate nohighlight">
+\[
+  a_y(t) = \frac{d^2y}{dt^2} = 12t
+  \]</div>
+<p>Therefore, the acceleration vector is:</p>
+<div class="math notranslate nohighlight">
+\[
+  \mathbf{a}(t) = 6 \hat{i} + 12t \hat{j}
+  \]</div>
+</li>
+</ul>
+</section>
+<section id="time-when-the-particle-s-velocity-is-zero">
+<h4>2. Time When the Particle’s Velocity is Zero<a class="headerlink" href="#time-when-the-particle-s-velocity-is-zero" title="Link to this heading">#</a></h4>
+<p>For the velocity to be zero, both components of the velocity vector must be zero simultaneously:</p>
+<div class="math notranslate nohighlight">
+\[
+  6t - 2 = 0 \quad \text{and} \quad 6t^2 - 1 = 0
+  \]</div>
+<p>From <span class="math notranslate nohighlight">\(6t - 2 = 0\)</span>, solving for <span class="math notranslate nohighlight">\(t\)</span> gives:</p>
+<div class="math notranslate nohighlight">
+\[
+  t = \frac{1}{3}
+  \]</div>
+<p>Substituting <span class="math notranslate nohighlight">\(t = \frac{1}{3}\)</span> into the second equation:</p>
+<div class="math notranslate nohighlight">
+\[
+  6 \left(\frac{1}{3}\right)^2 - 1 = \frac{2}{3} - 1 = -\frac{1}{3} \neq 0
+  \]</div>
+<p>Thus, there is no time <span class="math notranslate nohighlight">\(t\)</span> where the particle’s velocity is exactly zero in both the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> directions.</p>
+</section>
+<section id="length-of-the-curve">
+<h4>3. Length of the Curve<a class="headerlink" href="#length-of-the-curve" title="Link to this heading">#</a></h4>
+<p>The length of the curve traced by the particle from <span class="math notranslate nohighlight">\(t = 0\)</span> to <span class="math notranslate nohighlight">\(t = 2\)</span> is given by the formula:</p>
+<div class="math notranslate nohighlight">
+\[
+  L = \int_0^2 \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} \, dt
+  \]</div>
+<p>Substitute the derivatives <span class="math notranslate nohighlight">\(v_x(t) = 6t - 2\)</span> and <span class="math notranslate nohighlight">\(v_y(t) = 6t^2 - 1\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+  L = \int_0^2 \sqrt{(6t - 2)^2 + (6t^2 - 1)^2} \, dt
+  \]</div>
+<p>This integral can be solved either numerically or using appropriate substitution techniques to find the length of the curve.</p>
+</section>
+</section>
+<section id="applications">
+<h3>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h3>
+<p>Parametric equations are widely used to describe curves and motions in physics, engineering, and computer graphics. For instance, they are used to model the trajectory of particles, motion along a path, and even design complex curves in computer-aided design (CAD) software.</p>
+</section>
+<section id="python-visualization-and-curve-length-calculation">
+<h3>Python Visualization and Curve Length Calculation:<a class="headerlink" href="#python-visualization-and-curve-length-calculation" title="Link to this heading">#</a></h3>
+<p>Here’s the Python code to plot the parametric curve, velocity and acceleration vectors, and calculate the length of the curve numerically:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+
+<span class="c1"># Define the parametric equations for x(t) and y(t)</span>
+<span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t</span>
+
+<span class="k">def</span> <span class="nf">y</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="n">t</span>
+
+<span class="c1"># Define the velocity components</span>
+<span class="k">def</span> <span class="nf">v_x</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">t</span> <span class="o">-</span> <span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">v_y</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="c1"># Define the acceleration components</span>
+<span class="k">def</span> <span class="nf">a_x</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">6</span>
+
+<span class="k">def</span> <span class="nf">a_y</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">12</span> <span class="o">*</span> <span class="n">t</span>
+
+<span class="c1"># Define the integrand for the length of the curve</span>
+<span class="k">def</span> <span class="nf">integrand</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">v_x</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">v_y</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># Time range for plotting</span>
+<span class="n">t_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">x_vals</span> <span class="o">=</span> <span class="n">x</span><span class="p">(</span><span class="n">t_vals</span><span class="p">)</span>
+<span class="n">y_vals</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">t_vals</span><span class="p">)</span>
+
+<span class="c1"># Plot the parametric curve</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Parametric Curve: Particle Path&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+
+<span class="c1"># Calculate and plot velocity and acceleration vectors at specific points</span>
+<span class="n">t_points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">v_x_vals</span> <span class="o">=</span> <span class="n">v_x</span><span class="p">(</span><span class="n">t_points</span><span class="p">)</span>
+<span class="n">v_y_vals</span> <span class="o">=</span> <span class="n">v_y</span><span class="p">(</span><span class="n">t_points</span><span class="p">)</span>
+<span class="n">a_x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">t_points</span><span class="p">,</span> <span class="n">a_x</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>  <span class="c1"># a_x is constant, so create an array with the same length</span>
+<span class="n">a_y_vals</span> <span class="o">=</span> <span class="n">a_y</span><span class="p">(</span><span class="n">t_points</span><span class="p">)</span>
+
+<span class="c1"># Plot velocity vectors</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t_points</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">t_points</span><span class="p">),</span> <span class="n">v_x_vals</span><span class="p">,</span> <span class="n">v_y_vals</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Velocity Vectors&quot;</span><span class="p">)</span>
+
+<span class="c1"># Plot acceleration vectors</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">x</span><span class="p">(</span><span class="n">t_points</span><span class="p">),</span> <span class="n">y</span><span class="p">(</span><span class="n">t_points</span><span class="p">),</span> <span class="n">a_x_vals</span><span class="p">,</span> <span class="n">a_y_vals</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Acceleration Vectors&quot;</span><span class="p">)</span>
+
+<span class="c1"># Labels and Title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Particle Motion: Parametric Curve with Velocity and Acceleration Vectors&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Calculate the length of the curve numerically using integration</span>
+<span class="n">curve_length</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">integrand</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The length of the curve traced by the particle between t = 0 and t = 2 is approximately </span><span class="si">{</span><span class="n">curve_length</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5c56e60418cbca51e6a8aab01052de095388c2cd89f5705da33b49b8554db597.png" src="_images/5c56e60418cbca51e6a8aab01052de095388c2cd89f5705da33b49b8554db597.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The length of the curve traced by the particle between t = 0 and t = 2 is approximately 17.10.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-4-separable-differential-equation">
+<h2>Problem 4: Separable Differential Equation<a class="headerlink" href="#problem-4-separable-differential-equation" title="Link to this heading">#</a></h2>
+<p>Solve the following first-order separable ODE:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} = x^2 + x
+\]</div>
+<p>with the initial condition <span class="math notranslate nohighlight">\(y(1) = 3\)</span>.</p>
+<section id="id5">
+<h3>Solution:<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>To solve, integrate both sides with respect to <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y = \int (x^2 + x) \, dx = \frac{x^3}{3} + \frac{x^2}{2} + C
+\]</div>
+<p>Using the initial condition <span class="math notranslate nohighlight">\(y(1) = 3\)</span>, substitute <span class="math notranslate nohighlight">\(x = 1\)</span> and <span class="math notranslate nohighlight">\(y = 3\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+3 = \frac{1^3}{3} + \frac{1^2}{2} + C \quad \Rightarrow \quad 3 = \frac{1}{3} + \frac{1}{2} + C
+\]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(C\)</span>, we get <span class="math notranslate nohighlight">\(C = \frac{15}{6}\)</span>, so the solution is:</p>
+<div class="math notranslate nohighlight">
+\[
+y = \frac{x^3}{3} + \frac{x^2}{2} + \frac{15}{6}
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-5-exponential-growth">
+<h2>Problem 5: Exponential Growth<a class="headerlink" href="#problem-5-exponential-growth" title="Link to this heading">#</a></h2>
+<p>Solve the differential equation:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} = e^x + x
+\]</div>
+<p>with the initial condition <span class="math notranslate nohighlight">\(y(0) = 10\)</span>.</p>
+<section id="id6">
+<h3>Solution:<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>To solve, integrate both sides with respect to <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y = \int (e^x + x) \, dx = e^x + \frac{x^2}{2} + C
+\]</div>
+<p>Using the initial condition <span class="math notranslate nohighlight">\(y(0) = 10\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+10 = e^0 + \frac{0^2}{2} + C \quad \Rightarrow \quad 10 = 1 + C
+\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(C = 9\)</span>, and the solution is:</p>
+<div class="math notranslate nohighlight">
+\[
+y = e^x + \frac{x^2}{2} + 9
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-6-separable-differential-equation">
+<h2>Problem 6: Separable Differential Equation<a class="headerlink" href="#problem-6-separable-differential-equation" title="Link to this heading">#</a></h2>
+<p>Solve the differential equation:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} = \frac{1}{y}
+\]</div>
+<p>with the initial condition <span class="math notranslate nohighlight">\(y(1) = 2\)</span>.</p>
+<section id="id7">
+<h3>Solution:<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>This equation is separable, so we can rewrite it as:</p>
+<div class="math notranslate nohighlight">
+\[
+y \, dy = dx
+\]</div>
+<p>Next, integrate both sides:</p>
+<div class="math notranslate nohighlight">
+\[
+\int y \, dy = \int dx
+\]</div>
+<p>This gives:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{y^2}{2} = x + C
+\]</div>
+<p>Now, multiply by 2 to simplify:</p>
+<div class="math notranslate nohighlight">
+\[
+y^2 = 2x + 2C
+\]</div>
+<p>Using the initial condition <span class="math notranslate nohighlight">\(y(1) = 2\)</span>, substitute <span class="math notranslate nohighlight">\(x = 1\)</span> and <span class="math notranslate nohighlight">\(y = 2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+2^2 = 2(1) + 2C \quad \Rightarrow \quad 4 = 2 + 2C
+\]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(C\)</span>, we get:</p>
+<div class="math notranslate nohighlight">
+\[
+C = 1
+\]</div>
+<p>Thus, the solution is:</p>
+<div class="math notranslate nohighlight">
+\[
+y^2 = 2x + 2
+\]</div>
+<p>Taking the square root of both sides:</p>
+<div class="math notranslate nohighlight">
+\[
+y = \pm \sqrt{2x + 2}
+\]</div>
+<p>For the positive root, the solution is:</p>
+<div class="math notranslate nohighlight">
+\[
+y = \sqrt{2x + 2}
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-7-linear-and-non-linear-differential-equations">
+<h2>Problem 7: Linear and Non-Linear Differential Equations<a class="headerlink" href="#problem-7-linear-and-non-linear-differential-equations" title="Link to this heading">#</a></h2>
+<p>Consider the following two differential equations:</p>
+<ol class="arabic">
+<li><p><strong>Linear Differential Equation</strong>:<br />
+Solve the linear first-order differential equation:</p>
+<div class="math notranslate nohighlight">
+\[
+   \frac{dy}{dx} + y = e^x
+   \]</div>
+</li>
+<li><p><strong>Non-Linear Differential Equation</strong>:<br />
+Solve the non-linear differential equation:</p>
+<div class="math notranslate nohighlight">
+\[
+   \frac{dy}{dx} = y^2 - x
+   \]</div>
+</li>
+</ol>
+<section id="id8">
+<h3>Solution:<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<section id="linear-differential-equation">
+<h4>1. <strong>Linear Differential Equation</strong><a class="headerlink" href="#linear-differential-equation" title="Link to this heading">#</a></h4>
+<p>The equation is of the form:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} + P(x) y = Q(x)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(P(x) = 1\)</span> and <span class="math notranslate nohighlight">\(Q(x) = e^x\)</span>.</p>
+<p><strong>Step 1</strong>: Find the integrating factor <span class="math notranslate nohighlight">\(\mu(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mu(x) = e^{\int P(x) \, dx} = e^{\int 1 \, dx} = e^x
+\]</div>
+<p><strong>Step 2</strong>: Multiply both sides of the differential equation by the integrating factor <span class="math notranslate nohighlight">\(\mu(x)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+e^x \frac{dy}{dx} + e^x y = e^{2x}
+\]</div>
+<p><strong>Step 3</strong>: The left-hand side is the derivative of <span class="math notranslate nohighlight">\(e^x y\)</span>, so we can rewrite the equation as:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d}{dx} \left( e^x y \right) = e^{2x}
+\]</div>
+<p><strong>Step 4</strong>: Integrate both sides:</p>
+<div class="math notranslate nohighlight">
+\[
+e^x y = \int e^{2x} \, dx = \frac{e^{2x}}{2} + C
+\]</div>
+<p><strong>Step 5</strong>: Solve for <span class="math notranslate nohighlight">\(y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+y = \frac{e^x}{2} + Ce^{-x}
+\]</div>
+<p>Thus, the general solution is:</p>
+<div class="math notranslate nohighlight">
+\[
+y = \frac{e^x}{2} + Ce^{-x}
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="non-linear-differential-equation">
+<h4>2. <strong>Non-Linear Differential Equation</strong><a class="headerlink" href="#non-linear-differential-equation" title="Link to this heading">#</a></h4>
+<p>The given equation is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} = y^2 - x
+\]</div>
+<p>This is a <strong>non-linear</strong> differential equation and does not have a straightforward analytical solution. However, it can be solved using numerical methods, such as <strong>Euler’s method</strong>, or qualitative techniques like <strong>direction fields</strong> to analyze the behavior of the solutions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>While there is no simple analytic solution to present here, numerical solutions can be computed based on initial conditions.</p>
+<p>We use the <strong>Runge-Kutta method</strong> to solve the differential equation:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dy}{dx} = y^2 - x
+\]</div>
+</div>
+<section id="python-code">
+<h5>Python Code:<a class="headerlink" href="#python-code" title="Link to this heading">#</a></h5>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Function representing the ODE dy/dx = y^2 - x</span>
+<span class="k">def</span> <span class="nf">dydx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span>
+
+<span class="c1"># Fourth-order Runge-Kutta method for numerical solution of ODE</span>
+<span class="k">def</span> <span class="nf">runge_kutta_method</span><span class="p">(</span><span class="n">dydx</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x_end</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+    <span class="n">x_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">x_end</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+    <span class="n">y_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x_values</span><span class="p">))</span>
+    <span class="n">y_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">y0</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x_values</span><span class="p">)):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x_values</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y_values</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+        <span class="n">k1</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">dydx</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+        <span class="n">k2</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">dydx</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">k1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">k3</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">dydx</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">k2</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">k4</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="n">dydx</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">k3</span><span class="p">)</span>
+        
+        <span class="n">y_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="p">(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">k3</span> <span class="o">+</span> <span class="n">k4</span><span class="p">)</span> <span class="o">/</span> <span class="mi">6</span>
+    
+    <span class="k">return</span> <span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span>
+
+<span class="c1"># Adjust the domain to avoid large values causing overflow</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Initial x</span>
+<span class="n">y0</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Initial y</span>
+<span class="n">x_end_new</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Limit the domain to avoid instability</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># Step size</span>
+
+<span class="c1"># Solve the ODE using Runge-Kutta method with a smaller domain</span>
+<span class="n">x_values_rk_new</span><span class="p">,</span> <span class="n">y_values_rk_new</span> <span class="o">=</span> <span class="n">runge_kutta_method</span><span class="p">(</span><span class="n">dydx</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">x_end_new</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+
+<span class="c1"># Plot the solution with the new domain</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_values_rk_new</span><span class="p">,</span> <span class="n">y_values_rk_new</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Numerical Solution (Runge-Kutta Method)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Solution of $dy/dx = y^2 - x$ using Runge-Kutta Method&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/6d32a946f3fb858c048e4b90de296c287fc689ac1c4c2557923b012e961bf031.png" src="_images/6d32a946f3fb858c048e4b90de296c287fc689ac1c4c2557923b012e961bf031.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-8-boundary-value-problem-with-initial-conditions">
+<h2>Problem 8: Boundary Value Problem with Initial Conditions<a class="headerlink" href="#problem-8-boundary-value-problem-with-initial-conditions" title="Link to this heading">#</a></h2>
+<p>Solve the following second-order boundary value problem (BVP):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d^2 y}{dx^2} = -k^2 y
+\]</div>
+<p>with the boundary conditions:</p>
+<div class="math notranslate nohighlight">
+\[
+y(0) = 0 \quad \text{and} \quad y(L) = 0
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(k\)</span> is a constant and <span class="math notranslate nohighlight">\(L\)</span> is the length of the domain.</p>
+<section id="id9">
+<h3>Solution:<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<section id="step-1-general-solution-of-the-ode">
+<h4>Step 1: General Solution of the ODE<a class="headerlink" href="#step-1-general-solution-of-the-ode" title="Link to this heading">#</a></h4>
+<p>The given equation is a second-order homogeneous linear differential equation with constant coefficients:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{d^2 y}{dx^2} = -k^2 y
+\]</div>
+<p>The characteristic equation for this differential equation is:</p>
+<div class="math notranslate nohighlight">
+\[
+r^2 + k^2 = 0
+\]</div>
+<p>This gives the roots:</p>
+<div class="math notranslate nohighlight">
+\[
+r = \pm ik
+\]</div>
+<p>So, the general solution for the differential equation is:</p>
+<div class="math notranslate nohighlight">
+\[
+y(x) = C_1 \sin(kx) + C_2 \cos(kx)
+\]</div>
+</section>
+<section id="step-2-apply-the-boundary-conditions">
+<h4>Step 2: Apply the Boundary Conditions<a class="headerlink" href="#step-2-apply-the-boundary-conditions" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>First Boundary Condition: <span class="math notranslate nohighlight">\(y(0) = 0\)</span></strong></p></li>
+</ol>
+<p>Substitute <span class="math notranslate nohighlight">\(x = 0\)</span> into the general solution:</p>
+<div class="math notranslate nohighlight">
+\[
+y(0) = C_1 \sin(0) + C_2 \cos(0) = 0 \quad \Rightarrow \quad C_2 = 0
+\]</div>
+<p>Thus, the solution simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+y(x) = C_1 \sin(kx)
+\]</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>Second Boundary Condition: <span class="math notranslate nohighlight">\(y(L) = 0\)</span></strong></p></li>
+</ol>
+<p>Now, substitute <span class="math notranslate nohighlight">\(x = L\)</span> into the simplified solution:</p>
+<div class="math notranslate nohighlight">
+\[
+y(L) = C_1 \sin(kL) = 0
+\]</div>
+<p>For non-trivial solutions (i.e., <span class="math notranslate nohighlight">\(C_1 \neq 0\)</span>), we require:</p>
+<div class="math notranslate nohighlight">
+\[
+\sin(kL) = 0
+\]</div>
+<p>This implies:</p>
+<div class="math notranslate nohighlight">
+\[
+kL = n\pi \quad \Rightarrow \quad k = \frac{n\pi}{L}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is an integer (i.e., <span class="math notranslate nohighlight">\(n = 1, 2, 3, \dots\)</span>).</p>
+</section>
+<section id="step-3-final-solution">
+<h4>Step 3: Final Solution<a class="headerlink" href="#step-3-final-solution" title="Link to this heading">#</a></h4>
+<p>The final solution for the boundary value problem is:</p>
+<div class="math notranslate nohighlight">
+\[
+y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(C_1\)</span> is an arbitrary constant and <span class="math notranslate nohighlight">\(n\)</span> is a positive integer.</p>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-9-vector-field-and-gradient">
+<h2>Problem 9: Vector Field and Gradient<a class="headerlink" href="#problem-9-vector-field-and-gradient" title="Link to this heading">#</a></h2>
+<p>Given the scalar function:</p>
+<div class="math notranslate nohighlight">
+\[
+\phi(x, y, z) = x^2 y + yz^2
+\]</div>
+<ol class="arabic simple">
+<li><p>Find the <strong>gradient</strong> of the scalar field <span class="math notranslate nohighlight">\(\phi(x, y, z)\)</span>.</p></li>
+<li><p>Plot the vector field representing the gradient in the <span class="math notranslate nohighlight">\(xy\)</span>-plane for <span class="math notranslate nohighlight">\(z = 0\)</span>.</p></li>
+</ol>
+<section id="id10">
+<h3>Solution:<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<section id="gradient-of-the-scalar-field">
+<h4>1. <strong>Gradient of the Scalar Field</strong><a class="headerlink" href="#gradient-of-the-scalar-field" title="Link to this heading">#</a></h4>
+<p>The gradient of a scalar field <span class="math notranslate nohighlight">\(\phi(x, y, z)\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla \phi = \left( \frac{\partial \phi}{\partial x}, \frac{\partial \phi}{\partial y}, \frac{\partial \phi}{\partial z} \right)
+\]</div>
+<p>For <span class="math notranslate nohighlight">\(\phi(x, y, z) = x^2 y + yz^2\)</span>, the partial derivatives are:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \phi}{\partial x} = 2xy
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \phi}{\partial y} = x^2 + z^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \phi}{\partial z} = 2yz
+\]</div>
+<p>Thus, the gradient vector field is:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla \phi = (2xy, x^2 + z^2, 2yz)
+\]</div>
+</section>
+<section id="plotting-the-gradient-field-in-the-xy-plane">
+<h4>2. <strong>Plotting the Gradient Field in the <span class="math notranslate nohighlight">\(xy\)</span>-Plane</strong><a class="headerlink" href="#plotting-the-gradient-field-in-the-xy-plane" title="Link to this heading">#</a></h4>
+<p>Since we’re plotting in the <span class="math notranslate nohighlight">\(xy\)</span>-plane for <span class="math notranslate nohighlight">\(z = 0\)</span>, the gradient simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla \phi(x, y, 0) = (2xy, x^2, 0)
+\]</div>
+<p>Here is the Python code to plot the vector field in the <span class="math notranslate nohighlight">\(xy\)</span>-plane:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define the scalar field gradient in the xy-plane (z=0)</span>
+<span class="k">def</span> <span class="nf">grad_phi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">grad_x</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+    <span class="n">grad_y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">grad_x</span><span class="p">,</span> <span class="n">grad_y</span>
+
+<span class="c1"># Create a grid of points</span>
+<span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">y_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">)</span>
+
+<span class="c1"># Compute the gradient at each point</span>
+<span class="n">U</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">grad_phi</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="c1"># Plot the vector field</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gradient of $\phi(x, y, z) = x^2 y + yz^2$ in the xy-plane (z=0)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/9a22b04d4976f8a4bc9558934ae499fdeaa4a2f78d40eb7ff07acbd18ef78dad.png" src="_images/9a22b04d4976f8a4bc9558934ae499fdeaa4a2f78d40eb7ff07acbd18ef78dad.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-10-line-surface-and-volume-integrals">
+<h2>Problem 10: Line, Surface, and Volume Integrals<a class="headerlink" href="#problem-10-line-surface-and-volume-integrals" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h3>Problem Statement<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Line Integral</strong>: Given the vector field <span class="math notranslate nohighlight">\(\mathbf{F}(x, y) = (x^2, y^2)\)</span>, compute the line integral of <span class="math notranslate nohighlight">\(\mathbf{F} \)</span> along the curve <span class="math notranslate nohighlight">\(C\)</span>, where <span class="math notranslate nohighlight">\(C\)</span> is the straight line path from point <span class="math notranslate nohighlight">\((0, 0)\)</span> to point <span class="math notranslate nohighlight">\((1, 1)\)</span>.</p></li>
+<li><p><strong>Surface Integral</strong>: Compute the surface integral of the vector field <span class="math notranslate nohighlight">\(\mathbf{F}(x, y, z) = (y, z, x)\)</span> over the surface <span class="math notranslate nohighlight">\(S\)</span>, where <span class="math notranslate nohighlight">\(S\)</span> is the portion of the plane <span class="math notranslate nohighlight">\(z = 4 - x - y\)</span> in the first octant.</p></li>
+<li><p><strong>Volume Integral</strong>: Compute the volume integral of the scalar field <span class="math notranslate nohighlight">\(f(x, y, z) = x + y + z\)</span> over the region <span class="math notranslate nohighlight">\(V\)</span>, where <span class="math notranslate nohighlight">\(V\)</span> is the region bounded by the cylinder <span class="math notranslate nohighlight">\(x^2 + y^2 = 1\)</span> and the planes <span class="math notranslate nohighlight">\(z = 0\)</span> and <span class="math notranslate nohighlight">\(z = 3\)</span>.</p></li>
+</ol>
+</section>
+<section id="id12">
+<h3>Solution<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<section id="line-integral">
+<h4>1. Line Integral<a class="headerlink" href="#line-integral" title="Link to this heading">#</a></h4>
+<p>We want to compute the line integral of the vector field <span class="math notranslate nohighlight">\(\mathbf{F}(x, y) = (x^2, y^2)\)</span> along the curve <span class="math notranslate nohighlight">\(C\)</span>, a straight line from <span class="math notranslate nohighlight">\((0, 0)\)</span> to <span class="math notranslate nohighlight">\((1, 1)\)</span>.</p>
+<p>The line integral is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_C \mathbf{F} \cdot d\mathbf{r}
+\]</div>
+<p>Parameterizing the line as <span class="math notranslate nohighlight">\(x(t) = t\)</span> and <span class="math notranslate nohighlight">\(y(t) = t\)</span>, the differential displacement vector is <span class="math notranslate nohighlight">\(d\mathbf{r} = (1, 1) dt\)</span>.</p>
+<p>The integral becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_0^1 (t^2 + t^2) dt = \int_0^1 2t^2 dt
+\]</div>
+<p>The result can be calculated as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
+
+<span class="c1"># Define the parameterized vector field F along the curve x(t) = t, y(t) = t</span>
+<span class="k">def</span> <span class="nf">integrand_line</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># (x^2 + y^2) = 2t^2</span>
+
+<span class="c1"># Compute the line integral from t = 0 to t = 1</span>
+<span class="n">line_integral</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">integrand_line</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Line integral: </span><span class="si">{</span><span class="n">line_integral</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Line integral: 0.67
+</pre></div>
+</div>
+</div>
+</div>
+<p>The line integral of the vector field ( \mathbf{F}(x, y) = (x^2, y^2) ) along the curve is:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_C \mathbf{F} \cdot d\mathbf{r} = \frac{2}{3}
+\]</div>
+</section>
+<section id="surface-integral">
+<h4>2. Surface Integral<a class="headerlink" href="#surface-integral" title="Link to this heading">#</a></h4>
+<p>We are asked to compute the surface integral of the vector field ( \mathbf{F}(x, y, z) = (y, z, x) ) over the surface ( S ), which is the portion of the plane ( z = 4 - x - y ) in the first octant.</p>
+<section id="step-1-surface-integral-formula">
+<h5>Step 1: Surface Integral Formula<a class="headerlink" href="#step-1-surface-integral-formula" title="Link to this heading">#</a></h5>
+<p>The surface integral of a vector field ( \mathbf{F} ) over a surface ( S ) is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\iint_S \mathbf{F} \cdot \mathbf{n} \, dS
+\]</div>
+<p>where ( \mathbf{n} ) is the unit normal vector to the surface, and ( dS ) is the differential surface area element.</p>
+</section>
+<section id="step-2-parameterization-and-normal-vector">
+<h5>Step 2: Parameterization and Normal Vector<a class="headerlink" href="#step-2-parameterization-and-normal-vector" title="Link to this heading">#</a></h5>
+<p>The surface ( S ) is described by the plane equation ( z = 4 - x - y ). This can be parameterized as:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{r}(x, y) = (x, y, 4 - x - y)
+\]</div>
+<p>The partial derivatives of ( \mathbf{r} ) with respect to ( x ) and ( y ) give us the tangent vectors:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \mathbf{r}}{\partial x} = (1, 0, -1) \quad \text{and} \quad \frac{\partial \mathbf{r}}{\partial y} = (0, 1, -1)
+\]</div>
+<p>The cross product of these tangent vectors gives us the normal vector to the surface:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{n} = \frac{\partial \mathbf{r}}{\partial x} \times \frac{\partial \mathbf{r}}{\partial y} = (-1, -1, 1)
+\]</div>
+</section>
+<section id="step-3-dot-product-of-mathbf-f-and-mathbf-n">
+<h5>Step 3: Dot Product of ( \mathbf{F} ) and ( \mathbf{n} )<a class="headerlink" href="#step-3-dot-product-of-mathbf-f-and-mathbf-n" title="Link to this heading">#</a></h5>
+<p>The vector field is ( \mathbf{F}(x, y, z) = (y, z, x) ), so we need to compute the dot product:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{F} \cdot \mathbf{n} = (y, z, x) \cdot (-1, -1, 1) = -y - z + x
+\]</div>
+<p>Substitute ( z = 4 - x - y ) into the dot product:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{F} \cdot \mathbf{n} = -y - (4 - x - y) + x = 2x - 4
+\]</div>
+</section>
+<section id="step-4-limits-of-integration">
+<h5>Step 4: Limits of Integration<a class="headerlink" href="#step-4-limits-of-integration" title="Link to this heading">#</a></h5>
+<p>The surface lies in the first octant, so the limits for ( x ) and ( y ) are:</p>
+<ul class="simple">
+<li><p>( x ) ranges from 0 to 4.</p></li>
+<li><p>For a given ( x ), ( y ) ranges from 0 to ( 4 - x ).</p></li>
+</ul>
+</section>
+<section id="step-5-set-up-the-surface-integral">
+<h5>Step 5: Set Up the Surface Integral<a class="headerlink" href="#step-5-set-up-the-surface-integral" title="Link to this heading">#</a></h5>
+<p>The surface integral becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+\iint_S (2x - 4) \, dS = \int_0^4 \int_0^{4-x} (2x - 4) \, dy \, dx
+\]</div>
+</section>
+<section id="step-6-solve-the-surface-integral-numerically">
+<h5>Step 6: Solve the Surface Integral Numerically<a class="headerlink" href="#step-6-solve-the-surface-integral-numerically" title="Link to this heading">#</a></h5>
+<p>We can use Python to compute the surface integral:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">dblquad</span>
+
+<span class="c1"># Define the integrand for the surface integral (2x - 4)</span>
+<span class="k">def</span> <span class="nf">integrand_surface</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
+
+<span class="c1"># Limits for the region of integration</span>
+<span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span>
+<span class="n">y_min</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">y_max</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">4</span> <span class="o">-</span> <span class="n">x</span>
+
+<span class="c1"># Compute the surface integral</span>
+<span class="n">surface_integral</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">dblquad</span><span class="p">(</span><span class="n">integrand_surface</span><span class="p">,</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Surface integral: </span><span class="si">{</span><span class="n">surface_integral</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Surface integral: -10.67
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-7-final-answer">
+<h5>Step 7: Final Answer<a class="headerlink" href="#step-7-final-answer" title="Link to this heading">#</a></h5>
+<p>After performing the integration, the result of the surface integral is:</p>
+<div class="math notranslate nohighlight">
+\[
+\iint_S \mathbf{F} \cdot \mathbf{n} \, dS = -\frac{32}{3}
+\]</div>
+</section>
+</section>
+<section id="volume-integral">
+<h4>3. Volume Integral<a class="headerlink" href="#volume-integral" title="Link to this heading">#</a></h4>
+<p>We are asked to compute the volume integral of the scalar field <span class="math notranslate nohighlight">\( f(x, y, z) = x + y + z \)</span> over the region <span class="math notranslate nohighlight">\( V \)</span>, which is bounded by the cylinder <span class="math notranslate nohighlight">\( x^2 + y^2 = 1 \)</span> and the planes <span class="math notranslate nohighlight">\( z = 0 \)</span> and <span class="math notranslate nohighlight">\( z = 3 \)</span>.</p>
+<section id="step-1-volume-integral-formula">
+<h5>Step 1: Volume Integral Formula<a class="headerlink" href="#step-1-volume-integral-formula" title="Link to this heading">#</a></h5>
+<p>The volume integral of a scalar field <span class="math notranslate nohighlight">\( f(x, y, z) \)</span> over a volume <span class="math notranslate nohighlight">\( V \)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\iiint_V f(x, y, z) \, dV
+\]</div>
+</section>
+<section id="step-2-switch-to-cylindrical-coordinates">
+<h5>Step 2: Switch to Cylindrical Coordinates<a class="headerlink" href="#step-2-switch-to-cylindrical-coordinates" title="Link to this heading">#</a></h5>
+<p>Since the region <span class="math notranslate nohighlight">\( V \)</span> is a cylinder, it’s convenient to switch to cylindrical coordinates:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( x = r \cos\theta \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( y = r \sin\theta \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( z = z \)</span></p></li>
+</ul>
+<p>The volume element in cylindrical coordinates is:</p>
+<div class="math notranslate nohighlight">
+\[
+dV = r \, dr \, d\theta \, dz
+\]</div>
+<p>The scalar field <span class="math notranslate nohighlight">\( f(x, y, z) = x + y + z \)</span> becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+f(r, \theta, z) = r \cos\theta + r \sin\theta + z
+\]</div>
+</section>
+<section id="step-3-set-up-the-volume-integral">
+<h5>Step 3: Set Up the Volume Integral<a class="headerlink" href="#step-3-set-up-the-volume-integral" title="Link to this heading">#</a></h5>
+<p>The region <span class="math notranslate nohighlight">\( V \)</span> is bounded by:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( r \in [0, 1] \)</span> (the radius of the cylinder),</p></li>
+<li><p><span class="math notranslate nohighlight">\( \theta \in [0, 2\pi] \)</span> (the full revolution around the cylinder),</p></li>
+<li><p><span class="math notranslate nohighlight">\( z \in [0, 3] \)</span> (the height of the cylinder).</p></li>
+</ul>
+<p>The volume integral in cylindrical coordinates is:</p>
+<div class="math notranslate nohighlight">
+\[
+\iiint_V (r \cos\theta + r \sin\theta + z) \, r \, dr \, d\theta \, dz
+\]</div>
+</section>
+<section id="step-4-solve-the-volume-integral-numerically">
+<h5>Step 4: Solve the Volume Integral Numerically<a class="headerlink" href="#step-4-solve-the-volume-integral-numerically" title="Link to this heading">#</a></h5>
+<p>We can use Python to compute the volume integral:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">tplquad</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Define the scalar field in cylindrical coordinates f(r, theta, z)</span>
+<span class="k">def</span> <span class="nf">integrand_volume</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">r</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">r</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span>
+
+<span class="c1"># Limits for the volume integral</span>
+<span class="n">r_min</span><span class="p">,</span> <span class="n">r_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="n">theta_min</span><span class="p">,</span> <span class="n">theta_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span>
+
+<span class="c1"># Compute the volume integral</span>
+<span class="n">volume_integral</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tplquad</span><span class="p">(</span><span class="n">integrand_volume</span><span class="p">,</span> <span class="n">z_min</span><span class="p">,</span> <span class="n">z_max</span><span class="p">,</span> <span class="n">r_min</span><span class="p">,</span> <span class="n">r_max</span><span class="p">,</span> <span class="n">theta_min</span><span class="p">,</span> <span class="n">theta_max</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Volume integral: </span><span class="si">{</span><span class="n">volume_integral</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Volume integral: 34.07
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-final-answer">
+<h5>Step 5: Final Answer<a class="headerlink" href="#step-5-final-answer" title="Link to this heading">#</a></h5>
+<p>After performing the integration, the result of the volume integral is:</p>
+<div class="math notranslate nohighlight">
+\[
+\iiint_V (x + y + z) \, dV = 9\pi
+\]</div>
+</section>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-11-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">
+<h2>Problem 11: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow<a class="headerlink" href="#problem-11-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h3>Problem Statement:<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Divergence Theorem</strong>: Given the vector field <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (x^2, y^2, z^2) \)</span>, use the <strong>Divergence Theorem</strong> to compute the flux of <span class="math notranslate nohighlight">\( \mathbf{F} \)</span> through the surface of the cube bounded by the planes <span class="math notranslate nohighlight">\( x = 0 \)</span>, <span class="math notranslate nohighlight">\( x = 1 \)</span>, <span class="math notranslate nohighlight">\( y = 0 \)</span>, <span class="math notranslate nohighlight">\( y = 1 \)</span>, <span class="math notranslate nohighlight">\( z = 0 \)</span>, and <span class="math notranslate nohighlight">\( z = 1 \)</span>.</p></li>
+<li><p><strong>Stokes’ Theorem</strong>: Given the vector field <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (-y, x, 0) \)</span>, use <strong>Stokes’ Theorem</strong> to compute the circulation of <span class="math notranslate nohighlight">\( \mathbf{F} \)</span> around the boundary of the surface defined by the disk <span class="math notranslate nohighlight">\( x^2 + y^2 \leq 1 \)</span> in the plane <span class="math notranslate nohighlight">\( z = 0 \)</span>.</p></li>
+</ol>
+</section>
+<section id="id14">
+<h3>Solution<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<section id="divergence-theorem">
+<h4>1. Divergence Theorem:<a class="headerlink" href="#divergence-theorem" title="Link to this heading">#</a></h4>
+<p>The <strong>Divergence Theorem</strong> relates the flux of a vector field through a closed surface to the volume integral of the divergence of the vector field over the region enclosed by the surface. Mathematically, it states:</p>
+<div class="math notranslate nohighlight">
+\[
+\iint_S \mathbf{F} \cdot d\mathbf{A} = \iiint_V (\nabla \cdot \mathbf{F}) \, dV
+\]</div>
+<p>where <span class="math notranslate nohighlight">\( \mathbf{F} \)</span> is the vector field, <span class="math notranslate nohighlight">\( d\mathbf{A} \)</span> is the surface area element, and <span class="math notranslate nohighlight">\( \nabla \cdot \mathbf{F} \)</span> is the divergence of <span class="math notranslate nohighlight">\( \mathbf{F} \)</span>.</p>
+<p><strong>Step 1</strong>: Compute the divergence of the vector field <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (x^2, y^2, z^2) \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla \cdot \mathbf{F} = \frac{\partial}{\partial x}(x^2) + \frac{\partial}{\partial y}(y^2) + \frac{\partial}{\partial z}(z^2) = 2x + 2y + 2z
+\]</div>
+<p><strong>Step 2</strong>: Set up the volume integral over the cube <span class="math notranslate nohighlight">\( 0 \leq x \leq 1 \)</span>, <span class="math notranslate nohighlight">\( 0 \leq y \leq 1 \)</span>, and <span class="math notranslate nohighlight">\( 0 \leq z \leq 1 \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\iiint_V (2x + 2y + 2z) \, dV = \int_0^1 \int_0^1 \int_0^1 (2x + 2y + 2z) \, dx \, dy \, dz
+\]</div>
+<p><strong>Step 3</strong>: Compute the integral:</p>
+<ol class="arabic simple">
+<li><p>Integrating with respect to <span class="math notranslate nohighlight">\( x \)</span>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\int_0^1 (2x + 2y + 2z) \, dx = \left[ x^2 + 2yx + 2zx \right]_0^1 = 1 + 2y + 2z
+\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Integrating with respect to <span class="math notranslate nohighlight">\( y \)</span>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\int_0^1 (1 + 2y + 2z) \, dy = \left[ y + y^2 + 2zy \right]_0^1 = 1 + 1 + 2z = 2 + 2z
+\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Finally, integrate with respect to <span class="math notranslate nohighlight">\( z \)</span>:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\int_0^1 (2 + 2z) \, dz = \left[ 2z + z^2 \right]_0^1 = 2 + 1 = 3
+\]</div>
+<p>Thus, the flux of <span class="math notranslate nohighlight">\( \mathbf{F} \)</span> through the surface of the cube is:</p>
+<div class="math notranslate nohighlight">
+\[
+\iint_S \mathbf{F} \cdot d\mathbf{A} = 3
+\]</div>
+<section id="python">
+<h5>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h5>
+<p>We will create a grid of points in the cube and define the vector field <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (x^2, y^2, z^2) \)</span> on this grid.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Create a grid of points in the cube</span>
+<span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">z_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">z_vals</span><span class="p">)</span>
+
+
+<span class="c1"># Define the vector field F(x, y, z) = (x^2, y^2, z^2)</span>
+<span class="c1"># Vector field components</span>
+<span class="n">F_x</span> <span class="o">=</span> <span class="n">X</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># x component of the vector field</span>
+<span class="n">F_y</span> <span class="o">=</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># y component of the vector field</span>
+<span class="n">F_z</span> <span class="o">=</span> <span class="n">Z</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># z component of the vector field</span>
+
+<span class="c1"># Plot the vector field using quiver</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">F_x</span><span class="p">,</span> <span class="n">F_y</span><span class="p">,</span> <span class="n">F_z</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="c1"># Set labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X axis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y axis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Z axis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Vector Field $</span><span class="se">\\</span><span class="s1">mathbf</span><span class="si">{F}</span><span class="s1">(x, y, z) = (x^2, y^2, z^2)$ in the Cube&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/4fffd4dc6d5e3baa3aa4aecb96bf07a24c08c48c2ae0b364b1ad46c884019ecf.png" src="_images/4fffd4dc6d5e3baa3aa4aecb96bf07a24c08c48c2ae0b364b1ad46c884019ecf.png" />
+</div>
+</div>
+<p>Plot of the divergence field at <span class="math notranslate nohighlight">\(Z=0\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+
+<span class="c1"># Create a grid of points in the cube</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">50</span>  <span class="c1"># Increase the grid density for a smoother surface plot</span>
+<span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">)</span>
+
+<span class="c1"># Calculate the divergence at z = 0 plane</span>
+<span class="n">Divergence_z0</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">X</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">Y</span>  <span class="c1"># Since z = 0, the divergence simplifies to 2x + 2y</span>
+
+<span class="c1"># Create a 3D surface plot for the divergence on z = 0 plane</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot the surface</span>
+<span class="n">surface_plot</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Divergence_z0</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add a color bar</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">surface_plot</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="c1"># Set labels</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X axis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y axis&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Divergence&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Divergence $</span><span class="se">\\</span><span class="s1">nabla </span><span class="se">\\</span><span class="s1">cdot </span><span class="se">\\</span><span class="s1">mathbf</span><span class="si">{F}</span><span class="s1"> = 2x + 2y$ on the $z = 0$ plane&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b5edefacd9b4b1ff5e7e5b7976a56fe1e7fdf44aa419f5a9e3b69575075452d2.png" src="_images/b5edefacd9b4b1ff5e7e5b7976a56fe1e7fdf44aa419f5a9e3b69575075452d2.png" />
+</div>
+</div>
+<p>Volume integral for computing the divergence</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">tplquad</span>
+
+<span class="c1"># Define the divergence of the vector field</span>
+<span class="k">def</span> <span class="nf">divergence</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">z</span>
+
+<span class="c1"># Limits of the cube: x, y, z in [0, 1]</span>
+<span class="n">volume_integral</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">tplquad</span><span class="p">(</span><span class="n">divergence</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Volume integral of the divergence: </span><span class="si">{</span><span class="n">volume_integral</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Volume integral of the divergence: 3.00
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="stokes-theorem">
+<h4>2. Stokes’ Theorem<a class="headerlink" href="#stokes-theorem" title="Link to this heading">#</a></h4>
+<p><strong>Stokes’ Theorem</strong> relates the circulation of a vector field around a closed curve to the surface integral of the curl of the vector field over the surface bounded by the curve. Mathematically, it states:</p>
+<div class="math notranslate nohighlight">
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_S (\nabla \times \mathbf{F}) \cdot d\mathbf{A}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\( C \)</span> is the boundary curve, and <span class="math notranslate nohighlight">\( S \)</span> is the surface bounded by <span class="math notranslate nohighlight">\( C \)</span>.</p>
+<p><strong>Step 1</strong>: Compute the curl of the vector field <span class="math notranslate nohighlight">\( \mathbf{F}(x, y, z) = (-y, x, 0) \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla \times \mathbf{F} = \left( \frac{\partial}{\partial y}(0) - \frac{\partial}{\partial z}(x), \frac{\partial}{\partial z}(-y) - \frac{\partial}{\partial x}(0), \frac{\partial}{\partial x}(x) - \frac{\partial}{\partial y}(-y) \right) = (0, 0, 2)
+\]</div>
+<p>The curl of <span class="math notranslate nohighlight">\( \mathbf{F} \)</span> is <span class="math notranslate nohighlight">\( (0, 0, 2) \)</span>.</p>
+<p><strong>Step 2</strong>: The surface is the disk <span class="math notranslate nohighlight">\( x^2 + y^2 \leq 1 \)</span> in the plane <span class="math notranslate nohighlight">\( z = 0 \)</span>. The area element for a flat disk is <span class="math notranslate nohighlight">\( dA = dx \, dy \)</span>.</p>
+<p>Thus, the surface integral becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+\iint_S (0, 0, 2) \cdot (0, 0, 1) \, dA = 2 \iint_S dA
+\]</div>
+<p><strong>Step 3</strong>: The area of the disk is:</p>
+<div class="math notranslate nohighlight">
+\[
+\iint_S dA = \pi (1^2) = \pi
+\]</div>
+<p>Therefore, the circulation of <span class="math notranslate nohighlight">\( \mathbf{F} \)</span> around the boundary of the disk is:</p>
+<div class="math notranslate nohighlight">
+\[
+\oint_C \mathbf{F} \cdot d\mathbf{r} = 2\pi
+\]</div>
+</section>
+<section id="id15">
+<h4>Python<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<p>Visualize the vector field</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define the grid for the disk x^2 + y^2 &lt;= 1</span>
+<span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">y_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">)</span>
+
+<span class="c1"># Mask the points that lie outside the disk (x^2 + y^2 &gt; 1)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">X</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">Y</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;=</span> <span class="mi">1</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">Y</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+
+<span class="c1"># Define the vector field F(x, y, z) = (-y, x, 0) at z = 0</span>
+<span class="n">U</span> <span class="o">=</span> <span class="o">-</span><span class="n">Y</span>  <span class="c1"># x-component of the vector field</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">X</span>   <span class="c1"># y-component of the vector field</span>
+
+<span class="c1"># Plot the vector field</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Vector Field $</span><span class="se">\\</span><span class="s2">mathbf</span><span class="si">{F}</span><span class="s2">(x, y, z) = (-y, x, 0)$ in the plane $z = 0$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/868f11922f683fc9c4ebefaaaf3048edb5d226932b890b8ceece1c6a5f4bb5f4.png" src="_images/868f11922f683fc9c4ebefaaaf3048edb5d226932b890b8ceece1c6a5f4bb5f4.png" />
+</div>
+</div>
+<p>Plot the Boundary Curve:  The boundary curve of the disk is the unit circle</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the boundary curve (circle) x^2 + y^2 = 1</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">x_circle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+<span class="n">y_circle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+<span class="c1"># Plot the vector field and the boundary curve</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_circle</span><span class="p">,</span> <span class="n">y_circle</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Boundary Curve&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Vector Field and Boundary Curve $x^2 + y^2 = 1$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/88ad401078b41b6d9f49647a05659ea7aaaaa72fbc3d1bd3d392ede8393f9c5a.png" src="_images/88ad401078b41b6d9f49647a05659ea7aaaaa72fbc3d1bd3d392ede8393f9c5a.png" />
+</div>
+</div>
+<p>Calculate the Curl</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Area of the disk</span>
+<span class="n">area_of_disk</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">1</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># radius = 1</span>
+<span class="n">curl_z</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># curl in the z direction</span>
+
+<span class="c1"># Surface integral of the curl</span>
+<span class="n">surface_integral</span> <span class="o">=</span> <span class="n">curl_z</span> <span class="o">*</span> <span class="n">area_of_disk</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Surface integral of the curl: </span><span class="si">{</span><span class="n">surface_integral</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Surface integral of the curl: 6.28
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="problem-12-motion-on-an-inclined-plane">
+<h2>Problem 12: Motion on an Inclined Plane<a class="headerlink" href="#problem-12-motion-on-an-inclined-plane" title="Link to this heading">#</a></h2>
+<p>A block of mass <span class="math notranslate nohighlight">\( m = 5 \, \text{kg} \)</span> is placed on a frictionless inclined plane, which makes an angle of <span class="math notranslate nohighlight">\( \theta = 30^\circ \)</span> with the horizontal. The block is released from rest at the top of the incline.</p>
+<ol class="arabic simple">
+<li><p>What is the acceleration of the block along the incline?</p></li>
+<li><p>How fast is the block moving after 2 seconds?</p></li>
+<li><p>How far down the incline has the block moved after 2 seconds?</p></li>
+</ol>
+<section id="id16">
+<h3>Solution<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<section id="acceleration-along-the-incline">
+<h4>1. Acceleration Along the Incline<a class="headerlink" href="#acceleration-along-the-incline" title="Link to this heading">#</a></h4>
+<p>Using Newton’s second law of motion, the net force acting on the block along the incline is the component of the gravitational force that acts parallel to the incline. Since the plane is frictionless, the only force along the incline is due to gravity:</p>
+<div class="math notranslate nohighlight">
+\[
+F_{\parallel} = mg \sin \theta
+\]</div>
+<p>According to Newton’s second law, <span class="math notranslate nohighlight">\( F = ma \)</span>, so the acceleration along the incline is:</p>
+<div class="math notranslate nohighlight">
+\[
+a = \frac{F_{\parallel}}{m} = \frac{mg \sin \theta}{m} = g \sin \theta
+\]</div>
+<p>Substituting the values:</p>
+<div class="math notranslate nohighlight">
+\[
+a = (9.8 \, \text{m/s}^2) \sin 30^\circ = (9.8 \, \text{m/s}^2) \times 0.5 = 4.9 \, \text{m/s}^2
+\]</div>
+<p>Thus, the acceleration of the block along the incline is:</p>
+<div class="math notranslate nohighlight">
+\[
+a = 4.9 \, \text{m/s}^2
+\]</div>
+</section>
+<section id="speed-after-2-seconds">
+<h4>2. Speed After 2 Seconds<a class="headerlink" href="#speed-after-2-seconds" title="Link to this heading">#</a></h4>
+<p>The block is released from rest, so its initial velocity is <span class="math notranslate nohighlight">\( v_0 = 0 \, \text{m/s} \)</span>. Using the equation of motion:</p>
+<div class="math notranslate nohighlight">
+\[
+v = v_0 + at
+\]</div>
+<p>Substitute the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+v = 0 + (4.9 \, \text{m/s}^2) \times 2 \, \text{s} = 9.8 \, \text{m/s}
+\]</div>
+<p>Thus, after 2 seconds, the speed of the block is:</p>
+<div class="math notranslate nohighlight">
+\[
+v = 9.8 \, \text{m/s}
+\]</div>
+</section>
+<section id="distance-traveled-after-2-seconds">
+<h4>3. Distance Traveled After 2 Seconds<a class="headerlink" href="#distance-traveled-after-2-seconds" title="Link to this heading">#</a></h4>
+<p>We can use the equation of motion:</p>
+<div class="math notranslate nohighlight">
+\[
+s = v_0 t + \frac{1}{2} a t^2
+\]</div>
+<p>Substitute the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+s = 0 \times 2 + \frac{1}{2} (4.9 \, \text{m/s}^2) (2 \, \text{s})^2 = \frac{1}{2} (4.9 \, \text{m/s}^2) \times 4 = 9.8 \, \text{m}
+\]</div>
+<p>Thus, the block travels a distance of:</p>
+<div class="math notranslate nohighlight">
+\[
+s = 9.8 \, \text{m}
+\]</div>
+</section>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>The acceleration along the incline is <span class="math notranslate nohighlight">\( 4.9 \, \text{m/s}^2 \)</span>.</p></li>
+<li><p>The speed after 2 seconds is <span class="math notranslate nohighlight">\( 9.8 \, \text{m/s} \)</span>.</p></li>
+<li><p>The distance traveled after 2 seconds is <span class="math notranslate nohighlight">\( 9.8 \, \text{m} \)</span>.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-13-object-in-uniform-circular-motion-with-angular-velocity">
+<h2>Problem 13: Object in Uniform Circular Motion with Angular Velocity<a class="headerlink" href="#problem-13-object-in-uniform-circular-motion-with-angular-velocity" title="Link to this heading">#</a></h2>
+<p>A car of mass <span class="math notranslate nohighlight">\(m = 1000 \, \text{kg}\)</span> is moving in a circular track of radius <span class="math notranslate nohighlight">\(r = 50 \, \text{m}\)</span> with a constant speed of <span class="math notranslate nohighlight">\(v = 20 \, \text{m/s}\)</span>.</p>
+<ol class="arabic simple">
+<li><p>What is the magnitude of the centripetal force acting on the car?</p></li>
+<li><p>What is the angular velocity of the car?</p></li>
+<li><p>If the coefficient of static friction between the tires and the track is <span class="math notranslate nohighlight">\(\mu_s = 0.6\)</span>, what is the maximum speed the car can have before it starts to skid?</p></li>
+</ol>
+<section id="id17">
+<h3>Solution<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<section id="magnitude-of-the-centripetal-force">
+<h4>1. Magnitude of the Centripetal Force<a class="headerlink" href="#magnitude-of-the-centripetal-force" title="Link to this heading">#</a></h4>
+<p>In uniform circular motion, the centripetal force is the force that keeps an object moving in a circular path and is directed towards the center of the circle. The formula for centripetal force is:</p>
+<div class="math notranslate nohighlight">
+\[
+F_c = \frac{mv^2}{r}
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m = 1000 \, \text{kg}\)</span> is the mass of the car,</p></li>
+<li><p><span class="math notranslate nohighlight">\(v = 20 \, \text{m/s}\)</span> is the speed of the car,</p></li>
+<li><p><span class="math notranslate nohighlight">\(r = 50 \, \text{m}\)</span> is the radius of the circular path.</p></li>
+</ul>
+<p>Substituting the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+F_c = \frac{(1000 \, \text{kg}) \times (20 \, \text{m/s})^2}{50 \, \text{m}} = \frac{1000 \times 400}{50} = 8000 \, \text{N}
+\]</div>
+<p>Thus, the magnitude of the centripetal force is:</p>
+<div class="math notranslate nohighlight">
+\[
+F_c = 8000 \, \text{N}
+\]</div>
+</section>
+<section id="angular-velocity-of-the-car">
+<h4>2. Angular Velocity of the Car<a class="headerlink" href="#angular-velocity-of-the-car" title="Link to this heading">#</a></h4>
+<p>The <strong>angular velocity</strong> <span class="math notranslate nohighlight">\( \omega \)</span> of an object in circular motion is related to its linear velocity <span class="math notranslate nohighlight">\(v\)</span> by the following relationship:</p>
+<div class="math notranslate nohighlight">
+\[
+\omega = \frac{v}{r}
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v = 20 \, \text{m/s}\)</span> is the linear velocity of the car,</p></li>
+<li><p><span class="math notranslate nohighlight">\(r = 50 \, \text{m}\)</span> is the radius of the circular path.</p></li>
+</ul>
+<p>Substituting the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+\omega = \frac{20 \, \text{m/s}}{50 \, \text{m}} = 0.4 \, \text{rad/s}
+\]</div>
+<p>Thus, the angular velocity of the car is:</p>
+<div class="math notranslate nohighlight">
+\[
+\omega = 0.4 \, \text{rad/s}
+\]</div>
+</section>
+<section id="maximum-speed-before-skidding">
+<h4>3. Maximum Speed Before Skidding<a class="headerlink" href="#maximum-speed-before-skidding" title="Link to this heading">#</a></h4>
+<p>The car will start to skid when the frictional force between the tires and the track is no longer sufficient to provide the necessary centripetal force. The maximum frictional force (which acts as the centripetal force) is given by:</p>
+<div class="math notranslate nohighlight">
+\[
+F_f = \mu_s F_n
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mu_s = 0.6\)</span> is the coefficient of static friction,</p></li>
+<li><p><span class="math notranslate nohighlight">\(F_n = mg\)</span> is the normal force, where <span class="math notranslate nohighlight">\(g = 9.8 \, \text{m/s}^2\)</span> is the acceleration due to gravity.</p></li>
+</ul>
+<p>Substituting the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+F_f = \mu_s mg = 0.6 \times 1000 \, \text{kg} \times 9.8 \, \text{m/s}^2 = 5880 \, \text{N}
+\]</div>
+<p>The maximum centripetal force that friction can provide is <span class="math notranslate nohighlight">\(F_f = 5880 \, \text{N}\)</span>. This force is also equal to the centripetal force required for circular motion, so we can set it equal to the formula for centripetal force and solve for the maximum speed <span class="math notranslate nohighlight">\(v_\text{max}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+F_f = \frac{m v_\text{max}^2}{r}
+\]</div>
+<p>Substitute the values for <span class="math notranslate nohighlight">\(F_f\)</span>, <span class="math notranslate nohighlight">\(m\)</span>, and <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+5880 \, \text{N} = \frac{1000 \, \text{kg} \times v_\text{max}^2}{50 \, \text{m}}
+\]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(v_\text{max}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v_\text{max}^2 = \frac{5880 \times 50}{1000} = 294
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+v_\text{max} = \sqrt{294} \approx 17.15 \, \text{m/s}
+\]</div>
+<p>Thus, the maximum speed the car can have before skidding is:</p>
+<div class="math notranslate nohighlight">
+\[
+v_\text{max} \approx 17.15 \, \text{m/s}
+\]</div>
+</section>
+</section>
+<section id="summary-of-results">
+<h3>Summary of Results<a class="headerlink" href="#summary-of-results" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>The magnitude of the centripetal force acting on the car is <span class="math notranslate nohighlight">\(8000 \, \text{N}\)</span>.</p></li>
+<li><p>The angular velocity of the car is <span class="math notranslate nohighlight">\(0.4 \, \text{rad/s}\)</span>.</p></li>
+<li><p>The maximum speed the car can have before it starts to skid is approximately <span class="math notranslate nohighlight">\(17.15 \, \text{m/s}\)</span>.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-14-elastic-collision-and-energy-conservation">
+<h2>Problem 14: Elastic Collision and Energy Conservation<a class="headerlink" href="#problem-14-elastic-collision-and-energy-conservation" title="Link to this heading">#</a></h2>
+<p>A ball of mass <span class="math notranslate nohighlight">\(m_1 = 2 \, \text{kg}\)</span> is moving with a velocity of <span class="math notranslate nohighlight">\(v_1 = 5 \, \text{m/s}\)</span> towards another stationary ball of mass <span class="math notranslate nohighlight">\(m_2 = 3 \, \text{kg}\)</span>. The collision between the two balls is perfectly elastic.</p>
+<ol class="arabic simple">
+<li><p>What are the velocities of the two balls after the collision?</p></li>
+<li><p>Verify that both momentum and kinetic energy are conserved in the system.</p></li>
+</ol>
+<section id="id18">
+<h3>Solution<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<section id="final-velocities-of-the-balls-after-the-collision">
+<h4>1. Final Velocities of the Balls After the Collision<a class="headerlink" href="#final-velocities-of-the-balls-after-the-collision" title="Link to this heading">#</a></h4>
+<p>In a perfectly elastic collision, both <strong>momentum</strong> and <strong>kinetic energy</strong> are conserved.</p>
+<section id="conservation-of-momentum">
+<h5>Conservation of Momentum<a class="headerlink" href="#conservation-of-momentum" title="Link to this heading">#</a></h5>
+<p>The total momentum before the collision must equal the total momentum after the collision. The equation for conservation of momentum is:</p>
+<div class="math notranslate nohighlight">
+\[
+m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2'
+\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_1' \)</span> is the velocity of ball 1 after the collision,</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_2' \)</span> is the velocity of ball 2 after the collision,</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_2 = 0\)</span> since ball 2 is initially at rest.</p></li>
+</ul>
+<p>Thus, the momentum conservation equation simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+m_1 v_1 = m_1 v_1' + m_2 v_2'
+\]</div>
+<p>Substitute the known values for <span class="math notranslate nohighlight">\(m_1\)</span>, <span class="math notranslate nohighlight">\(v_1\)</span>, and <span class="math notranslate nohighlight">\(m_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+2 \, \text{kg} \times 5 \, \text{m/s} = 2 \, \text{kg} \times v_1' + 3 \, \text{kg} \times v_2'
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+10 \, \text{kg} \cdot \text{m/s} = 2 v_1' + 3 v_2'
+\]</div>
+</section>
+<section id="conservation-of-kinetic-energy">
+<h5>Conservation of Kinetic Energy<a class="headerlink" href="#conservation-of-kinetic-energy" title="Link to this heading">#</a></h5>
+<p>The total kinetic energy before the collision must equal the total kinetic energy after the collision. The equation for conservation of kinetic energy is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} m_1 v_1^2 + \frac{1}{2} m_2 v_2^2 = \frac{1}{2} m_1 v_1'^2 + \frac{1}{2} m_2 v_2'^2
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(v_2 = 0\)</span>, this simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} m_1 v_1^2 = \frac{1}{2} m_1 v_1'^2 + \frac{1}{2} m_2 v_2'^2
+\]</div>
+<p>Substitute the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{2} \times 2 \, \text{kg} \times (5 \, \text{m/s})^2 = \frac{1}{2} \times 2 \, \text{kg} \times v_1'^2 + \frac{1}{2} \times 3 \, \text{kg} \times v_2'^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+25 \, \text{J} = v_1'^2 + 1.5 v_2'^2
+\]</div>
+<p>Now, we have two equations:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\( 10 = 2 v_1' + 3 v_2' \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( 25 = v_1'^2 + 1.5 v_2'^2 \)</span></p></li>
+</ol>
+<p>We can solve this system of equations to find <span class="math notranslate nohighlight">\(v_1'\)</span> and <span class="math notranslate nohighlight">\(v_2'\)</span>.</p>
+</section>
+<section id="solving-the-system-of-equations">
+<h5>Solving the System of Equations<a class="headerlink" href="#solving-the-system-of-equations" title="Link to this heading">#</a></h5>
+<p>From the momentum equation:</p>
+<div class="math notranslate nohighlight">
+\[
+v_1' = 5 - 1.5 v_2'
+\]</div>
+<p>Substitute this into the energy equation:</p>
+<div class="math notranslate nohighlight">
+\[
+25 = (5 - 1.5 v_2')^2 + 1.5 v_2'^2
+\]</div>
+<p>Expand and simplify:</p>
+<div class="math notranslate nohighlight">
+\[
+25 = (25 - 15 v_2' + 2.25 v_2'^2) + 1.5 v_2'^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+25 = 25 - 15 v_2' + 3.75 v_2'^2
+\]</div>
+<p>Simplifying further:</p>
+<div class="math notranslate nohighlight">
+\[
+0 = -15 v_2' + 3.75 v_2'^2
+\]</div>
+<p>Factor out <span class="math notranslate nohighlight">\(v_2'\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v_2' (3.75 v_2' - 15) = 0
+\]</div>
+<p>Thus, <span class="math notranslate nohighlight">\(v_2' = 0\)</span> or <span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(v_2' = 0\)</span>, the collision would not have been elastic, so <span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span>.</p>
+<p>Now, substitute <span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span> into the momentum equation:</p>
+<div class="math notranslate nohighlight">
+\[
+v_1' = 5 - 1.5 \times 4 = 5 - 6 = -1 \, \text{m/s}
+\]</div>
+<p>Thus, the velocities after the collision are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(v_1' = -1 \, \text{m/s}\)</span> (ball 1 reverses direction),</p></li>
+<li><p><span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span> (ball 2 moves forward).</p></li>
+</ul>
+</section>
+</section>
+<section id="verifying-conservation-of-momentum-and-energy">
+<h4>2. Verifying Conservation of Momentum and Energy<a class="headerlink" href="#verifying-conservation-of-momentum-and-energy" title="Link to this heading">#</a></h4>
+<section id="momentum-conservation">
+<h5>Momentum Conservation<a class="headerlink" href="#momentum-conservation" title="Link to this heading">#</a></h5>
+<p>Before the collision:</p>
+<div class="math notranslate nohighlight">
+\[
+p_\text{initial} = m_1 v_1 + m_2 v_2 = 2 \times 5 + 3 \times 0 = 10 \, \text{kg} \cdot \text{m/s}
+\]</div>
+<p>After the collision:</p>
+<div class="math notranslate nohighlight">
+\[
+p_\text{final} = m_1 v_1' + m_2 v_2' = 2 \times (-1) + 3 \times 4 = -2 + 12 = 10 \, \text{kg} \cdot \text{m/s}
+\]</div>
+<p>Momentum is conserved, as <span class="math notranslate nohighlight">\(p_\text{initial} = p_\text{final}\)</span>.</p>
+</section>
+<section id="energy-conservation">
+<h5>Energy Conservation<a class="headerlink" href="#energy-conservation" title="Link to this heading">#</a></h5>
+<p>Before the collision:</p>
+<div class="math notranslate nohighlight">
+\[
+KE_\text{initial} = \frac{1}{2} m_1 v_1^2 = \frac{1}{2} \times 2 \times (5)^2 = 25 \, \text{J}
+\]</div>
+<p>After the collision:</p>
+<div class="math notranslate nohighlight">
+\[
+KE_\text{final} = \frac{1}{2} m_1 v_1'^2 + \frac{1}{2} m_2 v_2'^2 = \frac{1}{2} \times 2 \times (-1)^2 + \frac{1}{2} \times 3 \times (4)^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+KE_\text{final} = 1 + 24 = 25 \, \text{J}
+\]</div>
+<p>Energy is conserved, as <span class="math notranslate nohighlight">\(KE_\text{initial} = KE_\text{final}\)</span>.</p>
+</section>
+</section>
+</section>
+<section id="id19">
+<h3>Summary of Results<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>After the collision, ball 1 has a velocity of <span class="math notranslate nohighlight">\(v_1' = -1 \, \text{m/s}\)</span> and ball 2 has a velocity of <span class="math notranslate nohighlight">\(v_2' = 4 \, \text{m/s}\)</span>.</p></li>
+<li><p>Both momentum and kinetic energy are conserved in this elastic collision.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="problem-15-object-falling-from-a-height-energy-conservation">
+<h2>Problem 15: Object Falling from a Height (Energy Conservation)<a class="headerlink" href="#problem-15-object-falling-from-a-height-energy-conservation" title="Link to this heading">#</a></h2>
+<p>A rock of mass <span class="math notranslate nohighlight">\(m = 2 \, \text{kg}\)</span> is dropped from a height of <span class="math notranslate nohighlight">\(h = 10 \, \text{m}\)</span> above the ground. Assume no air resistance.</p>
+<ol class="arabic simple">
+<li><p>What is the speed of the rock just before it hits the ground?</p></li>
+<li><p>Verify that the potential energy at the start equals the kinetic energy just before impact.</p></li>
+<li><p>How long does it take for the rock to hit the ground?</p></li>
+</ol>
+<section id="id20">
+<h3>Solution<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<p>This problem involves the <strong>conversion of gravitational potential energy into kinetic energy</strong> as the rock falls. We will also verify that energy is conserved in the system.</p>
+<section id="speed-of-the-rock-just-before-impact">
+<h4>1. Speed of the Rock Just Before Impact<a class="headerlink" href="#speed-of-the-rock-just-before-impact" title="Link to this heading">#</a></h4>
+<p>To find the speed of the rock just before it hits the ground, we use the <strong>conservation of mechanical energy</strong>. Initially, the rock has gravitational potential energy, and as it falls, this energy is converted into kinetic energy.</p>
+<p>The total mechanical energy of the rock at the top (just before it is dropped) is:</p>
+<div class="math notranslate nohighlight">
+\[
+E_\text{total} = PE_\text{initial} = mgh
+\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(m = 2 \, \text{kg}\)</span> is the mass of the rock,</p></li>
+<li><p><span class="math notranslate nohighlight">\(g = 9.8 \, \text{m/s}^2\)</span> is the acceleration due to gravity,</p></li>
+<li><p><span class="math notranslate nohighlight">\(h = 10 \, \text{m}\)</span> is the height from which the rock is dropped.</p></li>
+</ul>
+<p>Substituting the known values:</p>
+<div class="math notranslate nohighlight">
+\[
+PE_\text{initial} = 2 \, \text{kg} \times 9.8 \, \text{m/s}^2 \times 10 \, \text{m} = 196 \, \text{J}
+\]</div>
+<p>At the moment just before the rock hits the ground, all the potential energy has been converted into kinetic energy. The total mechanical energy of the rock just before impact is:</p>
+<div class="math notranslate nohighlight">
+\[
+E_\text{total} = KE_\text{final} = \frac{1}{2} m v^2
+\]</div>
+<p>Since energy is conserved, <span class="math notranslate nohighlight">\(PE_\text{initial} = KE_\text{final}\)</span>. So:</p>
+<div class="math notranslate nohighlight">
+\[
+mgh = \frac{1}{2} m v^2
+\]</div>
+<p>Cancel the mass <span class="math notranslate nohighlight">\(m\)</span> on both sides of the equation:</p>
+<div class="math notranslate nohighlight">
+\[
+gh = \frac{1}{2} v^2
+\]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(v\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v^2 = 2gh
+\]</div>
+<p>Substitute the values of <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v^2 = 2 \times 9.8 \, \text{m/s}^2 \times 10 \, \text{m} = 196 \, \text{m}^2/\text{s}^2
+\]</div>
+<p>Taking the square root:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \sqrt{196} = 14 \, \text{m/s}
+\]</div>
+<p>Thus, the speed of the rock just before it hits the ground is:</p>
+<div class="math notranslate nohighlight">
+\[
+v = 14 \, \text{m/s}
+\]</div>
+</section>
+<section id="verify-energy-conservation">
+<h4>2. Verify Energy Conservation<a class="headerlink" href="#verify-energy-conservation" title="Link to this heading">#</a></h4>
+<p>Initially, the rock has only <strong>potential energy</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+PE_\text{initial} = mgh = 196 \, \text{J}
+\]</div>
+<p>Just before the rock hits the ground, all this potential energy is converted into <strong>kinetic energy</strong>. The final kinetic energy is:</p>
+<div class="math notranslate nohighlight">
+\[
+KE_\text{final} = \frac{1}{2} m v^2 = \frac{1}{2} \times 2 \, \text{kg} \times (14 \, \text{m/s})^2 = \frac{1}{2} \times 2 \times 196 = 196 \, \text{J}
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(PE_\text{initial} = KE_\text{final}\)</span>, energy is conserved in the system.</p>
+</section>
+<section id="time-to-hit-the-ground">
+<h4>3. Time to Hit the Ground<a class="headerlink" href="#time-to-hit-the-ground" title="Link to this heading">#</a></h4>
+<p>To find how long it takes for the rock to hit the ground, we use the equation for vertical motion under constant acceleration:</p>
+<div class="math notranslate nohighlight">
+\[
+h = \frac{1}{2} g t^2
+\]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(t\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+t^2 = \frac{2h}{g}
+\]</div>
+<p>Substitute the values for <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(g\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+t^2 = \frac{2 \times 10 \, \text{m}}{9.8 \, \text{m/s}^2} \approx 2.04 \, \text{s}^2
+\]</div>
+<p>Taking the square root:</p>
+<div class="math notranslate nohighlight">
+\[
+t = \sqrt{2.04} \approx 1.43 \, \text{s}
+\]</div>
+<p>Thus, it takes approximately:</p>
+<div class="math notranslate nohighlight">
+\[
+t \approx 1.43 \, \text{s}
+\]</div>
+<p>for the rock to hit the ground.</p>
+</section>
+</section>
+<section id="id21">
+<h3>Summary of Results<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>The speed of the rock just before it hits the ground is <span class="math notranslate nohighlight">\(14 \, \text{m/s}\)</span>.</p></li>
+<li><p>The potential energy at the start equals the kinetic energy just before impact, confirming that energy is conserved.</p></li>
+<li><p>It takes approximately <span class="math notranslate nohighlight">\(1.43 \, \text{seconds}\)</span> for the rock to hit the ground.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="syllabus.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Syllabus</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematics-prerequisites">Mathematics Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-prerequisites">Physics Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-1-understanding-derivatives-and-integrals">Problem 1: Understanding Derivatives and Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative">1. <strong>Derivative</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integral">2. <strong>Integral</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-visualization-and-area-calculation">Python Visualization and Area Calculation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-2-partial-derivatives-chain-rule-and-multiple-integrals">Problem 2: Partial Derivatives, Chain Rule, and Multiple Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-the-chain-rule">1. <strong>Applying the Chain Rule</strong>:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-integrals">2. <strong>Multiple Integrals</strong>:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-3-parametric-equations-and-applications">Problem 3: Parametric Equations and Applications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-and-acceleration-vectors">1. Velocity and Acceleration Vectors</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-when-the-particle-s-velocity-is-zero">2. Time When the Particle’s Velocity is Zero</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#length-of-the-curve">3. Length of the Curve</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-visualization-and-curve-length-calculation">Python Visualization and Curve Length Calculation:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-4-separable-differential-equation">Problem 4: Separable Differential Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Solution:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-5-exponential-growth">Problem 5: Exponential Growth</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Solution:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6-separable-differential-equation">Problem 6: Separable Differential Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Solution:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7-linear-and-non-linear-differential-equations">Problem 7: Linear and Non-Linear Differential Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-differential-equation">1. <strong>Linear Differential Equation</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-differential-equation">2. <strong>Non-Linear Differential Equation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#python-code">Python Code:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-8-boundary-value-problem-with-initial-conditions">Problem 8: Boundary Value Problem with Initial Conditions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-general-solution-of-the-ode">Step 1: General Solution of the ODE</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-apply-the-boundary-conditions">Step 2: Apply the Boundary Conditions</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-final-solution">Step 3: Final Solution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-9-vector-field-and-gradient">Problem 9: Vector Field and Gradient</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Solution:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient-of-the-scalar-field">1. <strong>Gradient of the Scalar Field</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-gradient-field-in-the-xy-plane">2. <strong>Plotting the Gradient Field in the <span class="math notranslate nohighlight">\(xy\)</span>-Plane</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-10-line-surface-and-volume-integrals">Problem 10: Line, Surface, and Volume Integrals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-integral">2. Surface Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-surface-integral-formula">Step 1: Surface Integral Formula</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-parameterization-and-normal-vector">Step 2: Parameterization and Normal Vector</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-dot-product-of-mathbf-f-and-mathbf-n">Step 3: Dot Product of ( \mathbf{F} ) and ( \mathbf{n} )</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-limits-of-integration">Step 4: Limits of Integration</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-set-up-the-surface-integral">Step 5: Set Up the Surface Integral</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-solve-the-surface-integral-numerically">Step 6: Solve the Surface Integral Numerically</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-final-answer">Step 7: Final Answer</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-integral">3. Volume Integral</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-volume-integral-formula">Step 1: Volume Integral Formula</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-switch-to-cylindrical-coordinates">Step 2: Switch to Cylindrical Coordinates</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-set-up-the-volume-integral">Step 3: Set Up the Volume Integral</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-solve-the-volume-integral-numerically">Step 4: Solve the Volume Integral Numerically</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-final-answer">Step 5: Final Answer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-11-application-of-the-divergence-theorem-and-stokes-theorem-in-fluid-flow">Problem 11: Application of the Divergence Theorem and Stokes’ Theorem in Fluid Flow</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Problem Statement:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence-theorem">1. Divergence Theorem:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stokes-theorem">2. Stokes’ Theorem</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-12-motion-on-an-inclined-plane">Problem 12: Motion on an Inclined Plane</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#acceleration-along-the-incline">1. Acceleration Along the Incline</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#speed-after-2-seconds">2. Speed After 2 Seconds</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distance-traveled-after-2-seconds">3. Distance Traveled After 2 Seconds</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-13-object-in-uniform-circular-motion-with-angular-velocity">Problem 13: Object in Uniform Circular Motion with Angular Velocity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#magnitude-of-the-centripetal-force">1. Magnitude of the Centripetal Force</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#angular-velocity-of-the-car">2. Angular Velocity of the Car</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#maximum-speed-before-skidding">3. Maximum Speed Before Skidding</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-14-elastic-collision-and-energy-conservation">Problem 14: Elastic Collision and Energy Conservation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#final-velocities-of-the-balls-after-the-collision">1. Final Velocities of the Balls After the Collision</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum">Conservation of Momentum</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-kinetic-energy">Conservation of Kinetic Energy</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-the-system-of-equations">Solving the System of Equations</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verifying-conservation-of-momentum-and-energy">2. Verifying Conservation of Momentum and Energy</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#momentum-conservation">Momentum Conservation</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-conservation">Energy Conservation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">Summary of Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-15-object-falling-from-a-height-energy-conservation">Problem 15: Object Falling from a Height (Energy Conservation)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Solution</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#speed-of-the-rock-just-before-impact">1. Speed of the Rock Just Before Impact</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#verify-energy-conservation">2. Verify Energy Conservation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#time-to-hit-the-ground">3. Time to Hit the Ground</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Summary of Results</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1269 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Properties of Fluids &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'fluid_properties';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Types of Fluid Flow" href="types_of_flows.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to the Fluid Mechanics Course Site
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Common Physical Quantities and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fluids_v_solids.html">Solids vs. Fluids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Properties of Fluids</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ffluid_properties.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/fluid_properties.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Properties of Fluids</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-density">What is Density?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-density-in-fluid-mechanics">Importance of Density in Fluid Mechanics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-density">Examples of Density</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-densities-of-fluids">Typical Densities of Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-density">Units of Density</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-example-buoyancy">Practical Example: Buoyancy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-specific-weight">What is Specific Weight?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-specific-weight">Units of Specific Weight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-between-density-and-specific-weight">Relationship Between Density and Specific Weight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-specific-weight-of-water">Example: Specific Weight of Water</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-applications-of-specific-weight">Practical Applications of Specific Weight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-specific-weights-for-common-fluids">Table of Specific Weights for Common Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-specific-gravity">What is Specific Gravity?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculation">Example Calculation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">Interpretation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-specific-gravities-for-common-substances">Table of Specific Gravities for Common Substances</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal Gas Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptualization">Conceptualization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-equation">Understanding the Equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-to-the-molar-form">Relationship to the Molar Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Calculation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-p-rho-r-t">Applications of <span class="math notranslate nohighlight">\(P = \rho R T\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-of-the-ideal-gas-law">Assumptions of the Ideal Gas Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-description-and-derivation">Viscosity: Description and Derivation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-viscosity">Introduction to Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#role-of-the-no-slip-condition-in-viscous-flows">Role of the No-Slip Condition in Viscous Flows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-mechanism-behind-the-no-slip-condition">Physical Mechanism Behind the No-Slip Condition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-in-applications">Importance in Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-flow-in-fluids">Shear Flow in Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopic-origin-of-viscosity">Microscopic Origin of Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-measurement-of-viscosity">Experimental Measurement of Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-viscosity-in-fluid-mechanics">Importance of Viscosity in Fluid Mechanics</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="properties-of-fluids">
+<h1>Properties of Fluids<a class="headerlink" href="#properties-of-fluids" title="Link to this heading">#</a></h1>
+<p>Understanding the physical properties of fluids is essential for analyzing fluid flow. The key properties include:</p>
+<ul class="simple">
+<li><p><strong>Density</strong> (<span class="math notranslate nohighlight">\(\rho\)</span>)</p></li>
+<li><p><strong>Specific Weight</strong> (<span class="math notranslate nohighlight">\(\gamma\)</span>)</p></li>
+<li><p><strong>Specific Gravity</strong> (<span class="math notranslate nohighlight">\(SG\)</span>)</p></li>
+<li><p><strong>Viscosity</strong> (<span class="math notranslate nohighlight">\(\mu\)</span>)</p></li>
+<li><p><strong>Surface Tension</strong> (<span class="math notranslate nohighlight">\(\sigma\)</span>)</p></li>
+<li></li>
+</ul>
+<section id="what-is-density">
+<h2>What is Density?<a class="headerlink" href="#what-is-density" title="Link to this heading">#</a></h2>
+<p><strong>Density</strong> is a fundamental property of fluids that measures the amount of mass contained in a unit volume of a substance. It is a key parameter in fluid mechanics, as it influences various aspects of fluid behavior, including pressure, buoyancy, and flow dynamics. Density is denoted by the symbol <span class="math notranslate nohighlight">\(\rho\)</span> and is mathematically expressed as:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho = \frac{m}{V}
+\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> is the density (in units of <span class="math notranslate nohighlight">\(kg/m^3\)</span> in SI),</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> is the mass of the fluid (in kilograms, kg),</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> is the volume of the fluid (in cubic meters, <span class="math notranslate nohighlight">\(m^3\)</span>).</p></li>
+</ul>
+<section id="importance-of-density-in-fluid-mechanics">
+<h3>Importance of Density in Fluid Mechanics<a class="headerlink" href="#importance-of-density-in-fluid-mechanics" title="Link to this heading">#</a></h3>
+<p>Density plays a crucial role in several fluid mechanics applications:</p>
+<ul class="simple">
+<li><p><strong>Buoyancy</strong>: Objects float or sink in a fluid depending on their density relative to the fluid. For instance, a boat floats because its average density is less than the density of water.</p></li>
+<li><p><strong>Pressure in a Fluid Column</strong>: The pressure at a given depth in a fluid is directly proportional to its density (hydrostatic pressure equation: <span class="math notranslate nohighlight">\(P = \rho gh\)</span>, where <span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravity and <span class="math notranslate nohighlight">\(h\)</span> is the depth).</p></li>
+<li><p><strong>Flow Behavior</strong>: In compressible flows (e.g., gases), density changes significantly and must be accounted for. In incompressible flows (e.g., liquids), density is generally constant.</p></li>
+</ul>
+</section>
+<section id="examples-of-density">
+<h3>Examples of Density<a class="headerlink" href="#examples-of-density" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Water</strong>: The density of water at standard temperature and pressure (STP) is approximately <span class="math notranslate nohighlight">\(1000 \, kg/m^3\)</span>. This property is commonly used as a reference for other fluids.</p></li>
+<li><p><strong>Air</strong>: The density of air at sea level and room temperature is about <span class="math notranslate nohighlight">\(1.225 \, kg/m^3\)</span>. This value decreases with altitude.</p></li>
+<li><p><strong>Mercury</strong>: Mercury has a very high density of approximately <span class="math notranslate nohighlight">\(13,600 \, kg/m^3\)</span>, which is why it is commonly used in barometers to measure atmospheric pressure.</p></li>
+</ol>
+</section>
+<section id="typical-densities-of-fluids">
+<h3>Typical Densities of Fluids<a class="headerlink" href="#typical-densities-of-fluids" title="Link to this heading">#</a></h3>
+<p>The following table lists the typical densities of common fluids in both <strong>SI units</strong> and <strong>British Gravitational (BG) units</strong>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fluid</p></th>
+<th class="head text-right"><p>Density (<span class="math notranslate nohighlight">\(kg/m^3\)</span>)</p></th>
+<th class="head text-right"><p>Density (<span class="math notranslate nohighlight">\(lb/ft^3\)</span>)</p></th>
+<th class="head"><p>Remarks</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Air (STP)</p></td>
+<td class="text-right"><p>1.225</p></td>
+<td class="text-right"><p>0.0765</p></td>
+<td><p>At sea level</p></td>
+</tr>
+<tr class="row-odd"><td><p>Water (STP)</p></td>
+<td class="text-right"><p>1000</p></td>
+<td class="text-right"><p>62.4</p></td>
+<td><p>Standard temperature</p></td>
+</tr>
+<tr class="row-even"><td><p>Seawater</p></td>
+<td class="text-right"><p>1025</p></td>
+<td class="text-right"><p>64</p></td>
+<td><p>Higher than fresh water due to salts</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mercury</p></td>
+<td class="text-right"><p>13,600</p></td>
+<td class="text-right"><p>847</p></td>
+<td><p>Extremely dense liquid</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethanol</p></td>
+<td class="text-right"><p>789</p></td>
+<td class="text-right"><p>49.3</p></td>
+<td><p>Common alcohol</p></td>
+</tr>
+<tr class="row-odd"><td><p>Glycerin</p></td>
+<td class="text-right"><p>1260</p></td>
+<td class="text-right"><p>78.6</p></td>
+<td><p>Viscous liquid</p></td>
+</tr>
+<tr class="row-even"><td><p>Gasoline</p></td>
+<td class="text-right"><p>680</p></td>
+<td class="text-right"><p>42.5</p></td>
+<td><p>Common fuel</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="units-of-density">
+<h3>Units of Density<a class="headerlink" href="#units-of-density" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>SI Units</strong>: In the International System of Units (SI), density is measured in <strong>kilograms per cubic meter</strong> (<span class="math notranslate nohighlight">\(kg/m^3\)</span>). This unit reflects the mass contained in one cubic meter of a substance.</p></li>
+<li><p><strong>BG Units</strong>: In the British Gravitational (BG) system, density is measured in <strong>pounds per cubic foot</strong> (<span class="math notranslate nohighlight">\(lb/ft^3\)</span>), which represents the weight of the fluid per unit volume in cubic feet.</p></li>
+</ul>
+</section>
+<section id="practical-example-buoyancy">
+<h3>Practical Example: Buoyancy<a class="headerlink" href="#practical-example-buoyancy" title="Link to this heading">#</a></h3>
+<p>Consider an object submerged in water. If the object’s density is less than that of water (<span class="math notranslate nohighlight">\(\rho_{\text{object}} &lt; \rho_{\text{water}}\)</span>), it will float. For example, a wooden block with a density of <span class="math notranslate nohighlight">\(600 \, kg/m^3\)</span> will float in water because its density is significantly lower than water’s density of <span class="math notranslate nohighlight">\(1000 \, kg/m^3\)</span>.</p>
+<p>On the other hand, if an object is denser than water (e.g., iron with <span class="math notranslate nohighlight">\(\rho \approx 7,870 \, kg/m^3\)</span>), it will sink because its density is much greater than the surrounding fluid.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<h1 class="rubric" id="slugs-vs-pounds-in-the-british-gravitational-bg-system">Slugs vs. Pounds in the British Gravitational (BG) System</h1>
+<p>In the <strong>British Gravitational (BG) system</strong>, there are two common ways to express mass-related quantities in fluid mechanics: <strong>slugs</strong> and <strong>pounds</strong>. These units represent different concepts and are often used in different contexts within fluid mechanics.</p>
+<h3 class="rubric" id="mass-density-vs-weight-density">1. Mass Density vs. Weight Density</h3>
+<ol class="arabic simple">
+<li><p><strong>Slugs per cubic foot (<span class="math notranslate nohighlight">\(\text{slug/ft}^3\)</span>)</strong>:</p>
+<ul class="simple">
+<li><p>This is a measure of <strong>mass density</strong> in the BG system. It corresponds to the <strong>mass per unit volume</strong> of a fluid, similar to how <strong>kg/m³</strong> is used in the SI system.</p></li>
+</ul>
+</li>
+<li><p><strong>Pounds per cubic foot (<span class="math notranslate nohighlight">\(\text{lb/ft}^3\)</span>)</strong>:</p>
+<ul class="simple">
+<li><p>This is a measure of <strong>weight density</strong> (also called specific weight), which represents the <strong>weight of the fluid per unit volume</strong>. This unit incorporates the force of gravity because it measures the fluid’s weight in pounds.</p></li>
+</ul>
+</li>
+</ol>
+<h3 class="rubric" id="key-difference-between-slug-and-pound-units">2. Key Difference Between Slug and Pound Units</h3>
+<ul>
+<li><p><strong>Slug (<span class="math notranslate nohighlight">\(\text{slug}\)</span>)</strong>:</p>
+<ul>
+<li><p>A <strong>slug</strong> is a unit of <strong>mass</strong> in the BG system.</p></li>
+<li><p>The relationship between mass and weight in the BG system is defined by:</p>
+<div class="math notranslate nohighlight">
+\[
+     W = mg
+     \]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(W\)</span> is the weight (in pounds, <span class="math notranslate nohighlight">\(\text{lb}\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> is the mass (in slugs, <span class="math notranslate nohighlight">\(\text{slug}\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravity (typically <span class="math notranslate nohighlight">\(32.174 \, \text{ft/s}^2\)</span>).</p></li>
+</ul>
+</li>
+<li><p>One <strong>slug</strong> is the amount of mass that, under standard Earth gravity, weighs <strong>1 pound-force per unit of acceleration</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Pound (<span class="math notranslate nohighlight">\(\text{lb}\)</span>)</strong>:</p>
+<ul class="simple">
+<li><p>A <strong>pound</strong> is a unit of <strong>force (weight)</strong> in the BG system.</p></li>
+<li><p>When we use <strong><span class="math notranslate nohighlight">\(\text{lb/ft}^3\)</span></strong>, we are expressing <strong>weight density</strong> (the weight per unit volume). This value includes the force due to gravity.</p></li>
+</ul>
+</li>
+</ul>
+<h3 class="rubric" id="conversion-between-slug-and-pound">3. Conversion Between Slug and Pound</h3>
+<p>To convert between <strong>weight density</strong> (<span class="math notranslate nohighlight">\(\text{lb/ft}^3\)</span>) and <strong>mass density</strong> (<span class="math notranslate nohighlight">\(\text{slug/ft}^3\)</span>), you need to account for the acceleration due to gravity (<span class="math notranslate nohighlight">\(g\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\rho_{\text{mass}} (\text{slug/ft}^3) = \frac{\rho_{\text{weight}} (\text{lb/ft}^3)}{g}
+\]</div>
+<p>For example, the weight density of water is approximately <span class="math notranslate nohighlight">\(62.4 \, \text{lb/ft}^3\)</span>. To convert this to mass density in slugs per cubic foot:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho = \frac{62.4 \, \text{lb/ft}^3}{32.174 \, \text{ft/s}^2} \approx 1.94 \, \text{slug/ft}^3
+\]</div>
+<h3 class="rubric" id="when-slugs-are-used">4. When Slugs are Used</h3>
+<p>In fluid mechanics, <strong>slugs/ft³</strong> is often used when dealing with <strong>mass density</strong> because it simplifies calculations involving dynamics. By using slugs, you can apply Newton’s second law (<span class="math notranslate nohighlight">\(F = ma\)</span>) directly without introducing a conversion factor for gravity, as slugs are already based on the relationship between mass and weight under standard gravity.</p>
+<h3 class="rubric" id="common-mistake-mixing-slugs-and-pounds">5. Common Mistake: Mixing Slugs and Pounds</h3>
+<p>It’s easy to confuse <strong>mass density</strong> and <strong>weight density</strong> in the BG system because both use units related to mass and force. Keep in mind:</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(\text{lb/ft}^3\)</span></strong> refers to <strong>weight density</strong>, which measures the weight of the fluid in pounds per cubic foot.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\text{slug/ft}^3\)</span></strong> is the correct unit for <strong>mass density</strong> in the BG system.</p></li>
+</ul>
+<p>Always convert between the two by dividing or multiplying by the acceleration due to gravity (<span class="math notranslate nohighlight">\(g = 32.174 \, \text{ft/s}^2\)</span>).</p>
+<h3 class="rubric" id="summary-of-differences">6. Summary of Differences</h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Quantity</p></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>Definition</p></th>
+<th class="head"><p>Units in BG System</p></th>
+<th class="head"><p>Units in SI System</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Mass Density</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(\rho_{\text{mass}}\)</span></p></td>
+<td><p>Mass per unit volume</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{slug/ft}^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{kg/m}^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Weight Density</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(\rho_{\text{weight}}\)</span></p></td>
+<td><p>Weight per unit volume (includes gravity)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{lb/ft}^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{N/m}^3\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>Mass Density</strong>: Refers to the mass contained in a given volume, and in the BG system, it is measured in <strong>slugs/ft³</strong>.</p></li>
+<li><p><strong>Weight Density</strong>: Refers to the weight of the fluid per unit volume, typically measured in <strong>lb/ft³</strong>, and incorporates the effect of gravity.</p></li>
+</ul>
+<h3 class="rubric" id="practical-example-calculating-density">Practical Example: Calculating Density</h3>
+<p>Let’s calculate the mass density of air using its typical weight density at sea level (<span class="math notranslate nohighlight">\(\approx 0.0765 \, \text{lb/ft}^3\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\rho_{\text{mass}} = \frac{0.0765 \, \text{lb/ft}^3}{32.174 \, \text{ft/s}^2} \approx 0.00238 \, \text{slug/ft}^3
+\]</div>
+<p>In this case, the mass density of air is about <span class="math notranslate nohighlight">\(0.00238 \, \text{slug/ft}^3\)</span>, while its weight density remains <span class="math notranslate nohighlight">\(0.0765 \, \text{lb/ft}^3\)</span>.</p>
+</div>
+</section>
+</section>
+<section id="what-is-specific-weight">
+<h2>What is Specific Weight?<a class="headerlink" href="#what-is-specific-weight" title="Link to this heading">#</a></h2>
+<p><strong>Specific weight</strong> (also known as <strong>weight density</strong>) is the weight of a fluid per unit volume. It is a measure of how much weight is associated with a given volume of the substance. Specific weight is denoted by the symbol <span class="math notranslate nohighlight">\(\gamma\)</span> and is related to the density of the fluid.</p>
+<p>Mathematically, specific weight is expressed as:</p>
+<div class="math notranslate nohighlight">
+\[
+\gamma = \rho g
+\]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\gamma\)</span> is the specific weight (in units of <span class="math notranslate nohighlight">\(N/m^3\)</span> or <span class="math notranslate nohighlight">\(lbf/ft^3\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> is the density of the fluid (in units of <span class="math notranslate nohighlight">\(kg/m^3\)</span> or <span class="math notranslate nohighlight">\(slug/ft^3\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> is the gravitational acceleration (standard value <span class="math notranslate nohighlight">\(9.81 \, m/s^2\)</span> or <span class="math notranslate nohighlight">\(32.174 \, ft/s^2\)</span>).</p></li>
+</ul>
+<section id="units-of-specific-weight">
+<h3>Units of Specific Weight<a class="headerlink" href="#units-of-specific-weight" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>SI Units</strong>: In the SI system, specific weight is measured in <strong>newtons per cubic meter</strong> (<span class="math notranslate nohighlight">\(N/m^3\)</span>), which represents the weight (force) in newtons of a fluid in one cubic meter of volume.</p>
+<div class="math notranslate nohighlight">
+\[ \gamma \ (\text{SI units}) = \rho \times 9.81 \, m/s^2 \]</div>
+</li>
+<li><p><strong>Imperial/US Units</strong>: In the Imperial system, specific weight is commonly measured in <strong>pounds-force per cubic foot</strong> (<span class="math notranslate nohighlight">\(lbf/ft^3\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[ \gamma \ (\text{Imperial units}) = \rho \times 32.174 \, ft/s^2 \]</div>
+</li>
+</ul>
+</section>
+<section id="relationship-between-density-and-specific-weight">
+<h3>Relationship Between Density and Specific Weight<a class="headerlink" href="#relationship-between-density-and-specific-weight" title="Link to this heading">#</a></h3>
+<p>The specific weight is directly proportional to the density of the fluid. For a fluid with constant density, the specific weight is simply the density multiplied by the acceleration due to gravity. If a fluid’s density changes with temperature or pressure, its specific weight will also change.</p>
+</section>
+<section id="example-specific-weight-of-water">
+<h3>Example: Specific Weight of Water<a class="headerlink" href="#example-specific-weight-of-water" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>In SI Units</strong>:
+The density of water at <span class="math notranslate nohighlight">\(4^\circ C\)</span> is approximately <span class="math notranslate nohighlight">\(1000 \, kg/m^3\)</span>. Using the acceleration due to gravity <span class="math notranslate nohighlight">\(g = 9.81 \, m/s^2\)</span>, the specific weight of water is:</p>
+<div class="math notranslate nohighlight">
+\[
+  \gamma_{\text{water}} = 1000 \, \text{kg/m}^3 \times 9.81 \, \text{m/s}^2 = 9810 \, \text{N/m}^3
+  \]</div>
+</li>
+<li><p><strong>In the BG System</strong>:
+The density of water in the BG system is approximately <strong><span class="math notranslate nohighlight">\(1.94 \, \text{slug/ft}^3\)</span></strong>. Using <span class="math notranslate nohighlight">\(g = 32.174 \, \text{ft/s}^2\)</span>, the specific weight of water is:</p>
+<div class="math notranslate nohighlight">
+\[
+  \gamma_{\text{water}} = 1.94 \, \text{slug/ft}^3 \times 32.174 \, \text{ft/s}^2 = 62.4 \, \text{lbf/ft}^3
+  \]</div>
+</li>
+</ul>
+<p>In the BG system, the specific weight of water remains <strong>62.4 lbf/ft³</strong>, as it accounts for both the density in slugs and the gravitational acceleration.</p>
+</section>
+<section id="practical-applications-of-specific-weight">
+<h3>Practical Applications of Specific Weight<a class="headerlink" href="#practical-applications-of-specific-weight" title="Link to this heading">#</a></h3>
+<p>Specific weight is often used in calculations involving:</p>
+<ul class="simple">
+<li><p><strong>Buoyancy</strong>: The weight of the displaced fluid determines the buoyant force on an object.</p></li>
+<li><p><strong>Hydrostatics</strong>: The pressure exerted by a fluid at rest depends on the specific weight, as seen in the hydrostatic pressure formulation <span class="math notranslate nohighlight">\(P = \gamma h\)</span>, where <span class="math notranslate nohighlight">\(h\)</span> is the height of the fluid column.</p></li>
+<li><p><strong>Hydraulic Systems</strong>: Engineers use specific weight to design systems where fluid flow and pressures are key factors, such as in dams or water distribution systems.</p></li>
+</ul>
+</section>
+<section id="table-of-specific-weights-for-common-fluids">
+<h3>Table of Specific Weights for Common Fluids<a class="headerlink" href="#table-of-specific-weights-for-common-fluids" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Fluid</p></th>
+<th class="head text-right"><p>Density (<span class="math notranslate nohighlight">\(\rho\)</span>)</p></th>
+<th class="head text-right"><p>Specific Weight (<span class="math notranslate nohighlight">\(\gamma\)</span>) in SI</p></th>
+<th class="head text-right"><p>Specific Weight (<span class="math notranslate nohighlight">\(\gamma\)</span>) in BG Units</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Air (STP)</p></td>
+<td class="text-right"><p>1.225 kg/m³</p></td>
+<td class="text-right"><p>12.01 N/m³</p></td>
+<td class="text-right"><p>0.0765 lbf/ft³</p></td>
+</tr>
+<tr class="row-odd"><td><p>Water (4°C)</p></td>
+<td class="text-right"><p>1000 kg/m³</p></td>
+<td class="text-right"><p>9810 N/m³</p></td>
+<td class="text-right"><p>62.4 lbf/ft³</p></td>
+</tr>
+<tr class="row-even"><td><p>Seawater</p></td>
+<td class="text-right"><p>1025 kg/m³</p></td>
+<td class="text-right"><p>10,055 N/m³</p></td>
+<td class="text-right"><p>64.0 lbf/ft³</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mercury</p></td>
+<td class="text-right"><p>13,600 kg/m³</p></td>
+<td class="text-right"><p>133,416 N/m³</p></td>
+<td class="text-right"><p>847 lbf/ft³</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethanol</p></td>
+<td class="text-right"><p>789 kg/m³</p></td>
+<td class="text-right"><p>7744.1 N/m³</p></td>
+<td class="text-right"><p>49.3 lbf/ft³</p></td>
+</tr>
+<tr class="row-odd"><td><p>Glycerin</p></td>
+<td class="text-right"><p>1260 kg/m³</p></td>
+<td class="text-right"><p>12,355 N/m³</p></td>
+<td class="text-right"><p>78.6 lbf/ft³</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Specific weight</strong> is the weight per unit volume of a substance and is given by the product of density and gravitational acceleration.</p></li>
+<li><p>It is widely used in fluid mechanics to calculate pressures, buoyancy forces, and other parameters related to the weight of fluids.</p></li>
+<li><p>Specific weight changes with variations in density and is influenced by temperature, pressure, and fluid composition.</p></li>
+</ul>
+<p>Understanding the specific weight is crucial in applications such as hydrostatics, hydraulics, and fluid dynamics.</p>
+</section>
+</section>
+<section id="what-is-specific-gravity">
+<h2>What is Specific Gravity?<a class="headerlink" href="#what-is-specific-gravity" title="Link to this heading">#</a></h2>
+<p><strong>Specific gravity</strong> (denoted as <span class="math notranslate nohighlight">\(SG\)</span>) is the ratio of the density of a substance to the density of a reference substance, usually <strong>water</strong> for liquids and solids, or <strong>air</strong> for gases. Since it is a ratio of two densities, <strong>specific gravity is a dimensionless quantity</strong>.</p>
+<p>For liquids and solids, the reference substance is water at <span class="math notranslate nohighlight">\(4^\circ C\)</span>, which has a density of approximately <span class="math notranslate nohighlight">\(1000 \, \text{kg/m}^3\)</span> in the SI system or <span class="math notranslate nohighlight">\(62.4 \, \text{lb/ft}^3\)</span> in the English system.</p>
+<div class="math notranslate nohighlight">
+\[
+SG = \frac{\rho_{\text{fluid}}}{\rho_{\text{water}}}
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho_{\text{fluid}}\)</span> is the density of the fluid (or material) whose specific gravity is being calculated,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho_{\text{water}}\)</span> is the density of water at <span class="math notranslate nohighlight">\(4^\circ C\)</span>.</p></li>
+</ul>
+<p>Since the densities are in the same units, the specific gravity itself has no units.</p>
+<section id="example-calculation">
+<h3>Example Calculation<a class="headerlink" href="#example-calculation" title="Link to this heading">#</a></h3>
+<p>If the density of mercury is <span class="math notranslate nohighlight">\(13,600 \, \text{kg/m}^3\)</span>, the specific gravity of mercury relative to water would be:</p>
+<div class="math notranslate nohighlight">
+\[
+SG_{\text{mercury}} = \frac{13,600 \, \text{kg/m}^3}{1000 \, \text{kg/m}^3} = 13.6
+\]</div>
+</section>
+<section id="interpretation">
+<h3>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>A <strong>specific gravity</strong> greater than 1 means the substance is <strong>denser than water</strong>.</p></li>
+<li><p>A <strong>specific gravity</strong> less than 1 means the substance is <strong>less dense than water</strong>.</p></li>
+</ul>
+<p>For example, the specific gravity of ethanol is 0.789, meaning ethanol is less dense than water.</p>
+</section>
+<section id="applications">
+<h3>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Buoyancy</strong>: Specific gravity helps in determining whether an object will float or sink in a fluid.</p></li>
+<li><p><strong>Concentration</strong>: It is used to estimate concentrations in solutions, especially in industries like brewing and chemical processing.</p></li>
+<li><p><strong>Hydrometry</strong>: Devices like hydrometers use specific gravity to measure the density of liquids.</p></li>
+</ul>
+</section>
+<section id="table-of-specific-gravities-for-common-substances">
+<h3>Table of Specific Gravities for Common Substances<a class="headerlink" href="#table-of-specific-gravities-for-common-substances" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Substance</p></th>
+<th class="head"><p>Specific Gravity (Relative to Water)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Water</p></td>
+<td><p>1.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mercury</p></td>
+<td><p>13.6</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethanol</p></td>
+<td><p>0.789</p></td>
+</tr>
+<tr class="row-odd"><td><p>Seawater</p></td>
+<td><p>1.025</p></td>
+</tr>
+<tr class="row-even"><td><p>Glycerin</p></td>
+<td><p>1.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>Air (Relative to Water)</p></td>
+<td><p>0.00123</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Note that for gases, specific gravity is often measured relative to air rather than water.</p>
+</section>
+</section>
+<section id="ideal-gas-law">
+<h2>Ideal Gas Law<a class="headerlink" href="#ideal-gas-law" title="Link to this heading">#</a></h2>
+<p>The <strong>Ideal Gas Law</strong> can also be expressed in terms of the <strong>specific form</strong> as:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \rho R T
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> is the <strong>pressure</strong> of the gas (in Pascals, Pa),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> is the <strong>density</strong> of the gas (in <span class="math notranslate nohighlight">\(\text{kg/m}^3\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(R\)</span> is the <strong>specific gas constant</strong> (in J/kg·K),</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is the <strong>absolute temperature</strong> of the gas (in Kelvin, K).</p></li>
+</ul>
+<section id="conceptualization">
+<h3>Conceptualization<a class="headerlink" href="#conceptualization" title="Link to this heading">#</a></h3>
+<p>This form of the Ideal Gas Law relates the <strong>pressure</strong> of a gas to its <strong>density</strong> rather than the amount of gas in moles (<span class="math notranslate nohighlight">\(n\)</span>). The specific gas constant <span class="math notranslate nohighlight">\(R\)</span> here is related to the universal gas constant <span class="math notranslate nohighlight">\(R_u\)</span> by:</p>
+<div class="math notranslate nohighlight">
+\[
+R = \frac{R_u}{M}
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_u = 8.314 \, \text{J/mol·K}\)</span> is the <strong>universal gas constant</strong>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> is the <strong>molar mass</strong> of the gas (in kg/mol).</p></li>
+</ul>
+<p>For example, the specific gas constant <span class="math notranslate nohighlight">\(R\)</span> for <strong>dry air</strong> is approximately <span class="math notranslate nohighlight">\(287 \, \text{J/kg·K}\)</span>.</p>
+</section>
+<section id="understanding-the-equation">
+<h3>Understanding the Equation<a class="headerlink" href="#understanding-the-equation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The equation <span class="math notranslate nohighlight">\(P = \rho R T\)</span> shows that <strong>pressure</strong> is directly proportional to both the <strong>density</strong> of the gas and its <strong>temperature</strong>.</p></li>
+<li><p><strong>Higher density</strong> at a constant temperature results in <strong>higher pressure</strong>.</p></li>
+<li><p>Similarly, increasing the <strong>temperature</strong> at a constant density will also increase the <strong>pressure</strong>.</p></li>
+</ul>
+<p>This form is particularly useful in atmospheric science and fluid dynamics, where <strong>density</strong> <span class="math notranslate nohighlight">\(\rho\)</span> is often a more convenient quantity than the number of moles.</p>
+</section>
+<section id="relationship-to-the-molar-form">
+<h3>Relationship to the Molar Form<a class="headerlink" href="#relationship-to-the-molar-form" title="Link to this heading">#</a></h3>
+<p>The traditional molar form of the Ideal Gas Law is:</p>
+<div class="math notranslate nohighlight">
+\[
+PV = nR_uT
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> is the pressure,</p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span> is the volume,</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> is the number of moles,</p></li>
+<li><p><span class="math notranslate nohighlight">\(R_u\)</span> is the <strong>universal gas constant</strong> (<span class="math notranslate nohighlight">\(8.314 \, \text{J/mol·K}\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is the absolute temperature.</p></li>
+</ul>
+<p>To derive <span class="math notranslate nohighlight">\(P = \rho R T\)</span>, we start by expressing <strong>density</strong> <span class="math notranslate nohighlight">\(\rho\)</span> as the mass per unit volume:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho = \frac{m}{V}
+\]</div>
+<p>Also, the number of moles <span class="math notranslate nohighlight">\(n\)</span> is related to the mass <span class="math notranslate nohighlight">\(m\)</span> and the <strong>molar mass</strong> <span class="math notranslate nohighlight">\(M\)</span> by:</p>
+<div class="math notranslate nohighlight">
+\[
+n = \frac{m}{M}
+\]</div>
+<p>Substituting <span class="math notranslate nohighlight">\(n = \frac{m}{M}\)</span> into the Ideal Gas Law:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \frac{nR_uT}{V} = \frac{mR_uT}{MV}
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\frac{m}{V} = \rho\)</span>, we now have:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \rho \frac{R_u}{M} T
+\]</div>
+<p>Thus, the equation becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \rho R T
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(R = \frac{R_u}{M}\)</span> is the <strong>specific gas constant</strong> for the particular gas being considered.</p>
+</section>
+<section id="id1">
+<h3>Summary<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R_u\)</span> is the universal gas constant.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R = \frac{R_u}{M}\)</span> is the specific gas constant, which depends on the molar mass of the gas.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Example Calculation<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Let’s calculate the pressure of dry air with a density of <span class="math notranslate nohighlight">\(1.2 \, \text{kg/m}^3\)</span> at a temperature of <span class="math notranslate nohighlight">\(300 \, \text{K}\)</span>, using the specific gas constant <span class="math notranslate nohighlight">\(R = 287 \, \text{J/kg·K}\)</span> for air.</p>
+<div class="math notranslate nohighlight">
+\[
+P = \rho R T = (1.2 \, \text{kg/m}^3)(287 \, \text{J/kg·K})(300 \, \text{K})
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+P = 103,320 \, \text{Pa} = 103.3 \, \text{kPa}
+\]</div>
+<p>So, the pressure is approximately <strong>103.3 kPa</strong>.</p>
+</section>
+<section id="applications-of-p-rho-r-t">
+<h3>Applications of <span class="math notranslate nohighlight">\(P = \rho R T\)</span><a class="headerlink" href="#applications-of-p-rho-r-t" title="Link to this heading">#</a></h3>
+<p>This form of the Ideal Gas Law is often used in fields like:</p>
+<ul class="simple">
+<li><p><strong>Atmospheric science</strong>: to describe the behavior of gases in the atmosphere.</p></li>
+<li><p><strong>Fluid mechanics</strong>: especially when analyzing compressible flows.</p></li>
+<li><p><strong>Aerospace engineering</strong>: to model air properties in high-speed flight.</p></li>
+</ul>
+</section>
+<section id="assumptions-of-the-ideal-gas-law">
+<h3>Assumptions of the Ideal Gas Law<a class="headerlink" href="#assumptions-of-the-ideal-gas-law" title="Link to this heading">#</a></h3>
+<p>Like the molar form, this specific form of the Ideal Gas Law assumes:</p>
+<ol class="arabic simple">
+<li><p><strong>No intermolecular forces</strong>: The gas molecules do not attract or repel each other.</p></li>
+<li><p><strong>Point particles</strong>: Gas molecules are considered to have negligible volume.</p></li>
+<li><p><strong>Elastic collisions</strong>: All collisions between gas molecules and with container walls are perfectly elastic.</p></li>
+<li><p><strong>Valid at low pressures and high temperatures</strong>: The law breaks down under extreme conditions (high pressure, low temperature).</p></li>
+</ol>
+</section>
+<section id="limitations">
+<h3>Limitations<a class="headerlink" href="#limitations" title="Link to this heading">#</a></h3>
+<p>The Ideal Gas Law, in this form, is an approximation that assumes <strong>ideal behavior</strong>. For <strong>real gases</strong> under conditions of high pressure or low temperature, deviations occur, and more complex equations, such as the <strong>Van der Waals equation</strong>, must be used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+
+<span class="c1"># Create a figure</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+
+<span class="c1"># Define ranges for temperature (T) and pressure (P)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>  <span class="c1"># Temperature from 300K to 700K</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>     <span class="c1"># Pressure from 1 to 10 atm</span>
+<span class="n">T</span><span class="p">,</span> <span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">P</span><span class="p">)</span>
+
+<span class="c1"># Equation for volume V, assume ideal gas law: PV = nRT</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">0.0821</span>  <span class="c1"># L·atm/mol·K (Ideal gas constant)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>       <span class="c1"># Assume 1 mole of gas</span>
+<span class="n">V</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">/</span> <span class="n">P</span>  <span class="c1"># Ideal gas law rearranged to V = nRT / P</span>
+
+<span class="c1"># Plot the surface in color</span>
+<span class="n">surf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;plasma&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
+
+<span class="c1"># Color bar for the surface</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">surf</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Label axes with units</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Pressure (P) [atm]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Temperature (T) [K]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Volume (V) [L]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Rotate the plot by 90 degrees</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">view_init</span><span class="p">(</span><span class="n">elev</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">azim</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>  <span class="c1"># azim=90 rotates it by 90 degrees</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d79e790e47c780e4ce4ee11d9c59812749300c8b7a96e6f025a09294c3e26914.png" src="_images/d79e790e47c780e4ce4ee11d9c59812749300c8b7a96e6f025a09294c3e26914.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="viscosity-description-and-derivation">
+<h2>Viscosity: Description and Derivation<a class="headerlink" href="#viscosity-description-and-derivation" title="Link to this heading">#</a></h2>
+<section id="introduction-to-viscosity">
+<h3>Introduction to Viscosity<a class="headerlink" href="#introduction-to-viscosity" title="Link to this heading">#</a></h3>
+<p>Viscosity is a measure of a fluid’s resistance to deformation under shear stress. In simple terms, it quantifies how “thick” or “sticky” a fluid is. High-viscosity fluids like honey resist flow more than low-viscosity fluids like water. Viscosity plays a critical role in fluid mechanics, affecting flow behavior in various applications ranging from lubrication to aerodynamics.</p>
+<p>Viscosity arises from the internal friction between layers of fluid in motion. When fluid moves, the layers adjacent to solid boundaries experience resistance due to intermolecular forces, and this interaction causes the “stickiness” that characterizes viscous effects.</p>
+<p>In fluids, viscosity depends on:</p>
+<ul class="simple">
+<li><p><strong>Temperature</strong>: Higher temperatures generally decrease the viscosity of liquids and increase the viscosity of gases.</p></li>
+<li><p><strong>Pressure</strong>: For most liquids, the viscosity slightly increases with pressure, while for gases, this effect is more complex.</p></li>
+</ul>
+<p>The <strong>no-slip condition</strong> is a fundamental boundary condition in fluid mechanics, particularly relevant in the context of viscosity. It states that at a solid boundary, a fluid will have zero velocity relative to the boundary. In other words, the fluid particles at the interface between the fluid and the solid surface “stick” to the surface, meaning that the velocity of the fluid at the boundary is equal to the velocity of the surface itself.</p>
+</section>
+<section id="role-of-the-no-slip-condition-in-viscous-flows">
+<h3>Role of the No-Slip Condition in Viscous Flows<a class="headerlink" href="#role-of-the-no-slip-condition-in-viscous-flows" title="Link to this heading">#</a></h3>
+<p>Viscosity, as described earlier, is a measure of a fluid’s internal resistance to deformation or shear. When fluid flows over a surface, such as a pipe wall or a flat plate, the no-slip condition creates a velocity gradient from zero at the boundary (due to the fluid adhering to the surface) to the maximum velocity in the flow field away from the surface. This velocity gradient generates <strong>shear stress</strong> in the fluid, with the magnitude of this stress being directly proportional to the viscosity of the fluid.</p>
+<p>For a highly viscous fluid, such as honey, the velocity gradient near the surface is more gradual, meaning the fluid’s motion near the boundary is significantly slowed down by viscous forces. In contrast, for low-viscosity fluids like water, the fluid velocity increases more sharply away from the surface, as the internal friction is lower.</p>
+</section>
+<section id="physical-mechanism-behind-the-no-slip-condition">
+<h3>Physical Mechanism Behind the No-Slip Condition<a class="headerlink" href="#physical-mechanism-behind-the-no-slip-condition" title="Link to this heading">#</a></h3>
+<p>The no-slip condition arises due to intermolecular forces between the fluid molecules and the solid boundary. Near the surface, fluid molecules are attracted to the solid and do not slip past it. The layer of fluid molecules closest to the surface is essentially stationary relative to the solid. The fluid layers adjacent to this stationary layer experience shear due to the velocity difference between layers, and this is where viscosity acts to resist the relative motion between the layers.</p>
+<p>In summary:</p>
+<ul class="simple">
+<li><p><strong>Viscosity</strong>: Determines how much the fluid resists the development of this velocity gradient.</p></li>
+<li><p><strong>No-slip condition</strong>: Ensures that the velocity of the fluid at the boundary equals the velocity of the solid surface, enforcing a zero-velocity condition at solid-fluid interfaces.</p></li>
+</ul>
+</section>
+<section id="importance-in-applications">
+<h3>Importance in Applications<a class="headerlink" href="#importance-in-applications" title="Link to this heading">#</a></h3>
+<p>The no-slip condition is critical in various engineering applications where fluid interaction with solid surfaces is important:</p>
+<ul class="simple">
+<li><p><strong>Lubrication</strong>: In systems where moving parts are lubricated, the no-slip condition ensures a velocity gradient develops in the lubricant, creating shear stress that supports the load.</p></li>
+<li><p><strong>Aerodynamics</strong>: In aerodynamics, the no-slip condition causes the formation of boundary layers on surfaces like airplane wings, which significantly affect drag and lift.</p></li>
+<li><p><strong>Heat transfer</strong>: In heat exchangers, the no-slip condition at the solid walls enhances heat transfer by enforcing fluid velocity gradients, which increase convective heat transfer.</p></li>
+</ul>
+<p>Thus, the no-slip condition is inseparably linked with viscosity, as it governs the behavior of fluids at solid boundaries, directly influencing the velocity distribution and the shear forces in the fluid.</p>
+</section>
+<section id="shear-flow-in-fluids">
+<h3>Shear Flow in Fluids<a class="headerlink" href="#shear-flow-in-fluids" title="Link to this heading">#</a></h3>
+<p>Consider a Newtonian fluid between two parallel plates, where:</p>
+<ul class="simple">
+<li><p>The bottom plate is stationary.</p></li>
+<li><p>The top plate moves at a constant velocity <span class="math notranslate nohighlight">\(U\)</span>.</p></li>
+<li><p>The fluid between the plates is assumed to be incompressible and Newtonian.</p></li>
+<li><p>The distance between the plates is <span class="math notranslate nohighlight">\(h\)</span>.</p></li>
+</ul>
+<p>The velocity distribution between the plates is linear, given by:</p>
+<div class="math notranslate nohighlight">
+\[
+u(y) = \frac{U}{h} y
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(u(y)\)</span> is the fluid velocity at a distance <span class="math notranslate nohighlight">\(y\)</span> from the stationary plate.</p>
+<p>The viscosity <span class="math notranslate nohighlight">\(\mu\)</span> is defined for Newtonian fluids (those for which the stress is proportional to the rate of strain) as the constant of proportionality between the shear stress <span class="math notranslate nohighlight">\(\tau\)</span> and the velocity gradient <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> in a simple shear flow:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{du}{dy}
+\]</div>
+<p>For Newtonian fluids, <span class="math notranslate nohighlight">\(\mu\)</span> remains constant, meaning the fluid’s resistance to shear flow is directly proportional to the velocity gradient. Non-Newtonian fluids, by contrast, exhibit a non-linear relationship between shear stress and velocity gradient, where viscosity may vary with the rate of strain.</p>
+<p>For this system:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{du}{dy} = \frac{U}{h}
+\]</div>
+<p>Thus, the shear stress is:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{U}{h}
+\]</div>
+<p>This shows that the shear stress <span class="math notranslate nohighlight">\(\tau\)</span> is directly proportional to the viscosity <span class="math notranslate nohighlight">\(\mu\)</span> and the velocity gradient <span class="math notranslate nohighlight">\(\frac{U}{h}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Remember:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\tau\)</span> is the shear stress (force per unit area) acting parallel to the fluid layer,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> is the velocity gradient (rate of strain) perpendicular to the fluid motion,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span> is the dynamic viscosity (units: <span class="math notranslate nohighlight">\(\text{Pa} \cdot \text{s}\)</span> or <span class="math notranslate nohighlight">\(\text{N} \cdot \text{s}/\text{m}^2\)</span>).</p></li>
+<li><p>In SI: <span class="math notranslate nohighlight">\(\text{Pa} \cdot \text{s}\)</span> or <span class="math notranslate nohighlight">\(\text{N} \cdot \text{s}/\text{m}^2\)</span>.</p></li>
+<li><p>In the CGS system: <strong>Poise</strong> (P), where <span class="math notranslate nohighlight">\(1 \, \text{P} = 0.1 \, \text{Pa} \cdot \text{s}\)</span>.</p></li>
+</ul>
+</div>
+<p>Another common term is <strong>kinematic viscosity</strong> <span class="math notranslate nohighlight">\(\nu\)</span>, defined as the ratio of dynamic viscosity to fluid density <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\nu = \frac{\mu}{\rho}
+\]</div>
+<p>The units of kinematic viscosity are <span class="math notranslate nohighlight">\(\text{m}^2/\text{s}\)</span> (SI) and <strong>Stokes (St)</strong> in the CGS system.</p>
+</section>
+<section id="microscopic-origin-of-viscosity">
+<h3>Microscopic Origin of Viscosity<a class="headerlink" href="#microscopic-origin-of-viscosity" title="Link to this heading">#</a></h3>
+<p>From a molecular perspective, viscosity is related to the momentum transfer between fluid molecules. In gases, molecules move randomly, and as they collide, they transfer momentum, creating a shear stress. In liquids, the intermolecular forces dominate, and these forces resist the relative motion of adjacent layers, contributing to the fluid’s viscosity.</p>
+</section>
+<section id="experimental-measurement-of-viscosity">
+<h3>Experimental Measurement of Viscosity<a class="headerlink" href="#experimental-measurement-of-viscosity" title="Link to this heading">#</a></h3>
+<p>Viscosity can be measured using several devices, such as:</p>
+<ul class="simple">
+<li><p><strong>Capillary Viscometers</strong>: Based on measuring the flow rate of the fluid through a thin tube.</p></li>
+<li><p><strong>Rotational Viscometers</strong>: Measure the torque required to rotate a disk or cylinder in the fluid.</p></li>
+<li><p><strong>Falling Sphere Viscometers</strong>: Measure the terminal velocity of a sphere falling through the fluid, applying Stokes’ law.</p></li>
+</ul>
+</section>
+<section id="importance-of-viscosity-in-fluid-mechanics">
+<h3>Importance of Viscosity in Fluid Mechanics<a class="headerlink" href="#importance-of-viscosity-in-fluid-mechanics" title="Link to this heading">#</a></h3>
+<p>Viscosity is a fundamental property that governs how fluids resist motion under applied forces. It is particularly important in understanding fluid flow in systems ranging from simple pipe flows to complex aerodynamic applications. Newton’s law of viscosity provides the foundation for analyzing fluid behavior in shear flows, allowing us to predict stresses, velocities, and flow rates in Newtonian fluids. Derived from Newton’s law of viscosity, this property governs many fluid behaviors in both laminar and turbulent regimes.</p>
+<p>In real-world engineering applications, accurate knowledge of viscosity is essential for designing fluid systems, analyzing heat transfer, and ensuring the efficient operation of machinery.</p>
+<ul class="simple">
+<li><p><strong>Laminar vs. Turbulent Flow</strong>: High viscosity favors laminar flow, while low viscosity fluids are more prone to turbulence.</p></li>
+<li><p><strong>Boundary Layers</strong>: Viscosity plays a critical role in the formation and thickness of boundary layers.</p></li>
+<li><p><strong>Energy Dissipation</strong>: Viscous effects lead to energy dissipation in fluids, important in pipe flow, pumps, and engines.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="types_of_flows.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Types of Fluid Flow</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-density">What is Density?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-density-in-fluid-mechanics">Importance of Density in Fluid Mechanics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-of-density">Examples of Density</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-densities-of-fluids">Typical Densities of Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-density">Units of Density</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-example-buoyancy">Practical Example: Buoyancy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-specific-weight">What is Specific Weight?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-specific-weight">Units of Specific Weight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-between-density-and-specific-weight">Relationship Between Density and Specific Weight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-specific-weight-of-water">Example: Specific Weight of Water</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-applications-of-specific-weight">Practical Applications of Specific Weight</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-specific-weights-for-common-fluids">Table of Specific Weights for Common Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-specific-gravity">What is Specific Gravity?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculation">Example Calculation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">Interpretation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-specific-gravities-for-common-substances">Table of Specific Gravities for Common Substances</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ideal-gas-law">Ideal Gas Law</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptualization">Conceptualization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#understanding-the-equation">Understanding the Equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relationship-to-the-molar-form">Relationship to the Molar Form</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Calculation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-p-rho-r-t">Applications of <span class="math notranslate nohighlight">\(P = \rho R T\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-of-the-ideal-gas-law">Assumptions of the Ideal Gas Law</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations">Limitations</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-description-and-derivation">Viscosity: Description and Derivation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-viscosity">Introduction to Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#role-of-the-no-slip-condition-in-viscous-flows">Role of the No-Slip Condition in Viscous Flows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-mechanism-behind-the-no-slip-condition">Physical Mechanism Behind the No-Slip Condition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-in-applications">Importance in Applications</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-flow-in-fluids">Shear Flow in Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#microscopic-origin-of-viscosity">Microscopic Origin of Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#experimental-measurement-of-viscosity">Experimental Measurement of Viscosity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#importance-of-viscosity-in-fluid-mechanics">Importance of Viscosity in Fluid Mechanics</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+## Setting Up the Environment
+
+To replicate the exact Python environment I am using for this course, you can replicate the `environment.yml` file or view its contents below.
+
+### Environment File Contents
+
+```yaml
+name: jupyterbook_env
+channels:
+  - defaults
+dependencies:
+  - anyio=4.6.2=py311hecd8cb5_0
+  - appnope=0.1.2=py311hecd8cb5_1001
+  - argon2-cffi=21.3.0=pyhd3eb1b0_0
+  - argon2-cffi-bindings=21.2.0=py311h6c40b1e_0
+  - asttokens=2.0.5=pyhd3eb1b0_0
+  - async-lru=2.0.4=py311hecd8cb5_0
+  - attrs=24.2.0=py311hecd8cb5_0
+  - beautifulsoup4=4.12.3=py311hecd8cb5_0
+  - blas=1.0=mkl
+  - bleach=4.1.0=pyhd3eb1b0_0
+  - bottleneck=1.3.7=py311hb3a5e46_0
+  - brotli=1.0.9=h6c40b1e_8
+  - brotli-bin=1.0.9=h6c40b1e_8
+  - brotli-python=1.0.9=py311hcec6c5f_8
+  - bzip2=1.0.8=h6c40b1e_6
+  - ca-certificates=2024.9.24=hecd8cb5_0
+  - certifi=2024.8.30=py311hecd8cb5_0
+  - cffi=1.17.1=py311h9205ec4_0
+  - charset-normalizer=3.3.2=pyhd3eb1b0_0
+  - comm=0.2.1=py311hecd8cb5_0
+  - contourpy=1.2.0=py311ha357a0b_0
+  - cycler=0.11.0=pyhd3eb1b0_0
+  - debugpy=1.6.7=py311hcec6c5f_0
+  - decorator=5.1.1=pyhd3eb1b0_0
+  - defusedxml=0.7.1=pyhd3eb1b0_0
+  - executing=0.8.3=pyhd3eb1b0_0
+  - fonttools=4.51.0=py311h6c40b1e_0
+  - freetype=2.12.1=hd8bbffd_0
+  - h11=0.14.0=py311hecd8cb5_0
+  - httpcore=1.0.2=py311hecd8cb5_0
+  - httpx=0.27.0=py311hecd8cb5_0
+  - idna=3.7=py311hecd8cb5_0
+  - intel-openmp=2023.1.0=ha357a0b_43548
+  - ipykernel=6.29.5=py311hecd8cb5_0
+  - ipython=8.27.0=py311hecd8cb5_0
+  - jedi=0.19.1=py311hecd8cb5_0
+  - jinja2=3.1.4=py311hecd8cb5_0
+  - jpeg=9e=h46256e1_3
+  - json5=0.9.6=pyhd3eb1b0_0
+  - jsonschema=4.23.0=py311hecd8cb5_0
+  - jsonschema-specifications=2023.7.1=py311hecd8cb5_0
+  - jupyter-lsp=2.2.0=py311hecd8cb5_0
+  - jupyter_client=8.6.0=py311hecd8cb5_0
+  - jupyter_core=5.7.2=py311hecd8cb5_0
+  - jupyter_events=0.10.0=py311hecd8cb5_0
+  - jupyter_server=2.14.1=py311hecd8cb5_0
+  - jupyter_server_terminals=0.4.4=py311hecd8cb5_1
+  - jupyterlab=4.2.5=py311hecd8cb5_0
+  - jupyterlab_pygments=0.1.2=py_0
+  - jupyterlab_server=2.27.3=py311hecd8cb5_0
+  - kiwisolver=1.4.4=py311hcec6c5f_0
+  - lcms2=2.12=hf1fd2bf_0
+  - lerc=3.0=he9d5cce_0
+  - libbrotlicommon=1.0.9=h6c40b1e_8
+  - libbrotlidec=1.0.9=h6c40b1e_8
+  - libbrotlienc=1.0.9=h6c40b1e_8
+  - libcxx=14.0.6=h9765a3e_0
+  - libdeflate=1.17=hb664fd8_1
+  - libffi=3.4.4=hecd8cb5_1
+  - libgfortran=5.0.0=11_3_0_hecd8cb5_28
+  - libgfortran5=11.3.0=h9dfd629_28
+  - libpng=1.6.39=h6c40b1e_0
+  - libsodium=1.0.18=h1de35cc_0
+  - libtiff=4.5.1=hcec6c5f_0
+  - libwebp-base=1.3.2=h46256e1_1
+  - llvm-openmp=14.0.6=h0dcd299_0
+  - lz4-c=1.9.4=hcec6c5f_1
+  - markupsafe=2.1.3=py311h6c40b1e_0
+  - matplotlib=3.9.2=py311hecd8cb5_0
+  - matplotlib-base=3.9.2=py311hc25a08b_0
+  - matplotlib-inline=0.1.6=py311hecd8cb5_0
+  - mistune=2.0.4=py311hecd8cb5_0
+  - mkl=2023.1.0=h8e150cf_43560
+  - mkl-service=2.4.0=py311h6c40b1e_1
+  - mkl_fft=1.3.8=py311h6c40b1e_0
+  - mkl_random=1.2.4=py311ha357a0b_0
+  - nbclient=0.8.0=py311hecd8cb5_0
+  - nbconvert=7.16.4=py311hecd8cb5_0
+  - nbformat=5.10.4=py311hecd8cb5_0
+  - ncurses=6.4=hcec6c5f_0
+  - nest-asyncio=1.6.0=py311hecd8cb5_0
+  - notebook=7.2.2=py311hecd8cb5_1
+  - notebook-shim=0.2.3=py311hecd8cb5_0
+  - numexpr=2.8.7=py311h728a8a3_0
+  - numpy=1.26.4=py311h728a8a3_0
+  - numpy-base=1.26.4=py311h53bf9ac_0
+  - openjpeg=2.5.2=hbf2204d_0
+  - openssl=3.0.15=h46256e1_0
+  - overrides=7.4.0=py311hecd8cb5_0
+  - packaging=24.1=py311hecd8cb5_0
+  - pandas=2.2.2=py311he327ffe_0
+  - pandocfilters=1.5.0=pyhd3eb1b0_0
+  - parso=0.8.3=pyhd3eb1b0_0
+  - pexpect=4.8.0=pyhd3eb1b0_3
+  - pillow=10.4.0=py311h46256e1_0
+  - pip=24.2=py311hecd8cb5_0
+  - platformdirs=3.10.0=py311hecd8cb5_0
+  - prometheus_client=0.14.1=py311hecd8cb5_0
+  - prompt-toolkit=3.0.43=py311hecd8cb5_0
+  - prompt_toolkit=3.0.43=hd3eb1b0_0
+  - psutil=5.9.0=py311h6c40b1e_0
+  - ptyprocess=0.7.0=pyhd3eb1b0_2
+  - pure_eval=0.2.2=pyhd3eb1b0_0
+  - pycparser=2.21=pyhd3eb1b0_0
+  - pyparsing=3.1.2=py311hecd8cb5_0
+  - pysocks=1.7.1=py311hecd8cb5_0
+  - python=3.11.10=h4d6d9e5_0
+  - python-dateutil=2.9.0post0=py311hecd8cb5_2
+  - python-fastjsonschema=2.16.2=py311hecd8cb5_0
+  - python-json-logger=2.0.7=py311hecd8cb5_0
+  - python-tzdata=2023.3=pyhd3eb1b0_0
+  - pytz=2024.1=py311hecd8cb5_0
+  - pyyaml=6.0.2=py311h46256e1_0
+  - pyzmq=25.1.2=py311hcec6c5f_0
+  - readline=8.2=hca72f7f_0
+  - referencing=0.30.2=py311hecd8cb5_0
+  - requests=2.32.3=py311hecd8cb5_0
+  - rfc3339-validator=0.1.4=py311hecd8cb5_0
+  - rfc3986-validator=0.1.1=py311hecd8cb5_0
+  - rpds-py=0.10.6=py311hf2ad997_0
+  - scipy=1.12.0=py311h224febf_0
+  - send2trash=1.8.2=py311hecd8cb5_0
+  - setuptools=75.1.0=py311hecd8cb5_0
+  - six=1.16.0=pyhd3eb1b0_1
+  - sniffio=1.3.0=py311hecd8cb5_0
+  - soupsieve=2.5=py311hecd8cb5_0
+  - sqlite=3.45.3=h6c40b1e_0
+  - stack_data=0.2.0=pyhd3eb1b0_0
+  - tbb=2021.8.0=ha357a0b_0
+  - terminado=0.17.1=py311hecd8cb5_0
+  - tinycss2=1.2.1=py311hecd8cb5_0
+  - tk=8.6.14=h4d00af3_0
+  - tornado=6.4.1=py311h46256e1_0
+  - traitlets=5.14.3=py311hecd8cb5_0
+  - typing-extensions=4.11.0=py311hecd8cb5_0
+  - typing_extensions=4.11.0=py311hecd8cb5_0
+  - tzdata=2024b=h04d1e81_0
+  - unicodedata2=15.1.0=py311h6c40b1e_0
+  - urllib3=2.2.3=py311hecd8cb5_0
+  - wcwidth=0.2.5=pyhd3eb1b0_0
+  - webencodings=0.5.1=py311hecd8cb5_1
+  - websocket-client=1.8.0=py311hecd8cb5_0
+  - wheel=0.44.0=py311hecd8cb5_0
+  - xz=5.4.6=h6c40b1e_1
+  - yaml=0.2.5=haf1e3a3_0
+  - zeromq=4.3.5=hcec6c5f_0
+  - zlib=1.2.13=h4b97444_1
+  - zstd=1.5.6=h138b38a_0
+  - pip:
+    - accessible-pygments==0.0.5
+    - alabaster==0.7.16
+    - babel==2.16.0
+    - click==8.1.7
+    - docutils==0.20.1
+    - greenlet==3.1.1
+    - imagesize==1.4.1
+    - importlib-metadata==8.5.0
+    - jupyter-book==1.0.3
+    - jupyter-cache==1.0.0
+    - latexcodec==3.0.0
+    - linkify-it-py==2.0.3
+    - markdown-it-py==3.0.0
+    - mdit-py-plugins==0.4.2
+    - mdurl==0.1.2
+    - myst-nb==1.1.2
+    - myst-parser==2.0.0
+    - pybtex==0.24.0
+    - pybtex-docutils==1.0.3
+    - pydata-sphinx-theme==0.15.4
+    - pygments==2.18.0
+    - snowballstemmer==2.2.0
+    - sphinx==7.4.7
+    - sphinx-book-theme==1.1.3
+    - sphinx-comments==0.0.3
+    - sphinx-copybutton==0.5.2
+    - sphinx-design==0.6.1
+    - sphinx-external-toc==1.0.1
+    - sphinx-jupyterbook-latex==1.0.0
+    - sphinx-multitoc-numbering==0.1.3
+    - sphinx-thebe==0.3.1
+    - sphinx-togglebutton==0.3.2
+    - sphinxcontrib-applehelp==2.0.0
+    - sphinxcontrib-bibtex==2.6.3
+    - sphinxcontrib-devhelp==2.0.0
+    - sphinxcontrib-htmlhelp==2.1.0
+    - sphinxcontrib-jsmath==1.0.1
+    - sphinxcontrib-qthelp==2.0.0
+    - sphinxcontrib-serializinghtml==2.0.0
+    - sqlalchemy==2.0.36
+    - tabulate==0.9.0
+    - uc-micro-py==1.0.3
+    - zipp==3.20.2
+```
+
+### Environment set up
+To set up the environment, follow these steps:
+
+1. Create the `environment.yml` file from the content above.
+2. Run the following command in your terminal:
+
+```bash
+conda env create -f environment.yml
+```

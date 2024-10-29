@@ -1,0 +1,951 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Common Physical Quantities and Units &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'units';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Prerequisites" href="prerequisites.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to the Fluid Mechanics Course Site
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Common Physical Quantities and Units</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Funits.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/units.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Common Physical Quantities and Units</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-conversion-table">Unit Conversion Table</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Notes:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="common-physical-quantities-and-units">
+<h1>Common Physical Quantities and Units<a class="headerlink" href="#common-physical-quantities-and-units" title="Link to this heading">#</a></h1>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Physical Quantity</p></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>SI Unit</p></th>
+<th class="head"><p>CGS Unit</p></th>
+<th class="head"><p>Imperial/US Unit</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Length</p></td>
+<td><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
+<td><p>meter (m)</p></td>
+<td><p>centimeter (cm)</p></td>
+<td><p>foot (ft), inch (in)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mass</p></td>
+<td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
+<td><p>kilogram (kg)</p></td>
+<td><p>gram (g)</p></td>
+<td><p>slug, pound (lb), ounce (oz)</p></td>
+</tr>
+<tr class="row-even"><td><p>Time</p></td>
+<td><p><span class="math notranslate nohighlight">\(t\)</span></p></td>
+<td><p>second (s)</p></td>
+<td><p>second (s)</p></td>
+<td><p>second (s), minute (min)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Speed</p></td>
+<td><p><span class="math notranslate nohighlight">\(v\)</span></p></td>
+<td><p>meter per second (m/s)</p></td>
+<td><p>centimeter per second (cm/s)</p></td>
+<td><p>foot per second (ft/s), miles per hour (mph)</p></td>
+</tr>
+<tr class="row-even"><td><p>Acceleration</p></td>
+<td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
+<td><p>meter per second squared (m/s²)</p></td>
+<td><p>centimeter per second squared (cm/s²)</p></td>
+<td><p>foot per second squared (ft/s²)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Force</p></td>
+<td><p><span class="math notranslate nohighlight">\(F\)</span></p></td>
+<td><p>newton (N) = kg·m/s²</p></td>
+<td><p>dyne = g·cm/s²</p></td>
+<td><p>pound-force (lbf)</p></td>
+</tr>
+<tr class="row-even"><td><p>Energy</p></td>
+<td><p><span class="math notranslate nohighlight">\(E\)</span></p></td>
+<td><p>joule (J) = N·m</p></td>
+<td><p>erg = dyne·cm</p></td>
+<td><p>British thermal unit (BTU), foot-pound (ft·lb)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Work</p></td>
+<td><p><span class="math notranslate nohighlight">\(W\)</span></p></td>
+<td><p>joule (J)</p></td>
+<td><p>erg</p></td>
+<td><p>foot-pound (ft·lb)</p></td>
+</tr>
+<tr class="row-even"><td><p>Power</p></td>
+<td><p><span class="math notranslate nohighlight">\(P\)</span></p></td>
+<td><p>watt (W) = J/s</p></td>
+<td><p>erg per second (erg/s)</p></td>
+<td><p>horsepower (hp)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pressure</p></td>
+<td><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td><p>pascal (Pa) = N/m²</p></td>
+<td><p>barye (Ba) = dyne/cm²</p></td>
+<td><p>pound per square inch (psi)</p></td>
+</tr>
+<tr class="row-even"><td><p>Density</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
+<td><p>kilogram per cubic meter (kg/m³)</p></td>
+<td><p>gram per cubic centimeter (g/cm³)</p></td>
+<td><p>slug per cubic foot (slug/ft³), pound per cubic foot (lb/ft³)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Volume</p></td>
+<td><p><span class="math notranslate nohighlight">\(V\)</span></p></td>
+<td><p>cubic meter (m³)</p></td>
+<td><p>cubic centimeter (cm³)</p></td>
+<td><p>cubic foot (ft³), gallon (gal)</p></td>
+</tr>
+<tr class="row-even"><td><p>Temperature</p></td>
+<td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
+<td><p>kelvin (K), Celsius (°C)</p></td>
+<td><p>Celsius (°C)</p></td>
+<td><p>Fahrenheit (°F)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Electric Current</p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p>ampere (A)</p></td>
+<td><p>statampere (statA)</p></td>
+<td><p>ampere (A)</p></td>
+</tr>
+<tr class="row-even"><td><p>Electric Charge</p></td>
+<td><p><span class="math notranslate nohighlight">\(q\)</span></p></td>
+<td><p>coulomb (C)</p></td>
+<td><p>statcoulomb (statC)</p></td>
+<td><p>coulomb (C)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Voltage (Electric Potential)</p></td>
+<td><p><span class="math notranslate nohighlight">\(V\)</span></p></td>
+<td><p>volt (V)</p></td>
+<td><p>statvolt (statV)</p></td>
+<td><p>volt (V)</p></td>
+</tr>
+<tr class="row-even"><td><p>Resistance</p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p>ohm (Ω)</p></td>
+<td><p>statohm (statΩ)</p></td>
+<td><p>ohm (Ω)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Capacitance</p></td>
+<td><p><span class="math notranslate nohighlight">\(C\)</span></p></td>
+<td><p>farad (F)</p></td>
+<td><p>statfarad (statF)</p></td>
+<td><p>farad (F)</p></td>
+</tr>
+<tr class="row-even"><td><p>Inductance</p></td>
+<td><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
+<td><p>henry (H)</p></td>
+<td><p>stathenry (statH)</p></td>
+<td><p>henry (H)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Frequency</p></td>
+<td><p><span class="math notranslate nohighlight">\(f\)</span></p></td>
+<td><p>hertz (Hz) = 1/s</p></td>
+<td><p>cycles per second (cps)</p></td>
+<td><p>hertz (Hz)</p></td>
+</tr>
+<tr class="row-even"><td><p>Angular Velocity</p></td>
+<td><p><span class="math notranslate nohighlight">\(\omega\)</span></p></td>
+<td><p>radian per second (rad/s)</p></td>
+<td><p>radian per second (rad/s)</p></td>
+<td><p>revolution per minute (rpm)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Momentum</p></td>
+<td><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
+<td><p>kilogram meter per second (kg·m/s)</p></td>
+<td><p>gram centimeter per second (g·cm/s)</p></td>
+<td><p>slug·ft/s</p></td>
+</tr>
+<tr class="row-even"><td><p>Impulse</p></td>
+<td><p><span class="math notranslate nohighlight">\(J\)</span></p></td>
+<td><p>newton-second (N·s)</p></td>
+<td><p>dyne-second (dyn·s)</p></td>
+<td><p>pound-force second (lbf·s)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Torque</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau\)</span></p></td>
+<td><p>newton-meter (N·m)</p></td>
+<td><p>dyne-centimeter (dyn·cm)</p></td>
+<td><p>pound-force foot (lbf·ft)</p></td>
+</tr>
+<tr class="row-even"><td><p>Magnetic Flux</p></td>
+<td><p><span class="math notranslate nohighlight">\(\Phi\)</span></p></td>
+<td><p>weber (Wb)</p></td>
+<td><p>maxwell</p></td>
+<td><p>weber (Wb)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Magnetic Field Strength</p></td>
+<td><p><span class="math notranslate nohighlight">\(B\)</span></p></td>
+<td><p>tesla (T)</p></td>
+<td><p>gauss (G)</p></td>
+<td><p>gauss (G)</p></td>
+</tr>
+<tr class="row-even"><td><p>Heat</p></td>
+<td><p><span class="math notranslate nohighlight">\(Q\)</span></p></td>
+<td><p>joule (J)</p></td>
+<td><p>calorie (cal)</p></td>
+<td><p>British thermal unit (BTU)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Luminous Intensity</p></td>
+<td><p><span class="math notranslate nohighlight">\(I_v\)</span></p></td>
+<td><p>candela (cd)</p></td>
+<td><p>stilb (sb)</p></td>
+<td><p>candela (cd)</p></td>
+</tr>
+<tr class="row-even"><td><p>Radioactivity</p></td>
+<td><p><span class="math notranslate nohighlight">\(A\)</span></p></td>
+<td><p>becquerel (Bq)</p></td>
+<td><p>curie (Ci)</p></td>
+<td><p>curie (Ci)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="notes">
+<h2>Notes:<a class="headerlink" href="#notes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>SI (International System of Units)</strong> is the standard unit system used in science and engineering.</p></li>
+<li><p><strong>CGS (Centimeter-Gram-Second)</strong> system is common in some theoretical physics fields.</p></li>
+<li><p><strong>Imperial/US Customary</strong> units are commonly used in the United States for daily measurements and some engineering fields.</p></li>
+<li><p>Some physical quantities, such as angular velocity or frequency, are expressed in consistent units across systems, but they may be expressed differently in certain contexts (e.g., revolutions per minute in the Imperial system).</p></li>
+</ul>
+</section>
+<section id="unit-conversion-table">
+<h2>Unit Conversion Table<a class="headerlink" href="#unit-conversion-table" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Quantity</p></th>
+<th class="head"><p>SI Unit</p></th>
+<th class="head"><p>Imperial/US Unit</p></th>
+<th class="head"><p>CGS Unit</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Length</strong></p></td>
+<td><p>1 meter (m)</p></td>
+<td><p>3.28084 feet (ft), 39.3701 inches (in)</p></td>
+<td><p>100 centimeters (cm)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Length</strong></p></td>
+<td><p>1 kilometer (km)</p></td>
+<td><p>0.621371 miles (mi)</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^5\)</span> centimeters (cm)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Length</strong></p></td>
+<td><p>1 millimeter (mm)</p></td>
+<td><p>0.0393701 inches (in)</p></td>
+<td><p>0.1 centimeters (cm)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Length</strong></p></td>
+<td><p>1 micrometer (µm)</p></td>
+<td><p>3.93701e-5 inches (in)</p></td>
+<td><p>0.0001 centimeters (cm)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Length</strong></p></td>
+<td><p>1 nanometer (nm)</p></td>
+<td><p>3.93701e-8 inches (in)</p></td>
+<td><p>10 angstroms (Å)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Mass</strong></p></td>
+<td><p>1 kilogram (kg)</p></td>
+<td><p>2.20462 pounds (lb)</p></td>
+<td><p>1000 grams (g)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Mass</strong></p></td>
+<td><p>1 gram (g)</p></td>
+<td><p>0.035274 ounces (oz)</p></td>
+<td><p>1 gram (g)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Mass</strong></p></td>
+<td><p>1 slug</p></td>
+<td><p>32.174 pounds (lb)</p></td>
+<td><p>14,593 grams (g)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Mass</strong></p></td>
+<td><p>1 milligram (mg)</p></td>
+<td><p>0.0154324 grains (gr)</p></td>
+<td><p>0.001 grams (g)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Area</strong></p></td>
+<td><p>1 square meter (m²)</p></td>
+<td><p>10.7639 square feet (ft²)</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^4\)</span> square centimeters (cm²)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Area</strong></p></td>
+<td><p>1 hectare (ha)</p></td>
+<td><p>2.47105 acres</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^8\)</span> square centimeters (cm²)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Volume</strong></p></td>
+<td><p>1 cubic meter (m³)</p></td>
+<td><p>35.3147 cubic feet (ft³), 61023.7 cubic inches (in³)</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^6\)</span> cubic centimeters (cm³)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Volume</strong></p></td>
+<td><p>1 liter (L)</p></td>
+<td><p>0.264172 gallons (gal), 33.814 fluid ounces (fl oz)</p></td>
+<td><p>1000 cubic centimeters (cm³)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Volume</strong></p></td>
+<td><p>1 milliliter (mL)</p></td>
+<td><p>0.033814 fluid ounces (fl oz)</p></td>
+<td><p>1 cubic centimeter (cm³)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Speed</strong></p></td>
+<td><p>1 meter/second (m/s)</p></td>
+<td><p>2.23694 miles/hour (mph), 3.28084 feet/second (ft/s)</p></td>
+<td><p>100 centimeters/second (cm/s)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Speed</strong></p></td>
+<td><p>1 kilometer/hour (km/h)</p></td>
+<td><p>0.621371 miles/hour (mph)</p></td>
+<td><p>27.7778 centimeters/second (cm/s)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Acceleration</strong></p></td>
+<td><p>1 meter/second² (m/s²)</p></td>
+<td><p>3.28084 feet/second² (ft/s²)</p></td>
+<td><p>100 centimeters/second² (cm/s²)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Force</strong></p></td>
+<td><p>1 newton (N)</p></td>
+<td><p>0.224809 pound-force (lbf)</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^5\)</span> dynes (dyn)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Energy</strong></p></td>
+<td><p>1 joule (J)</p></td>
+<td><p>0.000947817 BTU, 0.737562 foot-pound (ft·lb)</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^7\)</span> ergs</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Energy</strong></p></td>
+<td><p>1 kilojoule (kJ)</p></td>
+<td><p>0.947817 BTU</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^{10}\)</span> ergs</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Work</strong></p></td>
+<td><p>1 joule (J)</p></td>
+<td><p>0.737562 foot-pound (ft·lb)</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^7\)</span> ergs</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Power</strong></p></td>
+<td><p>1 watt (W)</p></td>
+<td><p>0.00134102 horsepower (hp)</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^7\)</span> erg/second (erg/s)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Pressure</strong></p></td>
+<td><p>1 pascal (Pa)</p></td>
+<td><p>0.000145038 psi (pound/inch²)</p></td>
+<td><p>10 baryes (Ba)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Pressure</strong></p></td>
+<td><p>1 atmosphere (atm)</p></td>
+<td><p>14.696 psi</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.01325 \times 10^6\)</span> dyn/cm²</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Temperature</strong></p></td>
+<td><p>0 Celsius (°C)</p></td>
+<td><p>32 Fahrenheit (°F)</p></td>
+<td><p>273.15 Kelvin (K)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Momentum</strong></p></td>
+<td><p>1 kilogram meter/second (kg·m/s)</p></td>
+<td><p>0.737562 slug·ft/s</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^5\)</span> gram centimeter/second (g·cm/s)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Torque</strong></p></td>
+<td><p>1 newton meter (N·m)</p></td>
+<td><p>0.737562 pound-foot (lbf·ft)</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^7\)</span> dyne centimeter (dyn·cm)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Angular Displacement</strong></p></td>
+<td><p>1 radian (rad)</p></td>
+<td><p>57.2958 degrees (°)</p></td>
+<td><p>1 radian (rad)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Angular Velocity</strong></p></td>
+<td><p>1 radian/second (rad/s)</p></td>
+<td><p>9.5493 revolutions per minute (rpm)</p></td>
+<td><p>1 radian/second (rad/s)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Heat</strong></p></td>
+<td><p>1 joule (J)</p></td>
+<td><p>0.000238846 kilocalories (kcal), 0.000947817 BTU</p></td>
+<td><p><span class="math notranslate nohighlight">\(10^7\)</span> ergs</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Luminous Intensity</strong></p></td>
+<td><p>1 candela (cd)</p></td>
+<td><p>0.092903 foot-candle</p></td>
+<td><p>1 stilb (sb)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Electric Current</strong></p></td>
+<td><p>1 ampere (A)</p></td>
+<td><p>1 ampere (A)</p></td>
+<td><p>3.33564 × <span class="math notranslate nohighlight">\(10^{-10}\)</span> statA</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Electric Charge</strong></p></td>
+<td><p>1 coulomb (C)</p></td>
+<td><p>1 coulomb (C)</p></td>
+<td><p><span class="math notranslate nohighlight">\(3.33564 × 10^{-10}\)</span> statC</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Voltage</strong></p></td>
+<td><p>1 volt (V)</p></td>
+<td><p>1 volt (V)</p></td>
+<td><p><span class="math notranslate nohighlight">\(299.79 \times 10^6\)</span> statvolt</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Resistance</strong></p></td>
+<td><p>1 ohm (Ω)</p></td>
+<td><p>1 ohm (Ω)</p></td>
+<td><p><span class="math notranslate nohighlight">\(8.9876 \times 10^{11}\)</span> statohm</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Capacitance</strong></p></td>
+<td><p>1 farad (F)</p></td>
+<td><p>1 farad (F)</p></td>
+<td><p><span class="math notranslate nohighlight">\(1.11265 \times 10^{-12}\)</span> statfarad</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Inductance</strong></p></td>
+<td><p>1 henry (H)</p></td>
+<td><p>1 henry (H)</p></td>
+<td><p><span class="math notranslate nohighlight">\(8.9876 \times 10^{11}\)</span> statH</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Magnetic Flux</strong></p></td>
+<td><p>1 weber (Wb)</p></td>
+<td><p>1 maxwell (Mx)</p></td>
+<td><p>1 maxwell (Mx)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Magnetic Field Strength</strong></p></td>
+<td><p>1 tesla (T)</p></td>
+<td><p>10,000 gauss (G)</p></td>
+<td><p>1 gauss (G)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Frequency</strong></p></td>
+<td><p>1 hertz (Hz)</p></td>
+<td><p>1 cycle per second (cps)</p></td>
+<td><p>1 hertz (Hz)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Luminous Flux</strong></p></td>
+<td><p>1 lumen (lm)</p></td>
+<td><p>1 lumen (lm)</p></td>
+<td><p>1 lumen (lm)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Radiation</strong></p></td>
+<td><p>1 becquerel (Bq)</p></td>
+<td><p>2.7027 × <span class="math notranslate nohighlight">\(10^{-11}\)</span> curies (Ci)</p></td>
+<td><p>2.7027 × <span class="math notranslate nohighlight">\(10^{-11}\)</span> curies (Ci)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="id1">
+<h3>Notes:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Length</strong>: Includes conversions between <strong>meters</strong>, <strong>feet</strong>, <strong>inches</strong>, and <strong>centimeters</strong>.</p></li>
+<li><p><strong>Mass</strong>: Includes conversions between <strong>kilograms</strong>, <strong>pounds</strong>, <strong>ounces</strong>, and <strong>grams</strong>.</p></li>
+<li><p><strong>Area</strong>: Includes conversions between <strong>square meters</strong>, <strong>square feet</strong>, <strong>hectares</strong>, <strong>acres</strong>, and <strong>square centimeters</strong>.</p></li>
+<li><p><strong>Volume</strong>: Includes conversions between <strong>liters</strong>, <strong>gallons</strong>, <strong>cubic feet</strong>, <strong>cubic inches</strong>, and <strong>cubic centimeters</strong>.</p></li>
+<li><p><strong>Speed</strong>: Includes conversions between <strong>meters per second</strong>, <strong>miles per hour</strong>, <strong>feet per second</strong>, and <strong>centimeters per second</strong>.</p></li>
+<li><p><strong>Energy</strong>: Includes conversions between <strong>joules</strong>, <strong>foot-pounds</strong>, <strong>BTU</strong>, and <strong>ergs</strong>.</p></li>
+<li><p><strong>Pressure</strong>: Includes conversions between <strong>pascals</strong>, <strong>psi</strong>, <strong>atmospheres</strong>, and <strong>dynes/cm²</strong>.</p></li>
+<li><p><strong>Electricity &amp; Magnetism</strong>: Includes units for <strong>electric current</strong>, <strong>electric charge</strong>, <strong>voltage</strong>, <strong>resistance</strong>, <strong>capacitance</strong>, <strong>inductance</strong>, and <strong>magnetic field strength</strong>.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="prerequisites.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Prerequisites</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-conversion-table">Unit Conversion Table</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Notes:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
