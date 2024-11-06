@@ -58,6 +58,7 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'syllabus';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -184,10 +185,10 @@
 <li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="units.html">Common Physical Quantities and Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluids_v_solids.html">Solids vs. Fluids</a></li>
-<li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Common Physical Quantities and Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluid_properties.html">Properties of Fluids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -387,8 +388,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-description">Course Description</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-by-week-outline">Week-by-Week Outline</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-1-2-introduction-to-fluid-mechanics-and-properties"><strong>Weeks 1-2: Introduction to Fluid Mechanics and Properties</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-3-4-differential-analysis-and-navier-stokes-equations"><strong>Weeks 3-4: Differential Analysis and Navier-Stokes Equations</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-7-8-fluid-statics-as-an-application-of-navier-stokes"><strong>Weeks 7-8: Fluid Statics as an Application of Navier-Stokes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-3-differential-analysis-and-navier-stokes-equations"><strong>Weeks 3: Differential Analysis and Navier-Stokes Equations</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-4-fluid-statics-as-an-application-of-navier-stokes"><strong>Weeks 4: Fluid Statics as an Application of Navier-Stokes</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-5-6-fluid-kinematics-description-of-fluid-motion"><strong>Weeks 5-6: Fluid Kinematics (Description of Fluid Motion)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-9-10-bernoullis-equation-and-energy-conservation"><strong>Weeks 9-10: Bernoulli’s Equation and Energy Conservation</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-11-12-control-volume-analysis-and-integral-conservation-laws"><strong>Weeks 11-12: Control Volume Analysis and Integral Conservation Laws</strong></a></li>
@@ -421,31 +422,30 @@ document.write(`
 <section id="weeks-1-2-introduction-to-fluid-mechanics-and-properties">
 <h3><strong>Weeks 1-2: Introduction to Fluid Mechanics and Properties</strong><a class="headerlink" href="#weeks-1-2-introduction-to-fluid-mechanics-and-properties" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Prerequisites: Math and physics</p></li>
-<li><p>Definition of fluids and distinction between solids and fluids.</p></li>
-<li><p>Fluid properties: density, viscosity, surface tension.</p></li>
-<li><p>Continuum hypothesis: fluid as a continuum.</p></li>
+<li><p><span style="color: green;">Prerequisites: Math and physics</span></p></li>
+<li><p><span style="color: green;">Definition of fluids and distinction between solids and fluids.</span></p></li>
+<li><p><span style="color: green;">Continuum hypothesis: fluid as a continuum.</span></p></li>
+<li><p>Common physical quantities and units</p></li>
+<li><p>Fluid properties: <span style="color: green;">density</span>, viscosity, surface tension.</p></li>
+<li><p>Ideal gas law</p></li>
+<li><p>No-slip condition</p></li>
+<li><p>Types of flows</p></li>
 <li><p>Basic concepts: fluid pressure, temperature, and velocity.</p></li>
 </ul>
 <p><strong>Lab</strong>: Measurement of basic fluid properties (density, viscosity, surface tension).</p>
 </section>
 <hr class="docutils" />
-<section id="weeks-3-4-differential-analysis-and-navier-stokes-equations">
-<h3><strong>Weeks 3-4: Differential Analysis and Navier-Stokes Equations</strong><a class="headerlink" href="#weeks-3-4-differential-analysis-and-navier-stokes-equations" title="Link to this heading">#</a></h3>
+<section id="weeks-3-differential-analysis-and-navier-stokes-equations">
+<h3><strong>Weeks 3: Differential Analysis and Navier-Stokes Equations</strong><a class="headerlink" href="#weeks-3-differential-analysis-and-navier-stokes-equations" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Review of Newton’s second law and its application to fluids.</p></li>
-<li><p>Differential control volumes and the derivation of the <strong>Navier-Stokes equations</strong>.</p></li>
 <li><p>Forces in fluid flow: pressure, body forces, and viscous forces.</p></li>
-<li><p>Introduction to boundary conditions.</p></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li><p>Derivation of the <strong>Navier-Stokes equations</strong>.</p></li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="weeks-7-8-fluid-statics-as-an-application-of-navier-stokes">
-<h3><strong>Weeks 7-8: Fluid Statics as an Application of Navier-Stokes</strong><a class="headerlink" href="#weeks-7-8-fluid-statics-as-an-application-of-navier-stokes" title="Link to this heading">#</a></h3>
+<section id="weeks-4-fluid-statics-as-an-application-of-navier-stokes">
+<h3><strong>Weeks 4: Fluid Statics as an Application of Navier-Stokes</strong><a class="headerlink" href="#weeks-4-fluid-statics-as-an-application-of-navier-stokes" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Fluid statics</strong> as a special case of the Navier-Stokes equations (no velocity, steady-state).</p></li>
 <li><p>Hydrostatic equation: (\frac{dp}{dz} = -\rho g).</p></li>
@@ -476,7 +476,6 @@ document.write(`
 </li>
 </ul>
 <p><strong>Lab</strong>: Visualization of streamlines and velocity fields using flow visualization techniques (dye injection, PIV).</p>
-<hr class="docutils" />
 </section>
 <hr class="docutils" />
 <section id="weeks-9-10-bernoullis-equation-and-energy-conservation">
@@ -546,11 +545,11 @@ document.write(`
 <section id="material">
 <h2>Material<a class="headerlink" href="#material" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong>Cengel, Yunus A., and John M. Cimbala.</strong> Fluid Mechanics: Fundamentals and Applications. McGraw-Hill, 2018. <span id="id1">[]</span></p></li>
-<li><p><strong>White, Frank M.</strong> Fluid Mechanics. McGraw-Hill, 2016. <span id="id2">[]</span></p></li>
-<li><p><strong>Munson, Bruce R., Donald F. Young, Theodore H. Okiishi, and Wade W. Huebsch.</strong> Fundamentals of Fluid Mechanics. Wiley, 2012. <span id="id3">[]</span></p></li>
-<li><p><strong>Shames, Irving H.</strong> Mechanics of Fluids. McGraw-Hill, 2003. <span id="id4">[]</span></p></li>
-<li><p><strong>Fox, Robert W., Alan T. McDonald, and Philip J. Pritchard.</strong> Introduction to Fluid Mechanics. Wiley, 2011. <span id="id5">[]</span></p></li>
+<li><p><strong>Cengel, Yunus A., and John M. Cimbala.</strong> Fluid Mechanics: Fundamentals and Applications. McGraw-Hill, 2018. <span id="id1">[<a class="reference internal" href="bibliography.html#id2" title="Yunus A. Cengel and John M. Cimbala. Fluid Mechanics: Fundamentals and Applications. McGraw-Hill, 2018.">CC18</a>]</span></p></li>
+<li><p><strong>White, Frank M.</strong> Fluid Mechanics. McGraw-Hill, 2016. <span id="id2">[<a class="reference internal" href="bibliography.html#id3" title="Frank M. White. Fluid Mechanics. McGraw-Hill, 2016.">Whi16</a>]</span></p></li>
+<li><p><strong>Munson, Bruce R., Donald F. Young, Theodore H. Okiishi, and Wade W. Huebsch.</strong> Fundamentals of Fluid Mechanics. Wiley, 2012. <span id="id3">[<a class="reference internal" href="bibliography.html#id4" title="Bruce R. Munson, Donald F. Young, Theodore H. Okiishi, and Wade W. Huebsch. Fundamentals of Fluid Mechanics. Wiley, 2012.">MYOH12</a>]</span></p></li>
+<li><p><strong>Shames, Irving H.</strong> Mechanics of Fluids. McGraw-Hill, 2003. <span id="id4">[<a class="reference internal" href="bibliography.html#id5" title="Irving H. Shames. Mechanics of Fluids. McGraw-Hill, 2003.">Sha03</a>]</span></p></li>
+<li><p><strong>Fox, Robert W., Alan T. McDonald, and Philip J. Pritchard.</strong> Introduction to Fluid Mechanics. Wiley, 2011. <span id="id5">[<a class="reference internal" href="bibliography.html#id6" title="Robert W. Fox, Alan T. McDonald, and Philip J. Pritchard. Introduction to Fluid Mechanics. Wiley, 2011.">FMP11</a>]</span></p></li>
 </ul>
 </section>
 </section>
@@ -622,8 +621,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#course-description">Course Description</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#week-by-week-outline">Week-by-Week Outline</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-1-2-introduction-to-fluid-mechanics-and-properties"><strong>Weeks 1-2: Introduction to Fluid Mechanics and Properties</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-3-4-differential-analysis-and-navier-stokes-equations"><strong>Weeks 3-4: Differential Analysis and Navier-Stokes Equations</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-7-8-fluid-statics-as-an-application-of-navier-stokes"><strong>Weeks 7-8: Fluid Statics as an Application of Navier-Stokes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-3-differential-analysis-and-navier-stokes-equations"><strong>Weeks 3: Differential Analysis and Navier-Stokes Equations</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-4-fluid-statics-as-an-application-of-navier-stokes"><strong>Weeks 4: Fluid Statics as an Application of Navier-Stokes</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-5-6-fluid-kinematics-description-of-fluid-motion"><strong>Weeks 5-6: Fluid Kinematics (Description of Fluid Motion)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-9-10-bernoullis-equation-and-energy-conservation"><strong>Weeks 9-10: Bernoulli’s Equation and Energy Conservation</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weeks-11-12-control-volume-analysis-and-integral-conservation-laws"><strong>Weeks 11-12: Control Volume Analysis and Integral Conservation Laws</strong></a></li>

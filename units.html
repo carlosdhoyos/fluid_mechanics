@@ -60,11 +60,12 @@
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'units';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Solids vs. Fluids" href="fluids_v_solids.html" />
-    <link rel="prev" title="Prerequisites" href="prerequisites.html" />
+    <link rel="next" title="Properties of Fluids" href="fluid_properties.html" />
+    <link rel="prev" title="Solids vs. Fluids" href="fluids_v_solids.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,10 +187,10 @@
 <li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Common Physical Quantities and Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluids_v_solids.html">Solids vs. Fluids</a></li>
-<li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Common Physical Quantities and Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluid_properties.html">Properties of Fluids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
 </ul>
 
@@ -386,11 +387,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-units">Common Units</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-conversion-table">Unit Conversion Table</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Notes:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-differences-between-imperial-and-bg-systems">Key Differences Between Imperial and BG Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement-of-force">Measurement of Force:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-mass-and-weight">Units of Mass and Weight:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consistent-unit-systems">Consistent Unit Systems:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-fluid-mechanics-context">Example in Fluid Mechanics Context</a></li>
 </ul>
             </nav>
         </div>
@@ -404,6 +415,8 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="common-physical-quantities-and-units">
 <h1>Common Physical Quantities and Units<a class="headerlink" href="#common-physical-quantities-and-units" title="Link to this heading">#</a></h1>
+<section id="common-units">
+<h2>Common Units<a class="headerlink" href="#common-units" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Physical Quantity</p></th>
@@ -411,6 +424,7 @@ document.write(`
 <th class="head"><p>SI Unit</p></th>
 <th class="head"><p>CGS Unit</p></th>
 <th class="head"><p>Imperial/US Unit</p></th>
+<th class="head"><p>BG (British Gravitational) Unit</p></th>
 </tr>
 </thead>
 <tbody>
@@ -419,29 +433,34 @@ document.write(`
 <td><p>meter (m)</p></td>
 <td><p>centimeter (cm)</p></td>
 <td><p>foot (ft), inch (in)</p></td>
+<td><p>foot (ft)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Mass</p></td>
 <td><p><span class="math notranslate nohighlight">\(m\)</span></p></td>
 <td><p>kilogram (kg)</p></td>
 <td><p>gram (g)</p></td>
-<td><p>slug, pound (lb), ounce (oz)</p></td>
+<td><p>pound-mass (lbm)</p></td>
+<td><p>slug</p></td>
 </tr>
 <tr class="row-even"><td><p>Time</p></td>
 <td><p><span class="math notranslate nohighlight">\(t\)</span></p></td>
 <td><p>second (s)</p></td>
 <td><p>second (s)</p></td>
 <td><p>second (s), minute (min)</p></td>
+<td><p>second (s)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Speed</p></td>
 <td><p><span class="math notranslate nohighlight">\(v\)</span></p></td>
 <td><p>meter per second (m/s)</p></td>
 <td><p>centimeter per second (cm/s)</p></td>
 <td><p>foot per second (ft/s), miles per hour (mph)</p></td>
+<td><p>foot per second (ft/s)</p></td>
 </tr>
 <tr class="row-even"><td><p>Acceleration</p></td>
 <td><p><span class="math notranslate nohighlight">\(a\)</span></p></td>
 <td><p>meter per second squared (m/s²)</p></td>
 <td><p>centimeter per second squared (cm/s²)</p></td>
+<td><p>foot per second squared (ft/s²)</p></td>
 <td><p>foot per second squared (ft/s²)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Force</p></td>
@@ -449,17 +468,20 @@ document.write(`
 <td><p>newton (N) = kg·m/s²</p></td>
 <td><p>dyne = g·cm/s²</p></td>
 <td><p>pound-force (lbf)</p></td>
+<td><p>pound-force (lbf)</p></td>
 </tr>
 <tr class="row-even"><td><p>Energy</p></td>
 <td><p><span class="math notranslate nohighlight">\(E\)</span></p></td>
 <td><p>joule (J) = N·m</p></td>
 <td><p>erg = dyne·cm</p></td>
 <td><p>British thermal unit (BTU), foot-pound (ft·lb)</p></td>
+<td><p>foot-pound (ft·lb)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Work</p></td>
 <td><p><span class="math notranslate nohighlight">\(W\)</span></p></td>
 <td><p>joule (J)</p></td>
 <td><p>erg</p></td>
+<td><p>foot-pound (ft·lb)</p></td>
 <td><p>foot-pound (ft·lb)</p></td>
 </tr>
 <tr class="row-even"><td><p>Power</p></td>
@@ -467,29 +489,34 @@ document.write(`
 <td><p>watt (W) = J/s</p></td>
 <td><p>erg per second (erg/s)</p></td>
 <td><p>horsepower (hp)</p></td>
+<td><p>horsepower (hp)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Pressure</p></td>
 <td><p><span class="math notranslate nohighlight">\(p\)</span></p></td>
 <td><p>pascal (Pa) = N/m²</p></td>
 <td><p>barye (Ba) = dyne/cm²</p></td>
 <td><p>pound per square inch (psi)</p></td>
+<td><p>pound per square foot (psf)</p></td>
 </tr>
 <tr class="row-even"><td><p>Density</p></td>
 <td><p><span class="math notranslate nohighlight">\(\rho\)</span></p></td>
 <td><p>kilogram per cubic meter (kg/m³)</p></td>
 <td><p>gram per cubic centimeter (g/cm³)</p></td>
-<td><p>slug per cubic foot (slug/ft³), pound per cubic foot (lb/ft³)</p></td>
+<td><p>pound per cubic foot (lb/ft³)</p></td>
+<td><p>slug per cubic foot (slug/ft³)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Volume</p></td>
 <td><p><span class="math notranslate nohighlight">\(V\)</span></p></td>
 <td><p>cubic meter (m³)</p></td>
 <td><p>cubic centimeter (cm³)</p></td>
 <td><p>cubic foot (ft³), gallon (gal)</p></td>
+<td><p>cubic foot (ft³)</p></td>
 </tr>
 <tr class="row-even"><td><p>Temperature</p></td>
 <td><p><span class="math notranslate nohighlight">\(T\)</span></p></td>
 <td><p>kelvin (K), Celsius (°C)</p></td>
 <td><p>Celsius (°C)</p></td>
+<td><p>Fahrenheit (°F)</p></td>
 <td><p>Fahrenheit (°F)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Electric Current</p></td>
@@ -497,11 +524,13 @@ document.write(`
 <td><p>ampere (A)</p></td>
 <td><p>statampere (statA)</p></td>
 <td><p>ampere (A)</p></td>
+<td><p>ampere (A)</p></td>
 </tr>
 <tr class="row-even"><td><p>Electric Charge</p></td>
 <td><p><span class="math notranslate nohighlight">\(q\)</span></p></td>
 <td><p>coulomb (C)</p></td>
 <td><p>statcoulomb (statC)</p></td>
+<td><p>coulomb (C)</p></td>
 <td><p>coulomb (C)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Voltage (Electric Potential)</p></td>
@@ -509,11 +538,13 @@ document.write(`
 <td><p>volt (V)</p></td>
 <td><p>statvolt (statV)</p></td>
 <td><p>volt (V)</p></td>
+<td><p>volt (V)</p></td>
 </tr>
 <tr class="row-even"><td><p>Resistance</p></td>
 <td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
 <td><p>ohm (Ω)</p></td>
 <td><p>statohm (statΩ)</p></td>
+<td><p>ohm (Ω)</p></td>
 <td><p>ohm (Ω)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Capacitance</p></td>
@@ -521,11 +552,13 @@ document.write(`
 <td><p>farad (F)</p></td>
 <td><p>statfarad (statF)</p></td>
 <td><p>farad (F)</p></td>
+<td><p>farad (F)</p></td>
 </tr>
 <tr class="row-even"><td><p>Inductance</p></td>
 <td><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
 <td><p>henry (H)</p></td>
 <td><p>stathenry (statH)</p></td>
+<td><p>henry (H)</p></td>
 <td><p>henry (H)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Frequency</p></td>
@@ -533,11 +566,13 @@ document.write(`
 <td><p>hertz (Hz) = 1/s</p></td>
 <td><p>cycles per second (cps)</p></td>
 <td><p>hertz (Hz)</p></td>
+<td><p>hertz (Hz)</p></td>
 </tr>
 <tr class="row-even"><td><p>Angular Velocity</p></td>
 <td><p><span class="math notranslate nohighlight">\(\omega\)</span></p></td>
 <td><p>radian per second (rad/s)</p></td>
 <td><p>radian per second (rad/s)</p></td>
+<td><p>revolution per minute (rpm)</p></td>
 <td><p>revolution per minute (rpm)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Momentum</p></td>
@@ -545,11 +580,13 @@ document.write(`
 <td><p>kilogram meter per second (kg·m/s)</p></td>
 <td><p>gram centimeter per second (g·cm/s)</p></td>
 <td><p>slug·ft/s</p></td>
+<td><p>slug·ft/s</p></td>
 </tr>
 <tr class="row-even"><td><p>Impulse</p></td>
 <td><p><span class="math notranslate nohighlight">\(J\)</span></p></td>
 <td><p>newton-second (N·s)</p></td>
 <td><p>dyne-second (dyn·s)</p></td>
+<td><p>pound-force second (lbf·s)</p></td>
 <td><p>pound-force second (lbf·s)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Torque</p></td>
@@ -557,16 +594,19 @@ document.write(`
 <td><p>newton-meter (N·m)</p></td>
 <td><p>dyne-centimeter (dyn·cm)</p></td>
 <td><p>pound-force foot (lbf·ft)</p></td>
+<td><p>pound-force foot (lbf·ft)</p></td>
 </tr>
 <tr class="row-even"><td><p>Magnetic Flux</p></td>
 <td><p><span class="math notranslate nohighlight">\(\Phi\)</span></p></td>
 <td><p>weber (Wb)</p></td>
 <td><p>maxwell</p></td>
 <td><p>weber (Wb)</p></td>
+<td><p>weber (Wb)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Magnetic Field Strength</p></td>
 <td><p><span class="math notranslate nohighlight">\(B\)</span></p></td>
 <td><p>tesla (T)</p></td>
+<td><p>gauss (G)</p></td>
 <td><p>gauss (G)</p></td>
 <td><p>gauss (G)</p></td>
 </tr>
@@ -575,11 +615,13 @@ document.write(`
 <td><p>joule (J)</p></td>
 <td><p>calorie (cal)</p></td>
 <td><p>British thermal unit (BTU)</p></td>
+<td><p>British thermal unit (BTU)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Luminous Intensity</p></td>
 <td><p><span class="math notranslate nohighlight">\(I_v\)</span></p></td>
 <td><p>candela (cd)</p></td>
 <td><p>stilb (sb)</p></td>
+<td><p>candela (cd)</p></td>
 <td><p>candela (cd)</p></td>
 </tr>
 <tr class="row-even"><td><p>Radioactivity</p></td>
@@ -587,18 +629,20 @@ document.write(`
 <td><p>becquerel (Bq)</p></td>
 <td><p>curie (Ci)</p></td>
 <td><p>curie (Ci)</p></td>
+<td><p>curie (Ci)</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <section id="notes">
-<h2>Notes:<a class="headerlink" href="#notes" title="Link to this heading">#</a></h2>
+<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>SI (International System of Units)</strong> is the standard unit system used in science and engineering.</p></li>
 <li><p><strong>CGS (Centimeter-Gram-Second)</strong> system is common in some theoretical physics fields.</p></li>
 <li><p><strong>Imperial/US Customary</strong> units are commonly used in the United States for daily measurements and some engineering fields.</p></li>
 <li><p>Some physical quantities, such as angular velocity or frequency, are expressed in consistent units across systems, but they may be expressed differently in certain contexts (e.g., revolutions per minute in the Imperial system).</p></li>
 </ul>
+</section>
 </section>
 <section id="unit-conversion-table">
 <h2>Unit Conversion Table<a class="headerlink" href="#unit-conversion-table" title="Link to this heading">#</a></h2>
@@ -608,6 +652,7 @@ document.write(`
 <th class="head"><p>SI Unit</p></th>
 <th class="head"><p>Imperial/US Unit</p></th>
 <th class="head"><p>CGS Unit</p></th>
+<th class="head"><p>BG Unit</p></th>
 </tr>
 </thead>
 <tbody>
@@ -615,211 +660,223 @@ document.write(`
 <td><p>1 meter (m)</p></td>
 <td><p>3.28084 feet (ft), 39.3701 inches (in)</p></td>
 <td><p>100 centimeters (cm)</p></td>
+<td><p>3.28084 feet (ft)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Length</strong></p></td>
 <td><p>1 kilometer (km)</p></td>
 <td><p>0.621371 miles (mi)</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^5\)</span> centimeters (cm)</p></td>
+<td><p>3280.84 feet (ft)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Length</strong></p></td>
 <td><p>1 millimeter (mm)</p></td>
 <td><p>0.0393701 inches (in)</p></td>
 <td><p>0.1 centimeters (cm)</p></td>
+<td><p>0.00328084 feet (ft)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Length</strong></p></td>
 <td><p>1 micrometer (µm)</p></td>
 <td><p>3.93701e-5 inches (in)</p></td>
 <td><p>0.0001 centimeters (cm)</p></td>
+<td><p>3.28084e-6 feet (ft)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Length</strong></p></td>
 <td><p>1 nanometer (nm)</p></td>
 <td><p>3.93701e-8 inches (in)</p></td>
 <td><p>10 angstroms (Å)</p></td>
+<td><p>3.28084e-9 feet (ft)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Mass</strong></p></td>
 <td><p>1 kilogram (kg)</p></td>
 <td><p>2.20462 pounds (lb)</p></td>
 <td><p>1000 grams (g)</p></td>
+<td><p>0.0685218 slugs</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Mass</strong></p></td>
 <td><p>1 gram (g)</p></td>
 <td><p>0.035274 ounces (oz)</p></td>
 <td><p>1 gram (g)</p></td>
+<td><p>6.85218e-5 slugs</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Mass</strong></p></td>
 <td><p>1 slug</p></td>
 <td><p>32.174 pounds (lb)</p></td>
 <td><p>14,593 grams (g)</p></td>
+<td><p>1 slug</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Mass</strong></p></td>
 <td><p>1 milligram (mg)</p></td>
 <td><p>0.0154324 grains (gr)</p></td>
 <td><p>0.001 grams (g)</p></td>
+<td><p>6.85218e-8 slugs</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Area</strong></p></td>
 <td><p>1 square meter (m²)</p></td>
 <td><p>10.7639 square feet (ft²)</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^4\)</span> square centimeters (cm²)</p></td>
+<td><p>10.7639 square feet (ft²)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Area</strong></p></td>
 <td><p>1 hectare (ha)</p></td>
 <td><p>2.47105 acres</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^8\)</span> square centimeters (cm²)</p></td>
+<td><p>107,639 square feet (ft²)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Volume</strong></p></td>
 <td><p>1 cubic meter (m³)</p></td>
 <td><p>35.3147 cubic feet (ft³), 61023.7 cubic inches (in³)</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^6\)</span> cubic centimeters (cm³)</p></td>
+<td><p>35.3147 cubic feet (ft³)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Volume</strong></p></td>
 <td><p>1 liter (L)</p></td>
 <td><p>0.264172 gallons (gal), 33.814 fluid ounces (fl oz)</p></td>
 <td><p>1000 cubic centimeters (cm³)</p></td>
+<td><p>0.0353147 cubic feet (ft³)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Volume</strong></p></td>
 <td><p>1 milliliter (mL)</p></td>
 <td><p>0.033814 fluid ounces (fl oz)</p></td>
 <td><p>1 cubic centimeter (cm³)</p></td>
+<td><p>3.53147e-5 cubic feet (ft³)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Speed</strong></p></td>
 <td><p>1 meter/second (m/s)</p></td>
 <td><p>2.23694 miles/hour (mph), 3.28084 feet/second (ft/s)</p></td>
 <td><p>100 centimeters/second (cm/s)</p></td>
+<td><p>3.28084 feet/second (ft/s)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Speed</strong></p></td>
 <td><p>1 kilometer/hour (km/h)</p></td>
 <td><p>0.621371 miles/hour (mph)</p></td>
 <td><p>27.7778 centimeters/second (cm/s)</p></td>
+<td><p>0.911344 feet/second (ft/s)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Acceleration</strong></p></td>
 <td><p>1 meter/second² (m/s²)</p></td>
 <td><p>3.28084 feet/second² (ft/s²)</p></td>
 <td><p>100 centimeters/second² (cm/s²)</p></td>
+<td><p>3.28084 feet/second² (ft/s²)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Force</strong></p></td>
 <td><p>1 newton (N)</p></td>
 <td><p>0.224809 pound-force (lbf)</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^5\)</span> dynes (dyn)</p></td>
+<td><p>0.224809 pound-force (lbf)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Energy</strong></p></td>
 <td><p>1 joule (J)</p></td>
 <td><p>0.000947817 BTU, 0.737562 foot-pound (ft·lb)</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^7\)</span> ergs</p></td>
+<td><p>0.737562 foot-pound (ft·lb)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Energy</strong></p></td>
 <td><p>1 kilojoule (kJ)</p></td>
 <td><p>0.947817 BTU</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^{10}\)</span> ergs</p></td>
+<td><p>737.562 foot-pound (ft·lb)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Work</strong></p></td>
 <td><p>1 joule (J)</p></td>
 <td><p>0.737562 foot-pound (ft·lb)</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^7\)</span> ergs</p></td>
+<td><p>0.737562 foot-pound (ft·lb)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Power</strong></p></td>
 <td><p>1 watt (W)</p></td>
 <td><p>0.00134102 horsepower (hp)</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^7\)</span> erg/second (erg/s)</p></td>
+<td><p>0.00134102 horsepower (hp)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Pressure</strong></p></td>
 <td><p>1 pascal (Pa)</p></td>
 <td><p>0.000145038 psi (pound/inch²)</p></td>
 <td><p>10 baryes (Ba)</p></td>
+<td><p>0.0208854 pound per square foot (psf)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Pressure</strong></p></td>
 <td><p>1 atmosphere (atm)</p></td>
 <td><p>14.696 psi</p></td>
 <td><p><span class="math notranslate nohighlight">\(1.01325 \times 10^6\)</span> dyn/cm²</p></td>
+<td><p>2116.22 pound per square foot (psf)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Temperature</strong></p></td>
 <td><p>0 Celsius (°C)</p></td>
 <td><p>32 Fahrenheit (°F)</p></td>
 <td><p>273.15 Kelvin (K)</p></td>
+<td><p>32 Fahrenheit (°F)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Momentum</strong></p></td>
 <td><p>1 kilogram meter/second (kg·m/s)</p></td>
 <td><p>0.737562 slug·ft/s</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^5\)</span> gram centimeter/second (g·cm/s)</p></td>
+<td><p>0.737562 slug·ft/s</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Torque</strong></p></td>
 <td><p>1 newton meter (N·m)</p></td>
 <td><p>0.737562 pound-foot (lbf·ft)</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^7\)</span> dyne centimeter (dyn·cm)</p></td>
+<td><p>0.737562 pound-foot (lbf·ft)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Angular Displacement</strong></p></td>
 <td><p>1 radian (rad)</p></td>
 <td><p>57.2958 degrees (°)</p></td>
 <td><p>1 radian (rad)</p></td>
+<td><p>57.2958 degrees (°)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Angular Velocity</strong></p></td>
 <td><p>1 radian/second (rad/s)</p></td>
 <td><p>9.5493 revolutions per minute (rpm)</p></td>
 <td><p>1 radian/second (rad/s)</p></td>
+<td><p>9.5493 revolutions per minute (rpm)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Heat</strong></p></td>
 <td><p>1 joule (J)</p></td>
 <td><p>0.000238846 kilocalories (kcal), 0.000947817 BTU</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^7\)</span> ergs</p></td>
+<td><p>0.000947817 BTU</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Luminous Intensity</strong></p></td>
 <td><p>1 candela (cd)</p></td>
 <td><p>0.092903 foot-candle</p></td>
 <td><p>1 stilb (sb)</p></td>
+<td><p>0.092903 foot-candle</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Electric Current</strong></p></td>
 <td><p>1 ampere (A)</p></td>
 <td><p>1 ampere (A)</p></td>
 <td><p>3.33564 × <span class="math notranslate nohighlight">\(10^{-10}\)</span> statA</p></td>
+<td><p>1 ampere (A)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Electric Charge</strong></p></td>
 <td><p>1 coulomb (C)</p></td>
 <td><p>1 coulomb (C)</p></td>
 <td><p><span class="math notranslate nohighlight">\(3.33564 × 10^{-10}\)</span> statC</p></td>
+<td><p>1 coulomb (C)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Voltage</strong></p></td>
 <td><p>1 volt (V)</p></td>
 <td><p>1 volt (V)</p></td>
 <td><p><span class="math notranslate nohighlight">\(299.79 \times 10^6\)</span> statvolt</p></td>
+<td><p>1 volt (V)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Resistance</strong></p></td>
 <td><p>1 ohm (Ω)</p></td>
 <td><p>1 ohm (Ω)</p></td>
 <td><p><span class="math notranslate nohighlight">\(8.9876 \times 10^{11}\)</span> statohm</p></td>
+<td><p>1 ohm (Ω)</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Capacitance</strong></p></td>
 <td><p>1 farad (F)</p></td>
 <td><p>1 farad (F)</p></td>
 <td><p><span class="math notranslate nohighlight">\(1.11265 \times 10^{-12}\)</span> statfarad</p></td>
+<td><p>1 farad (F)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Inductance</strong></p></td>
 <td><p>1 henry (H)</p></td>
 <td><p>1 henry (H)</p></td>
 <td><p><span class="math notranslate nohighlight">\(8.9876 \times 10^{11}\)</span> statH</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Magnetic Flux</strong></p></td>
-<td><p>1 weber (Wb)</p></td>
-<td><p>1 maxwell (Mx)</p></td>
-<td><p>1 maxwell (Mx)</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Magnetic Field Strength</strong></p></td>
-<td><p>1 tesla (T)</p></td>
-<td><p>10,000 gauss (G)</p></td>
-<td><p>1 gauss (G)</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Frequency</strong></p></td>
-<td><p>1 hertz (Hz)</p></td>
-<td><p>1 cycle per second (cps)</p></td>
-<td><p>1 hertz (Hz)</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Luminous Flux</strong></p></td>
-<td><p>1 lumen (lm)</p></td>
-<td><p>1 lumen (lm)</p></td>
-<td><p>1 lumen (lm)</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Radiation</strong></p></td>
-<td><p>1 becquerel (Bq)</p></td>
-<td><p>2.7027 × <span class="math notranslate nohighlight">\(10^{-11}\)</span> curies (Ci)</p></td>
-<td><p>2.7027 × <span class="math notranslate nohighlight">\(10^{-11}\)</span> curies (Ci)</p></td>
+<td><p>1 henry (H)</p></td>
 </tr>
 </tbody>
 </table>
@@ -836,7 +893,143 @@ document.write(`
 <li><p><strong>Pressure</strong>: Includes conversions between <strong>pascals</strong>, <strong>psi</strong>, <strong>atmospheres</strong>, and <strong>dynes/cm²</strong>.</p></li>
 <li><p><strong>Electricity &amp; Magnetism</strong>: Includes units for <strong>electric current</strong>, <strong>electric charge</strong>, <strong>voltage</strong>, <strong>resistance</strong>, <strong>capacitance</strong>, <strong>inductance</strong>, and <strong>magnetic field strength</strong>.</p></li>
 </ul>
+<p>The imperial system and the <strong>British Gravitational (BG) system</strong> are not exactly the same, though they are related and share some units.</p>
 </section>
+</section>
+<section id="key-differences-between-imperial-and-bg-systems">
+<h2>Key Differences Between Imperial and BG Systems<a class="headerlink" href="#key-differences-between-imperial-and-bg-systems" title="Link to this heading">#</a></h2>
+<section id="measurement-of-force">
+<h3>Measurement of Force:<a class="headerlink" href="#measurement-of-force" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>In the <strong>BG system</strong>, force is a primary unit and is measured in <strong>pounds-force (lbf)</strong>. This system is structured around the gravitational force, so mass is often derived based on weight.</p></li>
+<li><p>In the <strong>imperial system</strong>, measurements traditionally used <strong>pounds (lb)</strong> as a unit of mass. However, in modern contexts (especially engineering), “pound” usually refers to force, which aligns it more closely with the BG system.</p></li>
+</ul>
+</section>
+<section id="units-of-mass-and-weight">
+<h3>Units of Mass and Weight:<a class="headerlink" href="#units-of-mass-and-weight" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>In the <strong>BG system</strong>, mass is measured in <strong>slugs</strong>. The slug is a derived unit, defined such that one slug accelerates at (1 , \text{ft/s}^2) under a force of (1 , \text{lbf}).</p></li>
+<li><p>In contrast, the <strong>imperial system</strong> uses <strong>pound-mass (lbm)</strong>, often with gravitational conversions. For example, (1 , \text{lbm}) weighs (1 , \text{lbf}) under standard gravity (32.174 ft/s²), which can create confusion without a consistent handling of gravity.</p></li>
+</ul>
+</section>
+<section id="consistent-unit-systems">
+<h3>Consistent Unit Systems:<a class="headerlink" href="#consistent-unit-systems" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The <strong>BG system</strong> is designed to be internally consistent with a clear differentiation between mass and force, which helps avoid conversion issues between mass (slugs) and force (pound-force).</p></li>
+<li><p>The <strong>imperial system</strong> does not inherently provide this internal consistency, so conversions between force and mass may require gravitational constants depending on the context.</p></li>
+</ul>
+</section>
+</section>
+<section id="example-in-fluid-mechanics-context">
+<h2>Example in Fluid Mechanics Context<a class="headerlink" href="#example-in-fluid-mechanics-context" title="Link to this heading">#</a></h2>
+<p>When calculating forces, pressures, or dynamic interactions in fluid mechanics:</p>
+<ul class="simple">
+<li><p>The <strong>BG system</strong> is often used because it provides consistency for force-based calculations.</p></li>
+<li><p>In the <strong>imperial system</strong>, conversions may be necessary to clarify if pounds are representing mass or force.</p></li>
+</ul>
+<p>In summary, while both systems use similar units (e.g., feet, pounds), they apply them differently. The BG system offers a consistent approach for engineering calculations by defining mass in terms of slugs, aligning more directly with how the SI system separates kilograms (mass) and newtons (force).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<h1 class="rubric" id="slugs-vs-pounds-in-the-british-gravitational-bg-system">Slugs vs. Pounds in the British Gravitational (BG) System</h1>
+<p>In the <strong>British Gravitational (BG) system</strong>, there are two common ways to express mass-related quantities in fluid mechanics: <strong>slugs</strong> and <strong>pounds</strong>. These units represent different concepts and are often used in different contexts within fluid mechanics.</p>
+<h3 class="rubric" id="mass-density-vs-weight-density">1. Mass Density vs. Weight Density</h3>
+<ol class="arabic simple">
+<li><p><strong>Slugs per cubic foot (<span class="math notranslate nohighlight">\(\text{slug/ft}^3\)</span>)</strong>:</p>
+<ul class="simple">
+<li><p>This is a measure of <strong>mass density</strong> in the BG system. It corresponds to the <strong>mass per unit volume</strong> of a fluid, similar to how <strong>kg/m³</strong> is used in the SI system.</p></li>
+</ul>
+</li>
+<li><p><strong>Pounds per cubic foot (<span class="math notranslate nohighlight">\(\text{lb/ft}^3\)</span>)</strong>:</p>
+<ul class="simple">
+<li><p>This is a measure of <strong>weight density</strong> (also called specific weight), which represents the <strong>weight of the fluid per unit volume</strong>. This unit incorporates the force of gravity because it measures the fluid’s weight in pounds.</p></li>
+</ul>
+</li>
+</ol>
+<h3 class="rubric" id="key-difference-between-slug-and-pound-units">2. Key Difference Between Slug and Pound Units</h3>
+<ul>
+<li><p><strong>Slug (<span class="math notranslate nohighlight">\(\text{slug}\)</span>)</strong>:</p>
+<ul>
+<li><p>A <strong>slug</strong> is a unit of <strong>mass</strong> in the BG system.</p></li>
+<li><p>The relationship between mass and weight in the BG system is defined by:</p>
+<div class="math notranslate nohighlight">
+\[
+     W = mg
+     \]</div>
+<p>Where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(W\)</span> is the weight (in pounds, <span class="math notranslate nohighlight">\(\text{lb}\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span> is the mass (in slugs, <span class="math notranslate nohighlight">\(\text{slug}\)</span>),</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravity (typically <span class="math notranslate nohighlight">\(32.174 \, \text{ft/s}^2\)</span>).</p></li>
+</ul>
+</li>
+<li><p>One <strong>slug</strong> is the amount of mass that, under standard Earth gravity, weighs <strong>1 pound-force per unit of acceleration</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Pound (<span class="math notranslate nohighlight">\(\text{lb}\)</span>)</strong>:</p>
+<ul class="simple">
+<li><p>A <strong>pound</strong> is a unit of <strong>force (weight)</strong> in the BG system.</p></li>
+<li><p>When we use <strong><span class="math notranslate nohighlight">\(\text{lb/ft}^3\)</span></strong>, we are expressing <strong>weight density</strong> (the weight per unit volume). This value includes the force due to gravity.</p></li>
+</ul>
+</li>
+</ul>
+<h3 class="rubric" id="conversion-between-slug-and-pound">3. Conversion Between Slug and Pound</h3>
+<p>To convert between <strong>weight density</strong> (<span class="math notranslate nohighlight">\(\text{lb/ft}^3\)</span>) and <strong>mass density</strong> (<span class="math notranslate nohighlight">\(\text{slug/ft}^3\)</span>), you need to account for the acceleration due to gravity (<span class="math notranslate nohighlight">\(g\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\rho_{\text{mass}} (\text{slug/ft}^3) = \frac{\rho_{\text{weight}} (\text{lb/ft}^3)}{g}
+\]</div>
+<p>For example, the weight density of water is approximately <span class="math notranslate nohighlight">\(62.4 \, \text{lb/ft}^3\)</span>. To convert this to mass density in slugs per cubic foot:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho = \frac{62.4 \, \text{lb/ft}^3}{32.174 \, \text{ft/s}^2} \approx 1.94 \, \text{slug/ft}^3
+\]</div>
+<h3 class="rubric" id="when-slugs-are-used">4. When Slugs are Used</h3>
+<p>In fluid mechanics, <strong>slugs/ft³</strong> is often used when dealing with <strong>mass density</strong> because it simplifies calculations involving dynamics. By using slugs, you can apply Newton’s second law (<span class="math notranslate nohighlight">\(F = ma\)</span>) directly without introducing a conversion factor for gravity, as slugs are already based on the relationship between mass and weight under standard gravity.</p>
+<h3 class="rubric" id="common-mistake-mixing-slugs-and-pounds">5. Common Mistake: Mixing Slugs and Pounds</h3>
+<p>It’s easy to confuse <strong>mass density</strong> and <strong>weight density</strong> in the BG system because both use units related to mass and force. Keep in mind:</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(\text{lb/ft}^3\)</span></strong> refers to <strong>weight density</strong>, which measures the weight of the fluid in pounds per cubic foot.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(\text{slug/ft}^3\)</span></strong> is the correct unit for <strong>mass density</strong> in the BG system.</p></li>
+</ul>
+<p>Always convert between the two by dividing or multiplying by the acceleration due to gravity (<span class="math notranslate nohighlight">\(g = 32.174 \, \text{ft/s}^2\)</span>).</p>
+<h3 class="rubric" id="summary-of-differences">6. Summary of Differences</h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Quantity</p></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>Definition</p></th>
+<th class="head"><p>Units in BG System</p></th>
+<th class="head"><p>Units in SI System</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Mass Density</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(\rho_{\text{mass}}\)</span></p></td>
+<td><p>Mass per unit volume</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{slug/ft}^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{kg/m}^3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Weight Density</strong></p></td>
+<td><p><span class="math notranslate nohighlight">\(\rho_{\text{weight}}\)</span></p></td>
+<td><p>Weight per unit volume (includes gravity)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{lb/ft}^3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\text{N/m}^3\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>Mass Density</strong>: Refers to the mass contained in a given volume, and in the BG system, it is measured in <strong>slugs/ft³</strong>.</p></li>
+<li><p><strong>Weight Density</strong>: Refers to the weight of the fluid per unit volume, typically measured in <strong>lb/ft³</strong>, and incorporates the effect of gravity.</p></li>
+</ul>
+<h3 class="rubric" id="practical-example-calculating-density">Practical Example: Calculating Density</h3>
+<p>Let’s calculate the mass density of air using its typical weight density at sea level (<span class="math notranslate nohighlight">\(\approx 0.0765 \, \text{lb/ft}^3\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\rho_{\text{mass}} = \frac{0.0765 \, \text{lb/ft}^3}{32.174 \, \text{ft/s}^2} \approx 0.00238 \, \text{slug/ft}^3
+\]</div>
+<p>In this case, the mass density of air is about <span class="math notranslate nohighlight">\(0.00238 \, \text{slug/ft}^3\)</span>, while its weight density remains <span class="math notranslate nohighlight">\(0.0765 \, \text{lb/ft}^3\)</span>.</p>
+</div>
 </section>
 </section>
 
@@ -871,20 +1064,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="prerequisites.html"
+       href="fluids_v_solids.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Prerequisites</p>
+        <p class="prev-next-title">Solids vs. Fluids</p>
       </div>
     </a>
     <a class="right-next"
-       href="fluids_v_solids.html"
+       href="fluid_properties.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Solids vs. Fluids</p>
+        <p class="prev-next-title">Properties of Fluids</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -904,11 +1097,21 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-units">Common Units</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unit-conversion-table">Unit Conversion Table</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Notes:</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-differences-between-imperial-and-bg-systems">Key Differences Between Imperial and BG Systems</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#measurement-of-force">Measurement of Force:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#units-of-mass-and-weight">Units of Mass and Weight:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consistent-unit-systems">Consistent Unit Systems:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-fluid-mechanics-context">Example in Fluid Mechanics Context</a></li>
 </ul>
   </nav></div>
 

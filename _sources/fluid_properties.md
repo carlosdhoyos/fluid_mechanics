@@ -76,89 +76,8 @@ Consider an object submerged in water. If the object's density is less than that
 
 On the other hand, if an object is denser than water (e.g., iron with $\rho \approx 7,870 \, kg/m^3$), it will sink because its density is much greater than the surrounding fluid.
 
+[Watch the video](https://www.youtube.com/watch?v=Z50jEi1igNQ)
 
-```{note}
-
-# Slugs vs. Pounds in the British Gravitational (BG) System
-
-In the **British Gravitational (BG) system**, there are two common ways to express mass-related quantities in fluid mechanics: **slugs** and **pounds**. These units represent different concepts and are often used in different contexts within fluid mechanics.
-
-### 1. Mass Density vs. Weight Density
-
-1. **Slugs per cubic foot ($\text{slug/ft}^3$)**:
-   - This is a measure of **mass density** in the BG system. It corresponds to the **mass per unit volume** of a fluid, similar to how **kg/m³** is used in the SI system.
-   
-2. **Pounds per cubic foot ($\text{lb/ft}^3$)**:
-   - This is a measure of **weight density** (also called specific weight), which represents the **weight of the fluid per unit volume**. This unit incorporates the force of gravity because it measures the fluid's weight in pounds.
-
-### 2. Key Difference Between Slug and Pound Units
-
-- **Slug ($\text{slug}$)**: 
-   - A **slug** is a unit of **mass** in the BG system.
-   - The relationship between mass and weight in the BG system is defined by:
-     
-     $$
-     W = mg
-     $$
-     
-     Where:
-     - $W$ is the weight (in pounds, $\text{lb}$),
-     - $m$ is the mass (in slugs, $\text{slug}$),
-     - $g$ is the acceleration due to gravity (typically $32.174 \, \text{ft/s}^2$).
-
-   - One **slug** is the amount of mass that, under standard Earth gravity, weighs **1 pound-force per unit of acceleration**.
-
-- **Pound ($\text{lb}$)**:
-   - A **pound** is a unit of **force (weight)** in the BG system.
-   - When we use **$\text{lb/ft}^3$**, we are expressing **weight density** (the weight per unit volume). This value includes the force due to gravity.
-
-### 3. Conversion Between Slug and Pound
-
-To convert between **weight density** ($\text{lb/ft}^3$) and **mass density** ($\text{slug/ft}^3$), you need to account for the acceleration due to gravity ($g$):
-
-$$
-\rho_{\text{mass}} (\text{slug/ft}^3) = \frac{\rho_{\text{weight}} (\text{lb/ft}^3)}{g}
-$$
-
-For example, the weight density of water is approximately $62.4 \, \text{lb/ft}^3$. To convert this to mass density in slugs per cubic foot:
-
-$$
-\rho = \frac{62.4 \, \text{lb/ft}^3}{32.174 \, \text{ft/s}^2} \approx 1.94 \, \text{slug/ft}^3
-$$
-
-### 4. When Slugs are Used
-
-In fluid mechanics, **slugs/ft³** is often used when dealing with **mass density** because it simplifies calculations involving dynamics. By using slugs, you can apply Newton’s second law ($F = ma$) directly without introducing a conversion factor for gravity, as slugs are already based on the relationship between mass and weight under standard gravity.
-
-### 5. Common Mistake: Mixing Slugs and Pounds
-
-It's easy to confuse **mass density** and **weight density** in the BG system because both use units related to mass and force. Keep in mind:
-- **$\text{lb/ft}^3$** refers to **weight density**, which measures the weight of the fluid in pounds per cubic foot. 
-- **$\text{slug/ft}^3$** is the correct unit for **mass density** in the BG system. 
-
-Always convert between the two by dividing or multiplying by the acceleration due to gravity ($g = 32.174 \, \text{ft/s}^2$).
-
-### 6. Summary of Differences
-
-| Quantity        | Symbol           | Definition                         | Units in BG System       | Units in SI System        |
-|-----------------|------------------|------------------------------------|--------------------------|---------------------------|
-| **Mass Density**| $\rho_{\text{mass}}$ | Mass per unit volume               | $\text{slug/ft}^3$        | $\text{kg/m}^3$           |
-| **Weight Density**| $\rho_{\text{weight}}$| Weight per unit volume (includes gravity) | $\text{lb/ft}^3$ | $\text{N/m}^3$            |
-
-- **Mass Density**: Refers to the mass contained in a given volume, and in the BG system, it is measured in **slugs/ft³**.
-- **Weight Density**: Refers to the weight of the fluid per unit volume, typically measured in **lb/ft³**, and incorporates the effect of gravity.
-
-### Practical Example: Calculating Density
-
-Let’s calculate the mass density of air using its typical weight density at sea level ($\approx 0.0765 \, \text{lb/ft}^3$):
-
-$$
-\rho_{\text{mass}} = \frac{0.0765 \, \text{lb/ft}^3}{32.174 \, \text{ft/s}^2} \approx 0.00238 \, \text{slug/ft}^3
-$$
-
-In this case, the mass density of air is about $0.00238 \, \text{slug/ft}^3$, while its weight density remains $0.0765 \, \text{lb/ft}^3$.
-
-```
 
 ## What is Specific Weight?
 
@@ -404,6 +323,8 @@ Like the molar form, this specific form of the Ideal Gas Law assumes:
 The Ideal Gas Law, in this form, is an approximation that assumes **ideal behavior**. For **real gases** under conditions of high pressure or low temperature, deviations occur, and more complex equations, such as the **Van der Waals equation**, must be used.
 
 
+### Python: Matplotlib Static
+
 ```{code-cell} python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -438,6 +359,118 @@ ax.set_zlabel('Volume (V) [L]', fontsize=12)
 ax.view_init(elev=40, azim=50)  # azim=90 rotates it by 90 degrees
 
 plt.show()
+```
+
+
+### Python: Matplotlib Interactive I
+
+```{code-cell} python
+import numpy as np
+import plotly.graph_objects as go
+from plotly.offline import init_notebook_mode
+
+# Initialize Plotly to work in notebook mode for Jupyter environments
+init_notebook_mode(connected=True)
+
+# Define ranges for temperature (T) and pressure (P)
+T = np.linspace(300, 700, 50)  # Temperature from 300K to 700K
+P = np.linspace(1, 10, 50)     # Pressure from 1 to 10 atm
+T, P = np.meshgrid(T, P)
+
+# Equation for volume V, using the ideal gas law: PV = nRT
+R = 0.0821  # Ideal gas constant in L·atm/mol·K
+n = 1       # Assume 1 mole of gas
+V = (n * R * T) / P  # Rearranged ideal gas law to V = nRT / P
+
+# Create an interactive 3D surface plot with Plotly
+fig = go.Figure(data=[go.Surface(z=V, x=P, y=T, colorscale="Plasma")])
+
+# Update layout for the plot
+fig.update_layout(
+    title="Ideal Gas Law: Volume as a Function of Pressure and Temperature",
+    scene=dict(
+        xaxis_title="Pressure (P) [atm]",
+        yaxis_title="Temperature (T) [K]",
+        zaxis_title="Volume (V) [L]",
+        camera=dict(eye=dict(x=1.2, y=1.2, z=0.8))  # Set view angle
+    ),
+    coloraxis_colorbar=dict(
+        title="Volume [L]",
+        titleside="right"
+    )
+)
+
+# Show plot
+fig.show()
+```
+
+### Python: Plotly Interactive II
+
+```{code-cell} python
+import numpy as np
+import plotly.graph_objects as go
+
+# Define ranges for temperature (T) and pressure (P)
+T = np.linspace(300, 700, 50)  # Temperature from 300K to 700K
+P = np.linspace(1, 10, 50)     # Pressure from 1 to 10 atm
+T, P = np.meshgrid(T, P)
+
+# Equation for volume V, using the ideal gas law: PV = nRT
+R = 0.0821  # Ideal gas constant in L·atm/mol·K
+n = 1       # Assume 1 mole of gas
+V = (n * R * T) / P  # Rearranged ideal gas law to V = nRT / P
+
+# Create 3D surface plot
+fig = go.Figure()
+
+# Add 3D surface with reduced opacity
+fig.add_trace(go.Surface(z=V, x=P, y=T, colorscale="Plasma", opacity=0.5))
+
+# Interactive cross-sections for projections
+def add_projection(fig, P_val=None, T_val=None, V_val=None):
+    if P_val:
+        # Slice at a specific Pressure (P) value
+        V_slice = (n * R * T) / P_val
+        fig.add_trace(go.Scatter3d(
+            x=np.full(T.shape[0], P_val), y=T[:,0], z=V_slice[:,0],
+            mode="lines", line=dict(color="blue", width=6),
+            name=f"Projection at P={P_val} atm"))
+    if T_val:
+        # Slice at a specific Temperature (T) value
+        V_slice = (n * R * T_val) / P
+        fig.add_trace(go.Scatter3d(
+            x=P[0], y=np.full(P.shape[1], T_val), z=V_slice[0],
+            mode="lines", line=dict(color="green", width=6),
+            name=f"Projection at T={T_val} K"))
+    if V_val:
+        # Slice at a specific Volume (V) value
+        P_slice = (n * R * T) / V_val
+        fig.add_trace(go.Scatter3d(
+            x=P_slice[0], y=T[:,0], z=np.full(T.shape[0], V_val),
+            mode="lines", line=dict(color="red", width=6),
+            name=f"Projection at V={V_val} L"))
+
+# Initial projections
+add_projection(fig, P_val=5)
+add_projection(fig, T_val=500)
+add_projection(fig, V_val=20)
+
+# Update layout
+fig.update_layout(
+    title="Ideal Gas Law with Enhanced 2D Projections",
+    scene=dict(
+        xaxis_title="Pressure (P) [atm]",
+        yaxis_title="Temperature (T) [K]",
+        zaxis_title="Volume (V) [L]",
+        camera=dict(eye=dict(x=1.2, y=1.2, z=0.8))  # Set view angle
+    ),
+    coloraxis_colorbar=dict(
+        title="Volume [L]",
+        titleside="right"
+    )
+)
+
+fig.show()
 ```
 
 

@@ -7,30 +7,28 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 ## Week-by-Week Outline
 
 ### **Weeks 1-2: Introduction to Fluid Mechanics and Properties**
-- Prerequisites: Math and physics
-- Definition of fluids and distinction between solids and fluids.
-- Fluid properties: density, viscosity, surface tension.
-- Continuum hypothesis: fluid as a continuum.
+- <span style="color: green;">Prerequisites: Math and physics</span>
+- <span style="color: green;">Definition of fluids and distinction between solids and fluids.</span>
+- <span style="color: green;">Continuum hypothesis: fluid as a continuum.</span>
+- Common physical quantities and units
+- Fluid properties: <span style="color: green;">density</span>, viscosity, surface tension.
+- Ideal gas law
+- No-slip condition
+- Types of flows
 - Basic concepts: fluid pressure, temperature, and velocity.
 
 **Lab**: Measurement of basic fluid properties (density, viscosity, surface tension).
 
 ---
 
-### **Weeks 3-4: Differential Analysis and Navier-Stokes Equations**
+### **Weeks 3: Differential Analysis and Navier-Stokes Equations**
 - Review of Newton’s second law and its application to fluids.
-- Differential control volumes and the derivation of the **Navier-Stokes equations**.
 - Forces in fluid flow: pressure, body forces, and viscous forces.
-- Introduction to boundary conditions.
--
--
--
--
-
+- Derivation of the **Navier-Stokes equations**.
 
 ---
 
-### **Weeks 7-8: Fluid Statics as an Application of Navier-Stokes**
+### **Weeks 4: Fluid Statics as an Application of Navier-Stokes**
 - **Fluid statics** as a special case of the Navier-Stokes equations (no velocity, steady-state).
 - Hydrostatic equation: \(\frac{dp}{dz} = -\rho g\).
 - Pressure variation in incompressible and compressible static fluids.
@@ -55,8 +53,6 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
     - Application to incompressible and inviscid flows.
 
 **Lab**: Visualization of streamlines and velocity fields using flow visualization techniques (dye injection, PIV).
-
----
 
 ---
 
