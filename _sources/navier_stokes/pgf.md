@@ -14,15 +14,19 @@ To derive the pressure force, we consider the pressure acting on opposite faces 
 
 - **Pressure on the left face (at $x$)**: The pressure on the left face is $p(x, y, z)$, acting over an area $dy \cdot dz$.
     - The force due to pressure on the left face is therefore:
+    
       $$
       F_{\text{left}} = p(x, y, z) \cdot dy \cdot dz
       $$
   
 - **Pressure on the right face (at $x + dx$)**: The pressure on the right face is slightly different due to the pressure gradient in the $x$ direction. Using a Taylor series expansion:
+
     $$
     p(x + dx, y, z) \approx p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx
     $$
+
     - The force on the right face is:
+    
       $$
       F_{\text{right}} = \left( p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx \right) \cdot dy \cdot dz
       $$

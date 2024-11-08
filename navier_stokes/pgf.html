@@ -425,24 +425,29 @@ document.write(`
 <section id="step-2-calculate-pressure-forces-on-opposite-faces">
 <h2>Step 2: Calculate Pressure Forces on Opposite Faces<a class="headerlink" href="#step-2-calculate-pressure-forces-on-opposite-faces" title="Link to this heading">#</a></h2>
 <p>To derive the pressure force, we consider the pressure acting on opposite faces in the <span class="math notranslate nohighlight">\(x\)</span> direction.</p>
-<ul class="simple">
+<ul>
 <li><p><strong>Pressure on the left face (at <span class="math notranslate nohighlight">\(x\)</span>)</strong>: The pressure on the left face is <span class="math notranslate nohighlight">\(p(x, y, z)\)</span>, acting over an area <span class="math notranslate nohighlight">\(dy \cdot dz\)</span>.</p>
 <ul>
-<li><p>The force due to pressure on the left face is therefore:
-$<span class="math notranslate nohighlight">\(
-F_{\text{left}} = p(x, y, z) \cdot dy \cdot dz
-\)</span>$</p></li>
+<li><p>The force due to pressure on the left face is therefore:</p>
+<div class="math notranslate nohighlight">
+\[
+      F_{\text{left}} = p(x, y, z) \cdot dy \cdot dz
+      \]</div>
+</li>
 </ul>
 </li>
-<li><p><strong>Pressure on the right face (at <span class="math notranslate nohighlight">\(x + dx\)</span>)</strong>: The pressure on the right face is slightly different due to the pressure gradient in the <span class="math notranslate nohighlight">\(x\)</span> direction. Using a Taylor series expansion:
-$<span class="math notranslate nohighlight">\(
-  p(x + dx, y, z) \approx p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx
-  \)</span>$</p>
+<li><p><strong>Pressure on the right face (at <span class="math notranslate nohighlight">\(x + dx\)</span>)</strong>: The pressure on the right face is slightly different due to the pressure gradient in the <span class="math notranslate nohighlight">\(x\)</span> direction. Using a Taylor series expansion:</p>
+<div class="math notranslate nohighlight">
+\[
+    p(x + dx, y, z) \approx p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx
+    \]</div>
 <ul>
-<li><p>The force on the right face is:
-$<span class="math notranslate nohighlight">\(
-F_{\text{right}} = \left( p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx \right) \cdot dy \cdot dz
-\)</span>$</p></li>
+<li><p>The force on the right face is:</p>
+<div class="math notranslate nohighlight">
+\[
+      F_{\text{right}} = \left( p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx \right) \cdot dy \cdot dz
+      \]</div>
+</li>
 </ul>
 </li>
 </ul>
