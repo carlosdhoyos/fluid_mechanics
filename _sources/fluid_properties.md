@@ -22,7 +22,6 @@ Understanding the physical properties of fluids is essential for analyzing fluid
 - **Specific Gravity** ($SG$)
 - **Viscosity** ($\mu$)
 - **Surface Tension** ($\sigma$)
-- 
 
 ## What is Density?
 
@@ -589,3 +588,169 @@ In real-world engineering applications, accurate knowledge of viscosity is essen
 - **Laminar vs. Turbulent Flow**: High viscosity favors laminar flow, while low viscosity fluids are more prone to turbulence.
 - **Boundary Layers**: Viscosity plays a critical role in the formation and thickness of boundary layers.
 - **Energy Dissipation**: Viscous effects lead to energy dissipation in fluids, important in pipe flow, pumps, and engines.
+
+
+## Surface Tension in Fluid Mechanics
+
+**Surface Tension** is a phenomenon where the surface of a liquid behaves like a stretched elastic membrane due to intermolecular forces. At a molecular level, this effect arises because molecules at the liquid's surface experience a net inward force from neighboring molecules in the liquid, while molecules in the bulk experience balanced forces in all directions. This imbalance creates a “tension” on the surface, making it behave as if covered by an elastic film.
+
+### Importance and Applications
+
+Surface tension has significant effects in both natural and engineering systems:
+
+1. **Capillary Action**: Surface tension enables liquids to flow in narrow spaces without external forces. For example, water can rise in thin tubes (capillaries), essential in biological processes like water transport in plants.
+
+2. **Droplet Formation**: Surface tension is responsible for the spherical shape of liquid droplets. This is crucial in applications like inkjet printing and fuel injection systems, where controlled droplet formation is essential for proper functioning.
+
+3. **Soap Bubbles**: Surface tension allows the formation of thin films that can enclose air, creating bubbles. Surfactants (like soap) reduce surface tension, stabilizing the film, which is why soap bubbles are so commonly observed.
+
+4. **Small-Scale Systems**: In microfluidics and biomedical devices, surface tension forces dominate over gravitational forces due to the small scale. Engineers use this property to manipulate small fluid volumes precisely.
+
+### Practical Example: Maximum Internal Pressure in a Soap Bubble
+
+A classic problem in surface tension analysis involves determining the maximum internal pressure within a soap bubble.
+
+When a soap bubble forms, it has two surfaces (inside and outside) exposed to air. The surface tension ($ \sigma $) generates a pressure difference ($ \Delta P $) across these surfaces.
+
+For a soap bubble with radius $ r $, the pressure difference across the bubble's surface can be derived using the Young-Laplace equation:
+
+$$
+\Delta P = \frac{4 \sigma}{r}
+$$
+
+This equation accounts for the fact that a soap bubble has two layers (inner and outer surfaces), each contributing to the surface tension.
+
+### Example Calculation
+
+Let's determine the maximum internal pressure of a soap bubble with a radius of $ r = 0.01 \, \text{m} $ and a surface tension of $ \sigma = 0.03 \, \text{N/m} $.
+
+1. **Given Data**:
+   - Radius, $ r = 0.01$, $\text{m} $
+   - Surface tension, $ \sigma = 0.03 $, $\text{N/m} $
+
+2. **Applying the Formula**:
+
+   $$
+   \Delta P = \frac{4 \sigma}{r}
+   $$
+
+3. **Substitute the Values**:
+
+   $$
+   \Delta P = \frac{4 \times 0.03}{0.01} = \frac{0.12}{0.01} = 12 \, \text{Pa}
+   $$
+
+So, the maximum internal pressure of the soap bubble is $ 12 $, $\text{Pa} $ greater than the external atmospheric pressure.
+
+### Summary
+
+Surface tension is a vital phenomenon that significantly affects fluid behavior in various contexts. Understanding and applying principles of surface tension, like in the above calculation, is essential in designing and analyzing systems in fields as diverse as biomedicine, environmental science, and engineering.
+
+## Interactive Python Exercise: Surface Tension and Droplet Shape
+
+This interactive exercise uses Python and `Plotly` to simulate how surface tension affects the shape of a droplet. We’ll create a plot that demonstrates how the pressure difference needed to maintain a certain droplet size changes with surface tension.
+
+The Young-Laplace equation for a droplet on a surface is:
+
+$$
+\Delta P = \frac{2 \sigma}{r}
+$$
+
+Where:
+- $ \Delta P $ is the pressure difference,
+- $ \sigma $ is the surface tension, and
+- $ r $ is the radius of the droplet.
+
+The user can adjust the surface tension and observe its effect on the pressure difference and, consequently, the curvature of the droplet.
+
+### Code
+
+Below is the Python code. The exercise allows you to adjust the surface tension value and see the corresponding pressure difference required to maintain the droplet's shape.
+
+```{code-cell} python
+import numpy as np
+import plotly.graph_objects as go
+from ipywidgets import interact, FloatSlider
+
+# Constants
+r = 0.01  # Fixed radius of the droplet in meters
+
+# Function to calculate pressure difference based on surface tension
+def surface_tension_plot(sigma):
+    # Calculate pressure difference
+    delta_p = 2 * sigma / r
+
+    # Set up data for the droplet shape (a semi-circle profile view)
+    theta = np.linspace(0, np.pi, 100)  # Angle for the semi-circle
+    x = r * np.cos(theta)  # x-coordinates for the droplet's surface
+    y = r * np.sin(theta)  # y-coordinates for the droplet's surface
+    
+    # Plotting the droplet and the pressure difference
+    fig = go.Figure()
+
+    # Droplet shape (semi-circle)
+    fig.add_trace(go.Scatter(x=x, y=y, mode='lines', name='Droplet Surface', 
+                             line=dict(color='blue', width=3)))
+
+    # Show the pressure difference as text
+    fig.add_annotation(x=0, y=0.015,
+                       text=f"Pressure Difference (ΔP): {delta_p:.2f} Pa",
+                       showarrow=False,
+                       font=dict(size=14),
+                       align="center")
+
+    # Layout settings
+    fig.update_layout(
+        title=f"Droplet Shape with Surface Tension σ = {sigma:.2f} N/m",
+        xaxis_title="x [m]",
+        yaxis_title="y [m]",
+        xaxis=dict(scaleanchor="y", scaleratio=1),
+        yaxis=dict(range=[0, 0.02]),
+        showlegend=False
+    )
+
+    fig.show()
+
+# Interactive slider for surface tension
+interact(surface_tension_plot, sigma=FloatSlider(value=0.03, min=0.01, max=0.1, step=0.01, description="Surface Tension (σ)"));
+```
+
+# Explanation of the Surface Tension Interactive Exercise
+
+The following code demonstrates how surface tension affects the pressure difference needed to maintain a droplet's curvature. By using the Young-Laplace equation, we can explore how varying the surface tension changes this pressure difference.
+
+## Young-Laplace Equation for a Droplet
+
+The Young-Laplace equation describes the relationship between surface tension and pressure difference for a droplet:
+
+$$
+\Delta P = \frac{2 \sigma}{r}
+$$
+
+Where:
+- $\Delta P$ is the pressure difference across the droplet’s surface,
+- $\sigma$ is the surface tension (adjustable with a slider in the interactive example),
+- $r$ is the radius of the droplet.
+
+In this exercise, the radius $r$ is held constant at $0.01$, $\text{m}$, allowing us to see how different values of $\sigma$ (surface tension) influence the required pressure difference $\Delta P$.
+
+## Code Components
+
+1. **Droplet Shape (Semi-Circle)**:
+   - For simplicity, the droplet is visualized as a semi-circle. The x- and y-coordinates for this shape are calculated with basic trigonometric functions.
+   - The droplet radius is $r = 0.01$, $\text{m}$, giving the droplet a fixed profile.
+
+2. **Pressure Calculation**:
+   - The pressure difference $\Delta P$ is calculated using the formula $\Delta P = \frac{2 \sigma}{r}$.
+   - This equation reflects the inverse relationship between radius and pressure difference: as surface tension increases, the pressure difference required to maintain the curvature also increases.
+
+3. **Interactive Slider**:
+   - An interactive slider allows users to change the surface tension value $\sigma$.
+   - As the slider value is adjusted, the plot updates to show the corresponding pressure difference $\Delta P$.
+
+## Instructions for Use
+
+- Run the code and use the slider to modify the surface tension $\sigma$.
+- Observe how changing $\sigma$ affects the calculated pressure difference. This helps demonstrate how surface tension influences the droplet’s stability and required pressure.
+
+This exercise illustrates the role of surface tension in fluid mechanics, especially how it affects the pressure needed to maintain a droplet’s shape. This principle is crucial in applications such as inkjet printing, droplet formation in fuel injection systems, and various microfluidic applications.

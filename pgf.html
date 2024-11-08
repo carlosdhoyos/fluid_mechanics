@@ -6,8 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; My sample book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Derivation of the Pressure Gradient Force &#8212; My sample book</title>
   
   
   
@@ -56,10 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pgf';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="_static/favicon.ico"/>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -189,8 +192,7 @@
 <li class="toctree-l1"><a class="reference internal" href="fluid_properties.html">Properties of Fluids</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="recommended_problems.html">Recommended Problems</a></li>
@@ -267,7 +269,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpgf.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -279,6 +281,54 @@
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/pgf.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -320,7 +370,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -331,11 +383,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>Derivation of the Pressure Gradient Force</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-consider-a-small-fluid-parcel">Step 1: Consider a Small Fluid Parcel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-pressure-forces-on-opposite-faces">Step 2: Calculate Pressure Forces on Opposite Faces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-calculate-net-pressure-force-in-the-x-direction">Step 3: Calculate Net Pressure Force in the <span class="math notranslate nohighlight">\(x\)</span> Direction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-write-the-total-pressure-gradient-force">Step 4: Write the Total Pressure Gradient Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-express-the-pressure-gradient-force-per-unit-volume">Step 5: Express the Pressure Gradient Force per Unit Volume</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -345,13 +410,115 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
+  <section class="tex2jax_ignore mathjax_ignore" id="derivation-of-the-pressure-gradient-force">
+<h1>Derivation of the Pressure Gradient Force<a class="headerlink" href="#derivation-of-the-pressure-gradient-force" title="Link to this heading">#</a></h1>
+<p>To understand the <strong>pressure gradient force</strong> acting on a small fluid element, let’s start by examining the forces exerted by pressure differences across this element.</p>
+<section id="step-1-consider-a-small-fluid-parcel">
+<h2>Step 1: Consider a Small Fluid Parcel<a class="headerlink" href="#step-1-consider-a-small-fluid-parcel" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Let’s take a <strong>small rectangular parcel</strong> of fluid with dimensions <span class="math notranslate nohighlight">\(dx\)</span>, <span class="math notranslate nohighlight">\(dy\)</span>, and <span class="math notranslate nohighlight">\(dz\)</span> in the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> directions, respectively.</p></li>
+<li><p>Assume the fluid has a pressure field <span class="math notranslate nohighlight">\(p\)</span> that varies in space, meaning <span class="math notranslate nohighlight">\(p = p(x, y, z)\)</span>.</p></li>
+<li><p>The parcel will experience different pressures on opposite faces due to spatial changes in pressure (pressure gradient).</p></li>
+</ol>
+</section>
+<section id="step-2-calculate-pressure-forces-on-opposite-faces">
+<h2>Step 2: Calculate Pressure Forces on Opposite Faces<a class="headerlink" href="#step-2-calculate-pressure-forces-on-opposite-faces" title="Link to this heading">#</a></h2>
+<p>To derive the pressure force, we consider the pressure acting on opposite faces in the <span class="math notranslate nohighlight">\(x\)</span> direction.</p>
+<ul class="simple">
+<li><p><strong>Pressure on the left face (at <span class="math notranslate nohighlight">\(x\)</span>)</strong>: The pressure on the left face is <span class="math notranslate nohighlight">\(p(x, y, z)\)</span>, acting over an area <span class="math notranslate nohighlight">\(dy \cdot dz\)</span>.</p>
+<ul>
+<li><p>The force due to pressure on the left face is therefore:
+$<span class="math notranslate nohighlight">\(
+F_{\text{left}} = p(x, y, z) \cdot dy \cdot dz
+\)</span>$</p></li>
+</ul>
+</li>
+<li><p><strong>Pressure on the right face (at <span class="math notranslate nohighlight">\(x + dx\)</span>)</strong>: The pressure on the right face is slightly different due to the pressure gradient in the <span class="math notranslate nohighlight">\(x\)</span> direction. Using a Taylor series expansion:
+$<span class="math notranslate nohighlight">\(
+  p(x + dx, y, z) \approx p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx
+  \)</span>$</p>
+<ul>
+<li><p>The force on the right face is:
+$<span class="math notranslate nohighlight">\(
+F_{\text{right}} = \left( p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx \right) \cdot dy \cdot dz
+\)</span>$</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="step-3-calculate-net-pressure-force-in-the-x-direction">
+<h2>Step 3: Calculate Net Pressure Force in the <span class="math notranslate nohighlight">\(x\)</span> Direction<a class="headerlink" href="#step-3-calculate-net-pressure-force-in-the-x-direction" title="Link to this heading">#</a></h2>
+<p>The net pressure force in the <span class="math notranslate nohighlight">\(x\)</span> direction, <span class="math notranslate nohighlight">\(F_x\)</span>, is the difference between the force on the right face and the force on the left face:</p>
+<div class="math notranslate nohighlight">
+\[
+F_x = F_{\text{right}} - F_{\text{left}}
+\]</div>
+<p>Substituting the expressions from above:</p>
+<div class="math notranslate nohighlight">
+\[
+F_x = \left( p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx \right) \cdot dy \cdot dz - p(x, y, z) \cdot dy \cdot dz
+\]</div>
+<p>Simplifying by canceling terms:</p>
+<div class="math notranslate nohighlight">
+\[
+F_x = \frac{\partial p}{\partial x} \cdot dx \cdot dy \cdot dz
+\]</div>
+<p>Similarly, we can calculate the net pressure forces in the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> directions:</p>
+<div class="math notranslate nohighlight">
+\[
+F_y = \frac{\partial p}{\partial y} \cdot dx \cdot dy \cdot dz
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F_z = \frac{\partial p}{\partial z} \cdot dx \cdot dy \cdot dz
+\]</div>
+</section>
+<section id="step-4-write-the-total-pressure-gradient-force">
+<h2>Step 4: Write the Total Pressure Gradient Force<a class="headerlink" href="#step-4-write-the-total-pressure-gradient-force" title="Link to this heading">#</a></h2>
+<p>The total pressure force acting on the fluid parcel in all three directions can now be written as a vector:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{F}_{\text{pressure}} = - \left( \frac{\partial p}{\partial x} \hat{i} + \frac{\partial p}{\partial y} \hat{j} + \frac{\partial p}{\partial z} \hat{k} \right) \cdot dx \, dy \, dz
+\]</div>
+<p>Or, using the <strong>gradient operator</strong> <span class="math notranslate nohighlight">\( \nabla \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{F}_{\text{pressure}} = - (\nabla p) \, dx \, dy \, dz
+\]</div>
+</section>
+<section id="step-5-express-the-pressure-gradient-force-per-unit-volume">
+<h2>Step 5: Express the Pressure Gradient Force per Unit Volume<a class="headerlink" href="#step-5-express-the-pressure-gradient-force-per-unit-volume" title="Link to this heading">#</a></h2>
+<p>For a small fluid parcel, the <strong>volume</strong> <span class="math notranslate nohighlight">\(V\)</span> is <span class="math notranslate nohighlight">\(dx \cdot dy \cdot dz\)</span>. The <strong>pressure gradient force per unit volume</strong> (which we use in the Navier-Stokes equations) is therefore:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{f}_{\text{pressure}} = -\nabla p
+\]</div>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>The pressure gradient force per unit volume is <span class="math notranslate nohighlight">\( -\nabla p \)</span>. This force results from spatial changes in pressure within the fluid and acts from regions of higher pressure to regions of lower pressure. It is a key component in the Navier-Stokes equations, influencing the motion of fluid by accelerating it in the direction of lower pressure.</p>
+</section>
+</section>
 
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
-</div>
-
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -369,6 +536,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-consider-a-small-fluid-parcel">Step 1: Consider a Small Fluid Parcel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-pressure-forces-on-opposite-faces">Step 2: Calculate Pressure Forces on Opposite Faces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-calculate-net-pressure-force-in-the-x-direction">Step 3: Calculate Net Pressure Force in the <span class="math notranslate nohighlight">\(x\)</span> Direction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-write-the-total-pressure-gradient-force">Step 4: Write the Total Pressure Gradient Force</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-express-the-pressure-gradient-force-per-unit-volume">Step 5: Express the Pressure Gradient Force per Unit Volume</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

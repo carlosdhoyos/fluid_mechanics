@@ -1,0 +1,758 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Introduction to the Navier-Stokes Equations in Fluid Mechanics &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'navier_stokes';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Derivation of the Pressure Gradient Force" href="navier_stokes/pgf.html" />
+    <link rel="prev" title="Types of Fluid Flow" href="types_of_flows.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to the Fluid Mechanics Course Site
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fluids_v_solids.html">Solids vs. Fluids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html">Common Physical Quantities and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fluid_properties.html">Properties of Fluids</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="recommended_problems.html">Recommended Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="labs.html">Laboratory experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnavier_stokes.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/navier_stokes.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduction to the Navier-Stokes Equations in Fluid Mechanics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-form-of-the-navier-stokes-equations">Basic Form of the Navier-Stokes Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-derivation">Step-by-Step Derivation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-mass-continuity-equation">1. Conservation of Mass (Continuity Equation)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum-navier-stokes-equation">2. Conservation of Momentum (Navier-Stokes Equation)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-forms-of-the-navier-stokes-equations">Simplified Forms of the Navier-Stokes Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-importance-of-the-navier-stokes-equations">Practical Importance of the Navier-Stokes Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-in-solving-the-navier-stokes-equations">Challenges in Solving the Navier-Stokes Equations</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-the-navier-stokes-equations-in-fluid-mechanics">
+<h1>Introduction to the Navier-Stokes Equations in Fluid Mechanics<a class="headerlink" href="#introduction-to-the-navier-stokes-equations-in-fluid-mechanics" title="Link to this heading">#</a></h1>
+<p>The Navier-Stokes equations are a set of partial differential equations that describe the motion of fluid substances such as liquids and gases. They arise from applying Newton’s second law to fluid motion and incorporate the effects of viscosity in the fluid. The equations are fundamental in fluid mechanics and are used to model a wide range of fluid flow phenomena, from airflow over an airplane wing to ocean currents and blood flow in the human body.</p>
+<section id="basic-form-of-the-navier-stokes-equations">
+<h2>Basic Form of the Navier-Stokes Equations<a class="headerlink" href="#basic-form-of-the-navier-stokes-equations" title="Link to this heading">#</a></h2>
+<p>The Navier-Stokes equations are derived by considering the forces acting on a small fluid element and applying the principles of conservation of momentum and mass.</p>
+<p>The conservation of momentum in fluid mechanics can be derived by applying <strong>Newton’s Second Law</strong> to a small fluid element. Newton’s Second Law states that:</p>
+<blockquote>
+<div><p>The rate of change of momentum of an object is equal to the sum of the forces acting on it.</p>
+</div></blockquote>
+<p>Or in other words:</p>
+<blockquote>
+<div><p><strong>Force</strong> = <strong>Mass</strong> × <strong>Acceleration</strong></p>
+</div></blockquote>
+<p>In mathematical terms, Newton’s Second Law states that the force <span class="math notranslate nohighlight">\( \mathbf{F} \)</span> acting on a body is equal to the time rate of change of its momentum <span class="math notranslate nohighlight">\( \mathbf{p} \)</span>. If the mass <span class="math notranslate nohighlight">\( m \)</span> of the body is constant, the law simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{F} = m \mathbf{a}
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( \mathbf{F} \)</span> is the total force acting on the body,</p></li>
+<li><p><span class="math notranslate nohighlight">\( m \)</span> is the mass of the body,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mathbf{a} \)</span> is the acceleration of the body.</p></li>
+</ul>
+<p>Alternatively, Newton’s Second Law can be written in terms of the rate of change of momentum <span class="math notranslate nohighlight">\( \mathbf{p} = m \mathbf{V} \)</span>, where <span class="math notranslate nohighlight">\( \mathbf{V} \)</span> is the velocity:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{F} = \frac{d \mathbf{p}}{dt} = \frac{d}{dt} (m \mathbf{V})
+\]</div>
+<p>For a constant mass, this simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{F} = m \frac{d \mathbf{V}}{dt} = m \mathbf{a}
+\]</div>
+<p>In fluid mechanics, we apply this principle to a small fluid element, considering the forces due to pressure, viscosity, and external forces acting on it.</p>
+<p>In fluid mechanics, we apply this law to a small fluid element, considering how forces affect its acceleration and, consequently, its velocity. Here’s how we derive the conservation of momentum for a fluid using Newton’s Second Law.</p>
+<section id="step-by-step-derivation">
+<h3>Step-by-Step Derivation<a class="headerlink" href="#step-by-step-derivation" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p><strong>Identify the Fluid Element</strong>:</p>
+<ul class="simple">
+<li><p>Consider a small “parcel” or “element” of fluid. This element has mass, occupies a small volume in the fluid, and moves with the surrounding flow.</p></li>
+</ul>
+</li>
+<li><p><strong>Write Newton’s Second Law for the Fluid Element</strong>:</p>
+<ul>
+<li><p>For this small fluid element, Newton’s Second Law can be written as:</p>
+<blockquote>
+<div><p>The <strong>mass</strong> of the element multiplied by its <strong>acceleration</strong> is equal to the <strong>sum of all forces</strong> acting on it.</p>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>Express Mass and Acceleration</strong>:</p>
+<ul>
+<li><p>Let:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( \rho \)</span> be the <strong>density</strong> of the fluid.</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mathbf{V} \)</span> be the <strong>velocity vector</strong> of the fluid at a point in space and time.</p></li>
+</ul>
+</li>
+<li><p>The <strong>mass</strong> of a small fluid element with volume <span class="math notranslate nohighlight">\( dV \)</span> is <span class="math notranslate nohighlight">\( \rho dV \)</span>.</p></li>
+<li><p>The <strong>acceleration</strong> of the fluid element is the rate of change of the velocity vector <span class="math notranslate nohighlight">\( \mathbf{u} \)</span>, which includes both time-dependent changes and changes as the fluid element moves through space.</p>
+<p>So, the <strong>acceleration</strong> <span class="math notranslate nohighlight">\( \mathbf{a} \)</span> of the fluid element can be expressed as:</p>
+<div class="math notranslate nohighlight">
+\[
+     \mathbf{a} = \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{u}
+     \]</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Identify and Sum Up the Forces Acting on the Element</strong>:</p>
+<ul class="simple">
+<li><p>Three main forces act on the fluid element:</p>
+<ul>
+<li><p><strong>Pressure Force</strong>: Acts due to pressure differences across the element’s surface, pushing from regions of higher to lower pressure.</p>
+<ul>
+<li><p>This force per unit volume is <span class="math notranslate nohighlight">\( -\nabla p \)</span>, where <span class="math notranslate nohighlight">\( p \)</span> is the pressure.</p></li>
+</ul>
+</li>
+<li><p><strong>Viscous Force</strong>: Arises from the internal friction within the fluid, resisting motion.</p>
+<ul>
+<li><p>This force per unit volume is <span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{u} \)</span>, where <span class="math notranslate nohighlight">\( \mu \)</span> is the dynamic viscosity.</p></li>
+</ul>
+</li>
+<li><p><strong>External Force</strong>: Any additional body forces acting on the fluid, such as gravity.</p>
+<ul>
+<li><p>This is represented as <span class="math notranslate nohighlight">\( \mathbf{f} \)</span> per unit volume.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Combine Terms to Write the Conservation of Momentum</strong>:</p>
+<ul>
+<li><p>According to Newton’s Second Law, <strong>total force</strong> = <strong>mass × acceleration</strong>.</p></li>
+<li><p>For a fluid element, this gives:</p>
+<div class="math notranslate nohighlight">
+\[
+     \rho \left( \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}
+     \]</div>
+</li>
+<li><p>Here:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( \rho \left( \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} \right) \)</span> represents the <strong>mass times acceleration</strong> (the rate of change of momentum),</p></li>
+<li><p><span class="math notranslate nohighlight">\( -\nabla p \)</span> is the <strong>pressure force</strong>,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{u} \)</span> is the <strong>viscous force</strong>,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mathbf{f} \)</span> is the <strong>external force</strong>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>This equation is the <strong>Navier-Stokes equation</strong>, derived directly from <strong>Newton’s Second Law</strong>. It describes how the velocity of a fluid element changes in response to the combined effects of pressure, viscosity, and any external forces.</p>
+</section>
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<p>Starting from Newton’s Second Law, we derived the conservation of momentum for a fluid element. The Navier-Stokes equation we derived is central to fluid mechanics and applies to a wide range of fluid flows, describing how different forces interact to influence fluid motion.</p>
+<p>They can be expressed as:</p>
+</section>
+<section id="conservation-of-mass-continuity-equation">
+<h3>1. Conservation of Mass (Continuity Equation)<a class="headerlink" href="#conservation-of-mass-continuity-equation" title="Link to this heading">#</a></h3>
+<p>The continuity equation expresses the conservation of mass in the fluid, ensuring that mass cannot be created or destroyed:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{u}) = 0
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( \rho \)</span> is the fluid density,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mathbf{u} \)</span> is the velocity vector of the fluid, and</p></li>
+<li><p><span class="math notranslate nohighlight">\( t \)</span> is time.</p></li>
+</ul>
+<p>In incompressible flows, where <span class="math notranslate nohighlight">\( \rho \)</span> is constant, this simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla \cdot \mathbf{u} = 0
+\]</div>
+</section>
+<section id="conservation-of-momentum-navier-stokes-equation">
+<h3>2. Conservation of Momentum (Navier-Stokes Equation)<a class="headerlink" href="#conservation-of-momentum-navier-stokes-equation" title="Link to this heading">#</a></h3>
+<p>The Navier-Stokes equation is derived from Newton’s second law applied to a fluid element. It describes how the velocity of the fluid changes in response to forces acting on it, such as pressure gradients, viscous forces, and external forces like gravity:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho \left( \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( \rho \)</span> is the fluid density,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mathbf{u} \)</span> is the velocity vector,</p></li>
+<li><p><span class="math notranslate nohighlight">\( p \)</span> is the pressure,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mu \)</span> is the dynamic viscosity of the fluid, and</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mathbf{f} \)</span> represents any external body forces (e.g., gravity).</p></li>
+</ul>
+<p>The terms in this equation represent different physical effects:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\( \frac{\partial \mathbf{u}}{\partial t} \)</span>: Time-dependent acceleration of the fluid,</p></li>
+<li><p><span class="math notranslate nohighlight">\( (\mathbf{u} \cdot \nabla) \mathbf{u} \)</span>: Convective acceleration due to changes in velocity within the flow field,</p></li>
+<li><p><span class="math notranslate nohighlight">\( -\nabla p \)</span>: Force due to pressure gradients,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{u} \)</span>: Viscous force, representing internal friction within the fluid,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mathbf{f} \)</span>: External forces acting on the fluid element.</p></li>
+</ul>
+</section>
+</section>
+<section id="simplified-forms-of-the-navier-stokes-equations">
+<h2>Simplified Forms of the Navier-Stokes Equations<a class="headerlink" href="#simplified-forms-of-the-navier-stokes-equations" title="Link to this heading">#</a></h2>
+<p>In certain situations, the Navier-Stokes equations can be simplified:</p>
+<ol class="arabic">
+<li><p><strong>Incompressible, Newtonian Fluids</strong>:
+For fluids with constant density (incompressible) and where viscosity is independent of velocity gradients (Newtonian fluids), the equations simplify as:</p>
+<div class="math notranslate nohighlight">
+\[
+   \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{u} + \frac{\mathbf{f}}{\rho}
+   \]</div>
+<p>where <span class="math notranslate nohighlight">\( \nu = \frac{\mu}{\rho} \)</span> is the kinematic viscosity.</p>
+</li>
+<li><p><strong>Steady Flow</strong>:
+If the flow is steady (not changing over time), then <span class="math notranslate nohighlight">\( \frac{\partial \mathbf{u}}{\partial t} = 0 \)</span>, simplifying the equation further.</p></li>
+<li><p><strong>Potential Flow</strong>:
+In inviscid (non-viscous) flows, where <span class="math notranslate nohighlight">\( \mu = 0 \)</span>, the visc</p></li>
+</ol>
+</section>
+<section id="practical-importance-of-the-navier-stokes-equations">
+<h2>Practical Importance of the Navier-Stokes Equations<a class="headerlink" href="#practical-importance-of-the-navier-stokes-equations" title="Link to this heading">#</a></h2>
+<p>The Navier-Stokes equations are central to fluid mechanics because they describe the vast majority of fluid flows encountered in nature and engineering. They are used to:</p>
+<ul class="simple">
+<li><p><strong>Model weather patterns</strong>: Predicting wind patterns, storm formation, and climate change.</p></li>
+<li><p><strong>Design transportation vehicles</strong>: Analyzing the flow around cars, airplanes, and ships to reduce drag and improve fuel efficiency.</p></li>
+<li><p><strong>Optimize industrial processes</strong>: Controlling fluid flow in pipelines, chemical reactors, and cooling systems.</p></li>
+<li><p><strong>Understand biological flows</strong>: Simulating blood flow in arteries or air flow in lungs to improve medical treatments.</p></li>
+</ul>
+<section id="challenges-in-solving-the-navier-stokes-equations">
+<h3>Challenges in Solving the Navier-Stokes Equations<a class="headerlink" href="#challenges-in-solving-the-navier-stokes-equations" title="Link to this heading">#</a></h3>
+<p>The Navier-Stokes equations are nonlinear partial differential equations, which makes them difficult to solve analytically in most cases. Solutions are often obtained through:</p>
+<ul class="simple">
+<li><p><strong>Numerical methods</strong>: Computational fluid dynamics (CFD) techniques that approximate the equations on a discretized domain.</p></li>
+<li><p><strong>Simplified models</strong>: Applying assumptions like incompressibility or potential flow to reduce complexity.</p></li>
+<li><p><strong>Experimental validation</strong>: Using laboratory experiments to validate numerical or approximate solutions.</p></li>
+</ul>
+<p>The Navier-Stokes equations are still an area of active research, especially in understanding turbulence, which is a complex flow phenomenon that appears at high Reynolds numbers. In fact, a complete theoretical solution to the Navier-Stokes equations for turbulent flows is one of the unsolved problems in physics and mathematics, known as the <strong>Navier-Stokes existence and smoothness problem</strong>.</p>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="types_of_flows.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Types of Fluid Flow</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="navier_stokes/pgf.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Derivation of the Pressure Gradient Force</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-form-of-the-navier-stokes-equations">Basic Form of the Navier-Stokes Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-derivation">Step-by-Step Derivation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-mass-continuity-equation">1. Conservation of Mass (Continuity Equation)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum-navier-stokes-equation">2. Conservation of Momentum (Navier-Stokes Equation)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-forms-of-the-navier-stokes-equations">Simplified Forms of the Navier-Stokes Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-importance-of-the-navier-stokes-equations">Practical Importance of the Navier-Stokes Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-in-solving-the-navier-stokes-equations">Challenges in Solving the Navier-Stokes Equations</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

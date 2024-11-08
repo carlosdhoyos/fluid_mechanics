@@ -10,21 +10,22 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 - <span style="color: green;">Prerequisites: Math and physics</span>
 - <span style="color: green;">Definition of fluids and distinction between solids and fluids.</span>
 - <span style="color: green;">Continuum hypothesis: fluid as a continuum.</span>
-- Common physical quantities and units
-- Fluid properties: <span style="color: green;">density</span>, viscosity, surface tension.
-- Ideal gas law
-- No-slip condition
+- <span style="color: green;">Common physical quantities and units.</span>
+- Fluid properties: <span style="color: green;">density, viscosity</span>, surface tension.
+- <span style="color: green;">Ideal gas law</span>
+- <span style="color: green;">No-slip condition</span>
 - Types of flows
-- Basic concepts: fluid pressure, temperature, and velocity.
 
 **Lab**: Measurement of basic fluid properties (density, viscosity, surface tension).
 
 ---
 
-### **Weeks 3: Differential Analysis and Navier-Stokes Equations**
+### **Weeks 3: Navier-Stokes Equations**
 - Review of Newton’s second law and its application to fluids.
 - Forces in fluid flow: pressure, body forces, and viscous forces.
 - Derivation of the **Navier-Stokes equations**.
+
+
 
 ---
 

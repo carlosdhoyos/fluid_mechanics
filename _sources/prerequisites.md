@@ -412,7 +412,7 @@ $$
 \frac{dy}{dx} = x^2 + x
 $$
 
-with the initial condition $y(1) = 3$.
+with the condition $y(1) = 3$.
 
 ### Solution:
 
@@ -431,7 +431,7 @@ $$
 Solving for $C$, we get $C = \frac{15}{6}$, so the solution is:
 
 $$
-y = \frac{x^3}{3} + \frac{x^2}{2} + \frac{15}{6}
+y = \frac{x^3}{3} + \frac{x^2}{2} + \frac{13}{6}
 $$
 
 ---
