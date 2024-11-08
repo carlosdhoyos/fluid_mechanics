@@ -56,12 +56,12 @@ In fluid mechanics, we apply this law to a small fluid element, considering how 
      - $ \rho $ be the **density** of the fluid.
      - $ \mathbf{V} $ be the **velocity vector** of the fluid at a point in space and time.
    - The **mass** of a small fluid element with volume $ dV $ is $ \rho dV $.
-   - The **acceleration** of the fluid element is the rate of change of the velocity vector $ \mathbf{u} $, which includes both time-dependent changes and changes as the fluid element moves through space.
+   - The **acceleration** of the fluid element is the rate of change of the velocity vector $ \mathbf{V} $, which includes both time-dependent changes and changes as the fluid element moves through space.
 
      So, the **acceleration** $ \mathbf{a} $ of the fluid element can be expressed as:
      
      $$
-     \mathbf{a} = \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{u}
+     \mathbf{a} = \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V}
      $$
 
 4. **Identify and Sum Up the Forces Acting on the Element**:
@@ -71,7 +71,7 @@ In fluid mechanics, we apply this law to a small fluid element, considering how 
        - This force per unit volume is $ -\nabla p $, where $ p $ is the pressure.
 
      - **Viscous Force**: Arises from the internal friction within the fluid, resisting motion.
-       - This force per unit volume is $ \mu \nabla^2 \mathbf{u} $, where $ \mu $ is the dynamic viscosity.
+       - This force per unit volume is $ \mu \nabla^2 \mathbf{V} $, where $ \mu $ is the dynamic viscosity.
 
      - **External Force**: Any additional body forces acting on the fluid, such as gravity.
        - This is represented as $ \mathbf{f} $ per unit volume.
@@ -82,13 +82,13 @@ In fluid mechanics, we apply this law to a small fluid element, considering how 
    - For a fluid element, this gives:
 
      $$
-     \rho \left( \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}
+     \rho \left( \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} \right) = -\nabla p + \mu \nabla^2 \mathbf{V} + \mathbf{f}
      $$
 
    - Here:
-     - $ \rho \left( \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} \right) $ represents the **mass times acceleration** (the rate of change of momentum),
+     - $ \rho \left( \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} \right) $ represents the **mass times acceleration** (the rate of change of momentum),
      - $ -\nabla p $ is the **pressure force**,
-     - $ \mu \nabla^2 \mathbf{u} $ is the **viscous force**,
+     - $ \mu \nabla^2 \mathbf{V} $ is the **viscous force**,
      - $ \mathbf{f} $ is the **external force**.
 
 This equation is the **Navier-Stokes equation**, derived directly from **Newton’s Second Law**. It describes how the velocity of a fluid element changes in response to the combined effects of pressure, viscosity, and any external forces.
@@ -97,47 +97,26 @@ This equation is the **Navier-Stokes equation**, derived directly from **Newton�
 
 Starting from Newton's Second Law, we derived the conservation of momentum for a fluid element. The Navier-Stokes equation we derived is central to fluid mechanics and applies to a wide range of fluid flows, describing how different forces interact to influence fluid motion.
 
-They can be expressed as:
-
-### 1. Conservation of Mass (Continuity Equation)
-
-The continuity equation expresses the conservation of mass in the fluid, ensuring that mass cannot be created or destroyed:
-
-$$
-\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{u}) = 0
-$$
-
-where:
-- $ \rho $ is the fluid density,
-- $ \mathbf{u} $ is the velocity vector of the fluid, and
-- $ t $ is time.
-
-In incompressible flows, where $ \rho $ is constant, this simplifies to:
-
-$$
-\nabla \cdot \mathbf{u} = 0
-$$
-
-### 2. Conservation of Momentum (Navier-Stokes Equation)
+---
 
 The Navier-Stokes equation is derived from Newton’s second law applied to a fluid element. It describes how the velocity of the fluid changes in response to forces acting on it, such as pressure gradients, viscous forces, and external forces like gravity:
 
 $$
-\rho \left( \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}
+\rho \left( \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} \right) = -\nabla p + \mu \nabla^2 \mathbf{V} + \mathbf{f}
 $$
 
 where:
 - $ \rho $ is the fluid density,
-- $ \mathbf{u} $ is the velocity vector,
+- $ \mathbf{V} $ is the velocity vector,
 - $ p $ is the pressure,
 - $ \mu $ is the dynamic viscosity of the fluid, and
 - $ \mathbf{f} $ represents any external body forces (e.g., gravity).
 
 The terms in this equation represent different physical effects:
-- $ \frac{\partial \mathbf{u}}{\partial t} $: Time-dependent acceleration of the fluid,
-- $ (\mathbf{u} \cdot \nabla) \mathbf{u} $: Convective acceleration due to changes in velocity within the flow field,
+- $ \frac{\partial \mathbf{V}}{\partial t} $: Time-dependent acceleration of the fluid,
+- $ (\mathbf{V} \cdot \nabla) \mathbf{V} $: Convective acceleration due to changes in velocity within the flow field,
 - $ -\nabla p $: Force due to pressure gradients,
-- $ \mu \nabla^2 \mathbf{u} $: Viscous force, representing internal friction within the fluid,
+- $ \mu \nabla^2 \mathbf{V} $: Viscous force, representing internal friction within the fluid,
 - $ \mathbf{f} $: External forces acting on the fluid element.
 
 ## Simplified Forms of the Navier-Stokes Equations
@@ -148,13 +127,13 @@ In certain situations, the Navier-Stokes equations can be simplified:
    For fluids with constant density (incompressible) and where viscosity is independent of velocity gradients (Newtonian fluids), the equations simplify as:
 
    $$
-   \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{u} + \frac{\mathbf{f}}{\rho}
+   \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{V} + \frac{\mathbf{f}}{\rho}
    $$
 
    where $ \nu = \frac{\mu}{\rho} $ is the kinematic viscosity.
 
 2. **Steady Flow**:
-   If the flow is steady (not changing over time), then $ \frac{\partial \mathbf{u}}{\partial t} = 0 $, simplifying the equation further.
+   If the flow is steady (not changing over time), then $ \frac{\partial \mathbf{V}}{\partial t} = 0 $, simplifying the equation further.
 
 3. **Potential Flow**:
    In inviscid (non-viscous) flows, where $ \mu = 0 $, the visc

@@ -26,12 +26,11 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 - Derivation of the **Navier-Stokes equations**.
 
 
-
 ---
 
 ### **Weeks 4: Fluid Statics as an Application of Navier-Stokes**
 - **Fluid statics** as a special case of the Navier-Stokes equations (no velocity, steady-state).
-- Hydrostatic equation: \(\frac{dp}{dz} = -\rho g\).
+- Hydrostatic equation: $\frac{dp}{dz} = -\rho g$.
 - Pressure variation in incompressible and compressible static fluids.
 - Applications: pressure forces on submerged surfaces, buoyancy, and stability.
 

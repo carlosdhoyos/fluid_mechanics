@@ -194,6 +194,9 @@
 <li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/continuity.html">Conservation of Mass (Continuity Equation)</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="recommended_problems.html">Recommended Problems</a></li>
@@ -397,8 +400,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-form-of-the-navier-stokes-equations">Basic Form of the Navier-Stokes Equations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-derivation">Step-by-Step Derivation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-mass-continuity-equation">1. Conservation of Mass (Continuity Equation)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum-navier-stokes-equation">2. Conservation of Momentum (Navier-Stokes Equation)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-forms-of-the-navier-stokes-equations">Simplified Forms of the Navier-Stokes Equations</a></li>
@@ -480,11 +481,11 @@ document.write(`
 </ul>
 </li>
 <li><p>The <strong>mass</strong> of a small fluid element with volume <span class="math notranslate nohighlight">\( dV \)</span> is <span class="math notranslate nohighlight">\( \rho dV \)</span>.</p></li>
-<li><p>The <strong>acceleration</strong> of the fluid element is the rate of change of the velocity vector <span class="math notranslate nohighlight">\( \mathbf{u} \)</span>, which includes both time-dependent changes and changes as the fluid element moves through space.</p>
+<li><p>The <strong>acceleration</strong> of the fluid element is the rate of change of the velocity vector <span class="math notranslate nohighlight">\( \mathbf{V} \)</span>, which includes both time-dependent changes and changes as the fluid element moves through space.</p>
 <p>So, the <strong>acceleration</strong> <span class="math notranslate nohighlight">\( \mathbf{a} \)</span> of the fluid element can be expressed as:</p>
 <div class="math notranslate nohighlight">
 \[
-     \mathbf{a} = \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{u}
+     \mathbf{a} = \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V}
      \]</div>
 </li>
 </ul>
@@ -500,7 +501,7 @@ document.write(`
 </li>
 <li><p><strong>Viscous Force</strong>: Arises from the internal friction within the fluid, resisting motion.</p>
 <ul>
-<li><p>This force per unit volume is <span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{u} \)</span>, where <span class="math notranslate nohighlight">\( \mu \)</span> is the dynamic viscosity.</p></li>
+<li><p>This force per unit volume is <span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{V} \)</span>, where <span class="math notranslate nohighlight">\( \mu \)</span> is the dynamic viscosity.</p></li>
 </ul>
 </li>
 <li><p><strong>External Force</strong>: Any additional body forces acting on the fluid, such as gravity.</p>
@@ -518,14 +519,14 @@ document.write(`
 <li><p>For a fluid element, this gives:</p>
 <div class="math notranslate nohighlight">
 \[
-     \rho \left( \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}
+     \rho \left( \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} \right) = -\nabla p + \mu \nabla^2 \mathbf{V} + \mathbf{f}
      \]</div>
 </li>
 <li><p>Here:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \rho \left( \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} \right) \)</span> represents the <strong>mass times acceleration</strong> (the rate of change of momentum),</p></li>
+<li><p><span class="math notranslate nohighlight">\( \rho \left( \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} \right) \)</span> represents the <strong>mass times acceleration</strong> (the rate of change of momentum),</p></li>
 <li><p><span class="math notranslate nohighlight">\( -\nabla p \)</span> is the <strong>pressure force</strong>,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{u} \)</span> is the <strong>viscous force</strong>,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{V} \)</span> is the <strong>viscous force</strong>,</p></li>
 <li><p><span class="math notranslate nohighlight">\( \mathbf{f} \)</span> is the <strong>external force</strong>.</p></li>
 </ul>
 </li>
@@ -537,48 +538,26 @@ document.write(`
 <section id="summary">
 <h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
 <p>Starting from Newton’s Second Law, we derived the conservation of momentum for a fluid element. The Navier-Stokes equation we derived is central to fluid mechanics and applies to a wide range of fluid flows, describing how different forces interact to influence fluid motion.</p>
-<p>They can be expressed as:</p>
-</section>
-<section id="conservation-of-mass-continuity-equation">
-<h3>1. Conservation of Mass (Continuity Equation)<a class="headerlink" href="#conservation-of-mass-continuity-equation" title="Link to this heading">#</a></h3>
-<p>The continuity equation expresses the conservation of mass in the fluid, ensuring that mass cannot be created or destroyed:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{u}) = 0
-\]</div>
-<p>where:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \rho \)</span> is the fluid density,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mathbf{u} \)</span> is the velocity vector of the fluid, and</p></li>
-<li><p><span class="math notranslate nohighlight">\( t \)</span> is time.</p></li>
-</ul>
-<p>In incompressible flows, where <span class="math notranslate nohighlight">\( \rho \)</span> is constant, this simplifies to:</p>
-<div class="math notranslate nohighlight">
-\[
-\nabla \cdot \mathbf{u} = 0
-\]</div>
-</section>
-<section id="conservation-of-momentum-navier-stokes-equation">
-<h3>2. Conservation of Momentum (Navier-Stokes Equation)<a class="headerlink" href="#conservation-of-momentum-navier-stokes-equation" title="Link to this heading">#</a></h3>
+<hr class="docutils" />
 <p>The Navier-Stokes equation is derived from Newton’s second law applied to a fluid element. It describes how the velocity of the fluid changes in response to forces acting on it, such as pressure gradients, viscous forces, and external forces like gravity:</p>
 <div class="math notranslate nohighlight">
 \[
-\rho \left( \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} \right) = -\nabla p + \mu \nabla^2 \mathbf{u} + \mathbf{f}
+\rho \left( \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} \right) = -\nabla p + \mu \nabla^2 \mathbf{V} + \mathbf{f}
 \]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\( \rho \)</span> is the fluid density,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mathbf{u} \)</span> is the velocity vector,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mathbf{V} \)</span> is the velocity vector,</p></li>
 <li><p><span class="math notranslate nohighlight">\( p \)</span> is the pressure,</p></li>
 <li><p><span class="math notranslate nohighlight">\( \mu \)</span> is the dynamic viscosity of the fluid, and</p></li>
 <li><p><span class="math notranslate nohighlight">\( \mathbf{f} \)</span> represents any external body forces (e.g., gravity).</p></li>
 </ul>
 <p>The terms in this equation represent different physical effects:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \frac{\partial \mathbf{u}}{\partial t} \)</span>: Time-dependent acceleration of the fluid,</p></li>
-<li><p><span class="math notranslate nohighlight">\( (\mathbf{u} \cdot \nabla) \mathbf{u} \)</span>: Convective acceleration due to changes in velocity within the flow field,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \frac{\partial \mathbf{V}}{\partial t} \)</span>: Time-dependent acceleration of the fluid,</p></li>
+<li><p><span class="math notranslate nohighlight">\( (\mathbf{V} \cdot \nabla) \mathbf{V} \)</span>: Convective acceleration due to changes in velocity within the flow field,</p></li>
 <li><p><span class="math notranslate nohighlight">\( -\nabla p \)</span>: Force due to pressure gradients,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{u} \)</span>: Viscous force, representing internal friction within the fluid,</p></li>
+<li><p><span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{V} \)</span>: Viscous force, representing internal friction within the fluid,</p></li>
 <li><p><span class="math notranslate nohighlight">\( \mathbf{f} \)</span>: External forces acting on the fluid element.</p></li>
 </ul>
 </section>
@@ -591,12 +570,12 @@ document.write(`
 For fluids with constant density (incompressible) and where viscosity is independent of velocity gradients (Newtonian fluids), the equations simplify as:</p>
 <div class="math notranslate nohighlight">
 \[
-   \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{u} + \frac{\mathbf{f}}{\rho}
+   \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{V} + \frac{\mathbf{f}}{\rho}
    \]</div>
 <p>where <span class="math notranslate nohighlight">\( \nu = \frac{\mu}{\rho} \)</span> is the kinematic viscosity.</p>
 </li>
 <li><p><strong>Steady Flow</strong>:
-If the flow is steady (not changing over time), then <span class="math notranslate nohighlight">\( \frac{\partial \mathbf{u}}{\partial t} = 0 \)</span>, simplifying the equation further.</p></li>
+If the flow is steady (not changing over time), then <span class="math notranslate nohighlight">\( \frac{\partial \mathbf{V}}{\partial t} = 0 \)</span>, simplifying the equation further.</p></li>
 <li><p><strong>Potential Flow</strong>:
 In inviscid (non-viscous) flows, where <span class="math notranslate nohighlight">\( \mu = 0 \)</span>, the visc</p></li>
 </ol>
@@ -692,8 +671,6 @@ In inviscid (non-viscous) flows, where <span class="math notranslate nohighlight
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-form-of-the-navier-stokes-equations">Basic Form of the Navier-Stokes Equations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-derivation">Step-by-Step Derivation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-mass-continuity-equation">1. Conservation of Mass (Continuity Equation)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conservation-of-momentum-navier-stokes-equation">2. Conservation of Momentum (Navier-Stokes Equation)</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-forms-of-the-navier-stokes-equations">Simplified Forms of the Navier-Stokes Equations</a></li>

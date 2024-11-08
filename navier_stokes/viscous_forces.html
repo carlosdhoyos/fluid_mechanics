@@ -1,0 +1,768 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Derivation of Friction (Viscous) Forces in Fluid Mechanics &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'navier_stokes/viscous_forces';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Navier-Stokes Equations in Cartesian Coordinates" href="ns_cartesian.html" />
+    <link rel="prev" title="Derivation of the Pressure Gradient Force" href="pgf.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to the Fluid Mechanics Course Site
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../environment.html">Setting Up the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fluids_v_solids.html">Solids vs. Fluids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../units.html">Common Physical Quantities and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fluid_properties.html">Properties of Fluids</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../types_of_flows.html">Types of Fluid Flow</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pgf.html">Derivation of the Pressure Gradient Force</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="continuity.html">Conservation of Mass (Continuity Equation)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../recommended_problems.html">Recommended Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labs.html">Laboratory experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnavier_stokes/viscous_forces.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/navier_stokes/viscous_forces.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Derivation of Friction (Viscous) Forces in Fluid Mechanics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-consider-a-small-fluid-parcel">Step 1: Consider a Small Fluid Parcel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-define-shear-stress-due-to-viscosity">Step 2: Define Shear Stress Due to Viscosity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-stresses-in-other-directions">Shear Stresses in Other Directions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-calculate-the-net-viscous-force-on-the-fluid-parcel">Step 3: Calculate the Net Viscous Force on the Fluid Parcel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viscous-force-in-the-x-direction">Viscous Force in the <span class="math notranslate nohighlight">\(x\)</span> Direction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viscous-forces-in-the-y-and-z-directions">Viscous Forces in the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> Directions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-write-the-total-viscous-force-per-unit-volume">Step 4: Write the Total Viscous Force per Unit Volume</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-stresses-in-fluid-mechanics">Table of Stresses in Fluid Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="derivation-of-friction-viscous-forces-in-fluid-mechanics">
+<h1>Derivation of Friction (Viscous) Forces in Fluid Mechanics<a class="headerlink" href="#derivation-of-friction-viscous-forces-in-fluid-mechanics" title="Link to this heading">#</a></h1>
+<p>In fluid mechanics, <strong>viscous forces</strong> (or frictional forces) arise from the internal friction within a fluid as layers of fluid move relative to one another. These forces depend on the <strong>viscosity</strong> of the fluid and the velocity gradient between fluid layers. Let’s derive the expression for the viscous forces acting on a small fluid element.</p>
+<section id="step-1-consider-a-small-fluid-parcel">
+<h2>Step 1: Consider a Small Fluid Parcel<a class="headerlink" href="#step-1-consider-a-small-fluid-parcel" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>We start by examining a small rectangular fluid element (parcel) with dimensions <span class="math notranslate nohighlight">\(dx\)</span>, <span class="math notranslate nohighlight">\(dy\)</span>, and <span class="math notranslate nohighlight">\(dz\)</span>.</p></li>
+<li><p>Assume the fluid has a viscosity <span class="math notranslate nohighlight">\(\mu\)</span>, which is a measure of the fluid’s resistance to deformation (its “stickiness”).</p></li>
+</ol>
+</section>
+<section id="step-2-define-shear-stress-due-to-viscosity">
+<h2>Step 2: Define Shear Stress Due to Viscosity<a class="headerlink" href="#step-2-define-shear-stress-due-to-viscosity" title="Link to this heading">#</a></h2>
+<p>In a viscous fluid, as one layer of fluid moves past another, a <strong>shear stress</strong> is exerted due to the viscosity of the fluid. For a fluid moving in the <span class="math notranslate nohighlight">\(x\)</span> direction with velocity <span class="math notranslate nohighlight">\(u\)</span>, this shear stress <span class="math notranslate nohighlight">\(\tau_{xy}\)</span> is proportional to the rate of change of velocity in the <span class="math notranslate nohighlight">\(y\)</span> direction, which we can express as a partial derivative:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau_{xy} = \mu \frac{\partial u}{\partial y}
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\tau_{xy}\)</span> is the shear stress acting on the <span class="math notranslate nohighlight">\(x\)</span> face in the <span class="math notranslate nohighlight">\(y\)</span> direction,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span> is the dynamic viscosity of the fluid,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{\partial u}{\partial y}\)</span> represents the velocity gradient in the <span class="math notranslate nohighlight">\(y\)</span> direction.</p></li>
+</ul>
+<p>This relationship, called <strong>Newton’s Law of Viscosity</strong>, assumes a <strong>Newtonian fluid</strong> where the shear stress is linearly proportional to the velocity gradient.</p>
+<section id="shear-stresses-in-other-directions">
+<h3>Shear Stresses in Other Directions<a class="headerlink" href="#shear-stresses-in-other-directions" title="Link to this heading">#</a></h3>
+<p>Similarly, we can define shear stresses for velocity changes in other directions:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\tau_{yx} = \mu \frac{\partial v}{\partial x}\)</span>, where <span class="math notranslate nohighlight">\(v\)</span> is the velocity in the <span class="math notranslate nohighlight">\(y\)</span> direction.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\tau_{zx} = \mu \frac{\partial w}{\partial x}\)</span>, where <span class="math notranslate nohighlight">\(w\)</span> is the velocity in the <span class="math notranslate nohighlight">\(z\)</span> direction.</p></li>
+</ul>
+<p>In general, we define the <strong>shear stress tensor</strong> for a fluid as:
+$<span class="math notranslate nohighlight">\(
+\tau_{ij} = \mu \frac{\partial u_i}{\partial x_j}
+\)</span>$</p>
+<p>where <span class="math notranslate nohighlight">\(u_i\)</span> is the velocity in the <span class="math notranslate nohighlight">\(i\)</span> direction and <span class="math notranslate nohighlight">\(x_j\)</span> is the spatial coordinate in the <span class="math notranslate nohighlight">\(j\)</span> direction.</p>
+</section>
+</section>
+<section id="step-3-calculate-the-net-viscous-force-on-the-fluid-parcel">
+<h2>Step 3: Calculate the Net Viscous Force on the Fluid Parcel<a class="headerlink" href="#step-3-calculate-the-net-viscous-force-on-the-fluid-parcel" title="Link to this heading">#</a></h2>
+<p>Let’s calculate the viscous forces acting on the fluid parcel in the <span class="math notranslate nohighlight">\(x\)</span> direction. For simplicity, we’ll start with shear stresses acting on the faces perpendicular to the <span class="math notranslate nohighlight">\(x\)</span> axis.</p>
+<section id="viscous-force-in-the-x-direction">
+<h3>Viscous Force in the <span class="math notranslate nohighlight">\(x\)</span> Direction<a class="headerlink" href="#viscous-force-in-the-x-direction" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Shear Stress on the Left Face (<span class="math notranslate nohighlight">\(x\)</span>)</strong>:</p>
+<ul class="simple">
+<li><p>The shear stress on the left face (at position <span class="math notranslate nohighlight">\(x\)</span>) in the <span class="math notranslate nohighlight">\(x\)</span> direction is <span class="math notranslate nohighlight">\(\tau_{xx} = \mu \frac{\partial u}{\partial x}\)</span>.</p></li>
+<li><p>The force due to shear stress on this face, acting over an area <span class="math notranslate nohighlight">\(dy \cdot dz\)</span>, is:
+$<span class="math notranslate nohighlight">\(
+F_{\text{left}} = \tau_{xx} \cdot dy \cdot dz = \mu \frac{\partial u}{\partial x} \cdot dy \cdot dz
+\)</span>$</p></li>
+</ul>
+</li>
+<li><p><strong>Shear Stress on the Right Face (<span class="math notranslate nohighlight">\(x + dx\)</span>)</strong>:</p>
+<ul class="simple">
+<li><p>The shear stress on the right face (at <span class="math notranslate nohighlight">\(x + dx\)</span>) is:
+$<span class="math notranslate nohighlight">\(
+\tau_{xx}(x + dx) = \tau_{xx} + \frac{\partial \tau_{xx}}{\partial x} \cdot dx
+\)</span>$</p></li>
+<li><p>The force on the right face is then:
+$<span class="math notranslate nohighlight">\(
+F_{\text{right}} = \left( \tau_{xx} + \frac{\partial \tau_{xx}}{\partial x} \cdot dx \right) \cdot dy \cdot dz
+\)</span>$</p></li>
+</ul>
+</li>
+<li><p><strong>Net Viscous Force in the <span class="math notranslate nohighlight">\(x\)</span> Direction</strong>:</p>
+<ul class="simple">
+<li><p>The net viscous force in the <span class="math notranslate nohighlight">\(x\)</span> direction is:
+$<span class="math notranslate nohighlight">\(
+F_x = F_{\text{right}} - F_{\text{left}} = \frac{\partial \tau_{xx}}{\partial x} \cdot dx \cdot dy \cdot dz
+\)</span>$</p></li>
+<li><p>Substituting <span class="math notranslate nohighlight">\(\tau_{xx} = \mu \frac{\partial u}{\partial x}\)</span>, we get:
+$<span class="math notranslate nohighlight">\(
+F_x = \frac{\partial}{\partial x} \left( \mu \frac{\partial u}{\partial x} \right) \cdot dx \cdot dy \cdot dz
+\)</span>$</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="viscous-forces-in-the-y-and-z-directions">
+<h3>Viscous Forces in the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> Directions<a class="headerlink" href="#viscous-forces-in-the-y-and-z-directions" title="Link to this heading">#</a></h3>
+<p>Similarly, we can derive the viscous forces in the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> directions:</p>
+<div class="math notranslate nohighlight">
+\[
+F_y = \frac{\partial}{\partial y} \left( \mu \frac{\partial v}{\partial y} \right) \cdot dx \cdot dy \cdot dz
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+F_z = \frac{\partial}{\partial z} \left( \mu \frac{\partial w}{\partial z} \right) \cdot dx \cdot dy \cdot dz
+\]</div>
+</section>
+</section>
+<section id="step-4-write-the-total-viscous-force-per-unit-volume">
+<h2>Step 4: Write the Total Viscous Force per Unit Volume<a class="headerlink" href="#step-4-write-the-total-viscous-force-per-unit-volume" title="Link to this heading">#</a></h2>
+<p>The total viscous force per unit volume, <span class="math notranslate nohighlight">\(\mathbf{f}_{\text{viscous}}\)</span>, can be expressed by combining these components:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{f}_{\text{viscous}} = \nabla \cdot \left( \mu \nabla \mathbf{u} \right)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\nabla \mathbf{u}\)</span> is the velocity gradient tensor. This term appears in the Navier-Stokes equation as the <strong>viscous force per unit volume</strong> and describes the internal frictional forces in a fluid due to viscosity.</p>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>The viscous force per unit volume, <span class="math notranslate nohighlight">\(\mathbf{f}_{\text{viscous}} = \nabla \cdot \left( \mu \nabla \mathbf{u} \right)\)</span>, represents the frictional resistance within the fluid. This force is crucial in fluid mechanics because it captures how fluids resist deformation due to internal friction, affecting the velocity field and energy dissipation within the fluid.</p>
+</section>
+<hr class="docutils" />
+<section id="table-of-stresses-in-fluid-mechanics">
+<h2>Table of Stresses in Fluid Mechanics<a class="headerlink" href="#table-of-stresses-in-fluid-mechanics" title="Link to this heading">#</a></h2>
+<p>In fluid mechanics, stresses within a fluid are categorized as either <strong>normal stresses</strong> or <strong>shear stresses</strong>. Normal stresses act perpendicular to a surface and include both compressive and tensile stresses, while shear stresses act tangentially to a surface and arise from viscosity as layers of fluid slide past one another.</p>
+<p>The notation for stresses uses two subscripts:</p>
+<ul class="simple">
+<li><p>The first subscript indicates the <strong>direction normal to the surface</strong> on which the stress acts.</p></li>
+<li><p>The second subscript indicates the <strong>direction in which the stress acts</strong>.</p></li>
+</ul>
+<p>Below is a table summarizing the notation for all normal and shear stresses in a fluid, with the direction each stress acts on and the associated expression.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type of Stress</p></th>
+<th class="head"><p>Notation</p></th>
+<th class="head"><p>Acts on Surface Normal to</p></th>
+<th class="head"><p>Acts in Direction</p></th>
+<th class="head"><p>Expression</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Normal Stresses</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Compressive or tensile in <span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau_{xx}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\frac{\partial p}{\partial x} + \mu \frac{\partial u}{\partial x}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Compressive or tensile in <span class="math notranslate nohighlight">\(y\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau_{yy}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(y\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(y\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\frac{\partial p}{\partial y} + \mu \frac{\partial v}{\partial y}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Compressive or tensile in <span class="math notranslate nohighlight">\(z\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau_{zz}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(z\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(z\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(-\frac{\partial p}{\partial z} + \mu \frac{\partial w}{\partial z}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Shear Stresses</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Shear in <span class="math notranslate nohighlight">\(y\)</span> direction on <span class="math notranslate nohighlight">\(x\)</span> face</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau_{xy}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(y\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu \frac{\partial u}{\partial y}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Shear in <span class="math notranslate nohighlight">\(z\)</span> direction on <span class="math notranslate nohighlight">\(x\)</span> face</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau_{xz}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(z\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu \frac{\partial u}{\partial z}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Shear in <span class="math notranslate nohighlight">\(x\)</span> direction on <span class="math notranslate nohighlight">\(y\)</span> face</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau_{yx}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(y\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu \frac{\partial v}{\partial x}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Shear in <span class="math notranslate nohighlight">\(z\)</span> direction on <span class="math notranslate nohighlight">\(y\)</span> face</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau_{yz}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(y\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(z\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu \frac{\partial v}{\partial z}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Shear in <span class="math notranslate nohighlight">\(x\)</span> direction on <span class="math notranslate nohighlight">\(z\)</span> face</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau_{zx}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(z\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(x\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu \frac{\partial w}{\partial x}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Shear in <span class="math notranslate nohighlight">\(y\)</span> direction on <span class="math notranslate nohighlight">\(z\)</span> face</p></td>
+<td><p><span class="math notranslate nohighlight">\(\tau_{zy}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(z\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(y\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mu \frac{\partial w}{\partial y}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="notes">
+<h3>Notes:<a class="headerlink" href="#notes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Normal stresses</strong> include contributions from both <strong>pressure</strong> (compressive forces) and <strong>viscous effects</strong>.</p></li>
+<li><p><strong>Shear stresses</strong> are purely viscous in nature and arise from the relative motion (velocity gradient) between layers of fluid.</p></li>
+<li><p>In cases where the fluid is <strong>Newtonian</strong> (i.e., stress is proportional to the rate of strain), the dynamic viscosity <span class="math notranslate nohighlight">\( \mu \)</span> is a constant.</p></li>
+<li><p>The <strong>stress tensor</strong> is symmetric, so <span class="math notranslate nohighlight">\( \tau_{xy} = \tau_{yx} \)</span>, <span class="math notranslate nohighlight">\( \tau_{xz} = \tau_{zx} \)</span>, and <span class="math notranslate nohighlight">\( \tau_{yz} = \tau_{zy} \)</span>.</p></li>
+</ul>
+<p>This table provides a concise reference for understanding how each stress acts within a fluid element, assisting in the formulation and analysis of the Navier-Stokes equations.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./navier_stokes"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pgf.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Derivation of the Pressure Gradient Force</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ns_cartesian.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Navier-Stokes Equations in Cartesian Coordinates</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-consider-a-small-fluid-parcel">Step 1: Consider a Small Fluid Parcel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-define-shear-stress-due-to-viscosity">Step 2: Define Shear Stress Due to Viscosity</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shear-stresses-in-other-directions">Shear Stresses in Other Directions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-calculate-the-net-viscous-force-on-the-fluid-parcel">Step 3: Calculate the Net Viscous Force on the Fluid Parcel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viscous-force-in-the-x-direction">Viscous Force in the <span class="math notranslate nohighlight">\(x\)</span> Direction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#viscous-forces-in-the-y-and-z-directions">Viscous Forces in the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> Directions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-write-the-total-viscous-force-per-unit-volume">Step 4: Write the Total Viscous Force per Unit Volume</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-stresses-in-fluid-mechanics">Table of Stresses in Fluid Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
