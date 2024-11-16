@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Laboratory experiments" href="labs.html" />
-    <link rel="prev" title="Navier-Stokes Equations" href="navier_stokes.html" />
+    <link rel="prev" title="Conservation of Mass (Continuity Equation)" href="navier_stokes/continuity.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -190,7 +190,13 @@
 <li class="toctree-l1"><a class="reference internal" href="fluid_properties.html">Properties of Fluids</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="navier_stokes.html">Navier-Stokes Equations</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/continuity.html">Conservation of Mass (Continuity Equation)</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Recommended Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="labs.html">Laboratory experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
@@ -416,12 +422,15 @@ document.write(`
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Chapter 1</p></td>
-<td><p>1.77, 1.78, 1.80, 1.82, 1.85, 1.86, 1.89,</p></td>
+<td><p>1.77, 1.78, 1.80, 1.82, 1.85, 1.86, 1.89</p></td>
 </tr>
-<tr class="row-odd"><td><p>Chapter 2</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p>Chapter 1</p></td>
+<td><p>1.119, 1.120, 1.125, 1.127, 1.130</p></td>
 </tr>
-<tr class="row-even"><td><p>Chapter 3</p></td>
+<tr class="row-even"><td><p>Chapter 2</p></td>
+<td><p>2.6, 2.9, 2.11, 2.12, 2.25</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chapter 3</p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -441,8 +450,11 @@ document.write(`
 <tr class="row-even"><td><p>Chapter 2</p></td>
 <td><p>2–88, 2–93, 2–94</p></td>
 </tr>
-<tr class="row-odd"><td><p>Chapter 3</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p>Chapter 2</p></td>
+<td><p>2-109, 2–110, 2–111</p></td>
+</tr>
+<tr class="row-even"><td><p>Chapter 3</p></td>
+<td><p>3-15, 2-18, 3-19, 3-25</p></td>
 </tr>
 </tbody>
 </table>
@@ -461,11 +473,11 @@ document.write(`
 <tr class="row-even"><td><p>Chapter 1</p></td>
 <td><p>P1.48, P 1.54, P1.55, P 1.56</p></td>
 </tr>
-<tr class="row-odd"><td><p>Chapter 2</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p>Chapter 1</p></td>
+<td><p>P1.69, P1.71</p></td>
 </tr>
-<tr class="row-even"><td><p>Chapter 3</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p>Chapter 2</p></td>
+<td><p>P2.11, P2.13, P2.14, P2.18</p></td>
 </tr>
 </tbody>
 </table>
@@ -504,12 +516,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="navier_stokes.html"
+       href="navier_stokes/continuity.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Navier-Stokes Equations</p>
+        <p class="prev-next-title">Conservation of Mass (Continuity Equation)</p>
       </div>
     </a>
     <a class="right-next"
