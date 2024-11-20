@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Navier-Stokes Equations in Cartesian Coordinates &#8212; My sample book</title>
+    <title>Pressure Measurement Using Hydrostatic Balance &#8212; My sample book</title>
   
   
   
@@ -59,13 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'navier_stokes/ns_cartesian';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hysdrostatic_balance/pressure_measurement';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Conservation of Mass (Continuity Equation)" href="continuity.html" />
-    <link rel="prev" title="Derivation of Friction (Viscous) Forces in Fluid Mechanics" href="viscous_forces.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -128,6 +126,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -183,7 +183,7 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../environment.html">Setting Up the Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../prerequisites.html">Prerequisites</a></li>
@@ -192,17 +192,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../fluid_properties.html">Properties of Fluids</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../types_of_flows.html">Types of Fluid Flow</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="pgf.html">Derivation of the Pressure Gradient Force</a></li>
-<li class="toctree-l2"><a class="reference internal" href="viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Navier-Stokes Equations in Cartesian Coordinates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="continuity.html">Conservation of Mass (Continuity Equation)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../navier_stokes/viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../navier_stokes/ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hydrostatic_balance.html">Hydrostatic Balance</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../recommended_problems.html">Recommended Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../labs.html">Laboratory experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../semester_202402.html">Important dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../semester_202402.html">Important dates: Semester 2024 02</a></li>
 </ul>
 
     </div>
@@ -274,7 +276,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnavier_stokes/ns_cartesian.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fhysdrostatic_balance/pressure_measurement.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -304,7 +306,7 @@
       
       
       
-      <li><a href="../_sources/navier_stokes/ns_cartesian.md" target="_blank"
+      <li><a href="../_sources/hysdrostatic_balance/pressure_measurement.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -388,7 +390,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Navier-Stokes Equations in Cartesian Coordinates</h1>
+    <h1>Pressure Measurement Using Hydrostatic Balance</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -398,9 +400,33 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#x-direction">1. <span class="math notranslate nohighlight">\( x \)</span>-Direction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#y-direction">2. <span class="math notranslate nohighlight">\( y \)</span>-Direction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#z-direction">3. <span class="math notranslate nohighlight">\( z \)</span>-Direction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-barometer">1. The Barometer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-piezometer">2. The Piezometer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-u-tube-manometer">3. The U-Tube Manometer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-inclined-manometer">4. The Inclined Manometer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-devices">5. Other Devices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bourdon-tube">a. <strong>Bourdon Tube</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-pressure-transducer">b. <strong>Pressure Transducer</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-differential-manometer">c. <strong>Differential Manometer</strong></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
             </nav>
@@ -413,67 +439,145 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="navier-stokes-equations-in-cartesian-coordinates">
-<h1>Navier-Stokes Equations in Cartesian Coordinates<a class="headerlink" href="#navier-stokes-equations-in-cartesian-coordinates" title="Link to this heading">#</a></h1>
-<p>In three-dimensional Cartesian coordinates (<span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span>), the Navier-Stokes equations can be expressed separately for each direction. For a Newtonian, incompressible fluid, the conservation of momentum in each direction includes contributions from pressure, viscous, and external forces.</p>
-<p>Let’s assume:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \mathbf{V} = (u, v, w) \)</span>, where <span class="math notranslate nohighlight">\( u \)</span>, <span class="math notranslate nohighlight">\( v \)</span>, and <span class="math notranslate nohighlight">\( w \)</span> are the velocity components in the <span class="math notranslate nohighlight">\( x \)</span>, <span class="math notranslate nohighlight">\( y \)</span>, and <span class="math notranslate nohighlight">\( z \)</span> directions, respectively.</p></li>
-<li><p><span class="math notranslate nohighlight">\( \rho \)</span> is the fluid density, and <span class="math notranslate nohighlight">\( \mu \)</span> is the dynamic viscosity.</p></li>
-</ul>
-<p>The Navier-Stokes equations in each direction are as follows:</p>
-<section id="x-direction">
-<h2>1. <span class="math notranslate nohighlight">\( x \)</span>-Direction<a class="headerlink" href="#x-direction" title="Link to this heading">#</a></h2>
-<p>The Navier-Stokes equation in the <span class="math notranslate nohighlight">\( x \)</span> direction is:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="pressure-measurement-using-hydrostatic-balance">
+<h1>Pressure Measurement Using Hydrostatic Balance<a class="headerlink" href="#pressure-measurement-using-hydrostatic-balance" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Pressure measurement is a fundamental aspect of fluid mechanics, essential for understanding and controlling fluid behavior in engineering applications. Instruments like barometers, piezometers, and manometers rely on the principles of hydrostatic balance to measure fluid pressure accurately.</p>
+<p>Hydrostatic balance is described by the equation:</p>
 <div class="math notranslate nohighlight">
 \[
-\rho \left( \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} + w \frac{\partial u}{\partial z} \right) = -\frac{\partial p}{\partial x} + \mu \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} \right) + f_x
+\frac{\partial p}{\partial z} = -\rho g
+\]</div>
+<p>This relationship governs the variation of pressure with height in a fluid at rest. By integrating it, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[
+p = p_0 + \rho g h
 \]</div>
 <p>where:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \frac{\partial u}{\partial t} \)</span> is the local acceleration in the <span class="math notranslate nohighlight">\( x \)</span> direction,</p></li>
-<li><p><span class="math notranslate nohighlight">\( u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} + w \frac{\partial u}{\partial z} \)</span> represents convective acceleration,</p></li>
-<li><p><span class="math notranslate nohighlight">\( -\frac{\partial p}{\partial x} \)</span> is the pressure gradient in the <span class="math notranslate nohighlight">\( x \)</span> direction,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mu \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} \right) \)</span> is the viscous term (Laplacian of <span class="math notranslate nohighlight">\( u \)</span>),</p></li>
-<li><p><span class="math notranslate nohighlight">\( f_x \)</span> is any external body force in the <span class="math notranslate nohighlight">\( x \)</span> direction.</p></li>
+<li><p><span class="math notranslate nohighlight">\(p_0\)</span> is the reference pressure,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> is the fluid density,</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> is the acceleration due to gravity,</p></li>
+<li><p><span class="math notranslate nohighlight">\(h\)</span> is the height of the fluid column.</p></li>
+</ul>
+<p>This principle forms the basis for several devices used to measure pressure. Below, we discuss these devices with practical examples.</p>
+</section>
+<hr class="docutils" />
+<section id="the-barometer">
+<h2>1. The Barometer<a class="headerlink" href="#the-barometer" title="Link to this heading">#</a></h2>
+<section id="description">
+<h3>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
+<p>The barometer is used to measure atmospheric pressure. It typically consists of a vertical tube filled with a liquid (commonly mercury) inverted in an open reservoir. The height of the mercury column represents the atmospheric pressure:</p>
+<div class="math notranslate nohighlight">
+\[
+p_{\text{atm}} = \rho g h
+\]</div>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Mercury Barometer</strong>: If the height of the mercury column is 760 mm, and the density of mercury is <span class="math notranslate nohighlight">\(13,600 \, \text{kg/m}^3\)</span>, the atmospheric pressure is:
+$<span class="math notranslate nohighlight">\(
+p_{\text{atm}} = (13,600 \, \text{kg/m}^3)(9.81 \, \text{m/s}^2)(0.76 \, \text{m})
+\)</span><span class="math notranslate nohighlight">\(
+which calculates to approximately \)</span>101,325 , \text{Pa}$ (standard atmospheric pressure).</p></li>
 </ul>
 </section>
-<section id="y-direction">
-<h2>2. <span class="math notranslate nohighlight">\( y \)</span>-Direction<a class="headerlink" href="#y-direction" title="Link to this heading">#</a></h2>
-<p>The Navier-Stokes equation in the <span class="math notranslate nohighlight">\( y \)</span> direction is:</p>
+</section>
+<hr class="docutils" />
+<section id="the-piezometer">
+<h2>2. The Piezometer<a class="headerlink" href="#the-piezometer" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Description<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>A piezometer is a simple device for measuring the pressure of a liquid in a pipe. It consists of a transparent tube inserted vertically into the pipe. The height of the liquid column in the tube indicates the pressure:</p>
 <div class="math notranslate nohighlight">
 \[
-\rho \left( \frac{\partial v}{\partial t} + u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} + w \frac{\partial v}{\partial z} \right) = -\frac{\partial p}{\partial y} + \mu \left( \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} + \frac{\partial^2 v}{\partial z^2} \right) + f_y
+p = \rho g h
 \]</div>
-<p>where:</p>
+</section>
+<section id="id2">
+<h3>Example<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \frac{\partial v}{\partial t} \)</span> is the local acceleration in the <span class="math notranslate nohighlight">\( y \)</span> direction,</p></li>
-<li><p><span class="math notranslate nohighlight">\( u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} + w \frac{\partial v}{\partial z} \)</span> represents convective acceleration,</p></li>
-<li><p><span class="math notranslate nohighlight">\( -\frac{\partial p}{\partial y} \)</span> is the pressure gradient in the <span class="math notranslate nohighlight">\( y \)</span> direction,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mu \left( \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} + \frac{\partial^2 v}{\partial z^2} \right) \)</span> is the viscous term (Laplacian of <span class="math notranslate nohighlight">\( v \)</span>),</p></li>
-<li><p><span class="math notranslate nohighlight">\( f_y \)</span> is any external body force in the <span class="math notranslate nohighlight">\( y \)</span> direction.</p></li>
+<li><p><strong>Water Pipe</strong>: If the water column in a piezometer rises to 2 m and the density of water is <span class="math notranslate nohighlight">\(1000 \, \text{kg/m}^3\)</span>:
+$<span class="math notranslate nohighlight">\(
+p = (1000)(9.81)(2) = 19,620 \, \text{Pa}
+\)</span>$</p></li>
 </ul>
 </section>
-<section id="z-direction">
-<h2>3. <span class="math notranslate nohighlight">\( z \)</span>-Direction<a class="headerlink" href="#z-direction" title="Link to this heading">#</a></h2>
-<p>The Navier-Stokes equation in the <span class="math notranslate nohighlight">\( z \)</span> direction is:</p>
+</section>
+<hr class="docutils" />
+<section id="the-u-tube-manometer">
+<h2>3. The U-Tube Manometer<a class="headerlink" href="#the-u-tube-manometer" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>Description<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>The U-tube manometer measures pressure differences by comparing liquid heights in a U-shaped tube. A fluid of known density is placed in the tube, and pressure is related to the height difference:</p>
 <div class="math notranslate nohighlight">
 \[
-\rho \left( \frac{\partial w}{\partial t} + u \frac{\partial w}{\partial x} + v \frac{\partial w}{\partial y} + w \frac{\partial w}{\partial z} \right) = -\frac{\partial p}{\partial z} + \mu \left( \frac{\partial^2 w}{\partial x^2} + \frac{\partial^2 w}{\partial y^2} + \frac{\partial^2 w}{\partial z^2} \right) + f_z
+\Delta p = \rho g \Delta h
 \]</div>
-<p>where:</p>
+</section>
+<section id="id4">
+<h3>Example<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \frac{\partial w}{\partial t} \)</span> is the local acceleration in the <span class="math notranslate nohighlight">\( z \)</span> direction,</p></li>
-<li><p><span class="math notranslate nohighlight">\( u \frac{\partial w}{\partial x} + v \frac{\partial w}{\partial y} + w \frac{\partial w}{\partial z} \)</span> represents convective acceleration,</p></li>
-<li><p><span class="math notranslate nohighlight">\( -\frac{\partial p}{\partial z} \)</span> is the pressure gradient in the <span class="math notranslate nohighlight">\( z \)</span> direction,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mu \left( \frac{\partial^2 w}{\partial x^2} + \frac{\partial^2 w}{\partial y^2} + \frac{\partial^2 w}{\partial z^2} \right) \)</span> is the viscous term (Laplacian of <span class="math notranslate nohighlight">\( w \)</span>),</p></li>
-<li><p><span class="math notranslate nohighlight">\( f_z \)</span> is any external body force in the <span class="math notranslate nohighlight">\( z \)</span> direction.</p></li>
+<li><p><strong>Gas Pressure Measurement</strong>: If one side of the manometer shows a fluid height difference of 0.5 m using mercury:
+$<span class="math notranslate nohighlight">\(
+\Delta p = (13,600)(9.81)(0.5) = 66,660 \, \text{Pa}
+\)</span>$</p></li>
 </ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="the-inclined-manometer">
+<h2>4. The Inclined Manometer<a class="headerlink" href="#the-inclined-manometer" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>Description<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>An inclined manometer enhances sensitivity for small pressure differences by tilting the tube. The length of the liquid column along the incline is related to the pressure:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta p = \rho g h \sin \theta
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the angle of inclination.</p>
+</section>
+<section id="id6">
+<h3>Example<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Small Pressure Difference</strong>: For an inclined manometer with a fluid column length of 1 m at an angle <span class="math notranslate nohighlight">\(\theta = 30^\circ\)</span> and mercury:
+$<span class="math notranslate nohighlight">\(
+\Delta p = (13,600)(9.81)(1)(\sin 30^\circ) = 66,660 \, \text{Pa}
+\)</span>$</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="other-devices">
+<h2>5. Other Devices<a class="headerlink" href="#other-devices" title="Link to this heading">#</a></h2>
+<section id="a-bourdon-tube">
+<h3>a. <strong>Bourdon Tube</strong><a class="headerlink" href="#a-bourdon-tube" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Measures pressure using the deformation of a curved, flexible tube under pressure.</p></li>
+<li><p>Example: Used in industrial pressure gauges.</p></li>
+</ul>
+</section>
+<section id="b-pressure-transducer">
+<h3>b. <strong>Pressure Transducer</strong><a class="headerlink" href="#b-pressure-transducer" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Converts pressure into an electrical signal for digital applications.</p></li>
+<li><p>Example: Automotive sensors for monitoring engine oil pressure.</p></li>
+</ul>
+</section>
+<section id="c-differential-manometer">
+<h3>c. <strong>Differential Manometer</strong><a class="headerlink" href="#c-differential-manometer" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Used to measure pressure differences between two points in a system.</p></li>
+</ul>
+</section>
 </section>
 <hr class="docutils" />
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
-<p>The Navier-Stokes equations in Cartesian coordinates provide a breakdown of the momentum equations in each spatial direction, highlighting how forces (pressure, viscous, and external) contribute to acceleration in the <span class="math notranslate nohighlight">\( x \)</span>, <span class="math notranslate nohighlight">\( y \)</span>, and <span class="math notranslate nohighlight">\( z \)</span> directions. These component forms are particularly useful for solving problems in specific geometries, where each direction can be analyzed separately.</p>
+<p>Understanding hydrostatic balance provides the foundation for designing and using pressure measurement devices. From barometers for atmospheric pressure to advanced transducers for industrial applications, these tools play a vital role in engineering and scientific practice.</p>
+<p>Practical examples, as illustrated above, showcase how these principles are applied in real-world scenarios.</p>
 </section>
 </section>
 
@@ -490,7 +594,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./navier_stokes"
+            path: "./hysdrostatic_balance"
         },
         predefinedOutput: true
     }
@@ -507,24 +611,6 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="viscous_forces.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Derivation of Friction (Viscous) Forces in Fluid Mechanics</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="continuity.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Conservation of Mass (Continuity Equation)</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -541,9 +627,33 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#x-direction">1. <span class="math notranslate nohighlight">\( x \)</span>-Direction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#y-direction">2. <span class="math notranslate nohighlight">\( y \)</span>-Direction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#z-direction">3. <span class="math notranslate nohighlight">\( z \)</span>-Direction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-barometer">1. The Barometer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-piezometer">2. The Piezometer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-u-tube-manometer">3. The U-Tube Manometer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-inclined-manometer">4. The Inclined Manometer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-devices">5. Other Devices</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bourdon-tube">a. <strong>Bourdon Tube</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-pressure-transducer">b. <strong>Pressure Transducer</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-differential-manometer">c. <strong>Differential Manometer</strong></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
   </nav></div>

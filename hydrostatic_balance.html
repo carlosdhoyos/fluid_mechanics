@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction to the Navier-Stokes Equations in Fluid Mechanics &#8212; My sample book</title>
+    <title>Hydrostatic Balance &#8212; My sample book</title>
   
   
   
@@ -59,13 +59,13 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'navier_stokes';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hydrostatic_balance';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Derivation of the Pressure Gradient Force" href="navier_stokes/pgf.html" />
-    <link rel="prev" title="Types of Fluid Flow" href="types_of_flows.html" />
+    <link rel="next" title="Pressure Measurement Using Hydrostatic Balance" href="hydrostatic_balance/pressure_measurement.html" />
+    <link rel="prev" title="Navier-Stokes Equations in Cartesian Coordinates" href="navier_stokes/ns_cartesian.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -192,10 +192,17 @@
 <li class="toctree-l1"><a class="reference internal" href="fluid_properties.html">Properties of Fluids</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes/viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes/ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Hydrostatic Balance</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/pressure_measurement.html">Pressure Measurement Using Hydrostatic Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/manometry.html">Manometry and Pressure Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/forces_on_surfaces.html">Force Calculations on Flat and Curved Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/buoyancy.html">Buoyancy Force on a Submerged Object</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="recommended_problems.html">Recommended Problems</a></li>
@@ -273,7 +280,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnavier_stokes.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fhydrostatic_balance.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -303,7 +310,7 @@
       
       
       
-      <li><a href="_sources/navier_stokes.md" target="_blank"
+      <li><a href="_sources/hydrostatic_balance.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -387,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction to the Navier-Stokes Equations in Fluid Mechanics</h1>
+    <h1>Hydrostatic Balance</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -397,16 +404,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-form-of-the-navier-stokes-equations">Basic Form of the Navier-Stokes Equations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-derivation">Step-by-Step Derivation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-form-momentum-equation">General Form (Momentum Equation)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-for-hydrostatic-balance">Assumptions for Hydrostatic Balance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incorporating-gravitational-force">Incorporating Gravitational Force</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-forms-of-the-navier-stokes-equations">Simplified Forms of the Navier-Stokes Equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-importance-of-the-navier-stokes-equations">Practical Importance of the Navier-Stokes Equations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-in-solving-the-navier-stokes-equations">Challenges in Solving the Navier-Stokes Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-of-hydrostatic-balance">Integration of Hydrostatic Balance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incompressible-fluid-liquids">1. <strong>Incompressible Fluid (Liquids)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressible-fluid-atmosphere">2. <strong>Compressible Fluid (Atmosphere)</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
             </nav>
         </div>
@@ -418,187 +426,117 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-the-navier-stokes-equations-in-fluid-mechanics">
-<h1>Introduction to the Navier-Stokes Equations in Fluid Mechanics<a class="headerlink" href="#introduction-to-the-navier-stokes-equations-in-fluid-mechanics" title="Link to this heading">#</a></h1>
-<p>The Navier-Stokes equations are a set of partial differential equations that describe the motion of fluid substances such as liquids and gases. They arise from applying Newton’s second law to fluid motion and incorporate the effects of viscosity in the fluid. The equations are fundamental in fluid mechanics and are used to model a wide range of fluid flow phenomena, from airflow over an airplane wing to ocean currents and blood flow in the human body.</p>
-<section id="basic-form-of-the-navier-stokes-equations">
-<h2>Basic Form of the Navier-Stokes Equations<a class="headerlink" href="#basic-form-of-the-navier-stokes-equations" title="Link to this heading">#</a></h2>
-<p>The Navier-Stokes equations are derived by considering the forces acting on a small fluid element and applying the principles of conservation of momentum and mass.</p>
-<p>The conservation of momentum in fluid mechanics can be derived by applying <strong>Newton’s Second Law</strong> to a small fluid element. Newton’s Second Law states that:</p>
-<blockquote>
-<div><p>The rate of change of momentum of an object is equal to the sum of the forces acting on it.</p>
-</div></blockquote>
-<p>Or in other words:</p>
-<blockquote>
-<div><p><strong>Force</strong> = <strong>Mass</strong> × <strong>Acceleration</strong></p>
-</div></blockquote>
-<p>In mathematical terms, Newton’s Second Law states that the force <span class="math notranslate nohighlight">\( \mathbf{F} \)</span> acting on a body is equal to the time rate of change of its momentum <span class="math notranslate nohighlight">\( \mathbf{p} \)</span>. If the mass <span class="math notranslate nohighlight">\( m \)</span> of the body is constant, the law simplifies to:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="hydrostatic-balance">
+<h1>Hydrostatic Balance<a class="headerlink" href="#hydrostatic-balance" title="Link to this heading">#</a></h1>
+<p>The Navier-Stokes equations in three-dimensional Cartesian coordinates for a Newtonian fluid are expressed as follows:</p>
+<section id="general-form-momentum-equation">
+<h2>General Form (Momentum Equation)<a class="headerlink" href="#general-form-momentum-equation" title="Link to this heading">#</a></h2>
 <div class="math notranslate nohighlight">
 \[
-\mathbf{F} = m \mathbf{a}
+\rho \left( \frac{\partial \mathbf{V}}{\partial t} + \mathbf{V} \cdot \nabla \mathbf{V} \right) = -\nabla p + \mu \nabla^2 \mathbf{V} + \mathbf{f}
 \]</div>
 <p>where:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \mathbf{F} \)</span> is the total force acting on the body,</p></li>
-<li><p><span class="math notranslate nohighlight">\( m \)</span> is the mass of the body,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mathbf{a} \)</span> is the acceleration of the body.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{V} = (u, v, w)\)</span> is the velocity vector,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span> is the fluid density,</p></li>
+<li><p><span class="math notranslate nohighlight">\(p\)</span> is the pressure,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span> is the dynamic viscosity,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{f}\)</span> is the body force per unit volume, such as gravity.</p></li>
 </ul>
-<p>Alternatively, Newton’s Second Law can be written in terms of the rate of change of momentum <span class="math notranslate nohighlight">\( \mathbf{p} = m \mathbf{V} \)</span>, where <span class="math notranslate nohighlight">\( \mathbf{V} \)</span> is the velocity:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{F} = \frac{d \mathbf{p}}{dt} = \frac{d}{dt} (m \mathbf{V})
-\]</div>
-<p>For a constant mass, this simplifies to:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{F} = m \frac{d \mathbf{V}}{dt} = m \mathbf{a}
-\]</div>
-<p>In fluid mechanics, we apply this principle to a small fluid element, considering the forces due to pressure, viscosity, and external forces acting on it.</p>
-<p>In fluid mechanics, we apply this law to a small fluid element, considering how forces affect its acceleration and, consequently, its velocity. Here’s how we derive the conservation of momentum for a fluid using Newton’s Second Law.</p>
-<section id="step-by-step-derivation">
-<h3>Step-by-Step Derivation<a class="headerlink" href="#step-by-step-derivation" title="Link to this heading">#</a></h3>
-<ol class="arabic">
-<li><p><strong>Identify the Fluid Element</strong>:</p>
-<ul class="simple">
-<li><p>Consider a small “parcel” or “element” of fluid. This element has mass, occupies a small volume in the fluid, and moves with the surrounding flow.</p></li>
-</ul>
-</li>
-<li><p><strong>Write Newton’s Second Law for the Fluid Element</strong>:</p>
-<ul>
-<li><p>For this small fluid element, Newton’s Second Law can be written as:</p>
-<blockquote>
-<div><p>The <strong>mass</strong> of the element multiplied by its <strong>acceleration</strong> is equal to the <strong>sum of all forces</strong> acting on it.</p>
-</div></blockquote>
-</li>
-</ul>
-</li>
-<li><p><strong>Express Mass and Acceleration</strong>:</p>
-<ul>
-<li><p>Let:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \rho \)</span> be the <strong>density</strong> of the fluid.</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mathbf{V} \)</span> be the <strong>velocity vector</strong> of the fluid at a point in space and time.</p></li>
-</ul>
-</li>
-<li><p>The <strong>mass</strong> of a small fluid element with volume <span class="math notranslate nohighlight">\( dV \)</span> is <span class="math notranslate nohighlight">\( \rho dV \)</span>.</p></li>
-<li><p>The <strong>acceleration</strong> of the fluid element is the rate of change of the velocity vector <span class="math notranslate nohighlight">\( \mathbf{V} \)</span>, which includes both time-dependent changes and changes as the fluid element moves through space.</p>
-<p>So, the <strong>acceleration</strong> <span class="math notranslate nohighlight">\( \mathbf{a} \)</span> of the fluid element can be expressed as:</p>
-<div class="math notranslate nohighlight">
-\[
-     \mathbf{a} = \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V}
-     \]</div>
-</li>
-</ul>
-</li>
-<li><p><strong>Identify and Sum Up the Forces Acting on the Element</strong>:</p>
-<ul class="simple">
-<li><p>Three main forces act on the fluid element:</p>
-<ul>
-<li><p><strong>Pressure Force</strong>: Acts due to pressure differences across the element’s surface, pushing from regions of higher to lower pressure.</p>
-<ul>
-<li><p>This force per unit volume is <span class="math notranslate nohighlight">\( -\nabla p \)</span>, where <span class="math notranslate nohighlight">\( p \)</span> is the pressure.</p></li>
-</ul>
-</li>
-<li><p><strong>Viscous Force</strong>: Arises from the internal friction within the fluid, resisting motion.</p>
-<ul>
-<li><p>This force per unit volume is <span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{V} \)</span>, where <span class="math notranslate nohighlight">\( \mu \)</span> is the dynamic viscosity.</p></li>
-</ul>
-</li>
-<li><p><strong>External Force</strong>: Any additional body forces acting on the fluid, such as gravity.</p>
-<ul>
-<li><p>This is represented as <span class="math notranslate nohighlight">\( \mathbf{f} \)</span> per unit volume.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>Combine Terms to Write the Conservation of Momentum</strong>:</p>
-<ul>
-<li><p>According to Newton’s Second Law, <strong>total force</strong> = <strong>mass × acceleration</strong>.</p></li>
-<li><p>For a fluid element, this gives:</p>
-<div class="math notranslate nohighlight">
-\[
-     \rho \left( \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} \right) = -\nabla p + \mu \nabla^2 \mathbf{V} + \mathbf{f}
-     \]</div>
-</li>
-<li><p>Here:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \rho \left( \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} \right) \)</span> represents the <strong>mass times acceleration</strong> (the rate of change of momentum),</p></li>
-<li><p><span class="math notranslate nohighlight">\( -\nabla p \)</span> is the <strong>pressure force</strong>,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{V} \)</span> is the <strong>viscous force</strong>,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mathbf{f} \)</span> is the <strong>external force</strong>.</p></li>
-</ul>
-</li>
-</ul>
-</li>
+<section id="assumptions-for-hydrostatic-balance">
+<h3>Assumptions for Hydrostatic Balance<a class="headerlink" href="#assumptions-for-hydrostatic-balance" title="Link to this heading">#</a></h3>
+<p>To derive hydrostatic balance:</p>
+<ol class="arabic simple">
+<li><p><strong>Steady-state condition:</strong> <span class="math notranslate nohighlight">\(\frac{\partial \mathbf{V}}{\partial t} = 0\)</span> (no time-dependent changes).</p></li>
+<li><p><strong>No motion:</strong> <span class="math notranslate nohighlight">\(\mathbf{V} = 0\)</span> (fluid is at rest, so no convective acceleration).</p></li>
+<li><p><strong>Negligible viscous forces:</strong> <span class="math notranslate nohighlight">\(\mu \nabla^2 \mathbf{V} = 0\)</span> (dominance of pressure and body forces over viscous effects).</p></li>
 </ol>
-<p>This equation is the <strong>Navier-Stokes equation</strong>, derived directly from <strong>Newton’s Second Law</strong>. It describes how the velocity of a fluid element changes in response to the combined effects of pressure, viscosity, and any external forces.</p>
+<p>With these assumptions, the Navier-Stokes equations simplify to:</p>
+<div class="math notranslate nohighlight">
+\[
+-\nabla p + \mathbf{f} = 0
+\]</div>
 </section>
-<section id="summary">
-<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
-<p>Starting from Newton’s Second Law, we derived the conservation of momentum for a fluid element. The Navier-Stokes equation we derived is central to fluid mechanics and applies to a wide range of fluid flows, describing how different forces interact to influence fluid motion.</p>
+<section id="incorporating-gravitational-force">
+<h3>Incorporating Gravitational Force<a class="headerlink" href="#incorporating-gravitational-force" title="Link to this heading">#</a></h3>
+<p>The dominant body force in many scenarios is gravity, <span class="math notranslate nohighlight">\(\mathbf{f} = -\rho g \mathbf{j}\)</span>, where <span class="math notranslate nohighlight">\(\mathbf{j}\)</span> is the unit vector in the vertical direction (<span class="math notranslate nohighlight">\(z\)</span>). Substituting:</p>
+<div class="math notranslate nohighlight">
+\[
+-\nabla p - \rho g \mathbf{j} = 0
+\]</div>
+<p>In component form, this becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial p}{\partial x} = 0, \quad \frac{\partial p}{\partial y} = 0, \quad \frac{\partial p}{\partial z} = -\rho g
+\]</div>
+<p>The pressure only varies in the <span class="math notranslate nohighlight">\(z\)</span> direction, leading to:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial p}{\partial z} = -\rho g
+\]</div>
+<p>This is the equation of hydrostatic balance.</p>
+</section>
+</section>
 <hr class="docutils" />
-<p>The Navier-Stokes equation is derived from Newton’s second law applied to a fluid element. It describes how the velocity of the fluid changes in response to forces acting on it, such as pressure gradients, viscous forces, and external forces like gravity:</p>
+<section id="integration-of-hydrostatic-balance">
+<h2>Integration of Hydrostatic Balance<a class="headerlink" href="#integration-of-hydrostatic-balance" title="Link to this heading">#</a></h2>
+<section id="incompressible-fluid-liquids">
+<h3>1. <strong>Incompressible Fluid (Liquids)</strong><a class="headerlink" href="#incompressible-fluid-liquids" title="Link to this heading">#</a></h3>
+<p>For an incompressible fluid, <span class="math notranslate nohighlight">\(\rho\)</span> is constant. Integrating <span class="math notranslate nohighlight">\(\frac{\partial p}{\partial z} = -\rho g\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\rho \left( \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} \right) = -\nabla p + \mu \nabla^2 \mathbf{V} + \mathbf{f}
+p(z) = p_0 - \rho g z
 \]</div>
 <p>where:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \rho \)</span> is the fluid density,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mathbf{V} \)</span> is the velocity vector,</p></li>
-<li><p><span class="math notranslate nohighlight">\( p \)</span> is the pressure,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mu \)</span> is the dynamic viscosity of the fluid, and</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mathbf{f} \)</span> represents any external body forces (e.g., gravity).</p></li>
+<li><p><span class="math notranslate nohighlight">\(p_0\)</span> is the pressure at a reference height <span class="math notranslate nohighlight">\(z = 0\)</span>.</p></li>
 </ul>
-<p>The terms in this equation represent different physical effects:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\( \frac{\partial \mathbf{V}}{\partial t} \)</span>: Time-dependent acceleration of the fluid,</p></li>
-<li><p><span class="math notranslate nohighlight">\( (\mathbf{V} \cdot \nabla) \mathbf{V} \)</span>: Convective acceleration due to changes in velocity within the flow field,</p></li>
-<li><p><span class="math notranslate nohighlight">\( -\nabla p \)</span>: Force due to pressure gradients,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mu \nabla^2 \mathbf{V} \)</span>: Viscous force, representing internal friction within the fluid,</p></li>
-<li><p><span class="math notranslate nohighlight">\( \mathbf{f} \)</span>: External forces acting on the fluid element.</p></li>
-</ul>
+<p>This is the well-known hydrostatic pressure formula for liquids.</p>
 </section>
-</section>
-<section id="simplified-forms-of-the-navier-stokes-equations">
-<h2>Simplified Forms of the Navier-Stokes Equations<a class="headerlink" href="#simplified-forms-of-the-navier-stokes-equations" title="Link to this heading">#</a></h2>
-<p>In certain situations, the Navier-Stokes equations can be simplified:</p>
-<ol class="arabic">
-<li><p><strong>Incompressible, Newtonian Fluids</strong>:
-For fluids with constant density (incompressible) and where viscosity is independent of velocity gradients (Newtonian fluids), the equations simplify as:</p>
+<hr class="docutils" />
+<section id="compressible-fluid-atmosphere">
+<h3>2. <strong>Compressible Fluid (Atmosphere)</strong><a class="headerlink" href="#compressible-fluid-atmosphere" title="Link to this heading">#</a></h3>
+<p>For a compressible fluid, <span class="math notranslate nohighlight">\(\rho\)</span> varies with pressure and temperature. Using the ideal gas law:</p>
 <div class="math notranslate nohighlight">
 \[
-   \frac{\partial \mathbf{V}}{\partial t} + (\mathbf{V} \cdot \nabla) \mathbf{V} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{V} + \frac{\mathbf{f}}{\rho}
-   \]</div>
-<p>where <span class="math notranslate nohighlight">\( \nu = \frac{\mu}{\rho} \)</span> is the kinematic viscosity.</p>
-</li>
-<li><p><strong>Steady Flow</strong>:
-If the flow is steady (not changing over time), then <span class="math notranslate nohighlight">\( \frac{\partial \mathbf{V}}{\partial t} = 0 \)</span>, simplifying the equation further.</p></li>
-<li><p><strong>Potential Flow</strong>:
-In inviscid (non-viscous) flows, where <span class="math notranslate nohighlight">\( \mu = 0 \)</span>, the visc</p></li>
-</ol>
-</section>
-<section id="practical-importance-of-the-navier-stokes-equations">
-<h2>Practical Importance of the Navier-Stokes Equations<a class="headerlink" href="#practical-importance-of-the-navier-stokes-equations" title="Link to this heading">#</a></h2>
-<p>The Navier-Stokes equations are central to fluid mechanics because they describe the vast majority of fluid flows encountered in nature and engineering. They are used to:</p>
+\rho = \frac{p}{R T}
+\]</div>
+<p>where:</p>
 <ul class="simple">
-<li><p><strong>Model weather patterns</strong>: Predicting wind patterns, storm formation, and climate change.</p></li>
-<li><p><strong>Design transportation vehicles</strong>: Analyzing the flow around cars, airplanes, and ships to reduce drag and improve fuel efficiency.</p></li>
-<li><p><strong>Optimize industrial processes</strong>: Controlling fluid flow in pipelines, chemical reactors, and cooling systems.</p></li>
-<li><p><strong>Understand biological flows</strong>: Simulating blood flow in arteries or air flow in lungs to improve medical treatments.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R\)</span> is the specific gas constant,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span> is the temperature.</p></li>
 </ul>
-<section id="challenges-in-solving-the-navier-stokes-equations">
-<h3>Challenges in Solving the Navier-Stokes Equations<a class="headerlink" href="#challenges-in-solving-the-navier-stokes-equations" title="Link to this heading">#</a></h3>
-<p>The Navier-Stokes equations are nonlinear partial differential equations, which makes them difficult to solve analytically in most cases. Solutions are often obtained through:</p>
-<ul class="simple">
-<li><p><strong>Numerical methods</strong>: Computational fluid dynamics (CFD) techniques that approximate the equations on a discretized domain.</p></li>
-<li><p><strong>Simplified models</strong>: Applying assumptions like incompressibility or potential flow to reduce complexity.</p></li>
-<li><p><strong>Experimental validation</strong>: Using laboratory experiments to validate numerical or approximate solutions.</p></li>
-</ul>
-<p>The Navier-Stokes equations are still an area of active research, especially in understanding turbulence, which is a complex flow phenomenon that appears at high Reynolds numbers. In fact, a complete theoretical solution to the Navier-Stokes equations for turbulent flows is one of the unsolved problems in physics and mathematics, known as the <strong>Navier-Stokes existence and smoothness problem</strong>.</p>
+<p>Substitute <span class="math notranslate nohighlight">\(\rho\)</span> into <span class="math notranslate nohighlight">\(\frac{\partial p}{\partial z} = -\rho g\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial p}{\partial z} = -\frac{p g}{R T}
+\]</div>
+<p>Assuming isothermal conditions (<span class="math notranslate nohighlight">\(T\)</span> is constant), we can integrate:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{p} \frac{\partial p}{\partial z} = -\frac{g}{R T}
+\]</div>
+<p>Integrating:</p>
+<div class="math notranslate nohighlight">
+\[
+\ln p = -\frac{g z}{R T} + \ln p_0
+\]</div>
+<p>Exponentiate to solve for <span class="math notranslate nohighlight">\(p(z)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+p(z) = p_0 e^{-\frac{g z}{R T}}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_0\)</span> is the pressure at <span class="math notranslate nohighlight">\(z = 0\)</span>. This is the barometric pressure formula for the atmosphere.</p>
 </section>
+</section>
+<hr class="docutils" />
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>For <strong>incompressible fluids</strong>, hydrostatic pressure increases linearly with depth.</p></li>
+<li><p>For <strong>compressible fluids</strong>, pressure decreases exponentially with height under isothermal conditions.
+These simplifications and integrations illustrate the core principles of hydrostatic balance for different fluid states.</p></li>
+</ul>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -635,20 +573,20 @@ In inviscid (non-viscous) flows, where <span class="math notranslate nohighlight
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="types_of_flows.html"
+       href="navier_stokes/ns_cartesian.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Types of Fluid Flow</p>
+        <p class="prev-next-title">Navier-Stokes Equations in Cartesian Coordinates</p>
       </div>
     </a>
     <a class="right-next"
-       href="navier_stokes/pgf.html"
+       href="hydrostatic_balance/pressure_measurement.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Derivation of the Pressure Gradient Force</p>
+        <p class="prev-next-title">Pressure Measurement Using Hydrostatic Balance</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -668,16 +606,17 @@ In inviscid (non-viscous) flows, where <span class="math notranslate nohighlight
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-form-of-the-navier-stokes-equations">Basic Form of the Navier-Stokes Equations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-derivation">Step-by-Step Derivation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-form-momentum-equation">General Form (Momentum Equation)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assumptions-for-hydrostatic-balance">Assumptions for Hydrostatic Balance</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incorporating-gravitational-force">Incorporating Gravitational Force</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simplified-forms-of-the-navier-stokes-equations">Simplified Forms of the Navier-Stokes Equations</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practical-importance-of-the-navier-stokes-equations">Practical Importance of the Navier-Stokes Equations</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#challenges-in-solving-the-navier-stokes-equations">Challenges in Solving the Navier-Stokes Equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-of-hydrostatic-balance">Integration of Hydrostatic Balance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incompressible-fluid-liquids">1. <strong>Incompressible Fluid (Liquids)</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressible-fluid-atmosphere">2. <strong>Compressible Fluid (Atmosphere)</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
   </nav></div>
 

@@ -1,0 +1,768 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Force Calculations on Flat and Curved Surfaces &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hydrostatic_balance/forces_on_surfaces';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Recommended Problems" href="../recommended_problems.html" />
+    <link rel="prev" title="Pressure Measurement Using Hydrostatic Balance" href="pressure_measurement.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to the Fluid Mechanics Course Site
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../environment.html">Setting Up the Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fluids_v_solids.html">Solids vs. Fluids</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../units.html">Common Physical Quantities and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../fluid_properties.html">Properties of Fluids</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../types_of_flows.html">Types of Fluid Flow</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../navier_stokes/viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../navier_stokes/ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../hydrostatic_balance.html">Hydrostatic Balance</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pressure_measurement.html">Pressure Measurement Using Hydrostatic Balance</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Force Calculations on Flat and Curved Surfaces</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../recommended_problems.html">Recommended Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labs.html">Laboratory experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../semester_202402.html">Important dates: Semester 2024 02</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fhydrostatic_balance/forces_on_surfaces.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/hydrostatic_balance/forces_on_surfaces.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Force Calculations on Flat and Curved Surfaces</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-on-flat-surfaces-general-orientation">1. <strong>Force on Flat Surfaces (General Orientation)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pressure-distribution">a. Pressure Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-resultant-force">b. Resultant Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-line-of-action">c. Line of Action</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-practical-example">d. Practical Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-and-vertical-components">2. <strong>Horizontal and Vertical Components</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-component">Horizontal Component:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vertical-component">Vertical Component:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-on-curved-surfaces">3. <strong>Force on Curved Surfaces</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-horizontal-force">a. Horizontal Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-vertical-force">b. Vertical Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-resultant-force-and-direction">c. Resultant Force and Direction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-curved-surface">4. <strong>Example: Curved Surface</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionless-parameters">5. <strong>Dimensionless Parameters</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">6. <strong>Conclusion</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaways">Key Takeaways:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-exercises">Additional Exercises</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="force-calculations-on-flat-and-curved-surfaces">
+<h1>Force Calculations on Flat and Curved Surfaces<a class="headerlink" href="#force-calculations-on-flat-and-curved-surfaces" title="Link to this heading">#</a></h1>
+<p>In fluid mechanics, the force exerted by a fluid on a surface depends on the surface’s orientation, shape, and pressure distribution. Here, we derive methods for calculating forces on flat surfaces (general orientation) and curved surfaces, with an emphasis on clarity and practical applications.</p>
+<hr class="docutils" />
+<section id="force-on-flat-surfaces-general-orientation">
+<h2>1. <strong>Force on Flat Surfaces (General Orientation)</strong><a class="headerlink" href="#force-on-flat-surfaces-general-orientation" title="Link to this heading">#</a></h2>
+<p>A flat surface submerged in a fluid can be oriented at any angle <span class="math notranslate nohighlight">\(\theta\)</span> with respect to the horizontal. The pressure distribution on the surface is governed by hydrostatic principles.</p>
+<section id="a-pressure-distribution">
+<h3>a. Pressure Distribution<a class="headerlink" href="#a-pressure-distribution" title="Link to this heading">#</a></h3>
+<p>The pressure at any point on the surface is:</p>
+<div class="math notranslate nohighlight">
+\[
+p = p_0 + \rho g h,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(h\)</span> is the vertical depth of the point below the fluid surface. For a plane inclined at an angle <span class="math notranslate nohighlight">\(\theta\)</span>, the depth <span class="math notranslate nohighlight">\(h\)</span> is expressed as:</p>
+<div class="math notranslate nohighlight">
+\[
+h = z \sin \theta,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(z\)</span> is the distance along the inclined surface. This relationship forms the basis for pressure integration over the surface.</p>
+</section>
+<section id="b-resultant-force">
+<h3>b. Resultant Force<a class="headerlink" href="#b-resultant-force" title="Link to this heading">#</a></h3>
+<p>The total force on the surface is obtained by integrating the pressure over the area:</p>
+<div class="math notranslate nohighlight">
+\[
+F = \int_A p \, dA.
+\]</div>
+<p>For a flat surface of area <span class="math notranslate nohighlight">\(A\)</span>, uniform density <span class="math notranslate nohighlight">\(\rho\)</span>, and a centroid at depth <span class="math notranslate nohighlight">\(\bar{h}\)</span>, the resultant force simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+F = \rho g \bar{h} A,
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\bar{h}\)</span> is the vertical depth of the surface’s centroid,</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> is the total area of the surface.</p></li>
+</ul>
+</section>
+<section id="c-line-of-action">
+<h3>c. Line of Action<a class="headerlink" href="#c-line-of-action" title="Link to this heading">#</a></h3>
+<p>The line of action passes through the center of pressure. For an inclined surface, the center of pressure depth <span class="math notranslate nohighlight">\(h_{\text{cp}}\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+h_{\text{cp}} = \bar{h} + \frac{I_G}{\bar{h} A},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(I_G\)</span> is the second moment of area about the horizontal axis through the centroid.</p>
+</section>
+<section id="d-practical-example">
+<h3>d. Practical Example<a class="headerlink" href="#d-practical-example" title="Link to this heading">#</a></h3>
+<p><strong>Example 1: Flat Inclined Surface</strong><br />
+Consider a flat plate of area <span class="math notranslate nohighlight">\(A = 4 \, \text{m}^2\)</span>, inclined at <span class="math notranslate nohighlight">\(\theta = 30^\circ\)</span> to the horizontal, with centroid depth <span class="math notranslate nohighlight">\(\bar{h} = 2 \, \text{m}\)</span>.</p>
+<p><strong>Resultant Force:</strong>
+$<span class="math notranslate nohighlight">\(
+F = \rho g \bar{h} A = (1000)(9.81)(2)(4) = 78,480 \, \text{N}.
+\)</span>$</p>
+<p><strong>Horizontal and Vertical Components:</strong>
+$<span class="math notranslate nohighlight">\(
+F_x = F \cos \theta = 78,480 \cos(30^\circ) = 67,973 \, \text{N},
+\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[
+F_y = F \sin \theta = 78,480 \sin(30^\circ) = 39,240 \, \text{N}.
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="horizontal-and-vertical-components">
+<h2>2. <strong>Horizontal and Vertical Components</strong><a class="headerlink" href="#horizontal-and-vertical-components" title="Link to this heading">#</a></h2>
+<p>For an inclined surface, the resultant force can be resolved into horizontal (<span class="math notranslate nohighlight">\(F_x\)</span>) and vertical (<span class="math notranslate nohighlight">\(F_y\)</span>) components.</p>
+<section id="horizontal-component">
+<h3>Horizontal Component:<a class="headerlink" href="#horizontal-component" title="Link to this heading">#</a></h3>
+<p>The horizontal force corresponds to the force on the vertical projection:</p>
+<div class="math notranslate nohighlight">
+\[
+F_x = \rho g \bar{h}_x A_x,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(A_x\)</span> is the vertical projection area, and <span class="math notranslate nohighlight">\(\bar{h}_x\)</span> is the depth of its centroid.</p>
+</section>
+<section id="vertical-component">
+<h3>Vertical Component:<a class="headerlink" href="#vertical-component" title="Link to this heading">#</a></h3>
+<p>The vertical force arises from the weight of the fluid directly above the surface:</p>
+<div class="math notranslate nohighlight">
+\[
+F_y = \rho g \bar{h}_y A_y,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(A_y\)</span> is the horizontal projection area, and <span class="math notranslate nohighlight">\(\bar{h}_y\)</span> is the depth of its centroid.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="force-on-curved-surfaces">
+<h2>3. <strong>Force on Curved Surfaces</strong><a class="headerlink" href="#force-on-curved-surfaces" title="Link to this heading">#</a></h2>
+<p>For curved surfaces, the force calculation involves resolving the force into horizontal and vertical components.</p>
+<section id="a-horizontal-force">
+<h3>a. Horizontal Force<a class="headerlink" href="#a-horizontal-force" title="Link to this heading">#</a></h3>
+<p>The horizontal component equals the force exerted on the vertical projection of the curved surface:</p>
+<div class="math notranslate nohighlight">
+\[
+F_x = \rho g \bar{h}_x A_{\text{proj, vertical}}.
+\]</div>
+</section>
+<section id="b-vertical-force">
+<h3>b. Vertical Force<a class="headerlink" href="#b-vertical-force" title="Link to this heading">#</a></h3>
+<p>The vertical component equals the weight of the fluid above the surface:</p>
+<div class="math notranslate nohighlight">
+\[
+F_y = \rho g V_{\text{fluid}},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(V_{\text{fluid}}\)</span> is the volume of fluid above the curved surface.</p>
+</section>
+<section id="c-resultant-force-and-direction">
+<h3>c. Resultant Force and Direction<a class="headerlink" href="#c-resultant-force-and-direction" title="Link to this heading">#</a></h3>
+<p>The magnitude of the resultant force is:</p>
+<div class="math notranslate nohighlight">
+\[
+F_R = \sqrt{F_x^2 + F_y^2},
+\]</div>
+<p>and its direction:</p>
+<div class="math notranslate nohighlight">
+\[
+\theta = \tan^{-1} \left( \frac{F_y}{F_x} \right).
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="example-curved-surface">
+<h2>4. <strong>Example: Curved Surface</strong><a class="headerlink" href="#example-curved-surface" title="Link to this heading">#</a></h2>
+<p><strong>Example 2: Hemispherical Dome</strong><br />
+A hemispherical dome of radius <span class="math notranslate nohighlight">\(r = 2 \, \text{m}\)</span> is submerged under a fluid.</p>
+<ul class="simple">
+<li><p><strong>Horizontal Force (<span class="math notranslate nohighlight">\(F_x\)</span>):</strong>
+The vertical projection area is:
+$<span class="math notranslate nohighlight">\(
+A_{\text{proj}} = \pi r^2 = 12.57 \, \text{m}^2.
+\)</span><span class="math notranslate nohighlight">\(
+Thus,
+\)</span><span class="math notranslate nohighlight">\(
+F_x = \rho g \bar{h} A_{\text{proj}} = (1000)(9.81)(1)(12.57) = 123,290 \, \text{N}.
+\)</span>$</p></li>
+<li><p><strong>Vertical Force (<span class="math notranslate nohighlight">\(F_y\)</span>):</strong>
+The fluid volume above the hemisphere is:
+$<span class="math notranslate nohighlight">\(
+V_{\text{fluid}} = \frac{2}{3} \pi r^3 = 16.76 \, \text{m}^3.
+\)</span><span class="math notranslate nohighlight">\(
+Therefore,
+\)</span><span class="math notranslate nohighlight">\(
+F_y = \rho g V_{\text{fluid}} = (1000)(9.81)(16.76) = 164,440 \, \text{N}.
+\)</span>$</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="dimensionless-parameters">
+<h2>5. <strong>Dimensionless Parameters</strong><a class="headerlink" href="#dimensionless-parameters" title="Link to this heading">#</a></h2>
+<p>Dimensionless parameters, such as the Froude number or Reynolds number, are essential in real-world fluid mechanics applications, guiding interpretations of force impacts and flow regimes.</p>
+</section>
+<hr class="docutils" />
+<section id="conclusion">
+<h2>6. <strong>Conclusion</strong><a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>The methods outlined here are vital for designing safe and efficient fluid systems, including dams, submarine hulls, and fluid storage structures. Understanding the decomposition of forces into horizontal and vertical components simplifies analyses for both flat and curved surfaces.</p>
+<section id="key-takeaways">
+<h3>Key Takeaways:<a class="headerlink" href="#key-takeaways" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Flat surface force calculations rely on hydrostatic principles and centroid depths.</p></li>
+<li><p>Curved surface forces often require projections and volumetric considerations.</p></li>
+<li><p>Practical applications and diagrams enhance comprehension.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="additional-exercises">
+<h2>Additional Exercises<a class="headerlink" href="#additional-exercises" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Calculate the force on a rectangular plate <span class="math notranslate nohighlight">\(A = 3 \, \text{m}^2\)</span>, inclined at <span class="math notranslate nohighlight">\(45^\circ\)</span>, with <span class="math notranslate nohighlight">\(\bar{h} = 1.5 \, \text{m}\)</span>.</p></li>
+<li><p>Determine the force components on a quarter-spherical dome with radius <span class="math notranslate nohighlight">\(r = 1.5 \, \text{m}\)</span> submerged in water.</p></li>
+</ol>
+<p><strong>Figures:</strong></p>
+<ul class="simple">
+<li><p>Inclined flat surface showing pressure distribution and centroid.</p></li>
+<li><p>Hemispherical dome illustrating projection and fluid volume.</p></li>
+</ul>
+<p>These examples highlight the applicability of hydrostatics to engineering problems.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./hydrostatic_balance"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pressure_measurement.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Pressure Measurement Using Hydrostatic Balance</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../recommended_problems.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Recommended Problems</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-on-flat-surfaces-general-orientation">1. <strong>Force on Flat Surfaces (General Orientation)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pressure-distribution">a. Pressure Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-resultant-force">b. Resultant Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-line-of-action">c. Line of Action</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-practical-example">d. Practical Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-and-vertical-components">2. <strong>Horizontal and Vertical Components</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#horizontal-component">Horizontal Component:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vertical-component">Vertical Component:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#force-on-curved-surfaces">3. <strong>Force on Curved Surfaces</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-horizontal-force">a. Horizontal Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-vertical-force">b. Vertical Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-resultant-force-and-direction">c. Resultant Force and Direction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-curved-surface">4. <strong>Example: Curved Surface</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionless-parameters">5. <strong>Dimensionless Parameters</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">6. <strong>Conclusion</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaways">Key Takeaways:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-exercises">Additional Exercises</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Carlos D. Hoyos
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

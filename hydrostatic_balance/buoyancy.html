@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Derivation of the Pressure Gradient Force &#8212; My sample book</title>
+    <title>Buoyancy Force on a Submerged Object &#8212; My sample book</title>
   
   
   
@@ -59,13 +59,13 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'navier_stokes/pgf';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'hydrostatic_balance/buoyancy';</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Derivation of Friction (Viscous) Forces in Fluid Mechanics" href="viscous_forces.html" />
-    <link rel="prev" title="Introduction to the Navier-Stokes Equations in Fluid Mechanics" href="../navier_stokes.html" />
+    <link rel="next" title="Recommended Problems" href="../recommended_problems.html" />
+    <link rel="prev" title="Force Calculations on Flat and Curved Surfaces" href="forces_on_surfaces.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -192,17 +192,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../fluid_properties.html">Properties of Fluids</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="../types_of_flows.html">Types of Fluid Flow</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Derivation of the Pressure Gradient Force</a></li>
-<li class="toctree-l2"><a class="reference internal" href="viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="continuity.html">Conservation of Mass (Continuity Equation)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../navier_stokes/viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../navier_stokes/ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../hydrostatic_balance.html">Hydrostatic Balance</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pressure_measurement.html">Pressure Measurement Using Hydrostatic Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manometry.html">Manometry and Pressure Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forces_on_surfaces.html">Force Calculations on Flat and Curved Surfaces</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Buoyancy Force on a Submerged Object</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../recommended_problems.html">Recommended Problems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../labs.html">Laboratory experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../semester_202402.html">Important dates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../semester_202402.html">Important dates: Semester 2024 02</a></li>
 </ul>
 
     </div>
@@ -274,7 +280,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnavier_stokes/pgf.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fhydrostatic_balance/buoyancy.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -304,7 +310,7 @@
       
       
       
-      <li><a href="../_sources/navier_stokes/pgf.md" target="_blank"
+      <li><a href="../_sources/hydrostatic_balance/buoyancy.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -388,7 +394,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Derivation of the Pressure Gradient Force</h1>
+    <h1>Buoyancy Force on a Submerged Object</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -398,12 +404,30 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-consider-a-small-fluid-parcel">Step 1: Consider a Small Fluid Parcel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-pressure-forces-on-opposite-faces">Step 2: Calculate Pressure Forces on Opposite Faces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-calculate-net-pressure-force-in-the-x-direction">Step 3: Calculate Net Pressure Force in the <span class="math notranslate nohighlight">\(x\)</span> Direction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-write-the-total-pressure-gradient-force">Step 4: Write the Total Pressure Gradient Force</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-express-the-pressure-gradient-force-per-unit-volume">Step 5: Express the Pressure Gradient Force per Unit Volume</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relating-buoyancy-to-the-hydrostatic-equation">1. <strong>Relating Buoyancy to the Hydrostatic Equation</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-archimedes-principle">2. <strong>Derivation of Archimedes’ Principle</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-net-vertical-force">a. Net Vertical Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-displaced-fluid-volume">b. Displaced Fluid Volume</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-archimedes-principle">c. Archimedes’ Principle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-interpretation-of-buoyancy">3. <strong>Physical Interpretation of Buoyancy</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-for-buoyancy">4. <strong>Conditions for Buoyancy</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-floating-objects">a. Floating Objects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-submerged-objects">b. Submerged Objects</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-derivation">5. <strong>Example Derivation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-buoyancy">6. <strong>Applications of Buoyancy</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-ship-design">a. Ship Design</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-submarines">b. Submarines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-hot-air-balloons">c. Hot Air Balloons</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaways">7. <strong>Key Takeaways</strong></a></li>
 </ul>
             </nav>
         </div>
@@ -415,98 +439,163 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="derivation-of-the-pressure-gradient-force">
-<h1>Derivation of the Pressure Gradient Force<a class="headerlink" href="#derivation-of-the-pressure-gradient-force" title="Link to this heading">#</a></h1>
-<p>To understand the <strong>pressure gradient force</strong> acting on a small fluid element, let’s start by examining the forces exerted by pressure differences across this element.</p>
-<section id="step-1-consider-a-small-fluid-parcel">
-<h2>Step 1: Consider a Small Fluid Parcel<a class="headerlink" href="#step-1-consider-a-small-fluid-parcel" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Let’s take a <strong>small rectangular parcel</strong> of fluid with dimensions <span class="math notranslate nohighlight">\(dx\)</span>, <span class="math notranslate nohighlight">\(dy\)</span>, and <span class="math notranslate nohighlight">\(dz\)</span> in the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> directions, respectively.</p></li>
-<li><p>Assume the fluid has a pressure field <span class="math notranslate nohighlight">\(p\)</span> that varies in space, meaning <span class="math notranslate nohighlight">\(p = p(x, y, z)\)</span>.</p></li>
-<li><p>The parcel will experience different pressures on opposite faces due to spatial changes in pressure (pressure gradient).</p></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="buoyancy-force-on-a-submerged-object">
+<h1>Buoyancy Force on a Submerged Object<a class="headerlink" href="#buoyancy-force-on-a-submerged-object" title="Link to this heading">#</a></h1>
+<p>The buoyancy force arises from variations in hydrostatic pressure acting on the surfaces of a submerged object. This section derives <strong>Archimedes’ Principle</strong> from the fundamental hydrostatic equation and explains its implications.</p>
+<hr class="docutils" />
+<section id="relating-buoyancy-to-the-hydrostatic-equation">
+<h2>1. <strong>Relating Buoyancy to the Hydrostatic Equation</strong><a class="headerlink" href="#relating-buoyancy-to-the-hydrostatic-equation" title="Link to this heading">#</a></h2>
+<p>The pressure in a static fluid varies with depth according to the <strong>hydrostatic equation</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dp}{dz} = -\rho_f g,
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p\)</span> is the pressure,</p></li>
+<li><p><span class="math notranslate nohighlight">\(z\)</span> is the vertical coordinate (positive upward),</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho_f\)</span> is the fluid density,</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span> is the gravitational acceleration.</p></li>
+</ul>
+<p>Integrating this equation from the surface of the fluid (<span class="math notranslate nohighlight">\(z = 0\)</span>) to a depth <span class="math notranslate nohighlight">\(z\)</span>, with surface pressure <span class="math notranslate nohighlight">\(p_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+p = p_0 + \rho_f g z.
+\]</div>
+<p>This pressure variation generates a net upward force on submerged objects, leading to the buoyancy force.</p>
+</section>
+<hr class="docutils" />
+<section id="derivation-of-archimedes-principle">
+<h2>2. <strong>Derivation of Archimedes’ Principle</strong><a class="headerlink" href="#derivation-of-archimedes-principle" title="Link to this heading">#</a></h2>
+<p>Consider a submerged object of arbitrary shape fully surrounded by a fluid. The object experiences pressure forces acting on its surface.</p>
+<section id="a-net-vertical-force">
+<h3>a. Net Vertical Force<a class="headerlink" href="#a-net-vertical-force" title="Link to this heading">#</a></h3>
+<p>The pressure on the bottom surface is greater than on the top surface due to the increase in pressure with depth. Let the object displace a volume of fluid <span class="math notranslate nohighlight">\(V_d\)</span>.</p>
+<ul>
+<li><p><strong>Force on the top surface:</strong><br />
+At depth <span class="math notranslate nohighlight">\(z_{\text{top}}\)</span>, pressure is:</p>
+<div class="math notranslate nohighlight">
+\[
+  p_{\text{top}} = p_0 + \rho_f g z_{\text{top}}.
+  \]</div>
+<p>The force on the top surface (area <span class="math notranslate nohighlight">\(A_{\text{top}}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+  F_{\text{top}} = p_{\text{top}} A_{\text{top}}.
+  \]</div>
+</li>
+<li><p><strong>Force on the bottom surface:</strong><br />
+At depth <span class="math notranslate nohighlight">\(z_{\text{bottom}}\)</span>, pressure is:</p>
+<div class="math notranslate nohighlight">
+\[
+  p_{\text{bottom}} = p_0 + \rho_f g z_{\text{bottom}}.
+  \]</div>
+<p>The force on the bottom surface (area <span class="math notranslate nohighlight">\(A_{\text{bottom}}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+  F_{\text{bottom}} = p_{\text{bottom}} A_{\text{bottom}}.
+  \]</div>
+</li>
+<li><p><strong>Net upward force:</strong><br />
+Subtracting the forces:</p>
+<div class="math notranslate nohighlight">
+\[
+  F_B = F_{\text{bottom}} - F_{\text{top}} = \rho_f g (z_{\text{bottom}} - z_{\text{top}}) A_{\text{projected}},
+  \]</div>
+<p>where <span class="math notranslate nohighlight">\(A_{\text{projected}}\)</span> is the projected cross-sectional area.</p>
+</li>
+</ul>
+</section>
+<section id="b-displaced-fluid-volume">
+<h3>b. Displaced Fluid Volume<a class="headerlink" href="#b-displaced-fluid-volume" title="Link to this heading">#</a></h3>
+<p>The product <span class="math notranslate nohighlight">\((z_{\text{bottom}} - z_{\text{top}}) A_{\text{projected}}\)</span> equals the volume of displaced fluid, <span class="math notranslate nohighlight">\(V_d\)</span>. Thus, the buoyant force becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+F_B = \rho_f g V_d.
+\]</div>
+</section>
+<section id="c-archimedes-principle">
+<h3>c. Archimedes’ Principle<a class="headerlink" href="#c-archimedes-principle" title="Link to this heading">#</a></h3>
+<p>This result states that the <strong>buoyant force equals the weight of the displaced fluid</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+F_B = \text{Weight of Displaced Fluid}.
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="physical-interpretation-of-buoyancy">
+<h2>3. <strong>Physical Interpretation of Buoyancy</strong><a class="headerlink" href="#physical-interpretation-of-buoyancy" title="Link to this heading">#</a></h2>
+<p>The buoyancy force acts upward because the fluid pressure increases with depth, creating a net upward pressure difference on the object. The magnitude of this force depends only on the volume of displaced fluid and the fluid’s density, not the properties of the object.</p>
+</section>
+<hr class="docutils" />
+<section id="conditions-for-buoyancy">
+<h2>4. <strong>Conditions for Buoyancy</strong><a class="headerlink" href="#conditions-for-buoyancy" title="Link to this heading">#</a></h2>
+<section id="a-floating-objects">
+<h3>a. Floating Objects<a class="headerlink" href="#a-floating-objects" title="Link to this heading">#</a></h3>
+<p>If the object’s weight, <span class="math notranslate nohighlight">\(W\)</span>, is less than the buoyant force, it floats. The equilibrium condition is:</p>
+<div class="math notranslate nohighlight">
+\[
+F_B = W \quad \text{or} \quad \rho_f g V_d = m_o g,
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(m_o\)</span> is the object’s mass.</p>
+</section>
+<section id="b-submerged-objects">
+<h3>b. Submerged Objects<a class="headerlink" href="#b-submerged-objects" title="Link to this heading">#</a></h3>
+<p>For fully submerged objects, the displaced fluid volume equals the object’s volume, <span class="math notranslate nohighlight">\(V_o\)</span>. The net force determines whether the object sinks or remains neutrally buoyant:</p>
+<div class="math notranslate nohighlight">
+\[
+F_{\text{net}} = F_B - W.
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="example-derivation">
+<h2>5. <strong>Example Derivation</strong><a class="headerlink" href="#example-derivation" title="Link to this heading">#</a></h2>
+<p><strong>Example: Submerged Cube</strong><br />
+A cube with side length <span class="math notranslate nohighlight">\(L = 0.5 \, \text{m}\)</span> is submerged in water (<span class="math notranslate nohighlight">\(\rho_f = 1000 \, \text{kg/m}^3\)</span>). Find the buoyant force.</p>
+<section id="solution">
+<h3>Solution:<a class="headerlink" href="#solution" title="Link to this heading">#</a></h3>
+<ol class="arabic">
+<li><p><strong>Volume of Displaced Fluid:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   V_d = L^3 = (0.5)^3 = 0.125 \, \text{m}^3.
+   \]</div>
+</li>
+<li><p><strong>Buoyant Force:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+   F_B = \rho_f g V_d = (1000)(9.81)(0.125) = 1226.25 \, \text{N}.
+   \]</div>
+</li>
 </ol>
 </section>
-<section id="step-2-calculate-pressure-forces-on-opposite-faces">
-<h2>Step 2: Calculate Pressure Forces on Opposite Faces<a class="headerlink" href="#step-2-calculate-pressure-forces-on-opposite-faces" title="Link to this heading">#</a></h2>
-<p>To derive the pressure force, we consider the pressure acting on opposite faces in the <span class="math notranslate nohighlight">\(x\)</span> direction.</p>
-<ul>
-<li><p><strong>Pressure on the left face (at <span class="math notranslate nohighlight">\(x\)</span>)</strong>: The pressure on the left face is <span class="math notranslate nohighlight">\(p(x, y, z)\)</span>, acting over an area <span class="math notranslate nohighlight">\(dy \cdot dz\)</span>.</p>
-<ul>
-<li><p>The force due to pressure on the left face is therefore:</p>
-<div class="math notranslate nohighlight">
-\[
-      F_{\text{left}} = p(x, y, z) \cdot dy \cdot dz
-      \]</div>
-</li>
+</section>
+<hr class="docutils" />
+<section id="applications-of-buoyancy">
+<h2>6. <strong>Applications of Buoyancy</strong><a class="headerlink" href="#applications-of-buoyancy" title="Link to this heading">#</a></h2>
+<section id="a-ship-design">
+<h3>a. Ship Design<a class="headerlink" href="#a-ship-design" title="Link to this heading">#</a></h3>
+<p>Ships float because their hulls displace enough water to create a buoyant force equal to their weight.</p>
+</section>
+<section id="b-submarines">
+<h3>b. Submarines<a class="headerlink" href="#b-submarines" title="Link to this heading">#</a></h3>
+<p>Submarines adjust their buoyancy by altering ballast water, controlling their submerged depth.</p>
+</section>
+<section id="c-hot-air-balloons">
+<h3>c. Hot Air Balloons<a class="headerlink" href="#c-hot-air-balloons" title="Link to this heading">#</a></h3>
+<p>In gases, the buoyant force depends on the displaced air’s weight, enabling lift.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="key-takeaways">
+<h2>7. <strong>Key Takeaways</strong><a class="headerlink" href="#key-takeaways" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The buoyant force arises due to hydrostatic pressure variations in a fluid.</p></li>
+<li><p>Archimedes’ Principle states that the buoyant force equals the weight of the displaced fluid.</p></li>
+<li><p>Understanding buoyancy is critical in engineering applications like shipbuilding, underwater exploration, and aeronautics.</p></li>
 </ul>
-</li>
-<li><p><strong>Pressure on the right face (at <span class="math notranslate nohighlight">\(x + dx\)</span>)</strong>: The pressure on the right face is slightly different due to the pressure gradient in the <span class="math notranslate nohighlight">\(x\)</span> direction. Using a Taylor series expansion:</p>
-<div class="math notranslate nohighlight">
-\[
-    p(x + dx, y, z) \approx p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx
-    \]</div>
-<ul>
-<li><p>The force on the right face is:</p>
-<div class="math notranslate nohighlight">
-\[
-      F_{\text{right}} = \left( p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx \right) \cdot dy \cdot dz
-      \]</div>
-</li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="step-3-calculate-net-pressure-force-in-the-x-direction">
-<h2>Step 3: Calculate Net Pressure Force in the <span class="math notranslate nohighlight">\(x\)</span> Direction<a class="headerlink" href="#step-3-calculate-net-pressure-force-in-the-x-direction" title="Link to this heading">#</a></h2>
-<p>The net pressure force in the <span class="math notranslate nohighlight">\(x\)</span> direction, <span class="math notranslate nohighlight">\(F_x\)</span>, is the difference between the force on the right face and the force on the left face:</p>
-<div class="math notranslate nohighlight">
-\[
-F_x = F_{\text{right}} - F_{\text{left}}
-\]</div>
-<p>Substituting the expressions from above:</p>
-<div class="math notranslate nohighlight">
-\[
-F_x = \left( p(x, y, z) + \frac{\partial p}{\partial x} \cdot dx \right) \cdot dy \cdot dz - p(x, y, z) \cdot dy \cdot dz
-\]</div>
-<p>Simplifying by canceling terms:</p>
-<div class="math notranslate nohighlight">
-\[
-F_x = \frac{\partial p}{\partial x} \cdot dx \cdot dy \cdot dz
-\]</div>
-<p>Similarly, we can calculate the net pressure forces in the <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span> directions:</p>
-<div class="math notranslate nohighlight">
-\[
-F_y = \frac{\partial p}{\partial y} \cdot dx \cdot dy \cdot dz
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-F_z = \frac{\partial p}{\partial z} \cdot dx \cdot dy \cdot dz
-\]</div>
-</section>
-<section id="step-4-write-the-total-pressure-gradient-force">
-<h2>Step 4: Write the Total Pressure Gradient Force<a class="headerlink" href="#step-4-write-the-total-pressure-gradient-force" title="Link to this heading">#</a></h2>
-<p>The total pressure force acting on the fluid parcel in all three directions can now be written as a vector:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{F}_{\text{pressure}} = - \left( \frac{\partial p}{\partial x} \hat{i} + \frac{\partial p}{\partial y} \hat{j} + \frac{\partial p}{\partial z} \hat{k} \right) \cdot dx \, dy \, dz
-\]</div>
-<p>Or, using the <strong>gradient operator</strong> <span class="math notranslate nohighlight">\( \nabla \)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{F}_{\text{pressure}} = - (\nabla p) \, dx \, dy \, dz
-\]</div>
-</section>
-<section id="step-5-express-the-pressure-gradient-force-per-unit-volume">
-<h2>Step 5: Express the Pressure Gradient Force per Unit Volume<a class="headerlink" href="#step-5-express-the-pressure-gradient-force-per-unit-volume" title="Link to this heading">#</a></h2>
-<p>For a small fluid parcel, the <strong>volume</strong> <span class="math notranslate nohighlight">\(V\)</span> is <span class="math notranslate nohighlight">\(dx \cdot dy \cdot dz\)</span>. The <strong>pressure gradient force per unit volume</strong> (which we use in the Navier-Stokes equations) is therefore:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{f}_{\text{pressure}} = -\nabla p
-\]</div>
-</section>
-<section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
-<p>The pressure gradient force per unit volume is <span class="math notranslate nohighlight">\( -\nabla p \)</span>. This force results from spatial changes in pressure within the fluid and acts from regions of higher pressure to regions of lower pressure. It is a key component in the Navier-Stokes equations, influencing the motion of fluid by accelerating it in the direction of lower pressure.</p>
 </section>
 </section>
 
@@ -523,7 +612,7 @@ F_z = \frac{\partial p}{\partial z} \cdot dx \cdot dy \cdot dz
         },
         kernelOptions: {
             name: "python3",
-            path: "./navier_stokes"
+            path: "./hydrostatic_balance"
         },
         predefinedOutput: true
     }
@@ -541,20 +630,20 @@ F_z = \frac{\partial p}{\partial z} \cdot dx \cdot dy \cdot dz
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../navier_stokes.html"
+       href="forces_on_surfaces.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction to the Navier-Stokes Equations in Fluid Mechanics</p>
+        <p class="prev-next-title">Force Calculations on Flat and Curved Surfaces</p>
       </div>
     </a>
     <a class="right-next"
-       href="viscous_forces.html"
+       href="../recommended_problems.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Derivation of Friction (Viscous) Forces in Fluid Mechanics</p>
+        <p class="prev-next-title">Recommended Problems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -574,12 +663,30 @@ F_z = \frac{\partial p}{\partial z} \cdot dx \cdot dy \cdot dz
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-consider-a-small-fluid-parcel">Step 1: Consider a Small Fluid Parcel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-pressure-forces-on-opposite-faces">Step 2: Calculate Pressure Forces on Opposite Faces</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-calculate-net-pressure-force-in-the-x-direction">Step 3: Calculate Net Pressure Force in the <span class="math notranslate nohighlight">\(x\)</span> Direction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-write-the-total-pressure-gradient-force">Step 4: Write the Total Pressure Gradient Force</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-express-the-pressure-gradient-force-per-unit-volume">Step 5: Express the Pressure Gradient Force per Unit Volume</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#relating-buoyancy-to-the-hydrostatic-equation">1. <strong>Relating Buoyancy to the Hydrostatic Equation</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-archimedes-principle">2. <strong>Derivation of Archimedes’ Principle</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-net-vertical-force">a. Net Vertical Force</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-displaced-fluid-volume">b. Displaced Fluid Volume</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-archimedes-principle">c. Archimedes’ Principle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physical-interpretation-of-buoyancy">3. <strong>Physical Interpretation of Buoyancy</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-for-buoyancy">4. <strong>Conditions for Buoyancy</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-floating-objects">a. Floating Objects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-submerged-objects">b. Submerged Objects</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-derivation">5. <strong>Example Derivation</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-buoyancy">6. <strong>Applications of Buoyancy</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-ship-design">a. Ship Design</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-submarines">b. Submarines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-hot-air-balloons">c. Hot Air Balloons</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-takeaways">7. <strong>Key Takeaways</strong></a></li>
 </ul>
   </nav></div>
 

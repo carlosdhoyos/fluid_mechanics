@@ -11,7 +11,7 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 - <span style="color: green;">Definition of fluids and distinction between solids and fluids.</span>
 - <span style="color: green;">Continuum hypothesis: fluid as a continuum.</span>
 - <span style="color: green;">Common physical quantities and units.</span>
-- Fluid properties: <span style="color: green;">density, viscosity</span>, surface tension.
+- <span style="color: green;">Fluid properties: density, viscosity, surface tension.</span>
 - <span style="color: green;">Ideal gas law</span>
 - <span style="color: green;">No-slip condition</span>
 - Types of flows
@@ -21,21 +21,23 @@ This course introduces the fundamental principles of fluid mechanics, focusing o
 ---
 
 ### **Weeks 3: Navier-Stokes Equations**
-- Review of Newton’s second law and its application to fluids.
-- Forces in fluid flow: pressure, body forces, and viscous forces.
-- Derivation of the **Navier-Stokes equations**.
-
+- <span style="color: green;">Review of Newton’s second law and its application to fluids.</span>
+- <span style="color: green;">Forces in fluid flow: pressure, body forces, and viscous forces.</span>
+- <span style="color: green;">Derivation of the **Navier-Stokes equations**.</span>
 
 ---
 
 ### **Weeks 4: Fluid Statics as an Application of Navier-Stokes**
-- **Fluid statics** as a special case of the Navier-Stokes equations (no velocity, steady-state).
-- Hydrostatic equation: $\frac{dp}{dz} = -\rho g$.
-- Pressure variation in incompressible and compressible static fluids.
+- <span style="color: green;">**Fluid statics** as a special case of the Navier-Stokes equations (no velocity, steady-state).</span>
+- <span style="color: green;">Hydrostatic equation: $\frac{dp}{dz} = -\rho g$.</span>
+- <span style="color: green;">Pressure variation in incompressible and compressible static fluids.</span>
+- <span style="color: green;">Barometers, piezometers, </span>and manometers.
 - Applications: pressure forces on submerged surfaces, buoyancy, and stability.
 
-**Lab**: Verification of hydrostatic pressure distribution using manometers and hydrostatic force on submerged surfaces.
+---
 
+
+**Lab**: Verification of hydrostatic pressure distribution using manometers and hydrostatic force on submerged surfaces.
 
 **Lab**: Flow visualization and numerical simulation of simple flow fields using NS equations.
 
