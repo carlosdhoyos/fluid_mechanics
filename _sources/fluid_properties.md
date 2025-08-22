@@ -43,6 +43,11 @@ Density plays a crucial role in several fluid mechanics applications:
 - **Pressure in a Fluid Column**: The pressure at a given depth in a fluid is directly proportional to its density (hydrostatic pressure equation: $P = \rho gh$, where $g$ is the acceleration due to gravity and $h$ is the depth).
 - **Flow Behavior**: In compressible flows (e.g., gases), density changes significantly and must be accounted for. In incompressible flows (e.g., liquids), density is generally constant.
 
+```{note}
+In liquids, density variations are usually negligible except in thermal expansion problems.  
+In gases, density is a strong function of pressure and temperature, making it central to compressible flow analysis.
+```
+
 ### Examples of Density
 
 1. **Water**: The density of water at standard temperature and pressure (STP) is approximately $1000 \, kg/m^3$. This property is commonly used as a reference for other fluids.
@@ -200,6 +205,42 @@ For example, the specific gravity of ethanol is 0.789, meaning ethanol is less d
 | Air (Relative to Water) | 0.00123                              |
 
 Note that for gases, specific gravity is often measured relative to air rather than water.
+
+:::{note} Archimedes — Father of Hydrostatics
+- **Lifespan**: 287–212 BCE, born in Syracuse, studied in Alexandria.  
+
+- **Major Contributions**:  
+  - *On Floating Bodies* → Principle of buoyancy, density, specific gravity.  
+  - Lever law and simple machines → “Give me a place to stand, and I will move the world.”  
+  - Archimedean screw → Water lifting for irrigation.  
+  - Mathematical advances → Method of exhaustion (proto-calculus), close estimate of π.  
+
+- **Context**:  
+  - Patronized by King Hiero II of Syracuse.  
+  - Possible student of **Conon of Samos** in Alexandria.  
+  - Killed during the Roman conquest, despite orders to spare him.  
+
+- **Allies**:  
+  - **Conon of Samos** → mentor and friend in Alexandria.  
+  - **Eratosthenes** → correspondent, recipient of *The Method*.  
+  - **Dositheus of Pelusium** → disciple, to whom works were dedicated.  
+  - **King Hiero II** → political ally and patron.  
+
+- **Rivals & Tensions**:  
+  - **Apollonius of Perga** → geometry vs. mechanics; no open feud, but intellectual contrast.  
+  - **Romans** → feared his war machines; ultimately his military “rivals.”  
+  - Critics in Alexandria → annoyed at his secrecy and challenges without proofs.  
+
+- **Quirks & Gossip**:  
+  - “Eureka!” bath story (likely apocryphal but legendary).  
+  - Absorbed in diagrams — said to forget food, sleep, even war.  
+  - Built war machines but disliked being remembered for them.  
+
+- **Legacy**:  
+  - True *father of hydrostatics* and one of the founding figures of mechanics.  
+  - His fusion of mathematics and mechanics paved the way for Galileo, Newton, and modern fluid dynamics.  
+:::
+
 
 ## Ideal Gas Law
 
@@ -754,3 +795,6 @@ In this exercise, the radius $r$ is held constant at $0.01$, $\text{m}$, allowin
 - Observe how changing $\sigma$ affects the calculated pressure difference. This helps demonstrate how surface tension influences the droplet’s stability and required pressure.
 
 This exercise illustrates the role of surface tension in fluid mechanics, especially how it affects the pressure needed to maintain a droplet’s shape. This principle is crucial in applications such as inkjet printing, droplet formation in fuel injection systems, and various microfluidic applications.
+
+
+
