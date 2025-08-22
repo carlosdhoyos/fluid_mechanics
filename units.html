@@ -183,26 +183,51 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Foundations (Weeks 1–3)</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluids_v_solids.html">Solids vs. Fluids</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Common Physical Quantities and Units</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="fluid_properties.html">Properties of Fluids</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="kinematics/index.html">Fluid Kinematics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/lagrangian_vs_eulerian.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/vorticity_circulation.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/streamline_streakline_pathline.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/velocity_potential_streamfunction.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/example_fields.html">Placeholder</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statics (Week 4)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="hydrostatic_balance.html">Hydrostatic Balance</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/pressure_measurement.html">Pressure Measurement Using Hydrostatic Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/manometry.html">Manometry and Pressure Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/forces_on_surfaces.html">Force Calculations on Flat and Curved Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/buoyancy.html">Buoyancy Force on a Submerged Object</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Equations (Weeks 5–6)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes/viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes/ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navier_stokes/continuity.html">Conservation of Mass (Continuity Equation)</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Operations &amp; Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="labs.html">Laboratory experiments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="recommended_problems.html">Recommended Problems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="labs.html">Laboratory experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semester_202402.html">Important dates</a></li>
 </ul>
 
     </div>
@@ -398,6 +423,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Common Physical Quantities and Units</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-units">Common Units</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
 </ul>
@@ -414,6 +440,16 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-fluid-mechanics-context">Example in Fluid Mechanics Context</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#units-cheat-sheet">Units Cheat Sheet</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-unit-systems">Core Unit Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-conversions">Quick Conversions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slug-vs-pound-bg-system">Slug vs. Pound (BG System)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-reminder">Key Reminder</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -1043,6 +1079,66 @@ document.write(`
 </div>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="units-cheat-sheet">
+<h1>Units Cheat Sheet<a class="headerlink" href="#units-cheat-sheet" title="Link to this heading">#</a></h1>
+<section id="core-unit-systems">
+<h2>Core Unit Systems<a class="headerlink" href="#core-unit-systems" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>SI (MKS)</strong>: meter (m), kilogram (kg), second (s), newton (N), joule (J), pascal (Pa)</p></li>
+<li><p><strong>CGS</strong>: centimeter (cm), gram (g), second (s), dyne, erg, barye</p></li>
+<li><p><strong>Imperial/US</strong>: foot (ft), pound-mass (lbm), second (s), pound-force (lbf), foot-pound (ft·lb), psi</p></li>
+<li><p><strong>British Gravitational (BG)</strong>: foot (ft), slug (mass), second (s), pound-force (lbf)</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="quick-conversions">
+<h2>Quick Conversions<a class="headerlink" href="#quick-conversions" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Length</strong>: 1 m = 3.281 ft = 39.37 in</p></li>
+<li><p><strong>Mass</strong>: 1 kg = 2.205 lbm = 0.0685 slugs</p></li>
+<li><p><strong>Force</strong>: 1 N = 0.225 lbf = <span class="math notranslate nohighlight">\(10^5\)</span> dyn</p></li>
+<li><p><strong>Energy</strong>: 1 J = 0.7376 ft·lb = <span class="math notranslate nohighlight">\(10^7\)</span> erg = 0.000948 BTU</p></li>
+<li><p><strong>Pressure</strong>: 1 Pa = 0.000145 psi = 10 Ba</p></li>
+<li><p><strong>Density (water)</strong>:</p>
+<ul>
+<li><p>SI: <span class="math notranslate nohighlight">\(1000 \,\text{kg/m}^3\)</span></p></li>
+<li><p>BG (mass density): <span class="math notranslate nohighlight">\(1.94 \,\text{slug/ft}^3\)</span></p></li>
+<li><p>BG (weight density): <span class="math notranslate nohighlight">\(62.4 \,\text{lb/ft}^3\)</span></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="slug-vs-pound-bg-system">
+<h2>Slug vs. Pound (BG System)<a class="headerlink" href="#slug-vs-pound-bg-system" title="Link to this heading">#</a></h2>
+<ul>
+<li><p><strong>Slug</strong> = mass unit</p></li>
+<li><p><strong>Pound-force (lbf)</strong> = force (weight)</p></li>
+<li><p>Relation:</p>
+<div class="math notranslate nohighlight">
+\[
+  W = m g \quad\;\; (g = 32.174 \,\text{ft/s}^2)
+  \]</div>
+</li>
+<li><p><strong>Mass density</strong>: slugs/ft³ (like kg/m³)</p></li>
+<li><p><strong>Weight density</strong>: lb/ft³ (like N/m³)</p></li>
+</ul>
+<p>👉 Example:</p>
+<ul class="simple">
+<li><p>Water: <span class="math notranslate nohighlight">\(62.4 \,\text{lb/ft}^3 \;\Rightarrow\; 1.94 \,\text{slug/ft}^3\)</span></p></li>
+<li><p>Air: <span class="math notranslate nohighlight">\(0.0765 \,\text{lb/ft}^3 \;\Rightarrow\; 0.00238 \,\text{slug/ft}^3\)</span></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="key-reminder">
+<h2>Key Reminder<a class="headerlink" href="#key-reminder" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>SI is the universal standard</p></li>
+<li><p>BG is preferred for fluid mechanics in Imperial contexts (avoids <span class="math notranslate nohighlight">\(g_c\)</span> confusion)</p></li>
+<li><p>Always check if “lb” means <strong>mass (lbm)</strong> or <strong>force (lbf)</strong></p></li>
+</ul>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1108,6 +1204,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Common Physical Quantities and Units</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-units">Common Units</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
 </ul>
@@ -1124,6 +1221,16 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-fluid-mechanics-context">Example in Fluid Mechanics Context</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#units-cheat-sheet">Units Cheat Sheet</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#core-unit-systems">Core Unit Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-conversions">Quick Conversions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slug-vs-pound-bg-system">Slug vs. Pound (BG System)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-reminder">Key Reminder</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>

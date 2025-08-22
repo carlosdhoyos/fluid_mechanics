@@ -64,7 +64,7 @@
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Setting Up the Environment" href="environment.html" />
+    <link rel="next" title="Syllabus" href="syllabus.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,21 +184,27 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Foundations (Weeks 1–3)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluids_v_solids.html">Solids vs. Fluids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="units.html">Common Physical Quantities and Units</a></li>
+
 <li class="toctree-l1"><a class="reference internal" href="fluid_properties.html">Properties of Fluids</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navier_stokes/viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navier_stokes/ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="kinematics/index.html">Fluid Kinematics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/lagrangian_vs_eulerian.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/vorticity_circulation.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/streamline_streakline_pathline.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/velocity_potential_streamfunction.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/example_fields.html">Placeholder</a></li>
 </ul>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statics (Week 4)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="hydrostatic_balance.html">Hydrostatic Balance</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/pressure_measurement.html">Pressure Measurement Using Hydrostatic Balance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/manometry.html">Manometry and Pressure Measurement</a></li>
@@ -206,10 +212,23 @@
 <li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/buoyancy.html">Buoyancy Force on a Submerged Object</a></li>
 </ul>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Equations (Weeks 5–6)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="navier_stokes/ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Operations &amp; Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="labs.html">Laboratory experiments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="recommended_problems.html">Recommended Problems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="labs.html">Laboratory experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semester_202402.html">Important dates: Semester 2024 02</a></li>
 </ul>
 
     </div>
@@ -405,13 +424,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of-fluid-mechanics">The Importance of Fluid Mechanics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-mechanics-and-climate-science">Fluid Mechanics and Climate Science</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-scale-applications-from-biomedical-engineering-to-household-technologies">Small-Scale Applications: From Biomedical Engineering to Household Technologies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of-fluid-mechanics">The Importance of Fluid Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-mechanics-and-climate-science">Fluid Mechanics and Climate Science</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#small-scale-applications-from-biomedical-engineering-to-household-technologies">Small-Scale Applications: From Biomedical Engineering to Household Technologies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beyond-engineering-sports-and-performance">Beyond Engineering: Sports and Performance</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-jupyter-books">Why Jupyter Books?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-github">Why GitHub?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-the-notes-in-english">Why the Notes in English?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bit-about-me">A Bit About Me</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-the-notes-in-english">Why the Notes in English?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-figures">List of Figures</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -425,25 +449,56 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-fluid-mechanics-course-site">
 <h1>Welcome to the Fluid Mechanics Course Site<a class="headerlink" href="#welcome-to-the-fluid-mechanics-course-site" title="Link to this heading">#</a></h1>
-<p>My name is <strong>Carlos D. Hoyos</strong>, and I am one of the professors at the <strong>Universidad Nacional de Colombia, Facultad de Minas, Sede Medellín</strong>, guiding you through the principles and applications of fluid mechanics. As part of this journey, I am committed to building a set of online course materials to complement our in-class lectures. This content is made accessible through Jupyter Books hosted on GitHub, providing you with dynamic, interactive, and up-to-date resources for your studies.</p>
+<p>My name is <strong>Carlos D. Hoyos</strong>, and I am an associate professor at the <strong>Universidad Nacional de Colombia, Facultad de Minas, Sede Medellín, Departamento de Geociencias y Medioambiente</strong>. I have a <strong>Ph.D. in Earth and Atmospheric Sciences from Georgia Institute of Technology</strong>, along with a <strong>Masters in Oceanic and Atmospheric Sciences</strong>, a <strong>Masters in Water Resources</strong>, and a <strong>Civil Engineering degree</strong>. My work has taken me through diverse fields—studying the behavior of the <strong>atmosphere</strong>, understanding <strong>water resources</strong>, and applying <strong>data science</strong> to solve problems related to agriculture, energy, risk management, and climate. Fluid dynamics has been a common thread throughout my career, from analyzing <strong>atmospheric circulations</strong> that drive global climate patterns to modeling <strong>river flows</strong> that sustain ecosystems and cities. This course gives me the opportunity to share not only the fundamental concepts of fluid mechanics but also some of their applications.</p>
+<p>I am committed to building a set of online course materials to complement our in-class lectures. This content is made accessible through Jupyter Books hosted on GitHub, providing you with dynamic, interactive, and up-to-date resources for your studies.</p>
 <section id="the-importance-of-fluid-mechanics">
 <h2>The Importance of Fluid Mechanics<a class="headerlink" href="#the-importance-of-fluid-mechanics" title="Link to this heading">#</a></h2>
-<p>Fluid mechanics is not just a core subject within engineering; it’s the backbone of many fields that influence our daily lives. Whether you’re dealing with the flow of air over an aircraft wing, the circulation of blood in the human body, or the dynamics of ocean currents driving global climate patterns, fluid mechanics is involved. The discipline provides the tools to understand how fluids (liquids and gases) behave, whether they are at rest or in motion, and how these behaviors interact with the forces and energy around them.</p>
-<p>From an engineering perspective, fluid mechanics plays a crucial role in <strong>energy systems</strong>, where it helps us design more efficient turbines, optimize hydraulic systems, and improve aerodynamics in transportation. <strong>Environmental applications</strong> are just as critical. For instance, fluid mechanics is at the heart of <strong>water resource management</strong>—whether we are designing irrigation systems, controlling floodwaters, or managing the quality of water bodies like rivers and lakes.</p>
-<p>One of the most exciting areas where fluid mechanics comes into play is in <strong>climate science</strong>. As an engineer with a background in both climate and fluid dynamics, I can attest that understanding how fluids move in the atmosphere and oceans is fundamental to making accurate climate predictions. Large-scale systems like <strong>jet streams, ocean currents, and monsoons</strong> are governed by the principles of fluid mechanics. These systems, in turn, influence everything from <strong>local weather patterns</strong> to <strong>long-term climate trends</strong> that affect agriculture, ecosystems, and even energy generation.</p>
-<p>At the other end of the spectrum, fluid mechanics also helps solve <strong>small-scale, everyday problems</strong>. Think about how fluids are used in <strong>biomedical engineering</strong>—from the way drugs are delivered through microfluidic devices to how engineers design heart pumps and blood flow models. Even at this smaller scale, the principles we study in this course apply and enable breakthroughs in technology and medicine.</p>
-<p>Understanding fluid mechanics empowers us to address these diverse challenges, giving engineers a universal toolkit to approach problems ranging from global to local scales.</p>
-</section>
+<p>Fluid mechanics is not just a core subject within engineering; it’s the backbone of many fields that influence our daily lives. It explains how <strong>blood circulates in the human body</strong>, where advanced <a class="reference external" href="https://www.manchester.ac.uk/about/news/research-progress-reveals-faster-more-accurate-blood-flow-simulation-to-revolutionise-treatment-of-vascular-diseases/">simulations of vascular flows</a> are improving medical treatments (Figure 1). It underpins technologies such as <a class="reference external" href="https://pressbooks.online.ucf.edu/osuniversityphysics/chapter/14-5-fluid-dynamics/">fluid flow in pipes</a> (Figure 2), <a class="reference external" href="https://www.savener.es/en/featured-news/savener-expands-its-expertise-in-fluid-dynamics-cfd%EF%BF%BC/">valve and CFD simulations</a> (Figure 3), and <a class="reference external" href="https://www.mdpi.com/1996-1073/15/22/8405">mine ventilation systems</a> (Figure 4).</p>
+<p>From an engineering perspective, fluid mechanics plays a crucial role in <strong>energy systems</strong>, where it helps design more efficient turbines, optimize hydraulic systems, and improve aerodynamics in transportation. In renewable energy, it drives advances in <a class="reference external" href="https://www.usgs.gov/media/images/flow-water-produces-hydroelectricity">hydropower generation</a> (Figure 5), <a class="reference external" href="https://fluids.umn.edu/research/engineering-applications/hydropower">engineering applications of hydropower</a> (Figure 6), and <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/we.2639">wind turbine rotor simulations</a> (Figure 7). In aerospace, understanding the <a class="reference external" href="https://eaglepubs.erau.edu/introductiontoaerospaceflightvehicles/chapter/what-is-aerospace-engineering/">flow of air over wings</a> is critical to flight (Figure 8).</p>
 <section id="fluid-mechanics-and-climate-science">
-<h2>Fluid Mechanics and Climate Science<a class="headerlink" href="#fluid-mechanics-and-climate-science" title="Link to this heading">#</a></h2>
+<h3>Fluid Mechanics and Climate Science<a class="headerlink" href="#fluid-mechanics-and-climate-science" title="Link to this heading">#</a></h3>
 <p>While we often associate fluid mechanics with mechanical and civil engineering, its relevance to <strong>climate science</strong> cannot be overstated. Fluid behavior in the atmosphere and oceans dictates weather patterns, the distribution of heat and moisture across the planet, and even how pollutants disperse. As the climate changes, fluid mechanics becomes crucial in modeling these evolving dynamics and predicting their impacts on both natural and human systems.</p>
-<p>For example, <strong>wind energy</strong>, one of the most promising renewable energy sources, relies heavily on our understanding of fluid flow. Engineers design wind turbines and wind farms by modeling how air moves across landscapes. Similarly, in <strong>solar energy</strong>, fluid dynamics helps in improving the cooling systems of solar panels and optimizing the flow of air around large solar fields.</p>
-<p>Moreover, <strong>climate resilience</strong>—a topic that is increasingly critical as we face more extreme weather events—benefits directly from fluid mechanics. Flood control systems, stormwater management, and predicting the behavior of hurricanes or typhoons all require a deep understanding of how fluids move and interact with their surroundings.</p>
+<p>On a global scale, fluid mechanics governs <strong>large-scale circulation systems</strong> such as <a class="reference external" href="https://progearthplanetsci.springeropen.com/articles/10.1186/s40645-018-0208-3">river flows</a> (Figure 9), <a class="reference external" href="https://sos.noaa.gov/catalog/datasets/ocean-circulation-labeled-currents/">ocean currents</a> (Figure 10), <a class="reference external" href="https://www.rmets.org/metmatters/global-atmospheric-circulation">atmospheric circulation</a> (Figure 11), and even <a class="reference external" href="https://gpm.nasa.gov/data/art-creating-digital-hurricanes">hurricanes</a> (Figure 12). These systems, in turn, shape <strong>local weather patterns</strong>, <strong>long-term climate trends</strong>, and critical sectors such as agriculture, ecosystems, and energy generation.</p>
+<p>For example, <strong>wind energy</strong> relies directly on our ability to model how air moves across landscapes (Figure 7). In <strong>solar energy</strong>, fluid dynamics improves the cooling systems of solar panels and optimizes the airflow across large solar farms. Moreover, <strong>climate resilience</strong>—a pressing issue as we face more extreme weather events—benefits directly from fluid mechanics through flood control, stormwater management, and the prediction of hurricane or typhoon dynamics.</p>
 </section>
 <section id="small-scale-applications-from-biomedical-engineering-to-household-technologies">
-<h2>Small-Scale Applications: From Biomedical Engineering to Household Technologies<a class="headerlink" href="#small-scale-applications-from-biomedical-engineering-to-household-technologies" title="Link to this heading">#</a></h2>
-<p>While climate science deals with global fluid systems, the principles of fluid mechanics also apply at much smaller scales. <strong>Biomedical engineering</strong> is a field that deeply integrates fluid dynamics to design medical devices, simulate blood flow, and develop life-saving technologies. Engineers use fluid mechanics to understand how the heart pumps blood, how artificial valves can mimic natural flow, and even how we might deliver drugs through targeted microfluidic channels.</p>
-<p>Even in everyday household technologies, fluid mechanics plays a role—whether it’s the way your <strong>showerhead</strong> disperses water efficiently or how a <strong>vacuum cleaner</strong> is designed to create suction through fluid flow. These seemingly simple systems are based on complex principles that we will explore in this course.</p>
+<h3>Small-Scale Applications: From Biomedical Engineering to Household Technologies<a class="headerlink" href="#small-scale-applications-from-biomedical-engineering-to-household-technologies" title="Link to this heading">#</a></h3>
+<p>While climate science deals with global fluid systems, the principles of fluid mechanics also apply at much smaller scales. <strong>Biomedical engineering</strong> is a field that deeply integrates fluid dynamics to design medical devices, simulate blood flow, and develop life-saving technologies. Engineers use fluid mechanics to understand how the heart pumps blood, how artificial valves can mimic natural flow, and how drugs can be delivered through targeted microfluidic channels (Figure 1).</p>
+<p>Even in everyday household technologies, fluid mechanics plays a role—whether it’s the way a <strong>showerhead</strong> disperses water efficiently, how a <strong>vacuum cleaner</strong> generates suction, or how <a class="reference external" href="https://fluid-dynamics.leeds.ac.uk/research/outreach/learn-more-about-fluid-dynamics/surface-tension/">surface tension</a> (Figure 13) shapes the behavior of water droplets. These seemingly simple systems are based on the same complex principles we study in this course.</p>
+</section>
+<section id="beyond-engineering-sports-and-performance">
+<h3>Beyond Engineering: Sports and Performance<a class="headerlink" href="#beyond-engineering-sports-and-performance" title="Link to this heading">#</a></h3>
+<p>Fluid mechanics even reaches into <strong>sports and performance</strong>, such as optimizing <a class="reference external" href="https://www.racecar-engineering.com/advertisement/fluid-dynamics-in-motorsport/">aerodynamics in motorsport</a> (Figure 14). Athletes, race car engineers, and designers alike benefit from fluid dynamic principles to reduce drag, increase efficiency, and enhance performance.</p>
+<p>Ultimately, understanding fluid mechanics empowers us to address challenges at every scale—from <strong>global circulation systems</strong> that shape climate, to <strong>engineering innovations</strong> that drive renewable energy, to <strong>microscale biomedical devices</strong> that save lives. It is a universal toolkit for solving problems that connect physics, engineering, the environment, and human health.</p>
+<p><img alt="Blood flow simulation – University of Manchester" src="_images/blood.png" /><br />
+<em>Source: <a class="reference external" href="https://www.manchester.ac.uk/about/news/research-progress-reveals-faster-more-accurate-blood-flow-simulation-to-revolutionise-treatment-of-vascular-diseases/">University of Manchester – Research progress reveals faster, more accurate blood flow simulation to revolutionise treatment of vascular diseases</a></em></p>
+<p><img alt="Surface tension" src="_images/surfacetension.png" /><br />
+<em>Source: <a class="reference external" href="https://fluid-dynamics.leeds.ac.uk/research/outreach/learn-more-about-fluid-dynamics/surface-tension/">University of Leeds – Surface tension</a></em></p>
+<p><img alt="Fluid flow in pipes" src="_images/pipes.png" /><br />
+<em>Source: <a class="reference external" href="https://pressbooks.online.ucf.edu/osuniversityphysics/chapter/14-5-fluid-dynamics/">University of Central Florida – <em>University Physics Volume 2</em>, “Fluid Dynamics”</a></em></p>
+<p><img alt="Valve and CFD simulation" src="_images/valve.png" /><br />
+<em>Source: <a class="reference external" href="https://www.savener.es/en/featured-news/savener-expands-its-expertise-in-fluid-dynamics-cfd%EF%BF%BC/">Savener – Expands its expertise in fluid dynamics (CFD)</a></em></p>
+<p><img alt="River flows" src="_images/riverflows.png" /><br />
+<em>Source: <a class="reference external" href="https://progearthplanetsci.springeropen.com/articles/10.1186/s40645-018-0208-3">SpringerOpen – <em>Progress in Earth and Planetary Science</em>, “Title of the Article”</a></em></p>
+<p><img alt="Hydropower generation" src="_images/hydropower.png" /><br />
+<em>Source: <a class="reference external" href="https://www.usgs.gov/media/images/flow-water-produces-hydroelectricity">U.S. Geological Survey – Flow of water produces hydroelectricity</a></em></p>
+<p><img alt="Hydropower applications" src="_images/hydropower2.png" /><br />
+<em>Source: <a class="reference external" href="https://fluids.umn.edu/research/engineering-applications/hydropower">University of Minnesota – Fluids Research Group, Hydropower</a></em></p>
+<p><img alt="Wind energy simulation" src="_images/wind.png" /><br />
+<em>Source: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/we.2639">Wiley Online Library – Wind Energy, “Fluid–structure interaction simulations of a wind turbine rotor in complex flows, validated through field experiments”</a></em></p>
+<p><img alt="Aircraft wing airflow" src="_images/wing.png" /><br />
+<em>Source: <a class="reference external" href="https://eaglepubs.erau.edu/introductiontoaerospaceflightvehicles/chapter/what-is-aerospace-engineering/">Embry-Riddle Aeronautical University – <em>Introduction to Aerospace Flight Vehicles</em>, “What is Aerospace Engineering?”</a></em></p>
+<p><img alt="Ocean circulation currents" src="_images/ocean.png" /><br />
+<em>Source: <a class="reference external" href="https://sos.noaa.gov/catalog/datasets/ocean-circulation-labeled-currents/">NOAA Science On a Sphere – Ocean circulation (labeled currents)</a></em></p>
+<p><img alt="Global atmospheric circulation" src="_images/atmosphere.png" /><br />
+<em>Source: <a class="reference external" href="https://www.rmets.org/metmatters/global-atmospheric-circulation">Royal Meteorological Society – Global atmospheric circulation</a></em></p>
+<p><img alt="Digital hurricane visualization" src="_images/hurricane.png" /><br />
+<em>Source: <a class="reference external" href="https://gpm.nasa.gov/data/art-creating-digital-hurricanes">NASA GPM – The Art of Creating Digital Hurricanes</a></em></p>
+<p><img alt="Mine ventilation and energy" src="_images/mine.png" /><br />
+<em>Source: <a class="reference external" href="https://www.mdpi.com/1996-1073/15/22/8405">MDPI – <em>Energies</em>, “Title of the Article”</a></em></p>
+<p><img alt="Fluid dynamics in motorsport" src="_images/f1.png" /><br />
+<em>Source: <a class="reference external" href="https://www.racecar-engineering.com/advertisement/fluid-dynamics-in-motorsport/">Racecar Engineering – Fluid dynamics in motorsport</a></em></p>
+</section>
 </section>
 <section id="why-jupyter-books">
 <h2>Why Jupyter Books?<a class="headerlink" href="#why-jupyter-books" title="Link to this heading">#</a></h2>
@@ -459,29 +514,63 @@ document.write(`
 <h2>Why the Notes in English?<a class="headerlink" href="#why-the-notes-in-english" title="Link to this heading">#</a></h2>
 <p>Although this course is taught in Spanish, the course notes are provided in English to help you get comfortable with the <strong>technical terminology</strong> that dominates international literature, research, and professional work in fluid mechanics. Many of the key resources—such as academic papers, research articles, and advanced textbooks—are published in English, and mastering this language will help you stay connected with the <strong>global scientific community</strong>.</p>
 <p>By engaging with the material in English, you’ll be better prepared to attend <strong>international conferences</strong>, contribute to <strong>global research efforts</strong>, and work with colleagues from around the world. It’s an investment that will expand your opportunities both academically and professionally.</p>
-</section>
-<section id="a-bit-about-me">
-<h2>A Bit About Me<a class="headerlink" href="#a-bit-about-me" title="Link to this heading">#</a></h2>
-<p>I have a <strong>Ph.D. in Earth and Atmospheric Sciences from Georgia Institute of Technology</strong>, along with a <strong>Masters in Oceanic and Atmospheric Sciences</strong>, a <strong>Masters in Water Resources</strong>, and a <strong>Civil Engineering degree</strong>. My work has taken me through diverse fields—studying the behavior of <strong>atmospheric currents</strong>, understanding <strong>water resources</strong>, and applying <strong>data science</strong> to solve problems related to agriculture, energy, risk management, and climate.</p>
-<p>Fluid dynamics has been a common thread throughout my career, from analyzing <strong>atmospheric circulations</strong> that drive global climate patterns to modeling <strong>river flows</strong> that sustain ecosystems and cities. This course gives me the opportunity to share not only the fundamental concepts of fluid mechanics but also their real-world applications—whether in <strong>renewable energy</strong>, <strong>environmental protection</strong>, or <strong>cutting-edge technologies</strong>.</p>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Foundations (Weeks 1–3)</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluids_v_solids.html">Solids vs. Fluids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="units.html">Common Physical Quantities and Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="units.html#units-cheat-sheet">Units Cheat Sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluid_properties.html">Properties of Fluids</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluid_properties.html#explanation-of-the-surface-tension-interactive-exercise">Explanation of the Surface Tension Interactive Exercise</a></li>
 <li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hydrostatic_balance.html">Hydrostatic Balance</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recommended_problems.html">Recommended Problems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="labs.html">Laboratory experiments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semester_202402.html">Important dates: Semester 2024 02</a></li>
+<li class="toctree-l1"><a class="reference internal" href="kinematics/index.html">Fluid Kinematics</a></li>
 </ul>
 </div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statics (Week 4)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hydrostatic_balance.html">Hydrostatic Balance</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Equations (Weeks 5–6)</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Operations &amp; Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="labs.html">Laboratory experiments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recommended_problems.html">Recommended Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+</div>
+<section id="list-of-figures">
+<h3>List of Figures<a class="headerlink" href="#list-of-figures" title="Link to this heading">#</a></h3>
+<p><strong>Figure 1.</strong> Blood flow simulation – <em>Source: <a class="reference external" href="https://www.manchester.ac.uk/about/news/research-progress-reveals-faster-more-accurate-blood-flow-simulation-to-revolutionise-treatment-of-vascular-diseases/">University of Manchester</a></em></p>
+<p><strong>Figure 2.</strong> Fluid flow in pipes – <em>Source: <a class="reference external" href="https://pressbooks.online.ucf.edu/osuniversityphysics/chapter/14-5-fluid-dynamics/">University of Central Florida – University Physics Volume 2</a></em></p>
+<p><strong>Figure 3.</strong> Valve and CFD simulation – <em>Source: <a class="reference external" href="https://www.savener.es/en/featured-news/savener-expands-its-expertise-in-fluid-dynamics-cfd%EF%BF%BC/">Savener</a></em></p>
+<p><strong>Figure 4.</strong> Mine ventilation and energy – <em>Source: <a class="reference external" href="https://www.mdpi.com/1996-1073/15/22/8405">MDPI – <em>Energies</em></a></em></p>
+<p><strong>Figure 5.</strong> Hydropower generation – <em>Source: <a class="reference external" href="https://www.usgs.gov/media/images/flow-water-produces-hydroelectricity">U.S. Geological Survey</a></em></p>
+<p><strong>Figure 6.</strong> Hydropower applications – <em>Source: <a class="reference external" href="https://fluids.umn.edu/research/engineering-applications/hydropower">University of Minnesota – Fluids Research Group</a></em></p>
+<p><strong>Figure 7.</strong> Wind energy simulation – <em>Source: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/we.2639">Wiley Online Library – Wind Energy</a></em></p>
+<p><strong>Figure 8.</strong> Aircraft wing airflow – <em>Source: <a class="reference external" href="https://eaglepubs.erau.edu/introductiontoaerospaceflightvehicles/chapter/what-is-aerospace-engineering/">Embry-Riddle Aeronautical University</a></em></p>
+<p><strong>Figure 9.</strong> River flows – <em>Source: <a class="reference external" href="https://progearthplanetsci.springeropen.com/articles/10.1186/s40645-018-0208-3">SpringerOpen – <em>Progress in Earth and Planetary Science</em></a></em></p>
+<p><strong>Figure 10.</strong> Ocean circulation currents – <em>Source: <a class="reference external" href="https://sos.noaa.gov/catalog/datasets/ocean-circulation-labeled-currents/">NOAA Science On a Sphere</a></em></p>
+<p><strong>Figure 11.</strong> Global atmospheric circulation – <em>Source: <a class="reference external" href="https://www.rmets.org/metmatters/global-atmospheric-circulation">Royal Meteorological Society</a></em></p>
+<p><strong>Figure 12.</strong> Digital hurricane visualization – <em>Source: <a class="reference external" href="https://gpm.nasa.gov/data/art-creating-digital-hurricanes">NASA GPM</a></em></p>
+<p><strong>Figure 13.</strong> Surface tension – <em>Source: <a class="reference external" href="https://fluid-dynamics.leeds.ac.uk/research/outreach/learn-more-about-fluid-dynamics/surface-tension/">University of Leeds</a></em></p>
+<p><strong>Figure 14.</strong> Fluid dynamics in motorsport – <em>Source: <a class="reference external" href="https://www.racecar-engineering.com/advertisement/fluid-dynamics-in-motorsport/">Racecar Engineering</a></em></p>
+</section>
 </section>
 </section>
 
@@ -516,11 +605,11 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="environment.html"
+       href="syllabus.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Setting Up the Environment</p>
+        <p class="prev-next-title">Syllabus</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -540,13 +629,18 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of-fluid-mechanics">The Importance of Fluid Mechanics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-mechanics-and-climate-science">Fluid Mechanics and Climate Science</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-scale-applications-from-biomedical-engineering-to-household-technologies">Small-Scale Applications: From Biomedical Engineering to Household Technologies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-importance-of-fluid-mechanics">The Importance of Fluid Mechanics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-mechanics-and-climate-science">Fluid Mechanics and Climate Science</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#small-scale-applications-from-biomedical-engineering-to-household-technologies">Small-Scale Applications: From Biomedical Engineering to Household Technologies</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#beyond-engineering-sports-and-performance">Beyond Engineering: Sports and Performance</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-jupyter-books">Why Jupyter Books?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-github">Why GitHub?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-the-notes-in-english">Why the Notes in English?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-bit-about-me">A Bit About Me</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-the-notes-in-english">Why the Notes in English?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-of-figures">List of Figures</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

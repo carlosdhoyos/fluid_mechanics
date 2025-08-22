@@ -117,7 +117,9 @@ y_vals = f(x_vals)
 # Plot the function
 plt.figure(figsize=(8, 6))
 plt.plot(x_vals, y_vals, label=r'$f(x) = x^3 - 3x^2 + 2x$', color="blue")
-plt.fill_between(x_vals, y_vals, where=[(1 <= x <= 4) for x in x_vals], color='lightblue', alpha=0.5)
+mask = (x_vals >= 1) & (x_vals <= 4)
+plt.fill_between(x_vals, y_vals, where=mask, alpha=0.5)
+
 
 # Labels and Title
 plt.axhline(0, color='black',linewidth=0.5)
@@ -428,10 +430,10 @@ $$
 3 = \frac{1^3}{3} + \frac{1^2}{2} + C \quad \Rightarrow \quad 3 = \frac{1}{3} + \frac{1}{2} + C
 $$
 
-Solving for $C$, we get $C = \frac{15}{6}$, so the solution is:
+Solving for $C$, we get $C = \frac{13}{6}$, so the solution is:
 
 $$
-y = \frac{x^3}{3} + \frac{x^2}{2} + \frac{13}{6}
+y(x) = \frac{x^3}{3} + \frac{x^2}{2} + \frac{13}{6}
 $$
 
 ---
@@ -470,69 +472,50 @@ $$
 
 ## Problem 6: Separable Differential Equation
 
-Solve the differential equation:
+Solve the differential equation
 
 $$
-\frac{dy}{dx} = \frac{1}{y}
+\frac{dy}{dx} = \frac{1}{y}, \qquad y(1) = 2.
 $$
 
-with the initial condition $y(1) = 2$.
+### Solution
 
-### Solution:
-
-This equation is separable, so we can rewrite it as:
+Separate variables and integrate:
 
 $$
 y \, dy = dx
-$$
-
-Next, integrate both sides:
-
-$$
+\quad \Longrightarrow \quad
 \int y \, dy = \int dx
+\quad \Longrightarrow \quad
+\frac{y^2}{2} = x + C.
 $$
 
-This gives:
+Multiply by 2 and absorb constants:
 
 $$
-\frac{y^2}{2} = x + C
+y^2 = 2x + C.
 $$
 
-Now, multiply by 2 to simplify:
+Apply the initial condition $y(1) = 2$:
 
 $$
-y^2 = 2x + 2C
+4 = 2(1) + C \quad \Longrightarrow \quad C = 2.
 $$
 
-Using the initial condition $y(1) = 2$, substitute $x = 1$ and $y = 2$:
+Hence:
 
 $$
-2^2 = 2(1) + 2C \quad \Rightarrow \quad 4 = 2 + 2C
+y^2 = 2x + 2.
 $$
 
-Solving for $C$, we get:
+Taking square roots gives $y = \pm \sqrt{2x+2}$.  
+Since $y(1) = 2 > 0$, we select the positive branch:
 
 $$
-C = 1
+y(x) = \sqrt{2x+2}, \qquad x > -1.
 $$
 
-Thus, the solution is:
-
-$$
-y^2 = 2x + 2
-$$
-
-Taking the square root of both sides:
-
-$$
-y = \pm \sqrt{2x + 2}
-$$
-
-For the positive root, the solution is:
-
-$$
-y = \sqrt{2x + 2}
-$$
+*(The negative branch $y = -\sqrt{2x+2}$ does not satisfy the initial condition.)*
 
 
 ---
@@ -917,95 +900,53 @@ $$
 
 We are asked to compute the surface integral of the vector field \( \mathbf{F}(x, y, z) = (y, z, x) \) over the surface \( S \), which is the portion of the plane \( z = 4 - x - y \) in the first octant.
 
-##### Step 1: Surface Integral Formula
+We compute $\displaystyle \iint_S \mathbf F\cdot d\mathbf S$ for $\mathbf F(x,y,z)=(y,z,x)$ over $S:\ z=4-x-y$ in the first octant, with upward orientation.
 
-The surface integral of a vector field \( \mathbf{F} \) over a surface \( S \) is given by:
-
+Parameterize by $(x,y)$:
 $$
-\iint_S \mathbf{F} \cdot \mathbf{n} \, dS
-$$
-
-where \( \mathbf{n} \) is the unit normal vector to the surface, and \( dS \) is the differential surface area element.
-
-##### Step 2: Parameterization and Normal Vector
-
-The surface \( S \) is described by the plane equation \( z = 4 - x - y \). This can be parameterized as:
-
-$$
-\mathbf{r}(x, y) = (x, y, 4 - x - y)
+\mathbf r(x,y)=(x,\,y,\,4-x-y),\quad
+\mathbf r_x=(1,0,-1),\ \mathbf r_y=(0,1,-1),\ 
+\mathbf r_x\times\mathbf r_y=(1,1,1).
 $$
 
-The partial derivatives of \( \mathbf{r} \) with respect to \( x \) and \( y \) give us the tangent vectors:
-
+Then
 $$
-\frac{\partial \mathbf{r}}{\partial x} = (1, 0, -1) \quad \text{and} \quad \frac{\partial \mathbf{r}}{\partial y} = (0, 1, -1)
-$$
-
-The cross product of these tangent vectors gives us the normal vector to the surface:
-
-$$
-\mathbf{n} = \frac{\partial \mathbf{r}}{\partial x} \times \frac{\partial \mathbf{r}}{\partial y} = (-1, -1, 1)
+\mathbf F(\mathbf r(x,y))\cdot(\mathbf r_x\times\mathbf r_y)
+=(y,\,4-x-y,\,x)\cdot(1,1,1)
+= x+y+(4-x-y)=4.
 $$
 
-##### Step 3: Dot Product of \( \mathbf{F} \) and \( \mathbf{n} \)
-
-The vector field is \( \mathbf{F}(x, y, z) = (y, z, x) \), so we need to compute the dot product:
-
+The projection region is the triangle $R=\{(x,y):\,0\le x\le 4,\ 0\le y\le 4-x\}$ with area $\tfrac12\cdot 4\cdot 4=8$. Hence
 $$
-\mathbf{F} \cdot \mathbf{n} = (y, z, x) \cdot (-1, -1, 1) = -y - z + x
-$$
-
-Substitute \( z = 4 - x - y \) into the dot product:
-
-$$
-\mathbf{F} \cdot \mathbf{n} = -y - (4 - x - y) + x = 2x - 4
+\iint_S \mathbf F\cdot d\mathbf S
+=\iint_R 4\,dx\,dy
+=4\cdot 8
+=32.
 $$
 
-##### Step 4: Limits of Integration
+**Answer:** $\displaystyle \iint_S \mathbf F\cdot d\mathbf S=32$.
 
-The surface lies in the first octant, so the limits for \( x \) and \( y \) are:
-
-- \( x \) ranges from 0 to 4.
-- For a given \( x \), \( y \) ranges from 0 to \( 4 - x \).
-
-##### Step 5: Set Up the Surface Integral
-
-The surface integral becomes:
-
-$$
-\iint_S (2x - 4) \, dS = \int_0^4 \int_0^{4-x} (2x - 4) \, dy \, dx
-$$
-
-##### Step 6: Solve the Surface Integral Numerically
+##### Solve the Surface Integral Numerically
 
 We can use Python to compute the surface integral:
 
 ```{code-cell} python
 from scipy.integrate import dblquad
 
-# Define the integrand for the surface integral (2x - 4)
+# Correct integrand: F(r) · (r_x × r_y) = 4 (constant)
 def integrand_surface(y, x):
-    return 2 * x - 4
+    return 4.0
 
-# Limits for the region of integration
+# Limits for the triangular region: 0 ≤ x ≤ 4, 0 ≤ y ≤ 4 - x
 x_min, x_max = 0, 4
 y_min = lambda x: 0
 y_max = lambda x: 4 - x
 
 # Compute the surface integral
 surface_integral, _ = dblquad(integrand_surface, x_min, x_max, y_min, y_max)
-print(f"Surface integral: {surface_integral:.2f}")
+print(f"Surface integral: {surface_integral:.2f}")  
 
 ```
-
-##### Step 7: Final Answer
-
-After performing the integration, the result of the surface integral is:
-
-$$
-\iint_S \mathbf{F} \cdot \mathbf{n} \, dS = -\frac{32}{3}
-$$
-
 
 #### 3. Volume Integral
 
@@ -1077,10 +1018,20 @@ print(f"Volume integral: {volume_integral:.2f}")
 
 ##### Step 5: Final Answer
 
-After performing the integration, the result of the volume integral is:
+By symmetry, the contributions from $x$ and $y$ vanish over the cylinder.  
+Only the $z$-term contributes:
 
 $$
-\iiint_V (x + y + z) \, dV = 9\pi
+\iiint_V z \, dV
+= \int_{0}^{2\pi} \int_{0}^{1} \int_{0}^{3} z \, r \, dz \, dr \, d\theta
+= 2\pi \cdot \left(\tfrac{1}{2}\right) \cdot \left(\tfrac{9}{2}\right)
+= \tfrac{9\pi}{2}.
+$$
+
+Thus, the correct result of the volume integral is:
+
+$$
+\iiint_V (x + y + z) \, dV = \tfrac{9\pi}{2}.
 $$
 
 ---
@@ -1151,6 +1102,7 @@ We will create a grid of points in the cube and define the vector field $ \mathb
 
 ```{code-cell} python
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Create a grid of points in the cube
 x_vals, y_vals, z_vals = np.linspace(0, 1, 5), np.linspace(0, 1, 5), np.linspace(0, 1, 5)
@@ -1306,6 +1258,8 @@ plt.show()
 Plot the Boundary Curve:  The boundary curve of the disk is the unit circle
 
 ```{code-cell} python
+import matplotlib.pyplot as plt
+
 # Define the boundary curve (circle) x^2 + y^2 = 1
 theta = np.linspace(0, 2*np.pi, 100)
 x_circle = np.cos(theta)

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -183,8 +183,8 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="environment.html">Setting Up the Environment</a></li>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Foundations (Weeks 1–3)</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="syllabus.html">Syllabus</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Prerequisites</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fluids_v_solids.html">Solids vs. Fluids</a></li>
@@ -192,17 +192,41 @@
 <li class="toctree-l1"><a class="reference internal" href="fluid_properties.html">Properties of Fluids</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="types_of_flows.html">Types of Fluid Flow</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="kinematics/index.html">Fluid Kinematics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/lagrangian_vs_eulerian.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/vorticity_circulation.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/streamline_streakline_pathline.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/velocity_potential_streamfunction.html">Placeholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="kinematics/example_fields.html">Placeholder</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Statics (Week 4)</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="hydrostatic_balance.html">Hydrostatic Balance</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/pressure_measurement.html">Pressure Measurement Using Hydrostatic Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/manometry.html">Manometry and Pressure Measurement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/forces_on_surfaces.html">Force Calculations on Flat and Curved Surfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydrostatic_balance/buoyancy.html">Buoyancy Force on a Submerged Object</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Core Equations (Weeks 5–6)</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="navier_stokes.html">Introduction to the Navier-Stokes Equations in Fluid Mechanics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes/pgf.html">Derivation of the Pressure Gradient Force</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes/viscous_forces.html">Derivation of Friction (Viscous) Forces in Fluid Mechanics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes/ns_cartesian.html">Navier-Stokes Equations in Cartesian Coordinates</a></li>
-<li class="toctree-l2"><a class="reference internal" href="navier_stokes/continuity.html">Conservation of Mass (Continuity Equation)</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Course Operations &amp; Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="labs.html">Laboratory experiments</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="recommended_problems.html">Recommended Problems</a></li>
-<li class="toctree-l1"><a class="reference internal" href="labs.html">Laboratory experiments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
-<li class="toctree-l1"><a class="reference internal" href="semester_202402.html">Important dates</a></li>
 </ul>
 
     </div>
@@ -488,7 +512,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6-separable-differential-equation">Problem 6: Separable Differential Equation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Solution:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Solution</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7-linear-and-non-linear-differential-equations">Problem 7: Linear and Non-Linear Differential Equations</a><ul class="nav section-nav flex-column">
@@ -524,13 +548,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-integral">2. Surface Integral</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-surface-integral-formula">Step 1: Surface Integral Formula</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-parameterization-and-normal-vector">Step 2: Parameterization and Normal Vector</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-dot-product-of-mathbf-f-and-mathbf-n">Step 3: Dot Product of ( \mathbf{F} ) and ( \mathbf{n} )</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-limits-of-integration">Step 4: Limits of Integration</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-set-up-the-surface-integral">Step 5: Set Up the Surface Integral</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-solve-the-surface-integral-numerically">Step 6: Solve the Surface Integral Numerically</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-final-answer">Step 7: Final Answer</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-the-surface-integral-numerically">Solve the Surface Integral Numerically</a></li>
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-integral">3. Volume Integral</a><ul class="nav section-nav flex-column">
@@ -739,7 +757,9 @@ f'(x) = 3x^2 - 6x + 2
 <span class="c1"># Plot the function</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$f(x) = x^3 - 3x^2 + 2x$&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_vals</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_vals</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x_vals</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
 
 <span class="c1"># Labels and Title</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
@@ -759,7 +779,7 @@ f'(x) = 3x^2 - 6x + 2
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/d01ac6626333f287f9a83db74bd9509f926563aa0832f9d54a717b8698685099.png" src="_images/d01ac6626333f287f9a83db74bd9509f926563aa0832f9d54a717b8698685099.png" />
+<img alt="_images/eeda75e6a8dfe82dbdf5a5c53eb89bd478ad774f1ff332b01b2fe3fb6e637c1f.png" src="_images/eeda75e6a8dfe82dbdf5a5c53eb89bd478ad774f1ff332b01b2fe3fb6e637c1f.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The area under the curve from x=1 to x=4 is 15.75.
 </pre></div>
 </div>
@@ -1043,10 +1063,10 @@ y = \int (x^2 + x) \, dx = \frac{x^3}{3} + \frac{x^2}{2} + C
 \[
 3 = \frac{1^3}{3} + \frac{1^2}{2} + C \quad \Rightarrow \quad 3 = \frac{1}{3} + \frac{1}{2} + C
 \]</div>
-<p>Solving for <span class="math notranslate nohighlight">\(C\)</span>, we get <span class="math notranslate nohighlight">\(C = \frac{15}{6}\)</span>, so the solution is:</p>
+<p>Solving for <span class="math notranslate nohighlight">\(C\)</span>, we get <span class="math notranslate nohighlight">\(C = \frac{13}{6}\)</span>, so the solution is:</p>
 <div class="math notranslate nohighlight">
 \[
-y = \frac{x^3}{3} + \frac{x^2}{2} + \frac{13}{6}
+y(x) = \frac{x^3}{3} + \frac{x^2}{2} + \frac{13}{6}
 \]</div>
 </section>
 </section>
@@ -1081,59 +1101,44 @@ y = e^x + \frac{x^2}{2} + 9
 <hr class="docutils" />
 <section id="problem-6-separable-differential-equation">
 <h2>Problem 6: Separable Differential Equation<a class="headerlink" href="#problem-6-separable-differential-equation" title="Link to this heading">#</a></h2>
-<p>Solve the differential equation:</p>
+<p>Solve the differential equation</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{dy}{dx} = \frac{1}{y}
+\frac{dy}{dx} = \frac{1}{y}, \qquad y(1) = 2.
 \]</div>
-<p>with the initial condition <span class="math notranslate nohighlight">\(y(1) = 2\)</span>.</p>
 <section id="id7">
-<h3>Solution:<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
-<p>This equation is separable, so we can rewrite it as:</p>
+<h3>Solution<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Separate variables and integrate:</p>
 <div class="math notranslate nohighlight">
 \[
 y \, dy = dx
-\]</div>
-<p>Next, integrate both sides:</p>
-<div class="math notranslate nohighlight">
-\[
+\quad \Longrightarrow \quad
 \int y \, dy = \int dx
+\quad \Longrightarrow \quad
+\frac{y^2}{2} = x + C.
 \]</div>
-<p>This gives:</p>
+<p>Multiply by 2 and absorb constants:</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{y^2}{2} = x + C
+y^2 = 2x + C.
 \]</div>
-<p>Now, multiply by 2 to simplify:</p>
+<p>Apply the initial condition <span class="math notranslate nohighlight">\(y(1) = 2\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-y^2 = 2x + 2C
+4 = 2(1) + C \quad \Longrightarrow \quad C = 2.
 \]</div>
-<p>Using the initial condition <span class="math notranslate nohighlight">\(y(1) = 2\)</span>, substitute <span class="math notranslate nohighlight">\(x = 1\)</span> and <span class="math notranslate nohighlight">\(y = 2\)</span>:</p>
+<p>Hence:</p>
 <div class="math notranslate nohighlight">
 \[
-2^2 = 2(1) + 2C \quad \Rightarrow \quad 4 = 2 + 2C
+y^2 = 2x + 2.
 \]</div>
-<p>Solving for <span class="math notranslate nohighlight">\(C\)</span>, we get:</p>
+<p>Taking square roots gives <span class="math notranslate nohighlight">\(y = \pm \sqrt{2x+2}\)</span>.<br />
+Since <span class="math notranslate nohighlight">\(y(1) = 2 &gt; 0\)</span>, we select the positive branch:</p>
 <div class="math notranslate nohighlight">
 \[
-C = 1
+y(x) = \sqrt{2x+2}, \qquad x &gt; -1.
 \]</div>
-<p>Thus, the solution is:</p>
-<div class="math notranslate nohighlight">
-\[
-y^2 = 2x + 2
-\]</div>
-<p>Taking the square root of both sides:</p>
-<div class="math notranslate nohighlight">
-\[
-y = \pm \sqrt{2x + 2}
-\]</div>
-<p>For the positive root, the solution is:</p>
-<div class="math notranslate nohighlight">
-\[
-y = \sqrt{2x + 2}
-\]</div>
+<p><em>(The negative branch <span class="math notranslate nohighlight">\(y = -\sqrt{2x+2}\)</span> does not satisfy the initial condition.)</em></p>
 </section>
 </section>
 <hr class="docutils" />
@@ -1501,98 +1506,55 @@ y(x) = C_1 \sin\left( \frac{n\pi}{L} x \right)
 <section id="surface-integral">
 <h4>2. Surface Integral<a class="headerlink" href="#surface-integral" title="Link to this heading">#</a></h4>
 <p>We are asked to compute the surface integral of the vector field ( \mathbf{F}(x, y, z) = (y, z, x) ) over the surface ( S ), which is the portion of the plane ( z = 4 - x - y ) in the first octant.</p>
-<section id="step-1-surface-integral-formula">
-<h5>Step 1: Surface Integral Formula<a class="headerlink" href="#step-1-surface-integral-formula" title="Link to this heading">#</a></h5>
-<p>The surface integral of a vector field ( \mathbf{F} ) over a surface ( S ) is given by:</p>
-<div class="math notranslate nohighlight">
-\[
-\iint_S \mathbf{F} \cdot \mathbf{n} \, dS
-\]</div>
-<p>where ( \mathbf{n} ) is the unit normal vector to the surface, and ( dS ) is the differential surface area element.</p>
-</section>
-<section id="step-2-parameterization-and-normal-vector">
-<h5>Step 2: Parameterization and Normal Vector<a class="headerlink" href="#step-2-parameterization-and-normal-vector" title="Link to this heading">#</a></h5>
-<p>The surface ( S ) is described by the plane equation ( z = 4 - x - y ). This can be parameterized as:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{r}(x, y) = (x, y, 4 - x - y)
-\]</div>
-<p>The partial derivatives of ( \mathbf{r} ) with respect to ( x ) and ( y ) give us the tangent vectors:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{\partial \mathbf{r}}{\partial x} = (1, 0, -1) \quad \text{and} \quad \frac{\partial \mathbf{r}}{\partial y} = (0, 1, -1)
-\]</div>
-<p>The cross product of these tangent vectors gives us the normal vector to the surface:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{n} = \frac{\partial \mathbf{r}}{\partial x} \times \frac{\partial \mathbf{r}}{\partial y} = (-1, -1, 1)
-\]</div>
-</section>
-<section id="step-3-dot-product-of-mathbf-f-and-mathbf-n">
-<h5>Step 3: Dot Product of ( \mathbf{F} ) and ( \mathbf{n} )<a class="headerlink" href="#step-3-dot-product-of-mathbf-f-and-mathbf-n" title="Link to this heading">#</a></h5>
-<p>The vector field is ( \mathbf{F}(x, y, z) = (y, z, x) ), so we need to compute the dot product:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{F} \cdot \mathbf{n} = (y, z, x) \cdot (-1, -1, 1) = -y - z + x
-\]</div>
-<p>Substitute ( z = 4 - x - y ) into the dot product:</p>
-<div class="math notranslate nohighlight">
-\[
-\mathbf{F} \cdot \mathbf{n} = -y - (4 - x - y) + x = 2x - 4
-\]</div>
-</section>
-<section id="step-4-limits-of-integration">
-<h5>Step 4: Limits of Integration<a class="headerlink" href="#step-4-limits-of-integration" title="Link to this heading">#</a></h5>
-<p>The surface lies in the first octant, so the limits for ( x ) and ( y ) are:</p>
-<ul class="simple">
-<li><p>( x ) ranges from 0 to 4.</p></li>
-<li><p>For a given ( x ), ( y ) ranges from 0 to ( 4 - x ).</p></li>
-</ul>
-</section>
-<section id="step-5-set-up-the-surface-integral">
-<h5>Step 5: Set Up the Surface Integral<a class="headerlink" href="#step-5-set-up-the-surface-integral" title="Link to this heading">#</a></h5>
-<p>The surface integral becomes:</p>
-<div class="math notranslate nohighlight">
-\[
-\iint_S (2x - 4) \, dS = \int_0^4 \int_0^{4-x} (2x - 4) \, dy \, dx
-\]</div>
-</section>
-<section id="step-6-solve-the-surface-integral-numerically">
-<h5>Step 6: Solve the Surface Integral Numerically<a class="headerlink" href="#step-6-solve-the-surface-integral-numerically" title="Link to this heading">#</a></h5>
+<p>We compute <span class="math notranslate nohighlight">\(\displaystyle \iint_S \mathbf F\cdot d\mathbf S\)</span> for <span class="math notranslate nohighlight">\(\mathbf F(x,y,z)=(y,z,x)\)</span> over <span class="math notranslate nohighlight">\(S:\ z=4-x-y\)</span> in the first octant, with upward orientation.</p>
+<p>Parameterize by <span class="math notranslate nohighlight">\((x,y)\)</span>:
+$<span class="math notranslate nohighlight">\(
+\mathbf r(x,y)=(x,\,y,\,4-x-y),\quad
+\mathbf r_x=(1,0,-1),\ \mathbf r_y=(0,1,-1),\ 
+\mathbf r_x\times\mathbf r_y=(1,1,1).
+\)</span>$</p>
+<p>Then
+$<span class="math notranslate nohighlight">\(
+\mathbf F(\mathbf r(x,y))\cdot(\mathbf r_x\times\mathbf r_y)
+=(y,\,4-x-y,\,x)\cdot(1,1,1)
+= x+y+(4-x-y)=4.
+\)</span>$</p>
+<p>The projection region is the triangle <span class="math notranslate nohighlight">\(R=\{(x,y):\,0\le x\le 4,\ 0\le y\le 4-x\}\)</span> with area <span class="math notranslate nohighlight">\(\tfrac12\cdot 4\cdot 4=8\)</span>. Hence
+$<span class="math notranslate nohighlight">\(
+\iint_S \mathbf F\cdot d\mathbf S
+=\iint_R 4\,dx\,dy
+=4\cdot 8
+=32.
+\)</span>$</p>
+<p><strong>Answer:</strong> <span class="math notranslate nohighlight">\(\displaystyle \iint_S \mathbf F\cdot d\mathbf S=32\)</span>.</p>
+<section id="solve-the-surface-integral-numerically">
+<h5>Solve the Surface Integral Numerically<a class="headerlink" href="#solve-the-surface-integral-numerically" title="Link to this heading">#</a></h5>
 <p>We can use Python to compute the surface integral:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">dblquad</span>
 
-<span class="c1"># Define the integrand for the surface integral (2x - 4)</span>
+<span class="c1"># Correct integrand: F(r) · (r_x × r_y) = 4 (constant)</span>
 <span class="k">def</span> <span class="nf">integrand_surface</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
+    <span class="k">return</span> <span class="mf">4.0</span>
 
-<span class="c1"># Limits for the region of integration</span>
+<span class="c1"># Limits for the triangular region: 0 ≤ x ≤ 4, 0 ≤ y ≤ 4 - x</span>
 <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span>
 <span class="n">y_min</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">0</span>
 <span class="n">y_max</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">4</span> <span class="o">-</span> <span class="n">x</span>
 
 <span class="c1"># Compute the surface integral</span>
 <span class="n">surface_integral</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">dblquad</span><span class="p">(</span><span class="n">integrand_surface</span><span class="p">,</span> <span class="n">x_min</span><span class="p">,</span> <span class="n">x_max</span><span class="p">,</span> <span class="n">y_min</span><span class="p">,</span> <span class="n">y_max</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Surface integral: </span><span class="si">{</span><span class="n">surface_integral</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Surface integral: </span><span class="si">{</span><span class="n">surface_integral</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>  
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Surface integral: -10.67
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Surface integral: 32.00
 </pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="step-7-final-answer">
-<h5>Step 7: Final Answer<a class="headerlink" href="#step-7-final-answer" title="Link to this heading">#</a></h5>
-<p>After performing the integration, the result of the surface integral is:</p>
-<div class="math notranslate nohighlight">
-\[
-\iint_S \mathbf{F} \cdot \mathbf{n} \, dS = -\frac{32}{3}
-\]</div>
 </section>
 </section>
 <section id="volume-integral">
@@ -1671,10 +1633,19 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 </section>
 <section id="step-5-final-answer">
 <h5>Step 5: Final Answer<a class="headerlink" href="#step-5-final-answer" title="Link to this heading">#</a></h5>
-<p>After performing the integration, the result of the volume integral is:</p>
+<p>By symmetry, the contributions from <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> vanish over the cylinder.<br />
+Only the <span class="math notranslate nohighlight">\(z\)</span>-term contributes:</p>
 <div class="math notranslate nohighlight">
 \[
-\iiint_V (x + y + z) \, dV = 9\pi
+\iiint_V z \, dV
+= \int_{0}^{2\pi} \int_{0}^{1} \int_{0}^{3} z \, r \, dz \, dr \, d\theta
+= 2\pi \cdot \left(\tfrac{1}{2}\right) \cdot \left(\tfrac{9}{2}\right)
+= \tfrac{9\pi}{2}.
+\]</div>
+<p>Thus, the correct result of the volume integral is:</p>
+<div class="math notranslate nohighlight">
+\[
+\iiint_V (x + y + z) \, dV = \tfrac{9\pi}{2}.
 \]</div>
 </section>
 </section>
@@ -1743,6 +1714,7 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># Create a grid of points in the cube</span>
 <span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">z_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
@@ -1908,7 +1880,9 @@ f(r, \theta, z) = r \cos\theta + r \sin\theta + z
 <p>Plot the Boundary Curve:  The boundary curve of the disk is the unit circle</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the boundary curve (circle) x^2 + y^2 = 1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define the boundary curve (circle) x^2 + y^2 = 1</span>
 <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">x_circle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
 <span class="n">y_circle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
@@ -2528,7 +2502,7 @@ t \approx 1.43 \, \text{s}
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-6-separable-differential-equation">Problem 6: Separable Differential Equation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Solution:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Solution</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-7-linear-and-non-linear-differential-equations">Problem 7: Linear and Non-Linear Differential Equations</a><ul class="nav section-nav flex-column">
@@ -2564,13 +2538,7 @@ t \approx 1.43 \, \text{s}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Solution</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#line-integral">1. Line Integral</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#surface-integral">2. Surface Integral</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-surface-integral-formula">Step 1: Surface Integral Formula</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-parameterization-and-normal-vector">Step 2: Parameterization and Normal Vector</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-dot-product-of-mathbf-f-and-mathbf-n">Step 3: Dot Product of ( \mathbf{F} ) and ( \mathbf{n} )</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-limits-of-integration">Step 4: Limits of Integration</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-set-up-the-surface-integral">Step 5: Set Up the Surface Integral</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-solve-the-surface-integral-numerically">Step 6: Solve the Surface Integral Numerically</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-final-answer">Step 7: Final Answer</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#solve-the-surface-integral-numerically">Solve the Surface Integral Numerically</a></li>
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-integral">3. Volume Integral</a><ul class="nav section-nav flex-column">

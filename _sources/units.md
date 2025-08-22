@@ -200,3 +200,50 @@ $$
 In this case, the mass density of air is about $0.00238 \, \text{slug/ft}^3$, while its weight density remains $0.0765 \, \text{lb/ft}^3$.
 
 ```
+
+
+# Units Cheat Sheet
+
+## Core Unit Systems
+- **SI (MKS)**: meter (m), kilogram (kg), second (s), newton (N), joule (J), pascal (Pa)  
+- **CGS**: centimeter (cm), gram (g), second (s), dyne, erg, barye  
+- **Imperial/US**: foot (ft), pound-mass (lbm), second (s), pound-force (lbf), foot-pound (ft·lb), psi  
+- **British Gravitational (BG)**: foot (ft), slug (mass), second (s), pound-force (lbf)  
+
+---
+
+## Quick Conversions
+- **Length**: 1 m = 3.281 ft = 39.37 in  
+- **Mass**: 1 kg = 2.205 lbm = 0.0685 slugs  
+- **Force**: 1 N = 0.225 lbf = $10^5$ dyn  
+- **Energy**: 1 J = 0.7376 ft·lb = $10^7$ erg = 0.000948 BTU  
+- **Pressure**: 1 Pa = 0.000145 psi = 10 Ba  
+- **Density (water)**:  
+  - SI: $1000 \,\text{kg/m}^3$  
+  - BG (mass density): $1.94 \,\text{slug/ft}^3$  
+  - BG (weight density): $62.4 \,\text{lb/ft}^3$  
+
+---
+
+## Slug vs. Pound (BG System)
+- **Slug** = mass unit  
+- **Pound-force (lbf)** = force (weight)  
+- Relation:  
+
+  $$
+  W = m g \quad\;\; (g = 32.174 \,\text{ft/s}^2)
+  $$  
+
+- **Mass density**: slugs/ft³ (like kg/m³)  
+- **Weight density**: lb/ft³ (like N/m³)  
+
+👉 Example:  
+- Water: $62.4 \,\text{lb/ft}^3 \;\Rightarrow\; 1.94 \,\text{slug/ft}^3$  
+- Air: $0.0765 \,\text{lb/ft}^3 \;\Rightarrow\; 0.00238 \,\text{slug/ft}^3$  
+
+---
+
+## Key Reminder
+- SI is the universal standard  
+- BG is preferred for fluid mechanics in Imperial contexts (avoids $g_c$ confusion)  
+- Always check if “lb” means **mass (lbm)** or **force (lbf)**  
